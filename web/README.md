@@ -1,3 +1,3 @@
 # Nexaverse Web
 
-https://nexaverse.net
+_(see [Net](../net))_

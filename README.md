@@ -1,9 +1,11 @@
 # Nexaverse
 
-https://nexaverse.org
+### https://nexaverse.org
 
 Your gateway to the bleeding-edge blockchain community.
 
----
+This is the "official" Nexaverse monorepo.
 
-This is the monorepo for Nexaverse.
+## Introduction
+
+_TBD_
