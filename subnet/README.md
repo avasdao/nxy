@@ -5,6 +5,33 @@
 Connect to the Nexaverse Subnet to begin your journey down the rabbit hole.
 
 
+# Table of contents
+
+- [Introduction](#introduction)
+  - [Prerequisites](#prerequisites)
+  - [Requirements](#requirements)
+- [Getting Started](#getting-started)
+  - [Building the workspace](#building-the-workspace)
+
+
+## Introduction
+
+_TBD_
+
+### Prerequisites
+
+_TBD_
+
+### Requirements
+
+_TBD_
+
+
+## Getting Started
+
+_TBD_
+
+
 ## MetaMask Setup
 
 It takes less than a minute to get setup. First make sure that you have MetaMask installed.
@@ -49,10 +76,10 @@ The main network is for production-ready applications.
 
 There are two (2) "official" testnets for Nexaverse.
 
-### Buckhead
+### Buckhead (Leading Edge)
 
 This is a perfect clone of the Mainnet architecture.
 
-### Peachtree
+### Peachtree (Bleeding Edge)
 
 This is an experimental branch of the Mainnet, designed to test new features.
