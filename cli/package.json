@@ -1,0 +1,11 @@
+{
+  "name": "nexaverse-cli",
+  "version": "22.8.6",
+  "license": "MIT",
+  "description": "Nexaverse subnet.",
+  "main": "index.js",
+  "scripts": {
+    "manager": "node index",
+    "start": "node index"
+  }
+}
