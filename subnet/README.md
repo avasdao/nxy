@@ -2,20 +2,13 @@
 
 ### https://nexaverse.net
 
-A bleeding-edge network for blockchain creators.
+Connect to the Nexaverse Subnet and being your journey down the rabbit hole.
 
-## Introduction
+## MetaMask Setup
 
-_TBD_
+It takes less than a minute to get setup. First make sure that you have MetaMask installed.
 
-## NEXA EVM
+Chain ID (Mainnet): __0x1c3b | 7227__
+Chain ID (Testnet): __0x434b | 17227__
 
-The Nexa Ethereum Virtual Machine (NEXA-EVM) is an Avalanche Subnet.
-
-https://github.com/avasdao/nexa-evm
-
-## Application-specific Gas Fees
-
-Gas fees are dynamically adjusted based on the application and the current load on the network.
-
-> It is highly encouraged to migrate to a private Subnet in the case of consistently high gas fees. The Nexaverse Migration Toolkit (NMT) makes the process effortless for both developers and users.
+// TODO: Confirm ID availability.
