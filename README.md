@@ -19,15 +19,6 @@ This is the "official" Nexaverse monorepo.
 
 _TBD_
 
-### Prerequisites
-
-_TBD_
-
-### Requirements
-
-_TBD_
-
-
 ## Getting Started
 
 _TBD_

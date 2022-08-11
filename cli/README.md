@@ -1,6 +1,6 @@
 # Nexaverse Subnet
 
-### https://nexaverse.net
+### ↳ https://nexaverse.net
 
 Connect to the Nexaverse Subnet to begin your journey down the rabbit hole.
 
@@ -20,11 +20,20 @@ _TBD_
 
 ### Prerequisites
 
-_TBD_
+- A dedicated computer system (eg. desktop pc, laptop pc, vps).  
+_This computer system should be running 24x7x365._
+
+- Basic knowledge of Window or MacOS.  
+_We will be using the File Manager and Terminals for your respective platform._
+
+- You should have some knowledge of how to use a Terminal shell.  
+_We will need to issue specific commands that cannot be done from the GUI._
 
 ### Requirements
 
-_TBD_
+- NodeJS >= 16.0.0 must be installed.
+- npm >= 8.15.0 must be installed.
+- Hardhat >= 2.10.1 must be installed.
 
 
 ## Getting Started
@@ -42,9 +51,9 @@ Nexaverse
 
 ### RPC Endpoint
 
-https://nexaverse.net/mainnet _(Mainnet)_
+↳ https://nexaverse.net/mainnet _(Mainnet)_
 
-https://nexaverse.net/buckhead _(Buckhead Testnet)_
+↳ https://nexaverse.net/buckhead _(Buckhead Testnet)_
 
 ### Chain ID
 
@@ -60,11 +69,7 @@ NEXV
 
 ### Block Explorer
 
-https://explorer.nexaverse.net (Mainnet)
-
-https://buckhead.nexaverse.net (Buckhead Testnet)
-
-https://peachtree.nexaverse.net (Peachtree Testnet)
+↳ https://explorer.nexaverse.net (Mainnet)
 
 
 ## Mainnet
@@ -74,12 +79,28 @@ The main network is for production-ready applications.
 
 ## Testnets
 
-There are two (2) "official" testnets for Nexaverse.
+There are three (3) "official" testnets for Nexaverse.
 
 ### Buckhead (Leading Edge)
 
-This is a perfect clone of the Mainnet architecture.
+↳ https://buckhead.nexaverse.net
+
+A perfect replica/clone of the Mainnet architecture and configuration.
 
 ### Peachtree (Bleeding Edge)
 
-This is an experimental branch of the Mainnet, designed to test new features.
+Designed to test new VM features and configurations.
+
+↳ https://peachtree.nexaverse.net
+
+### Alpharetta (Infinity Edge)
+
+↳ https://alpharetta.nexaverse.net
+
+Designed to simulate stress testing the Mainnet.
+
+This network is automatically reset every 72 hours.
+
+__Objectives of this network include:__
+
+- anti-DDoS development

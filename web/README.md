@@ -19,26 +19,22 @@ _TBD_
 
 ### Prerequisites
 
-_TBD_
+- A dedicated computer system (eg. desktop pc, laptop pc, vps).  
+_This computer system should be running 24x7x365._
+
+- Basic knowledge of Window or MacOS.  
+_We will be using the File Manager and Terminals for your respective platform._
+
+- You should have some knowledge of how to use a Terminal shell.  
+_We will need to issue specific commands that cannot be done from the GUI._
 
 ### Requirements
 
-_TBD_
+- NodeJS >= 16.0.0 must be installed.
+- npm >= 8.15.0 must be installed.
+- Hardhat >= 2.10.1 must be installed.
 
 
 ## Getting Started
 
 _TBD_
-
-
-## NEXA EVM
-
-The Nexa Ethereum Virtual Machine (NEXA-EVM) is an Avalanche Subnet.
-
-https://github.com/avasdao/nexa-evm
-
-## Application-specific Gas Fees
-
-Gas fees are dynamically adjusted based on the application and the current load on the network.
-
-> It is highly encouraged to migrate to a private Subnet in the case of consistently high gas fees. The Nexaverse Migration Toolkit (NMT) makes the process effortless for both developers and users.
