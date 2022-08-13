@@ -18,6 +18,9 @@ import {
   View,
 } from 'react-native';
 
+/* Setup Tailwind CSS. */
+import {TailwindProvider} from 'tailwind-rn'
+
 import {
   Colors,
   DebugInstructions,
@@ -25,6 +28,8 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+
+import tailwind from 'tailwind-rn'
 
 const Section = ({children, title}): Node => {
   const isDarkMode = useColorScheme() === 'dark';
@@ -70,6 +75,10 @@ const App: () => Node = () => {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
+          tail
+          <Text style={tailwind('m-5 text-4xl text-pink-500 font-bold')}>
+            Welcome Tailwind CSS
+          </Text>
           <Section title="Step One">
             Edit <Text style={styles.highlight}>App.js</Text> to change this
             screen and then come back to see your edits.
