@@ -6,117 +6,171 @@
  * @flow strict-local
  */
 
-import React from 'react';
-import type {Node} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import React from 'react'
 
-/* Setup Tailwind CSS. */
-import {TailwindProvider} from 'tailwind-rn'
+import type {Node} from 'react'
 
 import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+    Dimensions,
+    SafeAreaView,
+    ScrollView,
+    StatusBar,
+    StyleSheet,
+    Text,
+    useColorScheme,
+    View,
+} from 'react-native'
+
+import {NavigationContainer} from '@react-navigation/native'
 
 import tailwind from 'tailwind-rn'
 
+import Bugsnag from '@bugsnag/react-native'
+
+import DeviceInfo from 'react-native-device-info'
+
 import store from './store'
 
-const Section = ({children, title}): Node => {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
+import MainStack from './screens/Main'
 
-const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
+/**
+ * Main Application
+ */
+const App = () => {
+    /* Initialize PROFILE context. */
+    const {
+        userid,
+        saveUserid,
+    } = React.useContext(store.Profile)
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+    /**
+     * Start Session
+     *
+     * Begins a new session.
+     *
+     * NOTE: Logs the device info to the API server.
+     */
+    React.useEffect(() => {
+        /**
+         * Fetch Device Info
+         *
+         * Will retrieve all available information about the running device
+         * and store to the active/new session.
+         */
+        const fetchDeviceInfo = async () => {
+            try {
+                /* Set unique id. */
+                const uid = await DeviceInfo.getUniqueId()
 
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Text style={tailwind('m-5 text-4xl text-pink-500 font-bold')}>
-            Welcome Tailwind CSS
-          </Text>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
-};
+                /* Set brand. */
+                const brand = await DeviceInfo.getBrand()
 
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
+                /* Set build id. */
+                const buildId = await DeviceInfo.getBuildId()
 
-export default App;
+                /* Set build number. */
+                const buildNumber = await DeviceInfo.getBuildNumber()
+
+                /* Set device id. */
+                const deviceId = await DeviceInfo.getDeviceId()
+
+                /* Set device name. */
+                const deviceName = await DeviceInfo.getDeviceName()
+
+                /* Set ip address. */
+                const ipAddress = await DeviceInfo.getIpAddress()
+
+                /* Set manufacturer. */
+                const mfr = await DeviceInfo.getManufacturer()
+
+                /* Set model. */
+                const model = await DeviceInfo.getModel()
+
+                /* Set system name. */
+                const sysName = await DeviceInfo.getSystemName()
+
+                /* Set system version. */
+                const sysVersion = await DeviceInfo.getSystemVersion()
+
+                /* Set security. */
+                const security = await DeviceInfo.isPinOrFingerprintSet()
+
+                /* Set tablet. */
+                const tablet = await DeviceInfo.isTablet()
+
+                /* Set version. */
+                const version = await DeviceInfo.getVersion()
+
+                /* Build session package. */
+                const pkg = {
+                    uid,
+                    brand,
+                    buildId,
+                    buildNumber,
+                    deviceId,
+                    deviceName,
+                    ipAddress,
+                    mfr,
+                    model,
+                    sysName,
+                    sysVersion,
+                    security,
+                    tablet,
+                    version,
+                }
+                // console.log('SESSION (pkg):', JSON.stringify(pkg, null, 4))
+
+                /* Save userid. */
+                saveUserid(uid)
+            } catch (err) {
+                console.error('SESSION ERROR', err)
+            }
+
+        }
+
+        /* Fetch device info. */
+        fetchDeviceInfo()
+    })
+
+    /* Initialize Bugsnag. */
+    const { createNavigationContainer } = Bugsnag.getPlugin('reactNavigation')
+    const BugsnagNavigationContainer = createNavigationContainer(
+        NavigationContainer)
+
+    /* Request dark mode. */
+    const isDarkMode = useColorScheme() === 'dark'
+
+    /* Set background style. */
+    const backgroundStyle = {
+        backgroundColor: isDarkMode ? 'rgba(30, 30, 30, 0.8)' : 'rgba(180, 180, 180, 0.8)',
+    }
+
+    /**
+     * Update Layout
+     *
+     * Controls the orientation updates to the UI.
+     */
+    const _updateLayout = () => {
+        /* Retreive window width. */
+        const width = Dimensions.get('window').width
+
+        /* Retrieve window height. */
+        const height = Dimensions.get('window').height
+
+        console.info(
+            `Screen Layout has been updated [ w:${parseInt(width)} | h:${parseInt(height)} ]`)
+    }
+
+    return (
+        <BugsnagNavigationContainer>
+            <SafeAreaView
+                onLayout={_updateLayout}
+                style={backgroundStyle, tailwind('h-full')}
+            >
+                <MainStack />
+            </SafeAreaView>
+        </BugsnagNavigationContainer>
+    )
+}
+
+export default App
