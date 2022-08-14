@@ -31,6 +31,8 @@ import {
 
 import tailwind from 'tailwind-rn'
 
+import store from './store'
+
 const Section = ({children, title}): Node => {
   const isDarkMode = useColorScheme() === 'dark';
   return (
@@ -75,7 +77,6 @@ const App: () => Node = () => {
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
-          tail
           <Text style={tailwind('m-5 text-4xl text-pink-500 font-bold')}>
             Welcome Tailwind CSS
           </Text>
