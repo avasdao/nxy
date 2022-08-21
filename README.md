@@ -2,9 +2,11 @@
 
 ### https://nexaverse.org
 
-Your gateway to the bleeding-edge blockchain community.
+A casual gaming Web3 community.
 
-This is the "official" Nexaverse monorepo.
+community-driven network within Ava
+
+> Nexaverse is powered by Ava's Virtual Machine (AvasVM).
 
 # Table of contents
 

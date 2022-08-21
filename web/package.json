@@ -1,44 +1,32 @@
 {
-  "name": "nexalab-web",
-  "version": "22.6.26",
+  "name": "nexaverse-web",
+  "version": "22.8.21",
   "license": "MIT",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e",
-    "lint": "vue-cli-service lint"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
+  "browserslist": "defaults, not ie <= 11",
   "dependencies": {
-    "core-js": "^3.6.5",
-    "vue": "^3.0.0",
-    "vue-router": "^4.0.0-0",
-    "vuex": "^4.0.0-0"
+    "@headlessui/react": "^1.6.5",
+    "@tailwindcss/forms": "^0.5.2",
+    "autoprefixer": "^10.4.7",
+    "clsx": "^1.1.1",
+    "focus-visible": "^5.2.0",
+    "framer-motion": "^6.5.1",
+    "next": "12.2.3",
+    "postcss-focus-visible": "^6.0.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "^3.1.4",
+    "use-debounce": "^8.0.3"
   },
   "devDependencies": {
-    "@tailwindcss/aspect-ratio": "0.2.1",
-    "@tailwindcss/forms": "0.3.3",
-    "@tailwindcss/line-clamp": "0.2.1",
-    "@tailwindcss/postcss7-compat": "2.2.7",
-    "@tailwindcss/typography": "0.4.1",
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-e2e-webdriverio": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-plugin-unit-jest": "~4.5.0",
-    "@vue/cli-plugin-vuex": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0",
-    "@vue/test-utils": "^2.0.0-0",
-    "babel-eslint": "^10.1.0",
-    "chromedriver": "^84.0.1",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^7.0.0",
-    "geckodriver": "^1.20.0",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-    "typescript": "~3.9.3",
-    "vue-jest": "^5.0.0-0",
-    "wdio-chromedriver-service": "^6.0.3",
-    "wdio-geckodriver-service": "^1.1.0"
+    "eslint": "8.15.0",
+    "eslint-config-next": "12.2.3",
+    "prettier": "^2.6.2",
+    "prettier-plugin-tailwindcss": "^0.1.11"
   }
 }
