@@ -1,11 +1,11 @@
 {
   "name": "nexaverse-mobile",
-  "version": "22.8.13",
+  "version": "22.8.15",
   "license": "MIT",
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "start": "react-native start",
+    "start": "react-native start --reset-cache",
     "test": "jest",
     "lint": "eslint ."
   },
@@ -26,6 +26,7 @@
     "mobx-persist": "0.4.1",
     "mobx-react-lite": "3.2.3",
     "moment": "2.29.1",
+    "nativewind": "2.0.0-next.58",
     "numeral": "2.0.6",
     "react": "17.0.2",
     "react-dom": "17.0.2",

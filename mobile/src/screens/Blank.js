@@ -21,7 +21,6 @@ import { observer } from 'mobx-react-lite'
 
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import LottieView from 'lottie-react-native'
-import tailwind from 'tailwind-rn'
 
 import { ethers, utils, Wallet } from 'ethers'
 
@@ -49,31 +48,35 @@ const Blank = observer(({navigation}) => {
     return (
         <ScrollView
             contentInsetAdjustmentBehavior="automatic"
-            style={tailwind('')}
+            className=""
         >
-            <View style={tailwind('py-6 items-center')}>
-                <View style={tailwind('bg-pink-200 px-3 py-2 rounded-full')}>
-                    <Text style={tailwind('text-pink-800 text-xl font-semibold')}>
-                        1,337 traders online..
+            <View className="py-6 items-center">
+                <View className="bg-pink-200 px-3 py-2 rounded-full">
+                    <Text className="text-pink-800 text-xl font-semibold">
+                        1,337 players online..
                     </Text>
                 </View>
             </View>
 
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                 <Text style={{ fontSize: 30 }}>
-                    Do <Text style={tailwind('font-bold')}>YOU</Text> need help?
+                    Do <Text className="font-bold">YOU</Text> need help?
                 </Text>
 
                 <Pressable onPress={() => navigation.goBack()} title="No thanks" />
             </View>
 
-            <View style={tailwind('py-5 bg-gray-50 items-center')}>
+            <Text className="text-4xl text-pink-500">
+                NEW TAILWIND PLUGIN
+            </Text>
+
+            <View className="py-5 bg-gray-50 items-center">
                 <LottieView
-                    style={tailwind('h-48')}
+                    className="h-48"
                     source={require('../assets/lottie/couple-talk.json')} autoPlay loop
                 />
 
-                <Text style={tailwind('text-pink-500 font-semibold')}>
+                <Text className="text-pink-500 font-semibold">
                     24 Hour Cafe
                 </Text>
             </View>

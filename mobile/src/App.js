@@ -23,8 +23,6 @@ import {
 
 import {NavigationContainer} from '@react-navigation/native'
 
-import tailwind from 'tailwind-rn'
-
 import Bugsnag from '@bugsnag/react-native'
 
 import DeviceInfo from 'react-native-device-info'
@@ -165,7 +163,8 @@ const App = () => {
         <BugsnagNavigationContainer>
             <SafeAreaView
                 onLayout={_updateLayout}
-                style={backgroundStyle, tailwind('h-full')}
+                style={backgroundStyle}
+                className="h-full"
             >
                 <MainStack />
             </SafeAreaView>

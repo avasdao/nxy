@@ -25,7 +25,6 @@ import { observer } from 'mobx-react-lite'
 
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import LottieView from 'lottie-react-native'
-import tailwind from 'tailwind-rn'
 
 import store from '../store'
 
@@ -60,19 +59,19 @@ const Blank = observer(() => {
         <View>
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                 <Text style={{ fontSize: 30 }}>
-                    Do <Text style={tailwind('font-bold')}>YOU</Text> need help?
+                    Do <Text className="font-bold">YOU</Text> need help?
                 </Text>
 
                 <Pressable onPress={() => navigation.goBack()} title="No thanks" />
             </View>
 
-            <View style={tailwind('py-5 bg-gray-50 items-center')}>
+            <View className="py-5 bg-gray-50 items-center">
                 <LottieView
-                    style={tailwind('h-48')}
+                    className="h-48"
                     source={require('../assets/lottie/couple-talk.json')} autoPlay loop
                 />
 
-                <Text style={tailwind('text-pink-500 font-semibold')}>
+                <Text className="text-pink-500 font-semibold">
                     24 Hour Cafe
                 </Text>
             </View>
