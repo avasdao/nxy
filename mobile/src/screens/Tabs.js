@@ -13,12 +13,12 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
 /* Add (navigation) stacks. */
-import PlaygroundStackScreen from './Blank'
-import WalletStackScreen from './Blank'
+import PlaygroundStackScreen from './Playground'
+import WalletStackScreen from './Wallet'
 
 /* Add (main) screens. */
-import CafeScreen from './Blank'
-import WorkspaceScreen from './Blank'
+import CafeScreen from './Cafe'
+import WorkspaceScreen from './Workspace'
 
 import InfoButton from '../components/InfoButton'
 import MenuButton from '../components/MenuButton'
