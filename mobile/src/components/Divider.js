@@ -12,14 +12,12 @@ import {
     View,
 } from 'react-native'
 
-import tailwind from 'tailwind-rn'
-
 /**
  * Divider
  */
 const Divider = (() => {
     return (
-        <View style={tailwind('border-t border-gray-300 my-2')} />
+        <View className="border-t border-gray-300 my-2" />
     )
 })
 

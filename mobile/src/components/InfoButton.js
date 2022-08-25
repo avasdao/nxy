@@ -22,8 +22,6 @@ import { useNavigation } from '@react-navigation/native'
 
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
-import tailwind from 'tailwind-rn'
-
 /**
  * Information Center Button
  *
@@ -36,7 +34,7 @@ const InfoButton = () => {
     return (
         <Pressable onPress={() => navigation.navigate('Info')}>
             <Ionicons
-                style={tailwind('mr-2 text-yellow-500')}
+                className="mr-2 text-yellow-500"
                 name={'information-circle'}
                 size={36}
             />

@@ -13,12 +13,12 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
 /* Add (navigation) stacks. */
-import PortalsStackScreen from './Blank'
-import TreasuryStackScreen from './Blank'
+import PlaygroundStackScreen from './Blank'
+import WalletStackScreen from './Blank'
 
 /* Add (main) screens. */
 import CafeScreen from './Blank'
-import PortfolioScreen from './Blank'
+import WorkspaceScreen from './Blank'
 
 import InfoButton from '../components/InfoButton'
 import MenuButton from '../components/MenuButton'
@@ -36,7 +36,7 @@ const Tabs = () => {
                 tabBarIcon: ({ focused, color, size }) => {
                     let iconName;
 
-                    if (route.name === 'Portals') {
+                    if (route.name === 'Playground') {
                         iconName = focused
                         ? 'ios-apps'
                         : 'ios-apps-outline'
@@ -44,11 +44,11 @@ const Tabs = () => {
                         iconName = focused
                         ? 'ios-cafe'
                         : 'ios-cafe-outline'
-                    } else if (route.name === 'Portfolio') {
+                    } else if (route.name === 'Workspace') {
                         iconName = focused
                         ? 'ios-bar-chart'
                         : 'ios-bar-chart-outline'
-                    } else if (route.name === 'Treasury') {
+                    } else if (route.name === 'Wallet') {
                         iconName = focused
                         ? 'ios-cash'
                         : 'ios-cash-outline'
@@ -67,16 +67,24 @@ const Tabs = () => {
             })}
         >
             <Tab.Screen
-                name="Portfolio"
-                component={PortfolioScreen}
+                name="Wallet"
+                component={WalletStackScreen}
+                options={{
+                    headerShown: false,
+                }}
+            />
+
+            <Tab.Screen
+                name="Workspace"
+                component={WorkspaceScreen}
                 options={{
                     headerRight: MenuButton,
                 }}
             />
 
             <Tab.Screen
-                name="Treasury"
-                component={TreasuryStackScreen}
+                name="Playground"
+                component={PlaygroundStackScreen}
                 options={{
                     headerShown: false,
                 }}
@@ -88,14 +96,6 @@ const Tabs = () => {
                 options={{
                     headerRight: InfoButton,
                     tabBarBadge: 3,
-                }}
-            />
-
-            <Tab.Screen
-                name="Portals"
-                component={PortalsStackScreen}
-                options={{
-                    headerShown: false,
                 }}
             />
         </Tab.Navigator>

@@ -21,7 +21,6 @@ import { observer } from 'mobx-react-lite'
 
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import LottieView from 'lottie-react-native'
-import tailwind from 'tailwind-rn'
 
 import { ethers, utils, Wallet } from 'ethers'
 
@@ -52,7 +51,7 @@ const Blank = observer(({navigation}) => {
     return (
         <ScrollView
             contentInsetAdjustmentBehavior="automatic"
-            style={tailwind('')}
+            className=""
         >
             <View style={tailwind('bg-gray-800 items-end py-1')}>
                 <Pressable onPress={() => navigation.goBack()}>

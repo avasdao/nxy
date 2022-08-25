@@ -26,8 +26,6 @@ import {
 
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
-import tailwind from 'tailwind-rn'
-
 import LottieView from 'lottie-react-native'
 
 // import { localNotif, schedNotif } from '../NotifManager'
@@ -35,7 +33,7 @@ import LottieView from 'lottie-react-native'
 
 import PushNotificationIOS from '@react-native-community/push-notification-ios'
 
-// import testPortals from './Info/_testPortals'
+// import testPlay from './Info/_testPlay'
 // import testCafe from './Info/_testCafe'
 import testCommunity from './Info/_testCommunity'
 // import testPortfolio from './Info/_testPortfolio'
@@ -44,7 +42,7 @@ import testCommunity from './Info/_testCommunity'
 
 import moment from 'moment'
 
-const testPortals = testCafe = testPortfolio = testReminder = testTreasury = () => {
+const testPlay = testCafe = testPortfolio = testReminder = testTreasury = () => {
     const details = request = {
         id: '1',
         body: `Yeah, so we're starting over..`,
@@ -92,80 +90,80 @@ const Support = () => {
     return (
         <ScrollView
             contentInsetAdjustmentBehavior="automatic"
-            style={tailwind('')}
+            className=""
         >
-            <View style={tailwind('mb-5 p-3')}>
-                <Text style={tailwind('text-3xl text-pink-500')}>
+            <View className="mb-5 p-3">
+                <Text className="text-3xl text-pink-500">
                     Support Center
                 </Text>
 
-                <Text style={tailwind('mt-3 text-lg text-gray-800')}>
+                <Text className="mt-3 text-lg text-gray-800">
                     Culpa et arbitror e minim, hic quis nisi iis singulis, ne malis distinguantur,
                     occaecat reprehenderit aut voluptate. Hic illum ullamco est amet eu ex multos
                     iudicem ea culpa ubi occaecat, velit est fabulas.
                 </Text>
 
-                <View style={tailwind('m-2 flex flex-row justify-around')}>
+                <View className="m-2 flex flex-row justify-around">
                     <Pressable
-                        style={tailwind('w-5/12 p-3 border-2 border-pink-400 bg-pink-200 rounded-xl')}
+                        className="w-5/12 p-3 border-2 border-pink-400 bg-pink-200 rounded-xl"
                         onPress={testCommunity}
                     >
-                        <Text style={tailwind('text-xl text-red-500 font-bold text-center')}>
+                        <Text className="text-xl text-red-500 font-bold text-center">
                             Community
                         </Text>
                     </Pressable>
 
                     <Pressable
-                        style={tailwind('w-5/12 p-3 border-2 border-pink-400 bg-pink-200 rounded-xl')}
+                        className="w-5/12 p-3 border-2 border-pink-400 bg-pink-200 rounded-xl"
                         onPress={testReminder}
                     >
-                        <Text style={tailwind('text-xl text-red-500 font-bold text-center')}>
+                        <Text className="text-xl text-red-500 font-bold text-center">
                             Reminder
                         </Text>
                     </Pressable>
                 </View>
 
-                <View style={tailwind('m-2 flex flex-row justify-around')}>
+                <View className="m-2 flex flex-row justify-around">
                     <Pressable
-                        style={tailwind('w-5/12 p-3 border-2 border-pink-400 bg-pink-200 rounded-xl')}
+                        className="w-5/12 p-3 border-2 border-pink-400 bg-pink-200 rounded-xl"
                         onPress={testPortfolio}
                     >
-                        <Text style={tailwind('text-xl text-red-500 font-bold text-center')}>
+                        <Text className="text-xl text-red-500 font-bold text-center">
                             Portfolio
                         </Text>
                     </Pressable>
 
                     <Pressable
-                        style={tailwind('w-5/12 p-3 border-2 border-pink-400 bg-pink-200 rounded-xl')}
+                        className="w-5/12 p-3 border-2 border-pink-400 bg-pink-200 rounded-xl"
                         onPress={testTreasury}
                     >
-                        <Text style={tailwind('text-xl text-red-500 font-bold text-center')}>
+                        <Text className="text-xl text-red-500 font-bold text-center">
                             Treasury
                         </Text>
                     </Pressable>
                 </View>
 
-                <View style={tailwind('m-2 flex flex-row justify-around')}>
+                <View className="m-2 flex flex-row justify-around">
                     <Pressable
-                        style={tailwind('w-5/12 p-3 border-2 border-pink-400 bg-pink-200 rounded-xl')}
+                        className="w-5/12 p-3 border-2 border-pink-400 bg-pink-200 rounded-xl"
                         onPress={testCafe}
                     >
-                        <Text style={tailwind('text-xl text-red-500 font-bold text-center')}>
+                        <Text className="text-xl text-red-500 font-bold text-center">
                             Café
                         </Text>
                     </Pressable>
 
                     <Pressable
-                        style={tailwind('w-5/12 p-3 border-2 border-pink-400 bg-pink-200 rounded-xl')}
-                        onPress={testPortals}
+                        className="w-5/12 p-3 border-2 border-pink-400 bg-pink-200 rounded-xl"
+                        onPress={testPlay}
                     >
-                        <Text style={tailwind('text-xl text-red-500 font-bold text-center')}>
-                            Portals
+                        <Text className="text-xl text-red-500 font-bold text-center">
+                            Play
                         </Text>
                     </Pressable>
                 </View>
 
-                <Text style={tailwind('mt-3 text-lg text-gray-800')}>
+                <Text className="mt-3 text-lg text-gray-800">
                     Aut duis tempor eu incididunt. O dolor magna sint constias, de export
                     despicationes, singulis an proident quo sunt proident ut efflorescere o aute
                     possumus singulis, de aliqua incurreret distinguantur non cupidatat export
@@ -188,54 +186,54 @@ const Settings = () => {
     return (
         <ScrollView
             contentInsetAdjustmentBehavior="automatic"
-            style={tailwind('')}
+            className=""
         >
-            <View style={tailwind('p-3')}>
-                <Text style={tailwind('text-lg text-gray-800')}>
+            <View className="p-3">
+                <Text className="text-lg text-gray-800">
                     Customize your settings here
                 </Text>
             </View>
 
-            <View style={tailwind('p-3')}>
-                <Text style={tailwind('text-base text-gray-800 font-light')}>
+            <View className="p-3">
+                <Text className="text-base text-gray-800 font-light">
                     Your window features:
                 </Text>
 
-                <Text style={tailwind('ml-3 text-sm text-gray-800')}>
+                <Text className="ml-3 text-sm text-gray-800">
                     Width: {Dimensions.get('window').width}
                 </Text>
 
-                <Text style={tailwind('ml-3 text-sm text-gray-800')}>
+                <Text className="ml-3 text-sm text-gray-800">
                     Height: {Dimensions.get('window').height}
                 </Text>
 
-                <Text style={tailwind('ml-3 text-sm text-gray-800')}>
+                <Text className="ml-3 text-sm text-gray-800">
                     Scale: {Dimensions.get('window').scale}
                 </Text>
 
-                <Text style={tailwind('ml-3 text-sm text-gray-800')}>
+                <Text className="ml-3 text-sm text-gray-800">
                     Font scale: {Dimensions.get('window').fontScale}
                 </Text>
             </View>
 
-            <View style={tailwind('p-3')}>
-                <Text style={tailwind('text-base text-gray-800')}>
+            <View className="p-3">
+                <Text className="text-base text-gray-800">
                     Your screen features:
                 </Text>
 
-                <Text style={tailwind('ml-3 text-sm text-gray-800')}>
+                <Text className="ml-3 text-sm text-gray-800">
                     Width: {Dimensions.get('screen').width}
                 </Text>
 
-                <Text style={tailwind('ml-3 text-sm text-gray-800')}>
+                <Text className="ml-3 text-sm text-gray-800">
                     Height: {Dimensions.get('screen').height}
                 </Text>
 
-                <Text style={tailwind('ml-3 text-sm text-gray-800')}>
+                <Text className="ml-3 text-sm text-gray-800">
                     Scale: {Dimensions.get('screen').scale}
                 </Text>
 
-                <Text style={tailwind('ml-3 text-sm text-gray-800')}>
+                <Text className="ml-3 text-sm text-gray-800">
                     Font scale: {Dimensions.get('screen').fontScale}
                 </Text>
             </View>
@@ -249,29 +247,29 @@ const Settings = () => {
  */
 function Info({navigation}) {
     return (
-        <View style={tailwind('h-full')}>
-            <View style={tailwind('bg-gray-800 items-end py-1')}>
+        <View className="h-full">
+            <View className="bg-gray-800 items-end py-1">
                 <Pressable onPress={() => navigation.goBack()}>
                     <Ionicons
-                        style={tailwind('mr-2 text-gray-300')}
+                        className="mr-2 text-gray-300"
                         name={'close-outline'}
                         size={40}
                     />
                 </Pressable>
             </View>
 
-            <View style={tailwind('py-5 bg-purple-200 items-center')}>
+            <View className="py-5 bg-purple-200 items-center">
                 <LottieView
-                    style={tailwind('h-24')}
+                    className="h-24"
                     source={require('../assets/lottie/customer-support.json')} autoPlay loop
                 />
 
-                <Text style={tailwind('text-purple-500 font-semibold')}>
+                <Text className="text-purple-500 font-semibold">
                     24 Customer Support Center
                 </Text>
             </View>
 
-            <Tab.Navigator style={tailwind('')}>
+            <Tab.Navigator className="">
                 <Tab.Screen
                     name="Support"
                     component={Support}
