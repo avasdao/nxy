@@ -1,4 +1,4 @@
-import { useId, useRef, useState } from 'react'
+import { useId, useRef, useState, useEffect } from 'react'
 import Image from 'next/future/image'
 import clsx from 'clsx'
 import { motion, useInView, useMotionValue } from 'framer-motion'
@@ -335,13 +335,27 @@ function AppDemo() {
 }
 
 export function Hero() {
+    // let [radicalTarget, setRadicalTarget] = useState(null)
+    // let [radicalTarget, setRadicalTarget] = useState('Creators')
+
+    // useEffect(() => {
+    //     setInterval(() => {
+    //         if (radicalTarget == 'Providers')
+    //             setRadicalTarget('Creators')
+    //         else if (radicalTarget == 'Creators')
+    //             setRadicalTarget('Users')
+    //         else
+    //             setRadicalTarget('Providers')
+    //     }, 5000)
+    // }, [])
+
     return (
         <div className="overflow-hidden py-20 sm:py-32 lg:pb-32 xl:pb-36">
             <Container>
                 <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
                     <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
                         <h1 className="text-4xl font-medium tracking-tight text-gray-900">
-                            An <em class="text-rose-500">Uncensorable</em> Metaverse<br />for our <em class="text-rose-500">Radical</em> Creators
+                            An <em className="text-rose-500">Uncensorable</em> Metaverse<br />for our <em className="text-rose-500">Radical</em> hi
                         </h1>
 
                         <p className="mt-6 text-lg text-gray-600">

@@ -38,20 +38,20 @@ const Tabs = () => {
 
                     if (route.name === 'Playground') {
                         iconName = focused
-                        ? 'ios-apps'
-                        : 'ios-apps-outline'
+                        ? 'ios-game-controller'
+                        : 'ios-game-controller-outline'
                     } else if (route.name === 'Café') {
                         iconName = focused
                         ? 'ios-cafe'
                         : 'ios-cafe-outline'
                     } else if (route.name === 'Workspace') {
                         iconName = focused
-                        ? 'ios-bar-chart'
-                        : 'ios-bar-chart-outline'
+                        ? 'ios-briefcase'
+                        : 'ios-briefcase-outline'
                     } else if (route.name === 'Wallet') {
                         iconName = focused
-                        ? 'ios-cash'
-                        : 'ios-cash-outline'
+                        ? 'ios-wallet'
+                        : 'ios-wallet-outline'
                     }
 
                     /* Return (tab) icon. */
