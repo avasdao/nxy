@@ -11,26 +11,29 @@ import { Reviews } from '@/components/Reviews'
 import { SecondaryFeatures } from '@/components/SecondaryFeatures'
 
 export default function Home() {
-  return (
-    <>
-      <Head>
-        <title>Nexaverse: Bleeding Edge Crypto Communities</title>
-        <meta
-          name="description"
-          content="Nexaverse."
-        />
-      </Head>
-      <Header />
-      <main>
-        <Hero />
-        <PrimaryFeatures />
-        <SecondaryFeatures />
-        <CallToAction />
-        <Reviews />
-        <Pricing />
-        <Faqs />
-      </main>
-      <Footer />
-    </>
-  )
+    return (
+        <>
+            <Head>
+                <title>Nexaverse: Uncensorable Metaverse for Radical Builders</title>
+                <meta
+                    name="description"
+                    content="Providing an identity-safe, transparent and uncensorable Metaverse built to empower our world's most Radical Builders to realize their wildest dreams."
+                />
+            </Head>
+
+            <Header />
+
+            <main>
+                <Hero />
+                <PrimaryFeatures />
+                <SecondaryFeatures />
+                <CallToAction />
+                <Reviews />
+                <Pricing />
+                <Faqs />
+            </main>
+
+            <Footer />
+        </>
+    )
 }
