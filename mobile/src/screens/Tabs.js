@@ -13,12 +13,11 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
 /* Add (navigation) stacks. */
-import PlaygroundStackScreen from './Playground'
-import WalletStackScreen from './Wallet'
+import ExplorerStackScreen from './Explorer'
+import WealthStackScreen from './Wealth'
 
 /* Add (main) screens. */
 import CafeScreen from './Cafe'
-import WorkspaceScreen from './Workspace'
 
 import InfoButton from '../components/InfoButton'
 import MenuButton from '../components/MenuButton'
@@ -36,22 +35,18 @@ const Tabs = () => {
                 tabBarIcon: ({ focused, color, size }) => {
                     let iconName;
 
-                    if (route.name === 'Playground') {
+                    if (route.name === 'Explorer') {
                         iconName = focused
-                        ? 'ios-game-controller'
-                        : 'ios-game-controller-outline'
+                        ? 'ios-rocket'
+                        : 'ios-rocket-outline'
                     } else if (route.name === 'Café') {
                         iconName = focused
                         ? 'ios-cafe'
                         : 'ios-cafe-outline'
-                    } else if (route.name === 'Workspace') {
+                    } else if (route.name === 'Wealth') {
                         iconName = focused
-                        ? 'ios-briefcase'
-                        : 'ios-briefcase-outline'
-                    } else if (route.name === 'Wallet') {
-                        iconName = focused
-                        ? 'ios-wallet'
-                        : 'ios-wallet-outline'
+                        ? 'ios-cash'
+                        : 'ios-cash-outline'
                     }
 
                     /* Return (tab) icon. */
@@ -67,24 +62,16 @@ const Tabs = () => {
             })}
         >
             <Tab.Screen
-                name="Wallet"
-                component={WalletStackScreen}
+                name="Wealth"
+                component={WealthStackScreen}
                 options={{
                     headerShown: false,
                 }}
             />
 
             <Tab.Screen
-                name="Workspace"
-                component={WorkspaceScreen}
-                options={{
-                    headerRight: MenuButton,
-                }}
-            />
-
-            <Tab.Screen
-                name="Playground"
-                component={PlaygroundStackScreen}
+                name="Explorer"
+                component={ExplorerStackScreen}
                 options={{
                     headerShown: false,
                 }}
