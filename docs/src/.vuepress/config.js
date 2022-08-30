@@ -57,7 +57,7 @@ module.exports = {
           collapsable: false,
           children: [
             '',
-            'using-vue',
+            'exchange',
           ]
         }
       ],
@@ -67,7 +67,7 @@ module.exports = {
           collapsable: false,
           children: [
             '',
-            'using-vue',
+            'games',
           ]
         }
       ],
@@ -77,7 +77,7 @@ module.exports = {
           collapsable: false,
           children: [
             '',
-            'using-vue',
+            'kickbacks',
           ]
         }
       ],
