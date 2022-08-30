@@ -24,6 +24,7 @@ import {
 import {NavigationContainer} from '@react-navigation/native'
 
 import Bugsnag from '@bugsnag/react-native'
+import { ampli } from './ampli'
 
 import DeviceInfo from 'react-native-device-info'
 
@@ -120,6 +121,12 @@ const App = () => {
 
                 /* Save userid. */
                 saveUserid(uid)
+
+                /* Record user id. */
+                ampli.identify('user-id', {
+                    uid,
+                    deviceId,
+                })
             } catch (err) {
                 console.error('SESSION ERROR', err)
             }
@@ -128,6 +135,9 @@ const App = () => {
 
         /* Fetch device info. */
         fetchDeviceInfo()
+
+        /* Record new user session. */
+        ampli.newUserSession()
     })
 
     /* Initialize Bugsnag. */

@@ -1,6 +1,6 @@
 {
   "name": "nexaverse-mobile",
-  "version": "22.8.15",
+  "version": "22.8.30",
   "license": "MIT",
   "scripts": {
     "android": "react-native run-android",
@@ -10,6 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@amplitude/react-native": "2.14.0",
     "@bugsnag/plugin-react-navigation": "7.16.0",
     "@bugsnag/react-native": "7.16.0",
     "@ethersproject/shims": "5.5.0",
