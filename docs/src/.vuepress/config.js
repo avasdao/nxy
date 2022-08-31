@@ -67,7 +67,10 @@ module.exports = {
           collapsable: false,
           children: [
             '',
-            'games',
+            'gaming-kit',
+            'game-design',
+            'game-mechanics',
+            'merchants-kit',
           ]
         }
       ],
@@ -77,7 +80,9 @@ module.exports = {
           collapsable: false,
           children: [
             '',
+            'validators',
             'kickbacks',
+            'token-mining',
           ]
         }
       ],

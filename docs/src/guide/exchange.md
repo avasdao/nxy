@@ -8,6 +8,8 @@ __The following asset pairs are currently supported:__
 1. NEX/AVAX
 2. NEX/BCH
 3. NEX/BTC
+4. NEX/USDC
+5. NEX/USDT
 
 ## Market Orders
 
