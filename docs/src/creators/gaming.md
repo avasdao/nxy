@@ -1,4 +1,4 @@
-# Gaming
+# Gaming Spaces
 
 Creating a game is a great way to earn residual income in the Nexaverse.
 

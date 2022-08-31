@@ -72,12 +72,15 @@ module.exports = {
           collapsable: false,
           children: [
             '',
+            'spaces',
             'gaming',
             'gaming-kit',
             'game-design',
             'game-mechanics',
-            'merchants-kit',
-            'influencers-kit',
+            'merchant',
+            'merchant-kit',
+            'studio',
+            'studio-kit',
           ]
         }
       ],

@@ -29,7 +29,7 @@ Here is a sample file:
 
 ### Category
 
-This the category of your Nexaverse Space.
+This the category of your Nexaverse [Space](spaces).
 
 ### Title
 
@@ -59,6 +59,8 @@ One of the leading HTML5 game engines.
 ## Phaser
 
 Phaser is good for developing cross-platform game applications. Its support for a wide range of plugins and the large community of developers building games with Phaser makes it very easy to get started with the framework.
+
+![Phaser Screenshot](https://i.ibb.co/sJVnnRn/image.png)
 
 ### Let’s build a basic application with Phaser
 
