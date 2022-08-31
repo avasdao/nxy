@@ -39,22 +39,25 @@ const Search = (_props) => {
 
     return (
         <View
-            className="bg-gray-800 border-2 border-gray-800 rounded-lg"
+            className="flex flex-row items-center bg-gray-800 border-2 border-gray-800 rounded-lg"
             style={_props.style}
         >
+            <View className="ml-2">
+                <Ionicons
+                    className="ml-5 top-2 text-gray-200"
+                    name={'search'}
+                    size={36}
+                    color={'#acacec'}
+                />
+            </View>
+
             <TextInput
-                className="h-14 pl-14 pb-3 text-xl text-gray-300 font-medium"
+                className="h-14 ml-3 pb-3 text-xl text-gray-300 font-medium"
                 onChangeText={_handleInput}
                 onFocus={() => alert('Search is NOT enabled in this DEMO')}
                 value={queryText}
                 placeholder={_props.placeholder}
                 placeholderTextColor="#AAA"
-            />
-
-            <Ionicons
-                className="absolute left-3 top-2 text-gray-500"
-                name={'search'}
-                size={36}
             />
         </View>
     )

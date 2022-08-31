@@ -57,7 +57,12 @@ module.exports = {
           collapsable: false,
           children: [
             '',
-            'exchange',
+            'wealth',
+            'wallet',
+            'assets',
+            'treasury',
+            'spaces',
+            'cafe',
           ]
         }
       ],
