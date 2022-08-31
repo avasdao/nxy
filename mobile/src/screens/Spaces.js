@@ -26,6 +26,9 @@ import { ethers, utils } from 'ethers'
 
 import store from '../store'
 
+import Divider from '../components/Divider'
+import Search from '../components/Search'
+
 /**
  * Playground Screen
  */
@@ -45,11 +48,24 @@ const Playground = observer(({navigation}) => {
         fetchInfo()
     }, [])
 
+    /* Handle search query. */
+    const _handleQuery = (_query) => {
+        console.log('QUERY (props):', _query)
+    }
+
     return (
         <ScrollView
             contentInsetAdjustmentBehavior="automatic"
             className=""
         >
+            <Search
+                className="mx-2 mt-2 mb-1"
+                onQuery={_handleQuery}
+                placeholder="What are you looking for?"
+            />
+
+            <Divider />
+
             <View className="py-6 items-center">
                 <View className="bg-pink-200 px-3 py-2 rounded-full">
                     <Text className="text-pink-800 text-xl font-semibold">

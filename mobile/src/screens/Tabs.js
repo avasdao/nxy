@@ -13,7 +13,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
 /* Add (navigation) stacks. */
-import ExplorerStackScreen from './Explorer'
+import SpacesStackScreen from './Spaces'
 import WealthStackScreen from './Wealth'
 
 /* Add (main) screens. */
@@ -35,10 +35,10 @@ const Tabs = () => {
                 tabBarIcon: ({ focused, color, size }) => {
                     let iconName;
 
-                    if (route.name === 'Explorer') {
+                    if (route.name === 'Spaces') {
                         iconName = focused
-                        ? 'ios-rocket'
-                        : 'ios-rocket-outline'
+                        ? 'ios-grid'
+                        : 'ios-grid-outline'
                     } else if (route.name === 'Café') {
                         iconName = focused
                         ? 'ios-cafe'
@@ -70,8 +70,8 @@ const Tabs = () => {
             />
 
             <Tab.Screen
-                name="Explorer"
-                component={ExplorerStackScreen}
+                name="Spaces"
+                component={SpacesStackScreen}
                 options={{
                     headerShown: false,
                 }}
