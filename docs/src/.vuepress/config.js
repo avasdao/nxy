@@ -53,7 +53,7 @@ module.exports = {
     sidebar: {
       '/guide/': [
         {
-          title: 'User Guide',
+          title: `User's Guide`,
           collapsable: false,
           children: [
             '',
@@ -68,20 +68,22 @@ module.exports = {
       ],
       '/creators/': [
         {
-          title: 'Creator Guide',
+          title: `Creator's Guide`,
           collapsable: false,
           children: [
             '',
+            'gaming',
             'gaming-kit',
             'game-design',
             'game-mechanics',
             'merchants-kit',
+            'influencers-kit',
           ]
         }
       ],
       '/investors/': [
         {
-          title: 'Investor Guide',
+          title: `Investor's Guide`,
           collapsable: false,
           children: [
             '',
