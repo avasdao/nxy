@@ -1,6 +1,6 @@
 {
   "name": "nexaverse-mobile",
-  "version": "22.8.30",
+  "version": "22.9.7",
   "license": "MIT",
   "scripts": {
     "android": "react-native run-android",
