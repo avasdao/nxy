@@ -2,7 +2,7 @@
 
 ### ↳ https://nexaverse.net
 
-Operating the most advanced EVM blockchain powered by [Avalanche Subnets](https://docs.avax.network/subnets).
+Operating the most advanced EVM blockchain powered by one of either [__Avalanche Subnets__](https://docs.avax.network/subnets) or [__Polygon Supernets__](https://polygon.technology/supernets/).
 
 # Table of contents
 

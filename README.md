@@ -1,12 +1,8 @@
 # Nexaverse
 
-### https://nexaverse.org
+### ↳ https://nexaverse.org
 
-A casual gaming Web3 community.
-
-community-driven network within Ava
-
-> Nexaverse is powered by Ava's Virtual Machine (AvasVM).
+Creating a Space for Creators to design, build & grow their own economies.
 
 # Table of contents
 
@@ -22,5 +18,22 @@ community-driven network within Ava
 _TBD_
 
 ## Getting Started
+
+_TBD_
+
+
+## Product
+
+_TBD_
+
+## Use Cases
+
+_TBD_
+
+## Team
+
+_TBD_
+
+## Go-To-Market Strategy
 
 _TBD_

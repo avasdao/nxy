@@ -2,4 +2,4 @@
 
 Welcome to the Nexaverse.
 
-Let's take a trip down the rabbit hole.
+If you're looking for that "special something" that you never knew you needed, then you've come to the right place.

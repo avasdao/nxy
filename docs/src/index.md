@@ -1,15 +1,15 @@
 ---
 home: true
 heroImage: https://nexaverse.org/logo.png
-tagline: A virtual playground where Creators and Investors meet to build their wildest dreams.
-actionText: Quick Start →
-actionLink: /guide/
+tagline: Discover how Creators and Investors are BUIDLing Web3 experiences for an all-new community of Users.
+actionText: Ready? Let's GO! →
+actionLink: /creators/
 features:
 - title: Play. Watch. Love!
-  details: There is no shortage of activities to occupy your time.
-- title: Monetize Your Vision
-  details: Creators are blessed with countless channels of monetization.
-- title: Premium ROI
-  details: Dozens of channels to earn residual revenues from projects.
+  details: Users will come to find that special "something" they never knew they wanted and now need!
+- title: Monetize Your Dreams
+  details: Creators will be blessed with dozens of monetization opportunities for funding their dreams.
+- title: A Premium ROI
+  details: Investors will find an infinite number of revenue channels to safely earn residual income from their crypto holdings.
 footer: Made by Ava's DAO with ❤️
 ---
