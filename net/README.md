@@ -1,6 +1,6 @@
-# Nexaverse Subnet
+# Nexaverse Network
 
-### https://nexaverse.net
+↳ https://nexaverse.net
 
 Operating the most advanced EVM blockchain powered by [Avalanche Subnets](https://docs.avax.network/subnets).
 
