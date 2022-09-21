@@ -52,11 +52,15 @@ The publishing date of your game.
 The last time your game was updated.
 
 
-## Construct 3
+## GDevelop
 
-One of the leading HTML5 game engines.
+![GDevelop banner](https://i.ibb.co/ZNMVZ53/image.png)
+
+This is one of the most popular game creation studios for beginners.
 
 ## Phaser
+
+> __You should know! —__ This game engine is meant for __intermediate to advanced__ game developers.
 
 Phaser is good for developing cross-platform game applications. Its support for a wide range of plugins and the large community of developers building games with Phaser makes it very easy to get started with the framework.
 
@@ -96,4 +100,8 @@ function create() {
 
 ## Blender
 
+> __You should know! —__ This application is meant for __advanced__ game developers.
+
 Design, build and integrate your 3D models with ease.
+
+![Blender screenshot](https://i.ibb.co/gJjqFY2/image.png)

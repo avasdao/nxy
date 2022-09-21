@@ -2,7 +2,7 @@
 
 ### ↳ https://nexaverse.net
 
-Connect to the Nexaverse Subnet to begin your journey down the rabbit hole.
+Connect to the __Nexaverse Network__ to begin your journey down the rabbit hole.
 
 
 # Table of contents
@@ -58,14 +58,13 @@ Nexaverse
 ### Chain ID
 
 Chain ID (Mainnet): __0x1c3b | 7227__
+> _NOTE: This ID matches the RPC port number used by the Nexa full node._
 
 Chain ID (Testnet): __0x434b | 17227__
 
-// TODO: Confirm ID availability.
-
 ### Token
 
-NEXV
+NEX
 
 ### Block Explorer
 
@@ -84,6 +83,7 @@ There are three (3) "official" testnets for Nexaverse.
 ### Buckhead (Leading Edge)
 
 ↳ https://buckhead.nexaverse.net
+> _Chain ID (Testnet): __0x434b | 17227___
 
 A perfect replica/clone of the Mainnet architecture and configuration.
 
@@ -92,10 +92,12 @@ A perfect replica/clone of the Mainnet architecture and configuration.
 Designed to test new VM features and configurations.
 
 ↳ https://peachtree.nexaverse.net
+> _Chain ID (Testnet): __0x | 27227___
 
 ### Alpharetta (Infinity Edge)
 
 ↳ https://alpharetta.nexaverse.net
+> _Chain ID (Testnet): __0x | 37227___
 
 Designed to simulate stress testing the Mainnet.
 
