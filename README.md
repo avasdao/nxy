@@ -17,6 +17,7 @@ Providing a safe [__Space__](http://docs.nexaverse.org/creators/spaces.html) for
 
 Nexaverse lives as a side-chain to a bleeding-edge UTXO blockchain called [__Nexa__](https://www.nexa.org/). Together they form a bond that covers the best of both blockchain universes; providing __Users__, __BUIDLers__ and __Investors__ with the luxury of choice!
 
+
 ## Getting Started
 
 _TBD_
@@ -26,17 +27,33 @@ _TBD_
 
 _TBD_
 
+
 ## Use Cases
 
 _TBD_
+
 
 ## Team
 
 _TBD_
 
+
 ## Go-To-Market Strategy
 
 _TBD_
+
+
+## Code Highlights
+
+We've implemented over a dozen innovations into the Nexaverse mobile app. The following notable features are:
+
+- Moralis
+- Filecoin
+- Polygon
+- Chainlink
+- Valist
+- XMTP
+
 
 ## Roadmap: Past, Present and Future 🚀
 
