@@ -30,7 +30,6 @@ build/
 local.properties
 *.iml
 *.hprof
-.cxx/
 
 # node.js
 #
@@ -62,3 +61,4 @@ buck-out/
 # Ruby / CocoaPods
 /ios/Pods/
 /vendor/bundle/
+.secrets.json
