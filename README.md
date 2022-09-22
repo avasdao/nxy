@@ -2,7 +2,7 @@
 
 ### ↳ https://nexaverse.org
 
-Providing a safe [__Space__](http://docs.nexaverse.org/creators/spaces.html) for Creators to each design, build & grow their own token economies.
+Providing a safe [__Space__](http://docs.nexaverse.org/creators/spaces.html) for Creators to each design, build & grow their own crypto economies.
 
 # Table of contents
 
@@ -149,17 +149,17 @@ Here are some of the most commonly asked questions about the Nexaverse.
 
 ### Why are you using PoW and not PoS to produce a Space's assets?
 
-Although we're now post "Merge", it is our experience that PoW will offer a greater defense against the ever fearful [__Howey Test__](https://www.investopedia.com/terms/h/howey-test.asp); and give our user community a greater assurance when creating and managing their token economies.
+Although we're now post "Merge", it is our experience that PoW will offer a greater defense against the ever fearful [__Howey Test__](https://www.investopedia.com/terms/h/howey-test.asp); and give our user community a greater assurance when creating and managing their crypto economies.
 
 ### What is 0xNEX?
 
-__0xNEX__ is the base token asset of the Nexaverse. This token is bridged from the [__Nexa blockchain__](https://www.nexa.org/) via the [__Nexa Exchange__](https://nexa.exchange). __$NEX__ is the native coin/currency of Nexa.
+__0xNEX__ is the base coin/asset of the Nexaverse. This coin is bridged from the [__Nexa blockchain__](https://www.nexa.org/) via the [__Nexa Exchange__](https://nexa.exchange). __$NEX__ is the native coin/asset of Nexa.
 
 _1 0xNEX = 1 $NEX_
 
-### What is the USD value of 1 (One) 0xNEX token?
+### What is the USD value of 1 (One) 0xNEX coin?
 
-At the time of this writing, 0xNEX has no face value, as there are currently NO exchanges supporting the token.
+At the time of this writing, 0xNEX has no face value, as there are currently NO exchanges supporting this asset.
 
 
 ## Get In Touch
