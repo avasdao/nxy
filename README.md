@@ -43,7 +43,7 @@ _TBD_
 _TBD_
 
 
-## Code Highlights
+## Technologies Used
 
 We've implemented over a dozen innovations into the Nexaverse mobile app. The following notable features are:
 
@@ -99,6 +99,10 @@ Here are some of the most commonly asked questions about the Nexaverse.
 ### Why are you using PoW and not PoS to produce a Space's assets?
 
 Although we're now post "Merge", it is our experience that PoW will offer a greater defense against the ever fearful [__Howey Test__](https://www.investopedia.com/terms/h/howey-test.asp); and give our user community a greater assurance when creating and managing their token economies.
+
+### What is the USD value of 1 NEX coin?
+
+At the time of this writing, NEX has no face value, as there are currently NO exchanges supporting the coin.
 
 
 ## Get In Touch
