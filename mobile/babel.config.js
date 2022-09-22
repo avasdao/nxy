@@ -1,10 +1,9 @@
 module.exports = {
-  presets: ['module:metro-react-native-babel-preset'],
-  plugins: [
-    ['@babel/plugin-transform-flow-strip-types'],
-    ['@babel/plugin-proposal-decorators', { 'legacy': true }],
-    ['@babel/plugin-proposal-class-properties', { 'loose': true }],
-    'react-native-reanimated/plugin',
-    'nativewind/babel',
+  presets: [
+    [
+      'module:metro-react-native-babel-preset',
+      // Prevents unnecessary babel transform BigInt to number for Hermes.
+      {unstable_transformProfile: 'hermes-stable'},
+    ],
   ],
-}
+};
