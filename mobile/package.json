@@ -12,6 +12,8 @@
   "dependencies": {
     "@amplitude/react-native": "2.14.0",
     "@azure/core-asynciterator-polyfill": "1.0.2",
+    "@bugsnag/plugin-react-navigation": "7.18.0",
+    "@bugsnag/react-native": "7.18.0",
     "@ethersproject/shims": "5.7.0",
     "@peculiar/webcrypto": "1.4.0",
     "@react-native-async-storage/async-storage": "1.17.10",

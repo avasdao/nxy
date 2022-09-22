@@ -9,8 +9,6 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "@bugsnag/plugin-react-navigation": "7.16.0",
-    "@bugsnag/react-native": "7.16.0",
     "react-native-camera": "4.2.1",
   },
   "devDependencies": {
