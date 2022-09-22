@@ -47,12 +47,37 @@ _TBD_
 
 We've implemented over a dozen innovations into the Nexaverse mobile app. The following notable features are:
 
-- Moralis
-- Filecoin
-- Polygon
-- Chainlink
-- Valist
-- XMTP
+### Moralis
+
+We're using the Moralis Web3 APIs to power ALL of our blockchain communications.
+
+Our team will soon be looking to install a `parse-server` and make the migration to [__self-hosting__](https://docs.moralis.io/docs/v1-server-self-hosting).
+
+__You can see our integration in the following source code:__
+
+- [`/mobile/package.json`](https://github.com/avasdao/nexaverse/blob/feba822624204eb796c40bb425bc34716fe02d58/mobile/package.json#L29)
+- `/mobile/src/App.js`
+
+
+### Filecoin
+
+We're using the Filecoin system via [__Fleek__](https://fleek.co/) to store media for our user's Spaces.
+
+__You can see our integration in the following source code:__
+
+- `/mobile/screens/Spaces.js`
+
+### Polygon
+
+_TBD_
+
+### Valist
+
+_TBD_
+
+### XMTP
+
+_TBD_
 
 
 ## Roadmap: Past, Present and Future 🚀
