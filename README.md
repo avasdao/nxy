@@ -35,10 +35,18 @@ Your NEW path to financial freedom is just a few minutes away..
 
 The Nexaverse mobile app aims to offer a Creator everything from A to Z, so they can hold the keys to their own financial future.
 
+__Presenting a comprehensive suite of tools & services:__
+
+- Web3 Site Builder
+- Merge Mining Software
+- Market Maker Bot
+
 
 ## Use Cases
 
-We aim to support Creators from all walks of life. During our initial (MVP) launch, we're targeting the following sectors:
+We aim to support Creators from all walks of life.
+
+__During our initial (MVP) launch, we'll be targeting the following sectors:__
 
 1. Gaming
 2. Podcasts
