@@ -45,39 +45,65 @@ _TBD_
 
 ## Technologies Used
 
-We've implemented over a dozen innovations into the Nexaverse mobile app. The following notable features are:
+Our team has integrated over a dozen Web3 innovations into our all-NEW Nexaverse mobile app. Below we detail some of our most noteworthy implementations 👇
 
 ### Filecoin
 
 We're using the Filecoin system via [__Fleek__](https://fleek.co/) to store media for our user's Spaces.
 
-__You can view our integration in the following source code:__
+__You can view our implementation in the following source code:__
 
-- `/mobile/screens/Spaces.js`
+- `/mobile/screens/Spaces.js` _(line ##)_
 
 ### Moralis
 
-We're using the Moralis Web3 APIs to power ALL of our blockchain communications.
+We're using the [__Moralis Web3 APIs__](https://v1docs.moralis.io/moralis-dapp/web3-api) to power ALL of our blockchain communications. Nexaverse currently supports both the Mainnet and Testnet for the following blockchains:
 
-Our team will soon be looking to install a `parse-server` and make the migration to a [__self-hosted Moralis server__](https://docs.moralis.io/docs/v1-server-self-hosting).
+1. Polygon _(MATIC)_
+2. Ethereum _(ETH)_
+3. Avalanche _(AVAX)_
+4. Binance _(BSC)_
 
-__You can view our integration in the following source code:__
+Our team will soon be looking to install a __`parse-server`__ and make the migration to a [__self-hosted Moralis server__](https://docs.moralis.io/docs/v1-server-self-hosting).
+
+__You can view our implementation in the following source code:__
 
 - [`/mobile/package.json`](https://github.com/avasdao/nexaverse/blob/feba822624204eb796c40bb425bc34716fe02d58/mobile/package.json#L29) _(line 29)_
-- `/mobile/src/App.js`
+- `/mobile/src/App.js` _(line ##)_
 
 
 ### Polygon
 
-_TBD_
+We've chosen Polygon as our default blockchain for its:
+
+- Speed to finality
+- Scalability
+- Low gas fees
+- Security
+- Developer support
+
+> ___Please Note:__ We're currently considering migrating to a [__Polygon Supernet__](https://polygon.technology/supernets/), which would allow our team even greater control of our back-end infrastructure & application security._
+
+__You can view our implementation in the following source code:__
+
+- [`/contracts/Spaces.sol`](https://github.com/avasdao/nexaverse/blob/master/contracts/Spaces.sol)
+- `/mobile/screens/Spaces.js` _(line ##)_
 
 ### Valist
 
-_TBD_
+We're using the Filecoin system via [__Fleek__](https://fleek.co/) to store media for our user's Spaces.
+
+__You can view our implementation in the following source code:__
+
+- `/mobile/components/GamesGallery.js` _(line ##)_
 
 ### XMTP
 
-_TBD_
+We're using the Filecoin system via [__Fleek__](https://fleek.co/) to store media for our user's Spaces.
+
+__You can view our implementation in the following source code:__
+
+- `/mobile/screens/Messenger.js` _(line ##)_
 
 
 ## Roadmap: Past, Present and Future 🚀
@@ -125,16 +151,23 @@ Here are some of the most commonly asked questions about the Nexaverse.
 
 Although we're now post "Merge", it is our experience that PoW will offer a greater defense against the ever fearful [__Howey Test__](https://www.investopedia.com/terms/h/howey-test.asp); and give our user community a greater assurance when creating and managing their token economies.
 
-### What is the USD value of 1 NEX coin?
+### What is 0xNEX?
 
-At the time of this writing, NEX has no face value, as there are currently NO exchanges supporting the coin.
+__0xNEX__ is the base token asset of the Nexaverse. This token is bridged from the [__Nexa blockchain__](https://www.nexa.org/) via the [__Nexa Exchange__](https://nexa.exchange). __$NEX__ is the native coin/currency of Nexa.
+
+_1 0xNEX = 1 $NEX_
+
+### What is the USD value of 1 (One) 0xNEX token?
+
+At the time of this writing, 0xNEX has no face value, as there are currently NO exchanges supporting the token.
 
 
 ## Get In Touch
 
 Please feel free to contact me _(and my team)_ using your preferred channel.
 
+- Twitter: [__0xShomari__](https://twitter.com/0xShomari) _(dms are open)_
+- Matrix: [__@nyusternie:matrix.org__](https://matrix.to/#/@nyusternie:matrix.org)
 - Email _(personal)_: __s [dot] prince [at] modenero [dot] com__
 - Email _(work)_: __support [at] modenero [dot] com__
-- Twitter: [__0xShomari__](https://twitter.com/0xShomari)
 - Slack: [__modenero.slack.com__](https://modenero.slack.com/)
