@@ -2,7 +2,7 @@
 
 ### ↳ https://nexaverse.org
 
-Providing a safe [__Space__](http://docs.nexaverse.org/creators/spaces.html) for Creators to each design, build & grow their own crypto economies.
+Providing a safe [__Space__](http://docs.nexaverse.org/creators/spaces.html) for Creators to each __Design__, __Build__ & __Grow__ their own crypto economies.
 
 # Table of contents
 
@@ -35,7 +35,9 @@ _TBD_
 
 ## Team
 
-_TBD_
+Ava's DAO is lead by [__0xShomari__](https://twitter.com/0xShomari).
+
+We aim to have the support of the Georgia Tech's [__Advanced Technology Development Center__](https://atdc.org/) in HOTlanta.
 
 
 ## Go-To-Market Strategy
