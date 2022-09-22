@@ -20,13 +20,13 @@ Nexaverse lives as a side-chain to a bleeding-edge UTXO blockchain called [__Nex
 
 ## Getting Started
 
-Your NEW financial freedom is just minutes away..
+Your NEW path to financial freedom is just a few minutes away..
 
 1. [__Download the app__](https://nexaverse.org/download) from your preferred app store.
 2. Click on the __Spaces__ tab.
 3. Click on __'Create a New Space'__.
 4. Enter a __name__ for your new Space.
-5. Take _(or upload)_ a __photo/image__ of your Space's cover.
+5. Take _(or upload)_ a __photo/image__ for your Space's cover.
 6. Choose a __3-5 character symbol__ for your Space's $COIN.
 7. __Profit!__ 🤑
 
@@ -49,14 +49,26 @@ We aim to support Creators from all walks of life. During our initial (MVP) laun
 
 Nexaverse is built and managed by [__Ava's DAO__](https://avasdao.org); which is lead by [__0xShomari__](https://twitter.com/0xShomari).
 
-Following the hackathon, we aim apply for the support of the Georgia Tech's [__Advanced Technology Development Center__](https://atdc.org/) in HOTlanta.
+Following the hackathon, we aim apply for support from Georgia Tech's [__Advanced Technology Development Center__](https://atdc.org/) in HOTlanta.
 
-As an alumni of ATDC, Shomari has the knowledge & experience needed to maximize the opportunities presented by this highly-successful organization.
+As an alumni of ATDC, Shomari has the right connections, knowledge & experience needed to maximize the opportunities presented by this highly-successful organization.
+
+> ___Please Note —__ None of the following team roles have been finalized as yet. These are ONLY the expected candidates (based on early discussions & past experience) and are subject to change._
+
+- __Yassine —__ _Business Development_
+- __Samson —__ _Financial Services_
+- __Akilah —__ _Sales & Marketing Director_
+- __Salah —__ _Senior Software Developer_
+- __Christa —__ _Community Relations_
 
 
 ## Go-To-Market Strategy
 
-_TBD_
+Please take a look at our "public" data room 👇
+
+- __Lean Canvas —__ https://canvas.nexaverse.org
+- __Product Tour —__ https://tour.nexaverse.org
+- __Business Plan__ _(coming soon)_
 
 
 ## Technologies Used
@@ -98,7 +110,7 @@ We've chosen Polygon as our default blockchain for its:
 - Security
 - Developer support
 
-> ___Please Note:__ We're currently considering migrating to a [__Polygon Supernet__](https://polygon.technology/supernets/), which would allow our team even greater control of our back-end infrastructure & application security._
+> ___Please Note —__ We're currently considering migrating to a [__Polygon Supernet__](https://polygon.technology/supernets/), which would allow our team even greater control of our back-end infrastructure & application security._
 
 __You can view our implementation in the following source code:__
 
