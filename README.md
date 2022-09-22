@@ -33,12 +33,16 @@ Your NEW financial freedom is just minutes away..
 
 ## Product
 
-_TBD_
+The Nexaverse mobile app aims to offer a Creator everything from A to Z, so they can hold the keys to their own financial future.
 
 
 ## Use Cases
 
-_TBD_
+We aim to support Creators from all walks of life. During our initial (MVP) launch, we're targeting the following sectors:
+
+1. Gaming
+2. Podcasts
+3. Fashion
 
 
 ## Team
