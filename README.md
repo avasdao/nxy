@@ -2,7 +2,7 @@
 
 ### ↳ https://nexaverse.org
 
-Providing a safe [__Space__](http://docs.nexaverse.org/creators/spaces.html) for Creators to each __Design__, __Build__ & __Grow__ their own crypto economies.
+Providing a safe & secure [__Space__](http://docs.nexaverse.org/creators/spaces.html) for Creators to each __Design__, __Build__ & __Grow__ their own crypto economies.
 
 # Table of contents
 
@@ -20,7 +20,15 @@ Nexaverse lives as a side-chain to a bleeding-edge UTXO blockchain called [__Nex
 
 ## Getting Started
 
-_TBD_
+Your NEW financial freedom is just minutes away..
+
+1. [__Download the app__](https://nexaverse.org/download) from your preferred app store.
+2. Click on the __Spaces__ tab.
+3. Click on __'Create a New Space'__.
+4. Enter a __name__ for your new Space.
+5. Take _(or upload)_ a __photo/image__ of your Space's cover.
+6. Choose a __3-5 character symbol__ for your Space's $COIN.
+7. __Profit!__ 🤑
 
 
 ## Product
