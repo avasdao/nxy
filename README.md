@@ -47,9 +47,11 @@ We aim to support Creators from all walks of life. During our initial (MVP) laun
 
 ## Team
 
-Ava's DAO is lead by [__0xShomari__](https://twitter.com/0xShomari).
+Nexaverse is built and managed by [__Ava's DAO__](https://avasdao.org); which is lead by [__0xShomari__](https://twitter.com/0xShomari).
 
-We aim to have the support of the Georgia Tech's [__Advanced Technology Development Center__](https://atdc.org/) in HOTlanta.
+Following the hackathon, we aim apply for the support of the Georgia Tech's [__Advanced Technology Development Center__](https://atdc.org/) in HOTlanta.
+
+As an alumni of ATDC, Shomari has the knowledge & experience needed to maximize the opportunities presented by this highly-successful organization.
 
 
 ## Go-To-Market Strategy
