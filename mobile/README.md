@@ -9,7 +9,7 @@ This code should only be **used experimentally** as we work to remove our depend
 ## Getting started
 
 1. Follow the [React Native guide](https://reactnative.dev/docs/environment-setup) to set up CLI environment
-1. Clone this repo and `cd example_chat_rn`
+1. Clone this repo and `cd nexaverse`
 1. Edit the blockchain account address in [App.tsx](https://github.com/xmtp/example-chat-react-native/blob/main/App.tsx)'s `sendGm()` to point to the recipient's address
 1. Run `npx react-native start` to start Metro
 1. Run `npx react-native run-ios` or `npx react-native run-android` to run the app

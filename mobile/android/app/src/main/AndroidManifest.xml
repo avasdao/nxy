@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.example_chat_rn">
+  package="org.nexaverse">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
