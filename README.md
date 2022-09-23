@@ -49,8 +49,8 @@ We aim to support Creators from all walks of life.
 __During our initial (MVP) launch, we'll be targeting the following sectors:__
 
 1. Gaming
-2. Podcasts
-3. Fashion
+2. Art & Fashion
+3. Influencers
 
 
 ## Team
