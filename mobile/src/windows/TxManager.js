@@ -18,7 +18,7 @@ import {
     View,
 } from 'react-native'
 
-import { observer } from 'mobx-react-lite'
+import { observer } from 'mobx-react'
 
 import { useNavigationContainerRef } from '@react-navigation/native'
 
@@ -29,7 +29,6 @@ import tailwind from 'tailwind-rn'
 import LottieView from 'lottie-react-native'
 
 import 'react-native-get-random-values'
-import '@ethersproject/shims'
 import { ethers, utils, Wallet } from 'ethers'
 
 import moment from 'moment'

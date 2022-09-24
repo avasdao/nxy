@@ -17,8 +17,11 @@ import {
 } from 'react-native'
 
 import App from './src/App'
+// import App from './App'
 
 import {name as appName} from './src/app.json'
+
+if (!new class { x }().hasOwnProperty('x')) throw new Error('Transpiler is not configured correctly');
 
 /* Disable log warnings. */
 LogBox.ignoreLogs([

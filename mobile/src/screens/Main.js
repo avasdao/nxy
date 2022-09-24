@@ -22,12 +22,12 @@ import {
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 /* Add (top-level) screens. */
-import InfoScreen from './Info'
+// import InfoScreen from './Info'
 import TabsScreen from './Tabs'
 
 /* Add (modal) windows. */
-import EarlyPreviewWin from '../windows/EarlyPreview'
-import TxManagerWin from '../windows/TxManager'
+// import EarlyPreviewWin from '../windows/EarlyPreview'
+// import TxManagerWin from '../windows/TxManager'
 
 /* Initialize navigators. */
 const HomeStack = createNativeStackNavigator()
@@ -41,12 +41,7 @@ const Home = () => {
             screenOptions={{ headerShown: false }}
         >
             <HomeStack.Screen name="Start" component={TabsScreen} />
-            <HomeStack.Screen name="Info" component={InfoScreen} />
 
-            <HomeStack.Group screenOptions={{ presentation: 'modal' }}>
-                <HomeStack.Screen name="EarlyPreview" component={EarlyPreviewWin} />
-                <HomeStack.Screen name="TxManager" component={TxManagerWin} />
-            </HomeStack.Group>
         </HomeStack.Navigator>
     )
 }

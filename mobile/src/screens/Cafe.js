@@ -17,7 +17,7 @@ import {
     View,
 } from 'react-native'
 
-import { observer } from 'mobx-react-lite'
+import { observer } from 'mobx-react'
 
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import LottieView from 'lottie-react-native'
