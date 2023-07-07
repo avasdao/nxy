@@ -2,7 +2,9 @@
 
 ### ↳ https://nexaverse.org
 
-Providing a safe & secure [__Space__](http://docs.nexaverse.org/creators/spaces.html) for Creators to each __Design__, __Build__ & __Grow__ their own crypto economies.
+> Uncensorable Crypto Spaces (UCS) -- For Our Most Radical Creators
+
+Providing safe & secure [__Spaces__](http://docs.nexaverse.org/creators/spaces.html) for creators to __Design__, __Build__ & __Grow__ their own "private" economies.
 
 # Table of contents
 
