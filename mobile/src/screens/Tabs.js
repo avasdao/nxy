@@ -8,9 +8,16 @@
 
 import React from 'react'
 
+import {
+    Image,
+    Text,
+} from 'react-native'
+
+
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import Ionicons from 'react-native-vector-icons/Ionicons'
+// import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 
 /* Add (navigation) stacks. */
 import SpacesStackScreen from './Spaces'
@@ -50,10 +57,9 @@ const Tabs = () => {
                     }
 
                     /* Return (tab) icon. */
-                    return <Ionicons
-                        name={iconName}
-                        size={size}
-                        color={color}
+                    return <Image
+                        source={require('../assets/logo.png')}
+                        style={{ width: 24, height: 24 }}
                     />
                 },
                 tabBarActiveTintColor: 'tomato',
