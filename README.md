@@ -2,9 +2,7 @@
 
 ### ↳ https://nexaverse.org
 
-> Uncensorable Private Spaces (UPS) -- For Our Most Radical Creators
-
-Providing safe & secure [__Spaces__](http://docs.nexaverse.org/creators/spaces.html) for creators to __Design__, __Build__ & __Grow__ their own _"private"_ economies.
+Introducing safe & secure [__Spaces__](http://docs.nexaverse.org/creators/spaces.html) for creators to __Design__, __Build__ & __Grow__ their own _"private"_ economies.
 
 # Table of contents
 
