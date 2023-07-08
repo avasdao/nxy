@@ -2,7 +2,7 @@
 
 ### ↳ https://nexaverse.org
 
-Introducing safe & secure [__Spaces__](http://docs.nexaverse.org/creators/spaces.html) for creators to __Design__, __Build__ & __Grow__ their own _"private"_ economies.
+Introducing safe & secure [__Spaces__](http://docs.nexaverse.org/creators/spaces.html) for Creators to __Build__, __Grow__ and __Profit__ from their _own community's_ economy.
 
 # Table of contents
 
