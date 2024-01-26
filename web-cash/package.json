@@ -1,0 +1,29 @@
+{
+  "name": "avas-cash",
+  "version": "23.11.22",
+  "license": "MIT",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@bitauth/libauth": "1.19.1",
+    "@pinia/nuxt": "0.4.7",
+    "firebase": "10.1.0",
+    "moment": "2.29.4",
+    "nexajs": "23.11.14",
+    "numeral": "2.0.6",
+    "nuxt": "3.0.0",
+    "pinia": "2.0.32",
+    "qr-scanner": "1.4.2",
+    "qrcode": "1.5.3",
+    "uuid": "9.0.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/i18n": "8.0.0-rc.2",
+    "@nuxtjs/tailwindcss": "6.4.1"
+  }
+}

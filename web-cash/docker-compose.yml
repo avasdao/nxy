@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  app:
+    build: .
+    image: avas-cash
+    container_name: avas-cash
+    restart: unless-stopped
+    # network_mode: 'host'
+    ports:
+      - '127.0.0.1:3000:3000'
+    environment:
+      - COUCHDB_USER=${COUCHDB_USER}
+      - COUCHDB_PASSWORD=${COUCHDB_PASSWORD}
+    logging: # apply better controls to Docker overlay folder
+      driver: 'json-file'
+      options:
+        max-file: '5'
+        max-size: '10m'

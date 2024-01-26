@@ -1,0 +1,10 @@
+{
+  "ticker": "AVAS",
+  "name": "Ava's Cash",
+  "summary": "Official Governance Token of Ava's DAO",
+  "description": "Ava's DAO is a non-profit organization on a mission to build and manage a comprehensive suite of products & services with the prime directive of assuring financial freedom for every man, woman and child.",
+  "legal": "Every $AVAS holder is permitted to Vote (on-chain) for public proposals. 'Qualified' $AVAS holders receive Daily Payouts (to their respective Nexa or Meta address) from revenues deposited into Ava's Treasury.",
+  "creator": "Ava's DAO",
+  "contact": { "address": "3455 Peachtree Rd NE, Suite #500, Atlanta, GA 30326", "email": "support@avasdao.org", "twitter.com": "@AvasDAO" },
+  "icon": "/icon.svg"
+}

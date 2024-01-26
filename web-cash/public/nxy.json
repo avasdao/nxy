@@ -1,0 +1,12 @@
+[{
+  "ticker": "NXY",
+  "name": "Nxy",
+  "summary": "Official token of Nxy, the fastest, cheapest and most uncensorable social network in existence.",
+  "description": "A fairly launched community token, packed with over 1K+ mutable proof-of-work (PoW) mining algorithms, offering indefinite support for both CPU and GPU mining rewards.",
+  "legal": "Every $NXY holder is permitted to Vote (on-chain) on ALL public proposals created by the Nxy community.",
+  "creator": "Ava's DAO",
+  "contact": { "address": "3455 Peachtree Rd NE, Suite #500, Atlanta, GA 30326", "email": "support@avasdao.org", "twitter.com": "@AvasDAO" },
+  "icon": "/icon.svg"
+},
+ "<signature-goes-here>"
+]
