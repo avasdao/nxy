@@ -1,17 +1,17 @@
 # Gaming Spaces
 
-Creating a game is a great way to earn residual income in the Nexaverse.
+Creating a game is a great way to earn residual income in Nxy.
 
 ![Games banner](https://i.ibb.co/d2vPq8s/image.png)
 
-Games can be played on your TV, while using your mobile device as a controller. Visit [nexaverse.net](https://nexaverse.net) using your smart TV web browser.
+Games can be played on your TV, while using your mobile device as a controller. Visit [nxy.app](https://nxy.app) using your smart TV web browser.
 
 > __You should know! —__ It's highly recommended that all Gaming Spaces use the __Real Money Gaming (RMG)__ blockchain to efficiently & effectively manage all of their counterparty matches.
 
 
 ## Revenue Opportunities
 
-There are ample channels to earn revenue in the Nexaverse:
+There are ample channels to earn revenue in Nxy:
 1. Investor / liquidity pools
 2. Token mining
 3. Streaming payments
@@ -21,4 +21,4 @@ There are ample channels to earn revenue in the Nexaverse:
 For every $1.00 earned by a game:
 - 30% is paid to Investors _(aka Liquidity Providers)_
 - 60% is paid to the Creators
-- 10% is held by the Nexaverse Treasury
+- 10% is held by Nxy Treasury

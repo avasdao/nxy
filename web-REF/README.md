@@ -1,6 +1,6 @@
-# Nexaverse Web
+# Nxy Web
 
-### https://nexaverse.org
+### https://nxy.app
 
 A bleeding edge blockchain community for Builders and Creators.
 

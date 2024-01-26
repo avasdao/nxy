@@ -1,6 +1,6 @@
 # My Treasury
 
-Protect your assets with the full security of the entire Nexaverse Federation of Validators.
+Protect your assets with the full security of the entire Nxy Federation of Validators.
 
 
 ## Federation Vault

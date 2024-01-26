@@ -31,7 +31,7 @@ import LottieView from 'lottie-react-native'
  */
 const openWebHome = async () => {
     /* Set URL. */
-    const url = 'https://nexaverse.org'
+    const url = 'https://nxy.app'
 
     /* Open URL. */
     await Linking.openURL(url)

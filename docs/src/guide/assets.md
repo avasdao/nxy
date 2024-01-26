@@ -4,7 +4,7 @@
 
 [https://nexa.exchange](https://nexa.exchange)
 
-Nexaverse makes it quick and easy to exchange your assets (incl. cross chain).
+Nxy makes it quick and easy to exchange your assets (incl. cross chain).
 
 __The following asset pairs are currently supported:__
 1. NEX/AVAX
@@ -36,7 +36,7 @@ All accounts are created using a 3-of-5 multiple signature vault. Account signat
 
 #### User wallet
 
-This public key is managed by the Nexaverse application.
+This public key is managed by Nxy application.
 
 #### Two-factor authentication
 

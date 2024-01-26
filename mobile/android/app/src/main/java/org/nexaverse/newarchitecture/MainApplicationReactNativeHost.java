@@ -1,4 +1,4 @@
-package org.nexaverse.newarchitecture;
+package org.nxy.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import org.nexaverse.BuildConfig;
-import org.nexaverse.newarchitecture.components.MainComponentsRegistry;
-import org.nexaverse.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import org.nxy.BuildConfig;
+import org.nxy.newarchitecture.components.MainComponentsRegistry;
+import org.nxy.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

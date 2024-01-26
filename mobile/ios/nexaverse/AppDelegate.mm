@@ -47,7 +47,7 @@ RCTAppSetupPrepareApp(application);
 #endif
 
   NSDictionary *initProps = [self prepareInitialProps];
-  UIView *rootView = RCTAppSetupDefaultRootView(bridge, @"nexaverse", initProps);
+  UIView *rootView = RCTAppSetupDefaultRootView(bridge, @"nxy", initProps);
 
   if (@available(iOS 13.0, *)) {
     rootView.backgroundColor = [UIColor systemBackgroundColor];

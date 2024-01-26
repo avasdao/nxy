@@ -1,6 +1,6 @@
-# Nexaverse Network
+# Nxy Network
 
-### ↳ https://nexaverse.net
+### ↳ https://nxy.app
 
 Operating the most advanced EVM blockchain powered by one of either [__Avalanche Subnets__](https://docs.avax.network/subnets) or [__Polygon Supernets__](https://polygon.technology/supernets/).
 
@@ -50,7 +50,7 @@ https://github.com/avasdao/avasvm
 
 Gas fees are dynamically adjusted based on the application and the current load on the network.
 
-> It is highly encouraged to migrate to a private Subnet in the case of consistently high gas fees. The Nexaverse Migration Toolkit (NMT) makes the process effortless for both developers and users.
+> It is highly encouraged to migrate to a private Subnet in the case of consistently high gas fees. The Nxy Migration Toolkit (NMT) makes the process effortless for both developers and users.
 
 
 ## MetaMask Setup
@@ -59,13 +59,13 @@ It takes less than a minute to get setup. First make sure that you have MetaMask
 
 ### Network Name
 
-Nexaverse
+Nxy
 
 ### RPC Endpoint
 
-↳ https://nexaverse.net/mainnet _(Mainnet)_
+↳ https://nxy.app/mainnet _(Mainnet)_
 
-↳ https://nexaverse.net/buckhead _(Buckhead Testnet)_
+↳ https://nxy.app/buckhead _(Buckhead Testnet)_
 
 ### Chain ID
 
@@ -80,7 +80,7 @@ NEX
 
 ### Block Explorer
 
-↳ https://nexaverse.info (Mainnet + All Testnets)
+↳ https://nxy.info (Mainnet + All Testnets)
 
 
 ## Mainnet
@@ -90,11 +90,11 @@ The main network is for production-ready applications.
 
 ## Testnets
 
-There are three (3) "official" testnets for Nexaverse.
+There are three (3) "official" testnets for Nxy.
 
 ### Buckhead (Leading Edge)
 
-↳ https://buckhead.nexaverse.net
+↳ https://buckhead.nxy.app
 > _Chain ID (Testnet): __0x434b | 17227___
 
 A perfect replica/clone of the Mainnet architecture and configuration.
@@ -103,12 +103,12 @@ A perfect replica/clone of the Mainnet architecture and configuration.
 
 Designed to test new VM features and configurations.
 
-↳ https://peachtree.nexaverse.net
+↳ https://peachtree.nxy.app
 > _Chain ID (Testnet): __0x | 27227___
 
 ### Alpharetta (Infinity Edge)
 
-↳ https://alpharetta.nexaverse.net
+↳ https://alpharetta.nxy.app
 > _Chain ID (Testnet): __0x | 37227___
 
 Designed to simulate stress testing the Mainnet.

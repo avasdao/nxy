@@ -372,7 +372,7 @@ export function Hero() {
                         </h1>
 
                         <p className="mt-6 text-lg text-gray-600">
-                            Nexaverse introduces an economicaly self-sustaining community that values privacy FIRST; allowing the world's MOST adventurous Users &amp; Providers to realize their wildest dreams.
+                            Nxy introduces an economicaly self-sustaining community that values privacy FIRST; allowing the world's MOST adventurous Users &amp; Providers to realize their wildest dreams.
                         </p>
 
                         <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">

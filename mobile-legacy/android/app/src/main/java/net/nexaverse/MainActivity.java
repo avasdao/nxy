@@ -1,4 +1,4 @@
-package net.nexaverse;
+package net.nxy;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "nexaverse";
+    return "nxy";
   }
 }

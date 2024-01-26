@@ -7,7 +7,7 @@ pragma solidity ^0.8.0;
  * Copyright (c) 2022 Ava's DAO
  * Released under the MIT License.
  *
- * Spaces - Manager for each Space in the Nexaverse.
+ * Spaces - Manager for each Space in Nxy.
  *
  * Version 22.9.21
  *

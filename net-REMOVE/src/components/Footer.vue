@@ -2,7 +2,7 @@
     <footer class="-mt-5 sm:-mt-6 flex justify-center text-gray-500 text-xs sm:text-sm">
         <span class="inline">
             Copyright &copy; {{curYear}}.
-            <a class="text-blue-400 font-medium hover:underline" href="https://nexaverse.net" target="_blank">Ava's DAO</a>.
+            <a class="text-blue-400 font-medium hover:underline" href="https://nxy.app" target="_blank">Ava's DAO</a>.
         </span>
 
         <span class="hidden sm:inline ml-1">

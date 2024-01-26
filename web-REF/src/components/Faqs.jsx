@@ -12,7 +12,7 @@ const faqs = [
     {
       question: 'Isn’t this insider trading?',
       answer:
-        'Yes exactly. But at scale! Historically you could only make insider trades with knowledge from your direct network. Nexaverse brings you insider trading tips from people you don’t even know.',
+        'Yes exactly. But at scale! Historically you could only make insider trades with knowledge from your direct network. Nxy brings you insider trading tips from people you don’t even know.',
     },
     {
       question: 'But isn’t insider trading illegal?',
@@ -27,12 +27,12 @@ const faqs = [
         'Again I would argue this isn’t really our responsibility. People make their own choices. If they don’t research the consequences that’s on them, not on us.',
     },
     {
-      question: 'Where is Nexaverse based?',
+      question: 'Where is Nxy based?',
       answer:
         'Let’s just say it’s not somewhere where the SEC is going to find us.',
     },
     {
-      question: 'Is there any age limit to trading on Nexaverse?',
+      question: 'Is there any age limit to trading on Nxy?',
       answer:
         'For our free plan, the age limit is based on the minimum age to trade in your country of residence. Our VIP plan uses advanced transaction anonymization though, so you can use that plan even if you’re 9 years old. Or a dog.',
     },
@@ -44,9 +44,9 @@ const faqs = [
         'Honestly we were surprised too, but eventually we found out that the app reviewer found the app so compelling they approved it just so they could use it themselves.',
     },
     {
-      question: 'How do I explain the money I withdraw from Nexaverse to the IRS?',
+      question: 'How do I explain the money I withdraw from Nxy to the IRS?',
       answer:
-        'This feels like one-hundred percent a you problem. Nexaverse is not responsible in any way for your tax returns.',
+        'This feels like one-hundred percent a you problem. Nxy is not responsible in any way for your tax returns.',
     },
     {
       question: 'How do I become an insider?',

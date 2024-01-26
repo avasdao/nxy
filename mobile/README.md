@@ -1,8 +1,8 @@
-# Nexaverse Mobile
+# Nxy Mobile
 
-### https://nexaverse.app
+### https://nxy.app
 
-The "official" Nexaverse app for Android and iOS.
+The "official" Nxy app for Android and iOS.
 
 # Table of contents
 

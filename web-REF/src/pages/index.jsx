@@ -14,7 +14,7 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>Nexaverse: A Space for Radical Creators</title>
+                <title>Nxy: A Space for Radical Creators</title>
                 <meta
                     name="description"
                     content="Providing an identity-safe, transparent and uncensorable Metaverse built to empower our world's most Radical Builders to realize their wildest dreams."

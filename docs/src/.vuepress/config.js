@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Nexaverse Docs',
+  title: 'Nxy Docs',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -46,8 +46,8 @@ module.exports = {
         link: '/investors/'
       },
       {
-        text: 'Launch Nexaverse',
-        link: 'https://nexaverse.net'
+        text: 'Launch Nxy',
+        link: 'https://nxy.app'
       }
     ],
     sidebar: {

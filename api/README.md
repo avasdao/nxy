@@ -1,8 +1,8 @@
-# Nexaverse API
+# Nxy API
 
-### https://api.nexaverse.net
+### https://api.nxy.app
 
-The "official" Nexaverse app for Android and iOS.
+The "official" Nxy app for Android and iOS.
 
 # Table of contents
 

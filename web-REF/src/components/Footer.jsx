@@ -33,7 +33,7 @@ export function Footer() {
                             <Image
                                 src={logo}
                                 className="h-10 w-10 flex-none fill-cyan-500"
-                                alt="Nexaverse logo"
+                                alt="Nxy logo"
                                 width="64px"
                                 height="64px"
                             />

@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: https://nexaverse.org/logo.png
+heroImage: https://nxy.app/logo.png
 tagline: Discover how Creators and Investors are BUIDLing Web3 experiences for an all-new community of Users.
 actionText: Ready? Let's GO! →
 actionLink: /creators/

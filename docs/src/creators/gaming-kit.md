@@ -29,7 +29,7 @@ Here is a sample file:
 
 ### Category
 
-This the category of your Nexaverse [Space](spaces).
+This the category of your Nxy [Space](spaces).
 
 ### Title
 

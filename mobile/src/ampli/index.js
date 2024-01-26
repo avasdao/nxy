@@ -12,9 +12,9 @@
  * Build: 1.0.0
  * Runtime: react-native:javascript-ampli
  *
- * [View Tracking Plan](https://data.amplitude.com/modenero-corp/Nexaverse/events/main/latest)
+ * [View Tracking Plan](https://data.amplitude.com/modenero-corp/Nxy/events/main/latest)
  *
- * [Full Setup Instructions](https://data.amplitude.com/modenero-corp/Nexaverse/implementation/mobile)
+ * [Full Setup Instructions](https://data.amplitude.com/modenero-corp/Nxy/implementation/mobile)
  */
 
 import {
@@ -271,7 +271,7 @@ export class Ampli {
   /**
    * newUserSession
    *
-   * [View in Tracking Plan](https://data.amplitude.com/modenero-corp/Nexaverse/events/main/latest/newUserSession)
+   * [View in Tracking Plan](https://data.amplitude.com/modenero-corp/Nxy/events/main/latest/newUserSession)
    *
    * Triggered when a user connects to the app.
    *
