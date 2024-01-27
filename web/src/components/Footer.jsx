@@ -40,11 +40,11 @@ export function Footer() {
 
                             <div className="ml-4">
                                 <p className="text-base font-semibold">
-                                    NEXAVERSE
+                                    NXY
                                 </p>
 
                                 <p className="mt-1 text-sm w-96">
-                                Providing an identity-safe, transparent and uncensorable Metaverse built to empower our world's most <span className="font-semibold">Radical Builders</span> to realize their wildest dreams.
+                                Providing safe & secure Spaces for Creators to Build, Grow & Profit from their own *exclusive* token economies.
                                 </p>
                             </div>
                         </div>
@@ -93,7 +93,7 @@ export function Footer() {
                     </form>
 
                     <p className="mt-6 text-sm text-gray-500 md:mt-0">
-                        &copy; Copyright {new Date().getFullYear()}. Ava's DAO. All rights reserved.
+                        &copy; Copyright {new Date().getFullYear()}. Ava&apos;s DAO. All rights reserved.
                     </p>
                 </div>
             </Container>
