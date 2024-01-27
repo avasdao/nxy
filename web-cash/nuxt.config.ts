@@ -6,9 +6,9 @@ export default defineNuxtConfig({
         head: {
             charset: 'utf-8',
             viewport: 'width=device-width, initial-scale=1',
-            title: `Ava's Cash`,
+            title: `Nxy Cash`,
             meta: [
-                { name: 'description', content: `The "official" governance token for Ava's DAO. Offering the Best Crypto Experience (CX) For Your Money®, plus daily $NEXA payouts to "qualified" HODLers.` },
+                { name: 'description', content: `Providing safe & secure Spaces for Creators to Build, Grow & Profit from their own *exclusive* token economies.` },
             ],
             link: [
                 { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

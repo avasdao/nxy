@@ -1,8 +1,8 @@
 <script setup lang="ts">
 useHead({
-    title: `Palms d'Iamante — Ava's Cash`,
+    title: `Palms d'Iamante — Nxy Cash`,
     meta: [
-        { name: 'description', content: `Ava's Cash makes building your next BIG idea effortless.` }
+        { name: 'description', content: `Nxy Cash makes building your next BIG idea effortless.` }
     ],
 })
 

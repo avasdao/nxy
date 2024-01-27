@@ -82,7 +82,7 @@ onMounted(() => {
                     <div class="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
                         <div class="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
                             <h1 class="text-6xl font-bold tracking-tight text-rose-400 sm:text-8xl">
-                                Ava's Cash
+                                Nxy Cash
                             </h1>
 
                             <h2 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">

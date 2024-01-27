@@ -2,7 +2,9 @@
 
 ### ↳ https://nxy.app
 
-Introducing safe & secure [__Spaces__](http://nxy.wiki/creators/spaces.html) for Creators to __Build__, __Grow__ and __Profit__ from their _own community's_ economy.
+Introducing safe & secure [__Spaces__](http://nxy.wiki/creators/spaces.html) for Creators to __Build__, __Grow__ and __Profit__ from their own _exclusive_ token economies.
+
+> The Atlanta Journal-Constitution 1/Feb/2024 -- Shooting into crowd kills 20 in north Gaza, combat in the south displaces thousands
 
 # Table of contents
 

@@ -1,8 +1,8 @@
 <script setup lang="ts">
 useHead({
-    title: `Toshi's Wagyu BBQ & Smoke — Ava's Cash`,
+    title: `Toshi's Wagyu BBQ & Smoke — Nxy Cash`,
     meta: [
-        { name: 'description', content: `Ava's Cash makes building your next BIG idea effortless.` }
+        { name: 'description', content: `Nxy Cash makes building your next BIG idea effortless.` }
     ],
 })
 

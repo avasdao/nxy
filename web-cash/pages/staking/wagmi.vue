@@ -1,8 +1,8 @@
 <script setup lang="ts">
 useHead({
-    title: `Wagmi Cattle Ranch & Brewery — Ava's Cash`,
+    title: `Wagmi Cattle Ranch & Brewery — Nxy Cash`,
     meta: [
-        { name: 'description', content: `Ava's Cash makes building your next BIG idea effortless.` }
+        { name: 'description', content: `Nxy Cash makes building your next BIG idea effortless.` }
     ],
 })
 

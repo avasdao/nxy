@@ -1,4 +1,4 @@
-# Ava's Cash
+# Nxy Cash
 
 ### https://avas.cash
 

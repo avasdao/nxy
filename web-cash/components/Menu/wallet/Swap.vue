@@ -55,7 +55,7 @@ const makeSwap = async () => {
             <div @click="isShowingNexa = false; isShowingAvas = true" class="px-2 flex-1 h-24 sm:h-32 flex justify-center items-center border border-rose-500 rounded-lg shadow bg-gradient-to-b from-rose-400 to-rose-200">
                 <div class="flex flex-col items-center">
                     <h2 class="text-2xl sm:text-3xl text-rose-900 font-medium whitespace-nowrap">
-                        Ava's Cash
+                        Nxy Cash
                     </h2>
 
                     <h3 class="text-sm sm:text-base text-rose-700 font-medium">
