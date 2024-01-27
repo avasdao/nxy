@@ -360,7 +360,7 @@ export function Hero() {
         // setInterval(_handleTarget, 5000)
 
         setIsRunning(true)
-    }, [])
+    }, [isRunning])
 
     return (
         <div className="overflow-hidden py-20 sm:py-32 lg:pb-32 xl:pb-36">
@@ -372,7 +372,7 @@ export function Hero() {
                         </h1>
 
                         <p className="mt-6 text-lg text-gray-600">
-                            Nxy introduces an economicaly self-sustaining community that values privacy FIRST; allowing the world's MOST adventurous Users &amp; Providers to realize their wildest dreams.
+                            Nxy introduces an economicaly self-sustaining community that values privacy FIRST; allowing the world&apos;s MOST adventurous Users &amp; Providers to realize their wildest dreams.
                         </p>
 
                         <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
