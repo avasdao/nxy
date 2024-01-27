@@ -14,10 +14,10 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>Nxy: A Space for Radical Creators</title>
+                <title>Nxy — Uncensored Creator Spaces</title>
                 <meta
                     name="description"
-                    content="Providing an identity-safe, transparent and uncensorable Metaverse built to empower our world's most Radical Builders to realize their wildest dreams."
+                    content="Providing safe & secure Spaces for Creators to Build, Grow & Profit from their own *exclusive* token economies."
                 />
             </Head>
 
