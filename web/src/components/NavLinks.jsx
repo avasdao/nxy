@@ -8,7 +8,7 @@ export function NavLinks() {
     return [
         ['Download App', '#download'],
         ['For Users', '#for-users'],
-        ['For Builders', '#for-builders'],
+        ['For Creators', '#for-creators'],
         ['FAQs', '#faqs'],
     ].map(([label, href], index) => (
         <Link
