@@ -13,7 +13,7 @@ const props = defineProps({
 import { useWalletStore } from '@/stores/wallet'
 const Wallet = useWalletStore()
 
-/* Set ($AVAS) token id. */
+/* Set ($NXY) token id. */
 const AVAS_TOKENID = 'nexa:tptlgmqhvmwqppajq7kduxenwt5ljzcccln8ysn9wdzde540vcqqqcra40x0x'
 
 const amount = ref(null)
@@ -32,7 +32,7 @@ const totalTokens = computed(() => {
 })
 
 const send = async (_amount) => {
-    /* Set ($AVAS) token id. */
+    /* Set ($NXY) token id. */
     const AVAS_TOKENID = 'nexa:tptlgmqhvmwqppajq7kduxenwt5ljzcccln8ysn9wdzde540vcqqqcra40x0x'
 
     /* Set token id. */
@@ -43,7 +43,7 @@ const send = async (_amount) => {
 
     const displayAmount = parseFloat(_amount) / 1e8
 
-    if (confirm(`Are you sure you want to STAKE ${numeral(displayAmount).format('0,0.00[000000]')} $AVAS to your Stakehouse?`)) {
+    if (confirm(`Are you sure you want to STAKE ${numeral(displayAmount).format('0,0.00[000000]')} $NXY to your Stakehouse?`)) {
         const response = await Wallet.makeReservation(_amount)
         console.log('RESPONSE', response)
 
@@ -249,7 +249,7 @@ const stakeCustom = () => {
                                 <input
                                     type="number"
                                     class="mt-3 w-full px-5 py-5 text-2xl text-yellow-900 bg-yellow-100 border-b-8 border-yellow-400 rounded-xl shadow-md placeholder:text-yellow-600 focus:outline-none"
-                                    placeholder="enter amount of $AVAS"
+                                    placeholder="enter amount of $NXY"
                                     v-model="amount"
                                 />
 

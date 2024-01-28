@@ -88,7 +88,7 @@ onMounted(() => {
                 </NuxtLink>
 
                 <NuxtLink to="/token" class="text-xl font-semibold leading-6 text-gray-900">
-                    $AVAS
+                    $NXY
                 </NuxtLink>
 
                 <NuxtLink to="/help" class="text-xl font-semibold leading-6 text-gray-900">

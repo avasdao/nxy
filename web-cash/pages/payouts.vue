@@ -55,8 +55,8 @@ const System = useSystemStore()
                             </h1>
 
                             <p class="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
-                                $AVAS HODLers are eligible to receive Daily $NEXA Payouts, sent each day at 04:20 UTC directly to their Nexa address.
-                                Stake your $AVAS today and start receiving automatic payouts for up to 1-year.
+                                $NXY HODLers are eligible to receive Daily $NEXA Payouts, sent each day at 04:20 UTC directly to their Nexa address.
+                                Stake your $NXY today and start receiving automatic payouts for up to 1-year.
                                 Earn additional rewards along the way to compound your Payouts up to 10X.
                             </p>
                         </div>

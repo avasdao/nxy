@@ -13,7 +13,7 @@ const isShowingNexa = ref(false)
 const makeSwap = async () => {
     const msg = `Are you sure you want to continue with this Swap:
 
-        ↪ You are sending ( 1.00 ) $AVAS
+        ↪ You are sending ( 1.00 ) $NXY
         ↪ You are receiving ( ~1,337.88 ) $NEXA
     `
     if (confirm(msg)) {
@@ -124,7 +124,7 @@ const makeSwap = async () => {
         <section v-if="isShowingAvas || isShowingNexa" class="grid grid-cols-2 gap-y-2">
             <div class="col-span-2 pb-3 flex justify-center">
                 <span class="text-sm text-sky-700 font-medium tracking-widest">
-                    1.00 $AVAS = 1,337.88 $NEXA
+                    1.00 $NXY = 1,337.88 $NEXA
                 </span>
             </div>
 

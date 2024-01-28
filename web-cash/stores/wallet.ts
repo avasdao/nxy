@@ -56,7 +56,7 @@ let secp256k1
     secp256k1 = await instantiateSecp256k1()
 })()
 
-/* Set ($AVAS) token id. */
+/* Set ($NXY) token id. */
 const AVAS_TOKENID = '57f46c1766dc0087b207acde1b3372e9f90b18c7e67242657344dcd2af660000'
 
 const TX_GAS_AMOUNT = 1000 // 10.00 NEXA

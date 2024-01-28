@@ -6,9 +6,9 @@
 
 ## Purpose
 
-1. Every $AVAS holder is permitted to __Vote__ _(on-chain)_ for public proposals.
+1. Every $NXY holder is permitted to __Vote__ _(on-chain)_ for public proposals.
 
-2. "Qualified" $AVAS holders receive __Daily Payouts__ _(to their respective Nexa or Meta address)_ from revenues deposited into Ava's Treasury.
+2. "Qualified" $NXY holders receive __Daily Payouts__ _(to their respective Nexa or Meta address)_ from revenues deposited into Ava's Treasury.
 
 ## About
 

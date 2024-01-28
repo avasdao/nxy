@@ -27,7 +27,7 @@ const { locale } = useI18n()
 
                 <div class="pb-6">
                     <NuxtLink to="/token" class="text-sm sm:text-lg leading-6 text-gray-600 hover:text-gray-900">
-                        $AVAS
+                        $NXY
                     </NuxtLink>
                 </div>
 

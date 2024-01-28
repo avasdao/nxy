@@ -94,7 +94,7 @@ onMounted(() => {
 
                                 <ul class="list-disc pl-10 pt-2 leading-8 text-lg text-gray-600">
                                     <li>Vote on governance proposals</li>
-                                    <li>HODL your $AVAS for payouts</li>
+                                    <li>HODL your $NXY for payouts</li>
                                     <li>Receive future $TOKEN airdrops</li>
                                 </ul>
                             </p>
@@ -169,7 +169,7 @@ onMounted(() => {
 
                         <div class="mt-10 max-w-xl text-base leading-7 text-gray-700">
                             <p>
-                                Every $AVAS holder is permitted to Vote (on-chain) for public proposals. 'Qualified' $AVAS holders receive Daily Payouts (to their respective Nexa or Meta address) from revenues deposited into Ava's Treasury.
+                                Every $NXY holder is permitted to Vote (on-chain) for public proposals. 'Qualified' $NXY holders receive Daily Payouts (to their respective Nexa or Meta address) from revenues deposited into Ava's Treasury.
                             </p>
 
                             <!-- <p class="mt-10">

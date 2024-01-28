@@ -96,7 +96,7 @@ onMounted(() => {
                                     </NuxtLink>
 
                                     <NuxtLink @click="toggleMenu" to="/token" class="w-full text-center px-2 py-1 bg-amber-200 border border-amber-300 tracking-widest hover:bg-amber-400">
-                                        $AVAS
+                                        $NXY
                                     </NuxtLink>
 
                                     <NuxtLink @click="toggleMenu" to="/help" class="w-full text-center px-2 py-1 bg-amber-200 border border-amber-300 rounded-tr-lg tracking-widest hover:bg-amber-400">

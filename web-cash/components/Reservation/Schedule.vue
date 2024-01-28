@@ -17,7 +17,7 @@ import { useWalletStore } from '@/stores/wallet'
 const System = useSystemStore()
 const Wallet = useWalletStore()
 
-/* Set ($AVAS) token id. */
+/* Set ($NXY) token id. */
 const AVAS_TOKENID = 'nexa:tptlgmqhvmwqppajq7kduxenwt5ljzcccln8ysn9wdzde540vcqqqcra40x0x'
 
 const unspent = ref(null)
@@ -117,7 +117,7 @@ onMounted(() => {
                             {{amountDisplay(token)}}
 
                             <span class="text-2xl text-rose-500">
-                                $AVAS
+                                $NXY
                             </span>
                         </h2>
 
