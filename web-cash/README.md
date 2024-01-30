@@ -1,8 +1,8 @@
 # Nxy Cash
 
-### https://avas.cash
+### https://nxy.cash
 
-### Official Governance Token of Ava's DAO
+### Official Token of Nyx
 
 ## Purpose
 
@@ -16,8 +16,8 @@
 
 ## Contact
 
-3455 Peachtree Rd NE  
-Suite #500  
+3455 Peachtree Rd NE
+Suite #500
 Atlanta, GA 30326
 
 support [at] avasdao [dot] org

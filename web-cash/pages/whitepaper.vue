@@ -24,32 +24,50 @@ const System = useSystemStore()
 <template>
     <main class="bg-white px-6 py-32 lg:px-8">
         <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
-            <p class="text-base font-semibold leading-7 text-indigo-600">
-                Document
+            <p class="text-base font-light leading-7 text-gray-400 italic tracking-wider">
+                Last updated: 2024.1.30
             </p>
 
-            <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                $NXY Whitepaper
+            <h1 class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+                NXY Whitepaper
             </h1>
 
-            <p class="mt-6 text-xl leading-8">
-                Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque id at vitae feugiat egestas ac. Diam nulla orci at in viverra scelerisque eget. Eleifend egestas
-                fringilla sapien.
+            <p class="my-6 text-xl leading-8">
+                We began in search of an elegant solution to the <span class="font-medium">"commons"</span> problem; offering <span class="font-medium">sustainable</span> infrastructure to an ever-growing community, using purely <span class="font-medium">economic</span> incentives, built directly into a <span class="font-medium">provably fair</span> protocol.
             </p>
 
-            <div class="mt-10 max-w-2xl">
-                <p>
-                    Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit.
-                    Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id.
-                </p>
+            <p class="my-12 text-5xl leading-[60px] font-light italic">
+                What we discovered was How-to <span class="font-normal">financially support <span class="text-rose-500 text-6xl">Creators</span></span> with <span class="underline">NO</span> strings attached, indefinitely!
+            </p>
+
+            <p class="my-6 text-xl leading-8">
+                $NXY introduces the <span class="font-medium"><NuxtLink class="text-blue-500 hover:underline" to="https://github.com/avasdao/wisebox/blob/master/mining/PoW/v1/Polymorph.nex" target="_blank">Polymorph</NuxtLink> NexScript contract</span> as a fairly launched community token over the Nxy L1+ network.
+                $NXY is packed with over <span class="font-medium text-amber-500">10M+ mutable proof-of-work (PoW) mining algorithms,</span> offering <em>indefinite<sup>*</sup></em> rewards for both CPU and GPU mining participants.
+            </p>
+
+            <p class="my-6 text-xl leading-8">
+                $NXY demonstrates the ability for ANYONE <em>(including mobile phone users)</em> to mine for an asset using only the proof-of-work (PoW) of a CPU.
+            </p>
+
+            <p class="mt-5 text-sm italic text-gray-400">
+                * In the event that remote services are disrupted, the contract can continue indefintiely in PUBLIC mode.
+            </p>
+
+            <div class="mt-20 max-w-2xl">
+                <h2 class="my-6 text-xl font-bold leading-8">
+                    Polymorph MOST attractive Benefits for Creators:
+                </h2>
 
                 <ul role="list" class="mt-8 max-w-xl space-y-8 text-gray-600">
                     <li class="flex gap-x-3">
                         <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
                         </svg>
+
                         <span>
-                            <strong class="font-semibold text-gray-900">Data types.</strong> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
+                            <strong class="font-semibold text-gray-900">Greater accessibility.</strong>
+                            Grow our community beyond traditional markets and boundaries.
+                            Our aim is to tear down the walls constructed by permission-seeking gatekeepers.
                         </span>
                     </li>
 
@@ -57,14 +75,22 @@ const System = useSystemStore()
                         <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
                         </svg>
-                        <span><strong class="font-semibold text-gray-900">Loops.</strong> Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.</span>
+
+                        <span>
+                            <strong class="font-semibold text-gray-900">Greater transparency.</strong>
+                            Allows our team to share and earn the trust of our community.
+                        </span>
                     </li>
 
                     <li class="flex gap-x-3">
                         <svg class="mt-1 h-5 w-5 flex-none text-indigo-600" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                             <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd" />
                         </svg>
-                        <span><strong class="font-semibold text-gray-900">Events.</strong> Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.</span>
+
+                        <span>
+                            <strong class="font-semibold text-gray-900">Greater sustainability.</strong>
+                            Maintenance is built directly into the protocol, allowing for perfect alignment of incentives to succeed with the community.
+                        </span>
                     </li>
                 </ul>
 
@@ -73,16 +99,15 @@ const System = useSystemStore()
                     Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.
                 </p>
 
-                <h2 class="mt-16 text-2xl font-bold tracking-tight text-gray-900">From beginner to expert in 3 hours</h2>
-
-                <p class="mt-6">
-                    Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam consequat in. Convallis arcu ipsum urna nibh. Pharetra, euismod vitae interdum mauris enim, consequat vulputate nibh. Maecenas pellentesque id sed tellus mauris,
-                    ultrices mauris. Tincidunt enim cursus ridiculus mi. Pellentesque nam sed nullam sed diam turpis ipsum eu a sed convallis diam.
-                </p>
+                <h2 class="mt-16 text-2xl font-bold tracking-tight text-gray-900">
+                    Greater Accessibility
+                </h2>
 
                 <figure class="mt-10 border-l border-indigo-600 pl-9">
                     <blockquote class="font-semibold text-gray-900">
-                        <p>“Vel ultricies morbi odio facilisi ultrices accumsan donec lacus purus. Lectus nibh ullamcorper ac dictum justo in euismod. Risus aenean ut elit massa. In amet aliquet eget cras. Sem volutpat enim tristique.”</p>
+                        <p>
+                            “Vel ultricies morbi odio facilisi ultrices accumsan donec lacus purus. Lectus nibh ullamcorper ac dictum justo in euismod. Risus aenean ut elit massa. In amet aliquet eget cras. Sem volutpat enim tristique.”
+                        </p>
                     </blockquote>
 
                     <figcaption class="mt-6 flex gap-x-4">
@@ -91,7 +116,10 @@ const System = useSystemStore()
                             src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
                             alt=""
                         />
-                        <div class="text-sm leading-6"><strong class="font-semibold text-gray-900">Maria Hill</strong> – Marketing Manager</div>
+                        <div class="text-sm leading-6">
+                            <strong class="font-semibold text-gray-900">Maria Hill</strong>
+                            – Marketing Manager
+                        </div>
                     </figcaption>
                 </figure>
 
@@ -111,9 +139,25 @@ const System = useSystemStore()
                             clip-rule="evenodd"
                         />
                     </svg>
+
                     Faucibus commodo massa rhoncus, volutpat.
                 </figcaption>
             </figure>
+
+            <div class="mt-16 max-w-2xl">
+                <h2 class="text-2xl font-bold tracking-tight text-gray-900">
+                    Mainteance Fees (1st 30 days)
+                </h2>
+
+                <p class="mt-6">
+                    WEEK #1 & #2 will be used to create the 1st $NXY liquidity pool on WiserSwap.
+                </p>
+
+                <p class="mt-6">
+                    WEEK #3 & #4 will be Airdropped to Twitter / X participants.
+                </p>
+
+            </div>
 
             <div class="mt-16 max-w-2xl">
                 <h2 class="text-2xl font-bold tracking-tight text-gray-900">
@@ -129,6 +173,7 @@ const System = useSystemStore()
                     Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit.
                 </p>
             </div>
+
         </div>
     </main>
 </template>

@@ -75,20 +75,20 @@ onMounted(() => {
             </div>
 
             <div class="hidden lg:flex lg:gap-x-12">
-                <NuxtLink to="/payouts" class="text-xl font-semibold leading-6 text-gray-900">
-                    Payouts
+                <NuxtLink to="/mining" class="text-xl font-semibold leading-6 text-gray-900">
+                    Mining
                 </NuxtLink>
 
-                <NuxtLink to="/staking" class="text-xl font-semibold leading-6 text-gray-900">
-                    Staking
-                </NuxtLink>
-
-                <NuxtLink to="/bootstrap" class="text-xl font-semibold leading-6 text-gray-900">
-                    Bootstrap
+                <NuxtLink to="https://nxy.app" target="_blank" class="text-xl font-semibold leading-6 text-gray-900">
+                    Download
                 </NuxtLink>
 
                 <NuxtLink to="/token" class="text-xl font-semibold leading-6 text-gray-900">
                     $NXY
+                </NuxtLink>
+
+                <NuxtLink to="/whitepaper" class="text-xl font-semibold leading-6 text-gray-900">
+                    Whitepaper
                 </NuxtLink>
 
                 <NuxtLink to="/help" class="text-xl font-semibold leading-6 text-gray-900">

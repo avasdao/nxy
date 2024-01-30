@@ -1,6 +1,6 @@
 {
-  "name": "avas-cash",
-  "version": "23.11.22",
+  "name": "nxy-cash",
+  "version": "24.1.29",
   "license": "MIT",
   "scripts": {
     "build": "nuxt build",
