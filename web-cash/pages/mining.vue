@@ -8,9 +8,9 @@ import {
 } from '@nexajs/rostrum'
 
 useHead({
-    title: 'Bootstrap Campaigns',
+    title: 'Mining',
     meta: [
-        { name: 'description', content: 'Ava presents 5 campaigns to help bootstrap the Nexa ecosystem.' }
+        { name: 'description', content: 'Web mining.' }
     ],
 })
 
@@ -147,11 +147,11 @@ onMounted(() => {
         <div class="mx-auto mt-8 max-w-7xl px-0 sm:mt-0 lg:px-8">
             <div class="mx-auto max-w-4xl text-center">
                 <h1 class="text-2xl font-semibold leading-7 text-indigo-600">
-                    Bootstrap Crowdfunding
+                    Mining Center
                 </h1>
 
                 <p class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                    We're Deploying Open &amp; Sustainable Infrastructure for Nexican Builders
+                    NXY introduces a NEW Crypto Mining for ANYONE with a CPU
                 </p>
             </div>
 
@@ -161,96 +161,26 @@ onMounted(() => {
                 For every contribution, supporters will receive <span class="text-2xl text-rose-500 font-extrabold">$NXY</span> sent to their Nexa wallet <span class="text-2xl text-indigo-500 font-extrabold">INSTANTLY!</span>
             </p>
 
+            <section class="w-1/2 flex flex-col gap-4">
+                <h2>
+                    Mining Station
+                </h2>
+
+                <button @click="startMiner" class="px-5 py-2 bg-lime-500 rounded-xl shadow hover:bg-lime-400">
+                    <span class="text-3xl text-lime-900 font-medium">
+                        Start Web Miner
+                    </span>
+                </button>
+
+                <div>
+                    Private/Public
+                </div>
+
+            </section>
+
             <div class="isolate mx-auto mt-10 grid grid-cols-1 gap-8 md:max-w-2xl md:grid-cols-2 lg:max-w-4xl lg:mx-0 lg:max-w-none xl:grid-cols-3">
 
-                <section
-                    v-for="(campaign, index) of campaigns" :key="campaign.id"
-                    class="relative rounded-3xl p-8 ring-1 ring-gray-200 bg-gradient-to-b from-gray-200 to-gray-50 border border-gray-300 shadow-sm"
-                    :class="[ campaign.asking === 0 ? 'opacity-30 cursor-not-allowed' : '' ]"
-                >
-                    <!-- Overlay for completed campaigns -->
-                    <div v-if="campaign?.isActive === false" class="absolute -ml-8 -mt-8 bg-gray-500 w-full h-full rounded-3xl opacity-50 cursor-not-allowed" />
-
-                    <div class="h-[160px] sm:h-[130px] lg:h-[160px]">
-                        <h2 class="font-medium text-gray-900 h-[80px] sm:h-[50px] lg:h-[80px]">
-                            <h4 class="text-sm uppercase sm:normal-case text-gray-600 sm:text-gray-900">
-                                Campaign {{(index + 1)}}/5
-                            </h4>
-                            <span class="block text-2xl sm:inline">
-                                {{campaign.title}}
-                            </span>
-                        </h2>
-
-                        <p class="mt-4 text-sm leading-6 text-gray-600 summary-three-lines">
-                            {{campaign.summary}}
-                        </p>
-                    </div>
-
-                    <p class="mt-6 flex items-baseline gap-x-1">
-                        <span class="text-4xl font-bold tracking-tight text-gray-900">
-                            {{receivedDisplay(campaign)}}
-                        </span>
-
-                        <span class="text-lg font-semibold leading-6 text-gray-600">
-                            raised
-                        </span>
-                    </p>
-
-                    <div v-if="campaign.asking !== 0" class="my-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
-                        <NuxtLink :to="'https://causes.cash/c/' + campaign.id" target="_blank" class="block w-full h-fit px-3 py-2 text-lg text-center text-amber-900 font-medium bg-amber-400 border border-amber-600 hover:bg-amber-300 rounded-lg shadow">
-                            Open Campaign
-                        </NuxtLink>
-
-                        <div>
-                            <button @click="copyToClipboard(campaign.receiver)" target="_blank" class="block w-full px-3 py-2 text-lg text-center text-sky-900 font-medium bg-sky-300 border border-sky-600 hover:bg-sky-200 rounded-lg shadow">
-                                Copy Pledge Address
-                            </button>
-                        </div>
-
-                        <NuxtLink :to="'https://explorer.nexa.org/address/' + campaign.receiver" target="_blank" class="sm:col-span-2 lg:col-span-1 -mt-2 px-5 text-xs text-blue-500 text-center font-medium tracking-widest truncate hover:underline hover:text-blue-400">
-                            {{campaign.receiver}}
-                        </NuxtLink>
-                    </div>
-
-                    <div class="grid grid-cols-5 gap-x-4 gap-y-2 text-sm leading-6 text-gray-600">
-                        <h3 class="col-span-2 text-lg font-medium text-right">
-                            Asking
-                        </h3>
-                        <h3 class="col-span-3 text-lg font-medium">
-                            <strong>{{numeral(asking(campaign)).format('0,0')}}</strong> NEXA
-                        </h3>
-
-                        <h3 class="col-span-2 text-lg font-medium text-right">
-                            Completed
-                        </h3>
-                        <h3 class="col-span-3 text-2xl text-rose-500 font-bold">
-                            {{completedDisplay(campaign)}}
-                        </h3>
-
-                        <h3 class="col-span-2 text-lg font-medium text-right">
-                            Rewards
-                        </h3>
-                        <h3 class="col-span-3 text-lg font-medium">
-                            <strong>{{numeral(rewards(campaign)).format('0,0')}}</strong> AVAS
-
-                            <small class="-mt-2 block">
-                                1% of 21M total
-                            </small>
-                        </h3>
-
-                        <h3 class="col-span-2 text-lg font-medium text-right">
-                            Discount
-                        </h3>
-                        <h3 class="col-span-3 text-lg font-medium">
-                            <strong>{{numeral(discount(campaign)).format('0,0[.]00')}}</strong> NEXA
-                            <strong class="text-rose-500">~{{discountUsdDisplay(campaign)}}</strong> <span class="text-base">per 1.0 AVAS</span>
-
-                            <small class="-mt-2 block">
-                                @ {{numeral(System.usd).format('$0,0.00')}} mNEXA/USD
-                            </small>
-                        </h3>
-                    </div>
-                </section>
+                TBD
 
             </div>
         </div>

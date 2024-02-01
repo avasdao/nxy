@@ -1,8 +1,8 @@
 [{
   "ticker": "NXY",
   "name": "Nxy",
-  "summary": "Official token of Nxy, the most accessible and totally uncensorable social network in existence.",
-  "description": "$NXY is a fairly launched community token, packed with over 10M+ mutable proof-of-work (PoW) mining algorithms, offering indefinite rewards for both CPU and GPU mining participants.",
+  "summary": "Official token of Nxy — leading an all NEW class of fully permissionless and uncensorable social finance (SoFi) networks.",
+  "description": "$NXY is a fairly launched community & governance token, packed with over 10M+ mutable proof-of-work (PoW) mining algorithms, offering indefinite rewards for both CPU and GPU mining participants.",
   "legal": "Every $NXY holder is permitted to Vote (on-chain) on ALL public proposals created by the Nxy community.",
   "creator": "Ava's DAO",
   "contact": { "address": "3455 Peachtree Rd NE, Suite #500, Atlanta, GA 30326", "email": "support@avasdao.org", "twitter.com": "@AvasDAO" },

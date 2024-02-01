@@ -29,11 +29,12 @@ const System = useSystemStore()
             </p>
 
             <h1 class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                NXY Whitepaper
+                $NXY Whitepaper
             </h1>
 
             <p class="my-6 text-xl leading-8">
-                We began in search of an elegant solution to the <span class="font-medium">"commons"</span> problem; offering <span class="font-medium">sustainable</span> infrastructure to an ever-growing community, using purely <span class="font-medium">economic</span> incentives, built directly into a <span class="font-medium">provably fair</span> protocol.
+                We began in search of an elegant solution to the <span class="text-2xl font-medium">"commons"</span> problem:
+                offering <span class="text-2xl font-medium">sustainable</span> infrastructure to an ever-growing global community, using purely <span class="text-2xl font-medium">economic</span> incentives, built directly into a <span class="text-2xl font-medium">provably fair</span> protocol.
             </p>
 
             <p class="my-12 text-5xl leading-[60px] font-light italic">
@@ -41,12 +42,12 @@ const System = useSystemStore()
             </p>
 
             <p class="my-6 text-xl leading-8">
-                $NXY introduces the <span class="font-medium"><NuxtLink class="text-blue-500 hover:underline" to="https://github.com/avasdao/wisebox/blob/master/mining/PoW/v1/Polymorph.nex" target="_blank">Polymorph</NuxtLink> NexScript contract</span> as a fairly launched community token over the Nxy L1+ network.
-                $NXY is packed with over <span class="font-medium text-amber-500">10M+ mutable proof-of-work (PoW) mining algorithms,</span> offering <em>indefinite<sup>*</sup></em> rewards for both CPU and GPU mining participants.
+                $NXY introduces the <span class="text-2xl font-medium"><NuxtLink class="text-blue-500 hover:underline" to="https://github.com/avasdao/wisebox/blob/master/mining/PoW/v1/Polymorph.nex" target="_blank">Polymorph</NuxtLink> NexScript contract</span> as a fairly launched community token over the Nxy L1+ network.
+                Polymorph v1 is packed with over <span class="text-2xl font-medium text-amber-500">10M+ mutable proof-of-work (PoW) mining algorithms,</span> offering <em>indefinite<sup>*</sup></em> rewards for both CPU and GPU mining participants.
             </p>
 
             <p class="my-6 text-xl leading-8">
-                $NXY demonstrates the ability for ANYONE <em>(including mobile phone users)</em> to mine for an asset using only the proof-of-work (PoW) of a CPU.
+                Our primary goal is to promote a <span class="text-2xl font-medium">MASSIVE wallet distribution</span> of $NXY, and effectively demonstrate the ability for <span class="text-2xl font-medium">ANYONE <em>(including mobile phone users)</em></span> to fairly mine for ANY Nexa-tokenized asset just by using the proof-of-work (PoW) power generated from <span class="text-2xl font-medium">A SINGLE CPU!</span>
             </p>
 
             <p class="mt-5 text-sm italic text-gray-400">
@@ -106,7 +107,10 @@ const System = useSystemStore()
                 <figure class="mt-10 border-l border-indigo-600 pl-9">
                     <blockquote class="font-semibold text-gray-900">
                         <p>
-                            “Vel ultricies morbi odio facilisi ultrices accumsan donec lacus purus. Lectus nibh ullamcorper ac dictum justo in euismod. Risus aenean ut elit massa. In amet aliquet eget cras. Sem volutpat enim tristique.”
+                            <span class="font-medium">“</span>
+                            It's beautiful to see a crypto community that's built for the other 99%.
+                            Nxy makes me feel like I finally belong to a place that understands what I care about.
+                            <span class="font-medium">”</span>
                         </p>
                     </blockquote>
 
@@ -129,7 +133,11 @@ const System = useSystemStore()
             </div>
 
             <figure class="mt-16">
-                <img class="aspect-video rounded-xl bg-gray-50 object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&w=1310&h=873&q=80&facepad=3" alt="" />
+                <img
+                    class="aspect-video rounded-xl bg-gray-50 object-cover"
+                    src="https://images.unsplash.com/photo-1531844251246-9a1bfaae09fc?q=80&w=1832&auto=format&fit=crop"
+                    alt=""
+                />
 
                 <figcaption class="mt-4 flex gap-x-2 text-sm leading-6 text-gray-500">
                     <svg class="mt-0.5 h-5 w-5 flex-none text-gray-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -143,6 +151,20 @@ const System = useSystemStore()
                     Faucibus commodo massa rhoncus, volutpat.
                 </figcaption>
             </figure>
+
+            <div class="mt-16 max-w-2xl">
+                <h2 class="text-2xl font-bold tracking-tight text-gray-900">
+                    Introduction
+                </h2>
+
+                <p class="mt-6">
+                    $NXY is a native asset/token that can be minted, in pre-determined quantities, by ANYONE using a NexScript wise contract and Nexa's 100K+ TPS 3rd-generation blockchain.
+                </p>
+
+                <p class="mt-8">
+                    Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit.
+                </p>
+            </div>
 
             <div class="mt-16 max-w-2xl">
                 <h2 class="text-2xl font-bold tracking-tight text-gray-900">
@@ -173,6 +195,37 @@ const System = useSystemStore()
                     Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit.
                 </p>
             </div>
+
+            <div class="mt-16 max-w-2xl">
+                <h2 class="text-2xl font-bold tracking-tight text-gray-900">
+                    NXL Mining Rewards
+                </h2>
+
+                <p class="mt-6">
+                    NXY has a simple rewards emission schedule that decreases the mining reward amount every 64,800 blocks (about 90 days).
+                </p>
+            </div>
+
+            <img
+                src="~/assets/whitepaper/rewards_schedule.png"
+                class="my-10 w-full rounded-2xl shadow-md"
+            />
+
+            <div class="mt-16 max-w-2xl">
+                <h4 class="mt-6 text-lg font-medium">
+                    The mining reward amount is governed by the following calculation:
+                </h4>
+
+                <pre class="mt-3">
+currentSeason = (currentEpoch / seasonLength) + 1
+miningReward = genesisMiningReward / currentSeason
+
+                </pre>
+            </div>
+
+            <WhitepaperRewardsSchedule class="my-10" />
+
+            <WhitepaperDisclaimer />
 
         </div>
     </main>
