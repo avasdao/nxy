@@ -22,7 +22,7 @@ export default defineNuxtConfig({
     /* Progressive Web Application Settings */
     pwa: {
         manifest: {
-            name: 'Nxy',
+            name: 'Nxy Cash',
             short_name: 'Nxy',
             description: `Providing safe & secure Spaces for Creators to Build, Grow & Profit from their own *exclusive* token economies.`,
             lang: 'en',
@@ -31,7 +31,7 @@ export default defineNuxtConfig({
             // useWebmanifestExtension: false,
         },
         meta: {
-            name: 'Nxy',
+            name: 'Nxy Cash',
             description: `Providing safe & secure Spaces for Creators to Build, Grow & Profit from their own *exclusive* token economies.`,
             author: `Ava's DAO`,
         },
