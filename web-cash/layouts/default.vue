@@ -103,17 +103,15 @@ onMounted(() => {
 <template>
     <main class="bg-white">
         <Header @toggle-menu="toggleMenu" />
-
         <slot />
-
         <Footer />
     </main>
 
-    <!-- <Menu
+    <Menu
         v-if="isShowingMenu"
         @toggleMenu="toggleMenu"
         :isShowingMenu="isShowingMenu"
-    /> -->
+    />
 </template>
 
 <style>

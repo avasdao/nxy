@@ -131,7 +131,7 @@ const discountUsdDisplay = (_campaign) => {
 
 onMounted(() => {
     // loadCampaign1()
-    init()
+    // init()
     // campaign_1_id
 })
 

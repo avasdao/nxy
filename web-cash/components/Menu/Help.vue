@@ -27,7 +27,7 @@ const count = ref(0)
 <template>
     <main class="flex flex-col gap-4">
         <p>
-            Nexa Exchange is very proud to introduce the <span class="font-semibold text-rose-900">1st Permissionless Asset Exchange;</span>
+            Nxy is very proud to introduce the <span class="font-semibold text-rose-900">1st Permissionless Asset Exchange;</span>
             running on Nexa's 100K TPS L1 blockchain.
         </p>
 
