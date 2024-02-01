@@ -56,7 +56,7 @@ onMounted(() => {
                 <ClientOnly>
                     <NuxtLink to="/markets" class="flex flex-row items-end gap-1 text-4xl text-rose-500 font-medium">
                         <div class="flex flex-row items-start">
-                            <sup class="mt-2 text-xs text-rose-300">USD</sup>
+                            <sup class="mt-2 text-xs text-rose-300">mNXY/USD</sup>
                             {{displayQuote.primary}}
                         </div>
 
@@ -100,7 +100,7 @@ onMounted(() => {
                 <ClientOnly>
                     <NuxtLink to="/markets" class="flex flex-row items-end gap-1 text-4xl text-rose-500 font-medium">
                         <div class="flex flex-row items-start">
-                            <sup class="mt-2 text-xs text-rose-300">USD</sup>
+                            <sup class="mt-2 text-xs text-rose-300">mNXY/USD</sup>
                             {{displayQuote.primary}}
                         </div>
 

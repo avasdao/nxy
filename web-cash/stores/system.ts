@@ -93,7 +93,8 @@ export const useSystemStore = defineStore('system', {
                 return null
             }
 
-            return this._tickers.AVAS.price
+            // FIXME:FOR DEV PURPSES ONLY
+            return (this._tickers.AVAS.price / 99.0)
         },
 
         nex() {
