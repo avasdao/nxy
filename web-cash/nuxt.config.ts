@@ -19,6 +19,29 @@ export default defineNuxtConfig({
         },
     },
 
+    /* Progressive Web Application Settings */
+    pwa: {
+        manifest: {
+            name: 'Nxy',
+            short_name: 'Nxy',
+            description: `Providing safe & secure Spaces for Creators to Build, Grow & Profit from their own *exclusive* token economies.`,
+            lang: 'en',
+            theme_color: '#6a5acd',
+            background_color: '#6a5acd',
+            // useWebmanifestExtension: false,
+        },
+        meta: {
+            name: 'Nxy',
+            description: `Providing safe & secure Spaces for Creators to Build, Grow & Profit from their own *exclusive* token economies.`,
+            author: `Ava's DAO`,
+        },
+        // icon: false, // disables the icon module
+        workbox: {
+            // workboxURL: 'TBD',
+            // enabled: true, // FOR DEV PURPOSES ONLY
+        },
+    },
+
     /* Application Modules */
     modules: [
         /* Tailwind CSS */
@@ -29,6 +52,9 @@ export default defineNuxtConfig({
 
         /* Internationalization for Nuxt */
         '@nuxtjs/i18n',
+
+        /* Progressive Web Application */
+        '@kevinmarrec/nuxt-pwa',
     ],
 
     /* Route Rules */
