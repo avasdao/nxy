@@ -1,0 +1,13 @@
+[{
+  "ticker": "HOTEL",
+  "name": "Forever Nxy, an Ava Maison",
+  "summary": "A nouveau-luxe, island paradise where ...",
+  "description": "This blockchain hotel boasts a wide selection of premium services, including: 24-hour concierge service, ...; ALL meticulously tailored to satisfy the specific needs of each individual Guest.",
+  "legal": "Each hotel guest is responsible for their own actions during their visit.",
+  "creator": "Ava's DAO",
+  "contact": { "address": "3455 Peachtree Rd NE, Suite #500, Atlanta, GA 30326", "email": "support@avasdao.org", "twitter.com": "@AvasDAO" },
+  "icon": "/hotel.svg",
+  "category": "NFT"
+},
+"<base64-signature-here>"
+]
