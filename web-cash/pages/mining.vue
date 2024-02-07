@@ -16,7 +16,9 @@ useHead({
 
 /* Initialize stores. */
 import { useSystemStore } from '@/stores/system'
+import { useWalletStore } from '@/stores/wallet'
 const System = useSystemStore()
+const Wallet = useWalletStore()
 
 const campaigns = ref([])
 
@@ -47,24 +49,15 @@ const copyToClipboard = (_text) => {
 const init = async () => {
     let response
 
-    response = await $fetch(`https://causes.cash/v1/campaign/${campaign_1_id}`)
+    const enclave = await $fetch('https://enclave.nxy.cash/v1/mining')
         .catch(err => console.error(err))
-    campaigns.value.push(response)
+    console.log('ENCLAVE', enclave)
 
-    response = await $fetch(`https://causes.cash/v1/campaign/${campaign_2_id}`)
+    console.log('WALLET ADDRESS', Wallet.address)
+
+    const history = await getAddressHistory(Wallet.address)
         .catch(err => console.error(err))
-    campaigns.value.push(response)
-
-    response = await $fetch(`https://causes.cash/v1/campaign/${campaign_3_id}`)
-        .catch(err => console.error(err))
-    campaigns.value.push(response)
-
-    response = await $fetch(`https://causes.cash/v1/campaign/${campaign_4_id}`)
-        .catch(err => console.error(err))
-    campaigns.value.push(response)
-    console.log('CAMPAIGN 4', response)
-
-    campaigns.value.push(campaign5)
+    console.log('HISTORY', history)
 }
 
 const receivedDisplay = (_campaign) => {
@@ -130,16 +123,13 @@ const discountUsdDisplay = (_campaign) => {
 }
 
 onMounted(() => {
-    // loadCampaign1()
-    // init()
-    // campaign_1_id
+    init()
 })
 
 // onBeforeUnmount(() => {
 //     console.log('Before Unmount!')
 //     // Now is the time to perform all cleanup operations.
 // })
-
 </script>
 
 <template>

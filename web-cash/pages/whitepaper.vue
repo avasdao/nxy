@@ -25,11 +25,11 @@ const System = useSystemStore()
     <main class="bg-white px-6 py-32 lg:px-8">
         <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
             <p class="text-base font-light leading-7 text-gray-400 italic tracking-wider">
-                Last updated: 2024.1.30
+                Last updated: 2024.2.4
             </p>
 
             <h1 class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                $NXY Whitepaper
+                $NXY Cash Whitepaper
             </h1>
 
             <p class="my-6 text-xl leading-8">
@@ -224,6 +224,8 @@ miningReward = genesisMiningReward / currentSeason
             </div>
 
             <WhitepaperRewardsSchedule class="my-10" />
+
+            <WhitepaperProxy />
 
             <WhitepaperDisclaimer />
 

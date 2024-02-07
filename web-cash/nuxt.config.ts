@@ -8,7 +8,7 @@ export default defineNuxtConfig({
             viewport: 'width=device-width, initial-scale=1',
             title: `Nxy Cash`,
             meta: [
-                { name: 'description', content: `Providing safe & secure Spaces for Creators to Build, Grow & Profit from their own *exclusive* token economies.` },
+                { name: 'description', content: `Providing safe & secure Spaces for Creators to Dream, Build & Profit from their own *exclusive* token economies.` },
             ],
             link: [
                 { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -24,7 +24,7 @@ export default defineNuxtConfig({
         manifest: {
             name: 'Nxy Cash',
             short_name: 'Nxy',
-            description: `Providing safe & secure Spaces for Creators to Build, Grow & Profit from their own *exclusive* token economies.`,
+            description: `Providing safe & secure Spaces for Creators to Dream, Build & Profit from their own *exclusive* token economies.`,
             lang: 'en',
             theme_color: '#6a5acd',
             background_color: '#6a5acd',
@@ -32,7 +32,7 @@ export default defineNuxtConfig({
         },
         meta: {
             name: 'Nxy Cash',
-            description: `Providing safe & secure Spaces for Creators to Build, Grow & Profit from their own *exclusive* token economies.`,
+            description: `Providing safe & secure Spaces for Creators to Dream, Build & Profit from their own *exclusive* token economies.`,
             author: `Ava's DAO`,
         },
         // icon: false, // disables the icon module

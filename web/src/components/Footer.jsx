@@ -44,7 +44,7 @@ export function Footer() {
                                 </p>
 
                                 <p className="mt-1 text-sm w-96">
-                                Providing safe & secure Spaces for Creators to Build, Grow & Profit from their own *exclusive* token economies.
+                                Providing safe & secure Spaces for Creators to Dream, Build & Profit from their own *exclusive* token economies.
                                 </p>
                             </div>
                         </div>
