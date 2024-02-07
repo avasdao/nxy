@@ -14,7 +14,7 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>Nxy — Uncensored Creator Spaces</title>
+                <title>Nxy — Monetize Uncensored Creator Spaces</title>
                 <meta
                     name="description"
                     content="Providing safe & secure Spaces for Creators to Dream, Build & Profit from their own *exclusive* token economies."
