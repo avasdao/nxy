@@ -14,8 +14,8 @@ const plans = [
         description:
             `Get started by building a brand NEW uncensorable Space for your next BIG idea.`,
         button: {
-            label: 'Get started for free',
-            href: '/register',
+            label: 'Get Started',
+            href: '/download',
         },
         features: [
             'Commission-free trading',
@@ -32,8 +32,8 @@ const plans = [
         description:
             `Initiate a NEW economy to MONETIZE your Space(s) with an EXCLUSIVE coin|token.`,
         button: {
-            label: 'Subscribe',
-            href: '/register',
+            label: 'Get Started',
+            href: '/download',
         },
         features: [
             'Everything included in 1st Space',
@@ -45,14 +45,14 @@ const plans = [
         logomarkClassName: 'fill-gray-500',
     },
     {
-        name: 'My 1st Enterprise',
+        name: 'My 1st Society',
         featured: true,
         price: { Monthly: 'Costs may vary', Annually: '' },
         description:
-            `You’ve got a huge amount of assets but it’s not enough. To the moon.`,
+            `Lead your community of followers to a BIG and BRIGHT future of prosperity.`,
         button: {
-            label: 'Subscribe',
-            href: '/register',
+            label: 'Get Started',
+            href: '/download',
         },
         features: [
             'Everything included in 1st Economy',
@@ -97,96 +97,100 @@ function Plan({
     activePeriod,
     logomarkClassName,
 }) {
-  return (
-    <section
-      className={clsx(
-        'flex flex-col overflow-hidden rounded-3xl p-6 shadow-lg shadow-gray-900/5',
-        featured ? 'order-first bg-gray-900 lg:order-none' : 'bg-white'
-      )}
-    >
-      <h3
-        className={clsx(
-          'flex items-center text-sm font-semibold',
-          featured ? 'text-white' : 'text-gray-900'
-        )}
-      >
-        <Logomark className={clsx('h-6 w-6 flex-none', logomarkClassName)} />
-        <span className="ml-4">{name}</span>
-      </h3>
-      <p
-        className={clsx(
-          'relative mt-5 flex text-3xl tracking-tight',
-          featured ? 'text-white' : 'text-gray-900'
-        )}
-      >
-        {price.Monthly === price.Annually ? (
-          price.Monthly
-        ) : (
-          <>
-            <span
-              aria-hidden={activePeriod === 'Annually'}
-              className={clsx(
-                'transition duration-300',
-                activePeriod === 'Annually' &&
-                  'pointer-events-none translate-x-6 select-none opacity-0'
-              )}
-            >
-              {price.Monthly}
-            </span>
-            <span
-              aria-hidden={activePeriod === 'Monthly'}
-              className={clsx(
-                'absolute left-0 top-0 transition duration-300',
-                activePeriod === 'Monthly' &&
-                  'pointer-events-none -translate-x-6 select-none opacity-0'
-              )}
-            >
-              {price.Annually}
-            </span>
-          </>
-        )}
-      </p>
-      <p
-        className={clsx(
-          'mt-3 text-sm',
-          featured ? 'text-gray-300' : 'text-gray-700'
-        )}
-      >
-        {description}
-      </p>
-      <div className="order-last mt-6">
-        <ul
-          role="list"
-          className={clsx(
-            '-my-2 divide-y text-sm',
-            featured
-              ? 'divide-gray-800 text-gray-300'
-              : 'divide-gray-200 text-gray-700'
-          )}
+    return (
+        <section
+            className={clsx(
+                'flex flex-col overflow-hidden rounded-3xl p-6 shadow-lg shadow-gray-900/5',
+                featured ? 'order-first bg-gray-900 lg:order-none' : 'bg-white'
+            )}
         >
-          {features.map((feature) => (
-            <li key={feature} className="flex py-2">
-              <CheckIcon
+            <h3
                 className={clsx(
-                  'h-6 w-6 flex-none',
-                  featured ? 'text-white' : 'text-cyan-500'
+                    'flex items-center text-sm font-semibold',
+                    featured ? 'text-white' : 'text-gray-900'
                 )}
-              />
-              <span className="ml-4">{feature}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-      <Button
-        href={button.href}
-        color={featured ? 'cyan' : 'gray'}
-        className="mt-6"
-        aria-label={`Get started with the ${name} plan for ${price}`}
-      >
-        {button.label}
-      </Button>
-    </section>
-  )
+            >
+                <Logomark className={clsx('h-8 w-8 flex-none', logomarkClassName)} />
+                <span className="ml-4 text-sky-500 text-2xl font-medium tracking-wider">
+                    {name}
+                </span>
+            </h3>
+            <p
+                className={clsx(
+                    'relative mt-5 flex text-3xl tracking-tight',
+                    featured ? 'text-white' : 'text-gray-900'
+                )}
+            >
+                {price.Monthly === price.Annually ? (
+                    price.Monthly
+                ) : (
+                    <>
+                        <span
+                            aria-hidden={activePeriod === 'Annually'}
+                            className={clsx(
+                                'transition duration-300',
+                                activePeriod === 'Annually' &&
+                                'pointer-events-none translate-x-6 select-none opacity-0'
+                            )}
+                        >
+                            {price.Monthly}
+                        </span>
+                        <span
+                            aria-hidden={activePeriod === 'Monthly'}
+                            className={clsx(
+                                'absolute left-0 top-0 transition duration-300',
+                                activePeriod === 'Monthly' &&
+                                'pointer-events-none -translate-x-6 select-none opacity-0'
+                            )}
+                        >
+                            {price.Annually}
+                        </span>
+                    </>
+                )}
+            </p>
+            <p
+                className={clsx(
+                    'mt-3 text-sm',
+                    featured ? 'text-gray-300' : 'text-gray-700'
+                )}
+            >
+                {description}
+            </p>
+            <div className="order-last mt-6">
+                <ul
+                    role="list"
+                    className={clsx(
+                        '-my-2 divide-y text-sm',
+                        featured
+                        ? 'divide-gray-800 text-gray-300'
+                        : 'divide-gray-200 text-gray-700'
+                    )}
+                >
+                    {features.map((feature) => (
+                        <li key={feature} className="flex py-2">
+                            <CheckIcon
+                                className={clsx(
+                                    'h-6 w-6 flex-none',
+                                    featured ? 'text-white' : 'text-cyan-500'
+                                )}
+                            />
+                            <span className="ml-4">{feature}</span>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+            <Button
+                href={button.href}
+                color={featured ? 'cyan' : 'gray'}
+                className="mt-6"
+                aria-label={`Get started with the ${name} plan for ${price}`}
+            >
+                <span className="text-2xl font-light italic">
+                    {button.label}
+                </span>
+            </Button>
+        </section>
+    )
 }
 
 export function Bundles() {

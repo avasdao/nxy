@@ -245,47 +245,53 @@ function Chart({
 }
 
 function AppDemo() {
-  let [activePointIndex, setActivePointIndex] = useState(null)
-  let activePriceIndex = activePointIndex ?? prices.length - 1
-  let activeValue = prices[activePriceIndex]
-  let previousValue = prices[activePriceIndex - 1]
-  let percentageChange =
-    activePriceIndex === 0
-      ? null
-      : ((activeValue - previousValue) / previousValue) * 100
+  	let [activePointIndex, setActivePointIndex] = useState(null)
+  	let activePriceIndex = activePointIndex ?? prices.length - 1
+  	let activeValue = prices[activePriceIndex]
+  	let previousValue = prices[activePriceIndex - 1]
+  	let percentageChange =
+    	activePriceIndex === 0
+      	? null
+      	: ((activeValue - previousValue) / previousValue) * 100
 
-  return (
-    <AppScreen>
-      <AppScreen.Body>
-        <div className="p-4">
-          <div className="flex gap-2">
-            <div className="text-xs leading-6 text-gray-500">
-              Tailwind Labs, Inc.
-            </div>
-            <div className="text-sm text-gray-900">$CSS</div>
-            <svg viewBox="0 0 24 24" className="ml-auto h-6 w-6" fill="none">
-              <path
-                d="M5 12a7 7 0 1 1 14 0 7 7 0 0 1-14 0ZM12 9v6M15 12H9"
-                stroke="#171717"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </div>
-          <div className="mt-3 border-t border-gray-200 pt-5">
-            <div className="flex items-baseline gap-2">
-              <div className="text-2xl tabular-nums tracking-tight text-gray-900">
-                {activeValue.toFixed(2)}
-              </div>
-              <div className="text-sm text-gray-900">USD</div>
-              {percentageChange && (
-                <div
-                  className={clsx(
-                    'ml-auto text-sm tabular-nums tracking-tight',
-                    percentageChange >= 0 ? 'text-cyan-500' : 'text-gray-500'
-                  )}
-                >
+  	return (
+    	<AppScreen>
+      		<AppScreen.Body>
+        		<div className="p-4">
+          			<div className="flex gap-2">
+            			<div className="text-xs leading-6 text-gray-500">
+              				RoboPetz
+            			</div>
+
+						<div className="text-sm text-gray-900">
+							$PETZ
+						</div>
+
+						<svg viewBox="0 0 24 24" className="ml-auto h-6 w-6" fill="none">
+              				<path
+                				d="M5 12a7 7 0 1 1 14 0 7 7 0 0 1-14 0ZM12 9v6M15 12H9"
+                				stroke="#171717"
+                				strokeWidth="2"
+                				strokeLinecap="round"
+                				strokeLinejoin="round"
+              				/>
+            			</svg>
+          			</div>
+          			<div className="mt-3 border-t border-gray-200 pt-5">
+						<div className="flex items-baseline gap-2">
+              				<div className="text-2xl tabular-nums tracking-tight text-gray-900">
+                				{activeValue.toFixed(2)}
+              				</div>
+
+			  				<div className="text-sm text-gray-900">USD</div>
+
+			  				{percentageChange && (
+                				<div
+                  					className={clsx(
+                    					'ml-auto text-sm tabular-nums tracking-tight',
+                    					percentageChange >= 0 ? 'text-cyan-500' : 'text-gray-500'
+									)}
+								>
                   {`${
                     percentageChange >= 0 ? '+' : ''
                   }${percentageChange.toFixed(2)}%`}
@@ -335,7 +341,6 @@ function AppDemo() {
 }
 
 export function Hero() {
-    console.log('CALLING HERO');
     let [radicalTarget, setRadicalTarget] = useState('Creators')
     let [isRunning, setIsRunning] = useState(false)
 
@@ -401,7 +406,7 @@ export function Hero() {
                     </div>
 
                     <div className="relative -mt-4 lg:col-span-7 lg:mt-0 xl:col-span-6">
-                        <p className="text-center text-sm font-semibold text-gray-900 lg:text-left">
+                        <p className="text-center text-xs font-semibold text-gray-500 lg:text-left tracking-widest uppercase">
                             As featured in
                         </p>
 

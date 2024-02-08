@@ -194,7 +194,7 @@ function DreamScreen({ custom, animated = false }) {
                 <div className="px-4 py-6">
                     <div className="space-y-6">
                         {[
-                            { label: 'Image Prompt', value: `unreal engine render of a cute tiny robo in a busy, crowded city at night, cute eyes, volumetric lighting` },
+                            { label: 'Image Prompt', value: `unreal engine render of a cute tiny robot in a busy, crowded city at night, cute eyes, volumetric lighting` },
                             // { label: 'Image Style', value: 'Hyper-realism' },
                         ].map((field) => (
                             <div key={field.label}>
@@ -230,33 +230,33 @@ function BuildScreen({ custom, animated = false }) {
     return (
         <AppScreen className="w-full">
             <MotionAppScreenHeader {...(animated ? headerAnimation : {})}>
-                <AppScreen.Title>RoboPets 4 Pets</AppScreen.Title>
-                <AppScreen.Subtitle>Kanban Board</AppScreen.Subtitle>
-                <AppScreen.Subtitle>June 21, 2024 (6 new items)</AppScreen.Subtitle>
+                <AppScreen.Title>RoboPetz</AppScreen.Title>
+                <AppScreen.Subtitle>Economic Summary</AppScreen.Subtitle>
+                <AppScreen.Subtitle>June 21, 2024</AppScreen.Subtitle>
             </MotionAppScreenHeader>
             <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
                 <div className="divide-y divide-gray-100">
                     {[
                         {
-                            name: 'Laravel',
+                            name: 'New Order Requests',
                             price: '4,098.01',
                             change: '+4.98%',
                             color: '#F9322C',
                             logo: LaravelLogo,
                         },
                         {
-                            name: 'Tuple',
-              price: '5,451.10',
-              change: '-3.38%',
-              color: '#5A67D8',
-              logo: TupleLogo,
+                            name: 'Kanban Board',
+                            price: '12 tasks',
+                            change: '3 past due',
+                            color: '#5A67D8',
+                            logo: TupleLogo,
                         },
                         {
-              name: 'Transistor',
-              price: '4,098.41',
-              change: '+6.25%',
-              color: '#2A5B94',
-              logo: TransistorLogo,
+                            name: 'Issues',
+                            price: '4 open',
+                            change: '1 new',
+                            color: '#2A5B94',
+                            logo: TransistorLogo,
                         },
                         {
               name: 'Diageo',
@@ -331,18 +331,18 @@ function ProfitScreen({ custom, animated = false }) {
     return (
         <AppScreen className="w-full">
             <MotionAppScreenHeader {...(animated ? headerAnimation : {})}>
-                <AppScreen.Title>Sell $PETS</AppScreen.Title>
+                <AppScreen.Title>Sell $PETZ</AppScreen.Title>
                 <AppScreen.Subtitle>
-                <span className="text-white">$1.3370</span> for each PETS
+                <span className="text-white">$1.3370</span> for each PETZ
                 </AppScreen.Subtitle>
             </MotionAppScreenHeader>
             <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
                 <div className="px-4 py-6">
                     <div className="space-y-4">
                         {[
-                            { label: 'Number of $PETS', value: '10,000' },
+                            { label: 'Trade quantity', value: '10,000' },
                             {
-                                label: 'Current market price',
+                                label: 'Market price',
                                 value: (
                                     <div className="flex">
                                         $1.3370
@@ -358,7 +358,7 @@ function ProfitScreen({ custom, animated = false }) {
                                     </div>
                                 ),
                             },
-                            { label: 'Estimated cost', value: '$13,370.88' },
+                            { label: 'Trade value', value: '$13,370.88' },
                         ].map((item) => (
                             <div
                                 key={item.label}
