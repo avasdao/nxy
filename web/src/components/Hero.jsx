@@ -372,7 +372,7 @@ export function Hero() {
                         </h1>
 
                         <p className="mt-6 text-lg text-gray-600">
-                            Nxy introduces the 1st uncensorable <span class="font-bold">Social Finance (SoFi) Network,</span> built on an economically self-sustaining and Layer 1 scaled community.
+                            Nxy introduces the 1st uncensorable <span className="font-bold">Social Finance (SoFi) Network,</span> built on an economically self-sustaining and Layer 1 scaled community.
                         </p>
 
                         <div className="mt-8 flex flex-wrap gap-x-6 gap-y-4">
