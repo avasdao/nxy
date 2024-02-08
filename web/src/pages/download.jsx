@@ -9,11 +9,11 @@ export default function Login() {
     return (
         <>
             <Head>
-                <title>Recovery - Nxy</title>
+                <title>Download - Nxy</title>
             </Head>
 
             <AuthLayout
-                title="Sign in to account"
+                title="Download For Your Platform"
                 subtitle={
                     <>
                         Lost access to your Persona?{' '}

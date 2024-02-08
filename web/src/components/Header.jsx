@@ -124,7 +124,7 @@ export function Header() {
                                                             Log in
                                                         </Button>
 
-                                                        <Button href="#">
+                                                        <Button href="/download">
                                                             Download the app
                                                         </Button>
                                                     </div>
@@ -136,11 +136,11 @@ export function Header() {
                             )}
                         </Popover>
 
-                        <Button href="/login" variant="outline" className="hidden lg:block">
+                        <Button href="/hotel" variant="outline" className="hidden lg:block text-lg font-light tracking-wider">
                             mNXY/USD $0.01
                         </Button>
 
-                        <Button href="#" className="hidden lg:block">
+                        <Button href="/download" className="hidden lg:block text-lg font-medium tracking-widest">
                             Download
                         </Button>
                     </div>

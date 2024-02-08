@@ -9,11 +9,11 @@ export default function Register() {
     return (
         <>
             <Head>
-                <title>Sign Up - Pocket</title>
+                <title>Forever Nxy, an Ava Maison</title>
             </Head>
 
             <AuthLayout
-                title="Sign up for an account"
+                title="Forever Nxy, an Ava Maison"
                 subtitle={
                     <>
                         Already registered?{' '}
