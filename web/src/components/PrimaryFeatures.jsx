@@ -19,6 +19,9 @@ import {
     TupleLogo,
 } from '@/components/StockLogos'
 
+import Image from 'next/image'
+import robot from '../images/app-preview-robot.jpg'
+
 const MotionAppScreenHeader = motion(AppScreen.Header)
 const MotionAppScreenBody = motion(AppScreen.Body)
 
@@ -45,7 +48,7 @@ const features = [
             `Nexa Studio offers a comprehensive suite of tools and services to help you bring your BIG ideas to life.
             Learn to monetize your BIG dreams in a way that you NEVER imagined before.`,
         icon: DeviceTouchIcon,
-        screen: InvestScreen,
+        screen: ProfitScreen,
     },
 ]
 
@@ -179,7 +182,11 @@ function DreamScreen({ custom, animated = false }) {
                 </AppScreen.Title>
 
                 <AppScreen.Subtitle>
-                    Generate images <span className="text-white">2x faster</span> with PRO.
+                    Stable Diffusion SDXL 1.0
+                </AppScreen.Subtitle>
+
+                <AppScreen.Subtitle>
+                    Generate images <span className="text-white">2x faster</span> with PRO
                 </AppScreen.Subtitle>
             </MotionAppScreenHeader>
 
@@ -187,11 +194,14 @@ function DreamScreen({ custom, animated = false }) {
                 <div className="px-4 py-6">
                     <div className="space-y-6">
                         {[
-                            { label: 'Image Prompt', value: `the creator of the most powerful financial network to every exist in 8k with hyper-realism` },
-                            { label: 'Image Style', value: 'Steampunk' },
+                            { label: 'Image Prompt', value: `unreal engine render of a cute tiny robo in a busy, crowded city at night, cute eyes, volumetric lighting` },
+                            // { label: 'Image Style', value: 'Hyper-realism' },
                         ].map((field) => (
                             <div key={field.label}>
-                                <div className="text-sm text-gray-500">{field.label}</div>
+                                <div className="text-xs font-medium text-cyan-700 tracking-widest uppercase">
+                                    {field.label}
+                                </div>
+
                                 <div className="mt-2 border-b border-gray-200 pb-2 text-sm text-gray-900">
                                     {field.value}
                                 </div>
@@ -199,8 +209,16 @@ function DreamScreen({ custom, animated = false }) {
                         ))}
                     </div>
 
-                    <div className="mt-6 rounded-lg bg-cyan-500 py-2 px-3 text-center text-sm font-semibold text-white">
-                        Generate Preview
+                    <div className="mt-5 rounded-lg bg-cyan-500 border border-cyan-800 py-2 px-3 text-center text-xl font-semibold text-white shadow">
+                        Generate Image
+                    </div>
+
+                    <div className="mt-5 w-full h-auto border border-cyan-800 rounded-lg shadow overflow-hidden">
+                        <Image
+                            src={robot}
+                            className="w-full h-auto"
+                            alt="App preview robot"
+                        />
                     </div>
                 </div>
             </MotionAppScreenBody>
@@ -212,7 +230,8 @@ function BuildScreen({ custom, animated = false }) {
     return (
         <AppScreen className="w-full">
             <MotionAppScreenHeader {...(animated ? headerAnimation : {})}>
-                <AppScreen.Title>Project Manager</AppScreen.Title>
+                <AppScreen.Title>RoboPets 4 Pets</AppScreen.Title>
+                <AppScreen.Subtitle>Kanban Board</AppScreen.Subtitle>
                 <AppScreen.Subtitle>June 21, 2024 (6 new items)</AppScreen.Subtitle>
             </MotionAppScreenHeader>
             <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
@@ -308,57 +327,57 @@ function BuildScreen({ custom, animated = false }) {
     )
 }
 
-function InvestScreen({ custom, animated = false }) {
-  return (
-    <AppScreen className="w-full">
-      <MotionAppScreenHeader {...(animated ? headerAnimation : {})}>
-        <AppScreen.Title>Buy $LA</AppScreen.Title>
-        <AppScreen.Subtitle>
-          <span className="text-white">$34.28</span> per share
-        </AppScreen.Subtitle>
-      </MotionAppScreenHeader>
-      <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
-        <div className="px-4 py-6">
-          <div className="space-y-4">
-            {[
-              { label: 'Number of shares', value: '100' },
-              {
-                label: 'Current market price',
-                value: (
-                  <div className="flex">
-                    $34.28
-                    <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6">
-                      <path
-                        d="M17 15V7H9M17 7 7 17"
-                        stroke="#06B6D4"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </div>
-                ),
-              },
-              { label: 'Estimated cost', value: '$3,428.00' },
-            ].map((item) => (
-              <div
-                key={item.label}
-                className="flex justify-between border-b border-gray-100 pb-4"
-              >
-                <div className="text-sm text-gray-500">{item.label}</div>
-                <div className="text-sm font-semibold text-gray-900">
-                  {item.value}
+function ProfitScreen({ custom, animated = false }) {
+    return (
+        <AppScreen className="w-full">
+            <MotionAppScreenHeader {...(animated ? headerAnimation : {})}>
+                <AppScreen.Title>Sell $PETS</AppScreen.Title>
+                <AppScreen.Subtitle>
+                <span className="text-white">$1.3370</span> for each PETS
+                </AppScreen.Subtitle>
+            </MotionAppScreenHeader>
+            <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
+                <div className="px-4 py-6">
+                    <div className="space-y-4">
+                        {[
+                            { label: 'Number of $PETS', value: '10,000' },
+                            {
+                                label: 'Current market price',
+                                value: (
+                                    <div className="flex">
+                                        $1.3370
+                                        <svg viewBox="0 0 24 24" fill="none" className="h-6 w-6">
+                                            <path
+                                                d="M17 15V7H9M17 7 7 17"
+                                                stroke="#06B6D4"
+                                                strokeWidth="2"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
+                                        </svg>
+                                    </div>
+                                ),
+                            },
+                            { label: 'Estimated cost', value: '$13,370.88' },
+                        ].map((item) => (
+                            <div
+                                key={item.label}
+                                className="flex justify-between border-b border-gray-100 pb-4"
+                            >
+                                <div className="text-sm text-gray-500">{item.label}</div>
+                                <div className="text-sm font-semibold text-gray-900">
+                                    {item.value}
+                                </div>
+                            </div>
+                        ))}
+                        <div className="rounded-lg bg-cyan-500 py-2 px-3 text-center text-xl font-semibold text-white">
+                            Submit Order
+                        </div>
+                    </div>
                 </div>
-              </div>
-            ))}
-            <div className="rounded-lg bg-cyan-500 py-2 px-3 text-center text-sm font-semibold text-white">
-              Buy shares
-            </div>
-          </div>
-        </div>
-      </MotionAppScreenBody>
-    </AppScreen>
-  )
+            </MotionAppScreenBody>
+        </AppScreen>
+    )
 }
 
 function usePrevious(value) {
