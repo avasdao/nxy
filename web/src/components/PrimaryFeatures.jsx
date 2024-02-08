@@ -9,41 +9,44 @@ import { CircleBackground } from '@/components/CircleBackground'
 import { Container } from '@/components/Container'
 import { PhoneFrame } from '@/components/PhoneFrame'
 import {
-  DiageoLogo,
-  LaravelLogo,
-  MirageLogo,
-  ReversableLogo,
-  StatamicLogo,
-  StaticKitLogo,
-  TransistorLogo,
-  TupleLogo,
+    DiageoLogo,
+    LaravelLogo,
+    MirageLogo,
+    ReversableLogo,
+    StatamicLogo,
+    StaticKitLogo,
+    TransistorLogo,
+    TupleLogo,
 } from '@/components/StockLogos'
 
 const MotionAppScreenHeader = motion(AppScreen.Header)
 const MotionAppScreenBody = motion(AppScreen.Body)
 
 const features = [
-  {
-    name: 'Earn crypto together with your friends',
-    description:
-      'For every friend you invite to Nxy, you get insider notifications 5 seconds sooner. And it’s 10 seconds if you invite an insider.',
-    icon: DeviceUserIcon,
-    screen: InviteScreen,
-  },
-  {
-    name: 'Notifications on stock dips',
-    description:
-      'Get a push notification every time we find out something that’s going to lower the share price on your holdings so you can sell before the information hits the public markets.',
-    icon: DeviceNotificationIcon,
-    screen: StocksScreen,
-  },
-  {
-    name: 'Invest what you want',
-    description:
-      'We hide your stock purchases behind thousands of anonymous trading accounts, so suspicious activity can never be traced back to you.',
-    icon: DeviceTouchIcon,
-    screen: InvestScreen,
-  },
+    {
+        name: 'DREAM IT...',
+        description:
+            `Nexa Studio offers a comprehensive suite of tools and services to help you bring your BIG ideas to life.
+            Learn to visualize your BIG dreams in a way that you NEVER imagined before.`,
+        icon: DeviceUserIcon,
+        screen: InviteScreen,
+    },
+    {
+        name: 'BUILD IT...',
+        description:
+            `Nexa Studio offers a comprehensive suite of tools and services to help you bring your BIG ideas to life.
+            Learn to build your BIG dreams in a way that you NEVER imagined before.`,
+        icon: DeviceNotificationIcon,
+        screen: StocksScreen,
+    },
+    {
+        name: 'PROFIT!',
+        description:
+            `Nexa Studio offers a comprehensive suite of tools and services to help you bring your BIG ideas to life.
+            Learn to monetize your BIG dreams in a way that you NEVER imagined before.`,
+        icon: DeviceTouchIcon,
+        screen: InvestScreen,
+    },
 ]
 
 function DeviceUserIcon(props) {
@@ -168,37 +171,41 @@ const bodyAnimation = {
 }
 
 function InviteScreen({ custom, animated = false }) {
-  return (
-    <AppScreen className="w-full">
-      <MotionAppScreenHeader {...(animated ? headerAnimation : {})}>
-        <AppScreen.Title>Invite people</AppScreen.Title>
-        <AppScreen.Subtitle>
-          Get tips <span className="text-white">5s sooner</span> for every
-          invite.
-        </AppScreen.Subtitle>
-      </MotionAppScreenHeader>
-      <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
-        <div className="px-4 py-6">
-          <div className="space-y-6">
-            {[
-              { label: 'Full name', value: 'Albert H. Wiggin' },
-              { label: 'Email address', value: 'awiggin@chase.com' },
-            ].map((field) => (
-              <div key={field.label}>
-                <div className="text-sm text-gray-500">{field.label}</div>
-                <div className="mt-2 border-b border-gray-200 pb-2 text-sm text-gray-900">
-                  {field.value}
+    return (
+        <AppScreen className="w-full">
+            <MotionAppScreenHeader {...(animated ? headerAnimation : {})}>
+                <AppScreen.Title>
+                    AI Studio
+                </AppScreen.Title>
+
+                <AppScreen.Subtitle>
+                    Generate images <span className="text-white">2x faster</span> with PRO.
+                </AppScreen.Subtitle>
+            </MotionAppScreenHeader>
+
+            <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
+                <div className="px-4 py-6">
+                    <div className="space-y-6">
+                        {[
+                            { label: 'Image Prompt', value: `the creator of the most powerful financial network to every exist in 8k with hyper-realism` },
+                            { label: 'Image Style', value: 'Steampunk' },
+                        ].map((field) => (
+                            <div key={field.label}>
+                                <div className="text-sm text-gray-500">{field.label}</div>
+                                <div className="mt-2 border-b border-gray-200 pb-2 text-sm text-gray-900">
+                                    {field.value}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="mt-6 rounded-lg bg-cyan-500 py-2 px-3 text-center text-sm font-semibold text-white">
+                        Generate Preview
+                    </div>
                 </div>
-              </div>
-            ))}
-          </div>
-          <div className="mt-6 rounded-lg bg-cyan-500 py-2 px-3 text-center text-sm font-semibold text-white">
-            Invite person
-          </div>
-        </div>
-      </MotionAppScreenBody>
-    </AppScreen>
-  )
+            </MotionAppScreenBody>
+        </AppScreen>
+    )
 }
 
 function StocksScreen({ custom, animated = false }) {
@@ -540,31 +547,28 @@ function FeaturesMobile() {
 }
 
 export function PrimaryFeatures() {
-  return (
-    <section
-      id="features"
-      aria-label="Features for investing all your money"
-      className="bg-gray-900 py-20 sm:py-32"
-    >
-      <Container>
-        <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">
-          <h2 className="text-3xl font-medium tracking-tight text-white">
-            Every feature you need to win. Try it for yourself.
-          </h2>
-          <p className="mt-2 text-lg text-gray-400">
-            Nxy was built for investors like you who play by their own rules
-            and aren’t going to let SEC regulations get in the way of their
-            dreams. If other investing tools are afraid to build it, Nxy has
-            it.
-          </p>
-        </div>
-      </Container>
-      <div className="mt-16 md:hidden">
-        <FeaturesMobile />
-      </div>
-      <Container className="hidden md:mt-20 md:block">
-        <FeaturesDesktop />
-      </Container>
-    </section>
-  )
+    return (
+        <section
+            id="features"
+            aria-label="Features for investing all your money"
+            className="bg-gray-900 py-20 sm:py-32"
+        >
+            <Container>
+                <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">
+                    <h2 className="text-3xl font-medium tracking-tight text-white">
+                        Dream. Build. Profit!
+                    </h2>
+                    <p className="mt-2 text-lg text-gray-400">
+                        Nxy offers Creators an opportunity to realize their wildest dreams in an environment with built-in monetization and protections against censorship.
+                    </p>
+                </div>
+            </Container>
+            <div className="mt-16 md:hidden">
+                <FeaturesMobile />
+            </div>
+            <Container className="hidden md:mt-20 md:block">
+                <FeaturesDesktop />
+            </Container>
+        </section>
+    )
 }

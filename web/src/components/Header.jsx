@@ -137,7 +137,7 @@ export function Header() {
                         </Popover>
 
                         <Button href="/login" variant="outline" className="hidden lg:block">
-                            mNexa/USD $7.00
+                            mNXY/USD $0.01
                         </Button>
 
                         <Button href="#" className="hidden lg:block">
