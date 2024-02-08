@@ -29,7 +29,7 @@ const features = [
             `Nexa Studio offers a comprehensive suite of tools and services to help you bring your BIG ideas to life.
             Learn to visualize your BIG dreams in a way that you NEVER imagined before.`,
         icon: DeviceUserIcon,
-        screen: InviteScreen,
+        screen: DreamScreen,
     },
     {
         name: 'BUILD IT.',
@@ -37,7 +37,7 @@ const features = [
             `Nexa Studio offers a comprehensive suite of tools and services to help you bring your BIG ideas to life.
             Learn to build your BIG dreams in a way that you NEVER imagined before.`,
         icon: DeviceNotificationIcon,
-        screen: StocksScreen,
+        screen: BuildScreen,
     },
     {
         name: 'PROFIT!',
@@ -170,7 +170,7 @@ const bodyAnimation = {
   },
 }
 
-function InviteScreen({ custom, animated = false }) {
+function DreamScreen({ custom, animated = false }) {
     return (
         <AppScreen className="w-full">
             <MotionAppScreenHeader {...(animated ? headerAnimation : {})}>
@@ -208,104 +208,104 @@ function InviteScreen({ custom, animated = false }) {
     )
 }
 
-function StocksScreen({ custom, animated = false }) {
-  return (
-    <AppScreen className="w-full">
-      <MotionAppScreenHeader {...(animated ? headerAnimation : {})}>
-        <AppScreen.Title>Stocks</AppScreen.Title>
-        <AppScreen.Subtitle>March 9, 2022</AppScreen.Subtitle>
-      </MotionAppScreenHeader>
-      <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
-        <div className="divide-y divide-gray-100">
-          {[
-            {
-              name: 'Laravel',
-              price: '4,098.01',
-              change: '+4.98%',
-              color: '#F9322C',
-              logo: LaravelLogo,
-            },
-            {
-              name: 'Tuple',
+function BuildScreen({ custom, animated = false }) {
+    return (
+        <AppScreen className="w-full">
+            <MotionAppScreenHeader {...(animated ? headerAnimation : {})}>
+                <AppScreen.Title>Project Manager</AppScreen.Title>
+                <AppScreen.Subtitle>June 21, 2024 (6 new items)</AppScreen.Subtitle>
+            </MotionAppScreenHeader>
+            <MotionAppScreenBody {...(animated ? { ...bodyAnimation, custom } : {})}>
+                <div className="divide-y divide-gray-100">
+                    {[
+                        {
+                            name: 'Laravel',
+                            price: '4,098.01',
+                            change: '+4.98%',
+                            color: '#F9322C',
+                            logo: LaravelLogo,
+                        },
+                        {
+                            name: 'Tuple',
               price: '5,451.10',
               change: '-3.38%',
               color: '#5A67D8',
               logo: TupleLogo,
-            },
-            {
+                        },
+                        {
               name: 'Transistor',
               price: '4,098.41',
               change: '+6.25%',
               color: '#2A5B94',
               logo: TransistorLogo,
-            },
-            {
+                        },
+                        {
               name: 'Diageo',
               price: '250.65',
               change: '+1.25%',
               color: '#3320A7',
               logo: DiageoLogo,
-            },
-            {
+                        },
+                        {
               name: 'StaticKit',
               price: '250.65',
               change: '-3.38%',
               color: '#2A3034',
               logo: StaticKitLogo,
-            },
-            {
+                        },
+                        {
               name: 'Statamic',
               price: '5,040.85',
               change: '-3.11%',
               color: '#0EA5E9',
               logo: StatamicLogo,
-            },
-            {
+                        },
+                        {
               name: 'Mirage',
               price: '140.44',
               change: '+9.09%',
               color: '#16A34A',
               logo: MirageLogo,
-            },
-            {
+                        },
+                        {
               name: 'Reversable',
               price: '550.60',
               change: '-1.25%',
               color: '#8D8D8D',
               logo: ReversableLogo,
-            },
-          ].map((stock) => (
-            <div key={stock.name} className="flex items-center gap-4 px-4 py-3">
-              <div
-                className="flex-none rounded-full"
-                style={{ backgroundColor: stock.color }}
-              >
-                <stock.logo className="h-10 w-10" />
-              </div>
-              <div className="flex-auto text-sm text-gray-900">
-                {stock.name}
-              </div>
-              <div className="flex-none text-right">
-                <div className="text-sm font-medium text-gray-900">
-                  {stock.price}
+                        },
+                    ].map((stock) => (
+                        <div key={stock.name} className="flex items-center gap-4 px-4 py-3">
+                            <div
+                                className="flex-none rounded-full"
+                                style={{ backgroundColor: stock.color }}
+                            >
+                                <stock.logo className="h-10 w-10" />
+                            </div>
+                            <div className="flex-auto text-sm text-gray-900">
+                                {stock.name}
+                            </div>
+                            <div className="flex-none text-right">
+                                <div className="text-sm font-medium text-gray-900">
+                                    {stock.price}
+                                </div>
+                                <div
+                                    className={clsx(
+                                        'text-xs leading-5',
+                                        stock.change.startsWith('+')
+                                        ? 'text-cyan-500'
+                                        : 'text-gray-500'
+                                    )}
+                                >
+                                    {stock.change}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
                 </div>
-                <div
-                  className={clsx(
-                    'text-xs leading-5',
-                    stock.change.startsWith('+')
-                      ? 'text-cyan-500'
-                      : 'text-gray-500'
-                  )}
-                >
-                  {stock.change}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </MotionAppScreenBody>
-    </AppScreen>
-  )
+            </MotionAppScreenBody>
+        </AppScreen>
+    )
 }
 
 function InvestScreen({ custom, animated = false }) {
