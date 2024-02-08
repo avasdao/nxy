@@ -24,7 +24,7 @@ const MotionAppScreenBody = motion(AppScreen.Body)
 
 const features = [
     {
-        name: 'DREAM IT...',
+        name: 'DREAM IT.',
         description:
             `Nexa Studio offers a comprehensive suite of tools and services to help you bring your BIG ideas to life.
             Learn to visualize your BIG dreams in a way that you NEVER imagined before.`,
@@ -32,7 +32,7 @@ const features = [
         screen: InviteScreen,
     },
     {
-        name: 'BUILD IT...',
+        name: 'BUILD IT.',
         description:
             `Nexa Studio offers a comprehensive suite of tools and services to help you bring your BIG ideas to life.
             Learn to build your BIG dreams in a way that you NEVER imagined before.`,
@@ -372,19 +372,19 @@ function usePrevious(value) {
 }
 
 function FeaturesDesktop() {
-  let [changeCount, setChangeCount] = useState(0)
-  let [selectedIndex, setSelectedIndex] = useState(0)
-  let prevIndex = usePrevious(selectedIndex)
-  let isForwards = prevIndex === undefined ? true : selectedIndex > prevIndex
+    let [changeCount, setChangeCount] = useState(0)
+    let [selectedIndex, setSelectedIndex] = useState(0)
+    let prevIndex = usePrevious(selectedIndex)
+    let isForwards = prevIndex === undefined ? true : selectedIndex > prevIndex
 
-  let onChange = useDebouncedCallback(
-    (selectedIndex) => {
-      setSelectedIndex(selectedIndex)
-      setChangeCount((changeCount) => changeCount + 1)
-    },
-    100,
-    { leading: true }
-  )
+    let onChange = useDebouncedCallback(
+        (selectedIndex) => {
+            setSelectedIndex(selectedIndex)
+            setChangeCount((changeCount) => changeCount + 1)
+        },
+        100,
+        { leading: true }
+    )
 
   return (
     <Tab.Group
@@ -556,7 +556,7 @@ export function PrimaryFeatures() {
             <Container>
                 <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-3xl">
                     <h2 className="text-3xl font-medium tracking-tight text-white">
-                        Dream. Build. Profit!
+                        Dream It. Build It. Profit!
                     </h2>
                     <p className="mt-2 text-lg text-gray-400">
                         Nxy offers Creators an opportunity to realize their wildest dreams in an environment with built-in monetization and protections against censorship.
