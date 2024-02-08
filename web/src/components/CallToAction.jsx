@@ -19,7 +19,8 @@ export function CallToAction() {
                     </h2>
 
                     <p className="mt-4 text-lg text-gray-300">
-                        It takes just a few minutes, using ANY of our popular templates.
+                        It takes just a few minutes.
+                        Choose from ANY of the Noob Starter Bundles.
                     </p>
 
                     <div className="mt-8 flex justify-center">

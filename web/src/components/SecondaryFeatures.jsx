@@ -3,42 +3,42 @@ import { useId } from 'react'
 import { Container } from '@/components/Container'
 
 const features = [
-  {
-    name: 'Invest any amount',
-    description:
-      'Whether it’s $1 or $1,000,000, we can put your money to work for you.',
-    icon: DeviceArrowIcon,
-  },
-  {
-    name: 'Build a balanced portfolio',
-    description:
-      'Invest in different industries to find the most opportunities to win huge.',
-    icon: DeviceCardsIcon,
-  },
-  {
-    name: 'Trade in real-time',
-    description:
-      'Get insider tips on big stock moves and act on them within seconds.',
-    icon: DeviceClockIcon,
-  },
-  {
-    name: 'Profit from your network',
-    description:
-      'Invite new insiders to get tips faster and beat even other Pocket users.',
-    icon: DeviceListIcon,
-  },
-  {
-    name: 'Encrypted and anonymized',
-    description:
-      'Cutting-edge security technology that even the NSA doesn’t know about keeps you hidden.',
-    icon: DeviceLockIcon,
-  },
-  {
-    name: 'Portfolio tracking',
-    description:
-      'Watch your investments grow exponentially, leaving other investors in the dust.',
-    icon: DeviceChartIcon,
-  },
+    {
+        name: '100% Permissionless',
+        description:
+            `You'll NEVER require anyone's permission or license to Create before fulfilling YOUR dreams.`,
+        icon: DeviceArrowIcon,
+    },
+    {
+        name: 'FREE & Infinite Scalability',
+        description:
+            `Finally STOP worrying about hosting costs after deploying to Nxy's global P2P network.`,
+        icon: DeviceCardsIcon,
+    },
+    {
+        name: 'Endless Opportunities',
+        description:
+            `Participate in as many different Economies as YOU desire to reach YOUR lifestyle goals.`,
+        icon: DeviceListIcon,
+    },
+    {
+        name: 'Time-saving Automation',
+        description:
+            `Programmable money has NEVER been more convenient for YOUR everyday lifestyle.`,
+        icon: DeviceClockIcon,
+    },
+    {
+        name: '100% Uptime Guarantee',
+        description:
+            `Nxy runs on top of the MOST powerful P2P / distributed computing network in the world.`,
+        icon: DeviceChartIcon,
+    },
+    {
+        name: 'E2E Encrypted & Anonymized',
+        description:
+            `Bleeding-edge technology, that the NSA wish you didn't know about, keeps you Safu.`,
+        icon: DeviceLockIcon,
+    },
 ]
 
 function DeviceArrowIcon(props) {
@@ -187,40 +187,45 @@ function DeviceChartIcon(props) {
 }
 
 export function SecondaryFeatures() {
-  return (
-    <section
-      id="secondary-features"
-      aria-label="Features for building a portfolio"
-      className="py-20 sm:py-32"
-    >
-      <Container>
-        <div className="mx-auto max-w-2xl sm:text-center">
-          <h2 className="text-3xl font-medium tracking-tight text-gray-900">
-            Now is the time to build your portfolio.
-          </h2>
-          <p className="mt-2 text-lg text-gray-600">
-            With typical market returns, you have to start young to secure your
-            future. With Pocket, it’s never too late to build your nest egg.
-          </p>
-        </div>
-        <ul
-          role="list"
-          className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
+    return (
+        <section
+            id="benefits"
+            aria-label="Benefits for building with Nxy"
+            className="py-20 sm:py-32"
         >
-          {features.map((feature) => (
-            <li
-              key={feature.name}
-              className="rounded-2xl border border-gray-200 p-8"
-            >
-              <feature.icon className="h-8 w-8" />
-              <h3 className="mt-6 font-semibold text-gray-900">
-                {feature.name}
-              </h3>
-              <p className="mt-2 text-gray-700">{feature.description}</p>
-            </li>
-          ))}
-        </ul>
-      </Container>
-    </section>
-  )
+            <Container>
+                <div className="mx-auto max-w-2xl sm:text-center">
+                    <h2 className="text-3xl font-medium tracking-tight text-gray-900">
+                        Now is the time to Build-Your-Future...
+                    </h2>
+
+                    <p className="mt-2 text-lg text-gray-600">
+                        Let Nxy be the last Space you&apos;ll ever <span className="text-xl font-bold italic">HAVE</span> to move to again.
+                        Access to The Oasis grants you <span className="text-xl font-bold italic">UNLIMITED</span> freedom to discover... <span className="text-xl font-bold italic">EVERYTHING!</span>
+                    </p>
+                </div>
+
+                <ul
+                    role="list"
+                    className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
+                >
+                    {features.map((feature) => (
+                        <li
+                            key={feature.name}
+                            className="rounded-2xl border border-gray-200 p-8"
+                        >
+                            <feature.icon className="h-8 w-8" />
+                            <h3 className="mt-6 text-xl font-semibold text-gray-600">
+                                {feature.name}
+                            </h3>
+
+                            <p className="mt-2 text-gray-700">
+                                {feature.description}
+                                </p>
+                        </li>
+                    ))}
+                </ul>
+            </Container>
+        </section>
+    )
 }

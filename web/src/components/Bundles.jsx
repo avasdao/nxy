@@ -208,12 +208,12 @@ export function Bundles() {
                         id="pricing-title"
                         className="text-3xl font-medium tracking-tight text-gray-900"
                     >
-                        Starter Bundles, INSTANT Setup!
+                        Noob Starter Bundles, INSTANT Setup!
                     </h2>
 
                     <p className="mt-2 text-lg text-gray-600">
-                        Whether you’re one person trying to get ahead or a big firm trying
-                        to take over the world, we’ve got a plan for you.
+                        Whether you&apos;re one person trying to get ahead or a big firm trying
+                        to take over the world, we&apos;ve got a Bundle ready for you.
                     </p>
                 </div>
 
