@@ -368,7 +368,7 @@ export function Hero() {
                 <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:gap-y-20">
                     <div className="relative z-10 mx-auto max-w-2xl lg:col-span-7 lg:max-w-none lg:pt-6 xl:col-span-6">
                         <h1 className="text-5xl font-medium tracking-tight text-gray-900 leading-[60px]">
-                            <em className="text-rose-500">Build &amp; Monetize</em> Your Next BIG Idea in Uncensored Spaces exclusively for <em className="text-rose-500">"Edgy" Creators</em>
+                            <em className="text-rose-500">Build &amp; Monetize</em> Your Next BIG Idea in Uncensored Spaces exclusively for <em className="text-rose-500">&ldquo;Edgy&rdquo; Creators</em>
                         </h1>
 
                         <p className="mt-6 text-lg text-gray-600">
