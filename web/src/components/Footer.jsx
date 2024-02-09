@@ -8,7 +8,7 @@ import qrCode from '@/images/qr-code.svg'
 
 // import Image from 'next/future/image'
 import Image from 'next/image'
-import logo from '../images/logo.png'
+import logo from '@/images/logo.png'
 
 function QrCodeBorder(props) {
     return (
@@ -38,12 +38,12 @@ export function Footer() {
                             />
 
                             <div className="ml-4">
-                                <p className="text-base font-semibold">
+                                <p className="text-2xl font-semibold">
                                     NXY
                                 </p>
 
-                                <p className="mt-1 text-sm w-96">
-                                Providing safe & secure Spaces for Creators to Dream, Build & Profit from their own *exclusive* token economies.
+                                <p className="mt-1 text-sm w-full lg:w-2/3 italic">
+                                    Providing safe & secure Spaces for Creators to Dream, Build & Profit from their own *exclusive* token economies.
                                 </p>
                             </div>
                         </div>

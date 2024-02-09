@@ -20,7 +20,7 @@ import {
 } from '@/components/StockLogos'
 
 import Image from 'next/image'
-import robot from '../images/app-preview-robot.jpg'
+import robot from '@/images/app-preview-robot.jpg'
 
 const MotionAppScreenHeader = motion(AppScreen.Header)
 const MotionAppScreenBody = motion(AppScreen.Body)

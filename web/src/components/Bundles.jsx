@@ -101,7 +101,8 @@ function Plan({
         <section
             className={clsx(
                 'flex flex-col overflow-hidden rounded-3xl p-6 shadow-lg shadow-gray-900/5',
-                featured ? 'order-first bg-gray-900 lg:order-none' : 'bg-white'
+                // featured ? 'order-first bg-gray-900 lg:order-none' : 'bg-white'
+                featured ? 'bg-gray-900' : 'bg-white'
             )}
         >
             <h3

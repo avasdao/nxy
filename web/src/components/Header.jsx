@@ -37,7 +37,7 @@ function MobileNavLink({ children, ...props }) {
     return (
         <Popover.Button
             as={Link}
-            className="block text-base leading-7 tracking-tight text-gray-700"
+            className="block text-xl leading-7 tracking-tight text-gray-700"
             {...props}
         >
             {children}
@@ -70,9 +70,9 @@ export function Header() {
                                     >
                                         {({ open }) =>
                                             open ? (
-                                                <ChevronUpIcon className="h-6 w-6" />
+                                                <ChevronUpIcon className="h-10 w-10" />
                                             ) : (
-                                                <MenuIcon className="h-6 w-6" />
+                                                <MenuIcon className="h-10 w-10" />
                                             )
                                         }
                                     </Popover.Button>
@@ -110,8 +110,8 @@ export function Header() {
                                                             Reviews
                                                         </MobileNavLink>
 
-                                                        <MobileNavLink href="#pricing">
-                                                            Pricing
+                                                        <MobileNavLink href="#bundles">
+                                                            Noob Bundles
                                                         </MobileNavLink>
 
                                                         <MobileNavLink href="#faqs">
@@ -120,12 +120,12 @@ export function Header() {
                                                     </div>
 
                                                     <div className="mt-8 flex flex-col gap-4">
-                                                        <Button href="/login" variant="outline">
-                                                            Log in
+                                                        <Button href="https://avas.cash" target="_blank" variant="outline" className="py-4 text-[1.4em]">
+                                                            mNXY/USD $0.01
                                                         </Button>
 
-                                                        <Button href="/download">
-                                                            Download the app
+                                                        <Button href="https://avas.cash/mining" target="_blank" className="py-4 text-[1.8em]">
+                                                            Start Mining
                                                         </Button>
                                                     </div>
                                                 </Popover.Panel>
@@ -140,8 +140,8 @@ export function Header() {
                             mNXY/USD $0.01
                         </Button>
 
-                        <Button href="/download" className="hidden lg:block text-lg font-medium tracking-widest">
-                            Download
+                        <Button href="https://avas.cash/mining" target="_blank" className="hidden lg:block text-lg font-medium tracking-widest">
+                            Start Mining
                         </Button>
                     </div>
                 </Container>
