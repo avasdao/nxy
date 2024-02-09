@@ -79,7 +79,7 @@ onMounted(() => {
                     Mining
                 </NuxtLink>
 
-                <NuxtLink to="https://nxy.app" target="_blank" class="text-xl font-semibold leading-6 text-gray-900">
+                <NuxtLink to="https://nxy.social/download" target="_blank" class="text-xl font-semibold leading-6 text-gray-900">
                     Download
                 </NuxtLink>
 

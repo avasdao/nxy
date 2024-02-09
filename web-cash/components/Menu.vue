@@ -31,7 +31,6 @@ const trackMatomo = () => {
 onMounted(() => {
     trackMatomo()
 })
-
 </script>
 
 <template>
@@ -87,12 +86,12 @@ onMounted(() => {
 
                             <nav class="lg:hidden mb-3 px-3 sm:px-10 w-full flex flex-col items-center text-xs text-amber-800 font-medium uppercase">
                                 <div class="w-full my-0 py-2 flex flex-row gap-x-0.5">
-                                    <NuxtLink @click="toggleMenu" to="/payouts" class="w-full text-center px-2 py-1 bg-amber-200 border border-amber-300 rounded-tl-lg tracking-widest hover:bg-amber-400">
-                                        Payouts
+                                    <NuxtLink @click="toggleMenu" to="https://nxy.social/download" target="_blank" class="w-full text-center px-2 py-1 bg-amber-200 border border-amber-300 rounded-tl-lg tracking-widest hover:bg-amber-400">
+                                        Download
                                     </NuxtLink>
 
-                                    <NuxtLink @click="toggleMenu" to="/staking" class="w-full text-center px-2 py-1 bg-amber-200 border border-amber-300 tracking-widest hover:bg-amber-400">
-                                        Staking
+                                    <NuxtLink @click="toggleMenu" to="/whitepaper" class="w-full text-center px-2 py-1 bg-amber-200 border border-amber-300 tracking-widest hover:bg-amber-400">
+                                        Whitepaper
                                     </NuxtLink>
 
                                     <NuxtLink @click="toggleMenu" to="/token" class="w-full text-center px-2 py-1 bg-amber-200 border border-amber-300 tracking-widest hover:bg-amber-400">
@@ -104,8 +103,8 @@ onMounted(() => {
                                     </NuxtLink>
                                 </div>
 
-                                <NuxtLink @click="toggleMenu" to="/bootstrap" class="-mt-1.5 w-full text-center my-0 px-2 py-1 bg-amber-200 border border-amber-300 rounded-b-lg tracking-widest hover:bg-amber-400">
-                                    Bootstrap Nexa
+                                <NuxtLink @click="toggleMenu" to="/mining" class="-mt-1.5 w-full text-center my-0 px-2 py-1 bg-amber-200 border border-amber-300 rounded-b-lg tracking-widest hover:bg-amber-400 uppercase">
+                                    Mining Center
                                 </NuxtLink>
                             </nav>
 

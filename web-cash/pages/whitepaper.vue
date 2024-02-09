@@ -22,14 +22,14 @@ const System = useSystemStore()
 </script>
 
 <template>
-    <main class="bg-white px-6 py-32 lg:px-8">
+    <main class="bg-white px-3 py-32 sm:px-4 lg:px-6">
         <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
             <p class="text-base font-light leading-7 text-gray-400 italic tracking-wider">
                 Last updated: 2024.2.4
             </p>
 
-            <h1 class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                $NXY Cash Whitepaper
+            <h1 class="mt-2 text-6xl sm:text-5xl font-bold tracking-tight text-gray-900">
+                $NXY Cash <span class="pl-8 sm:pl-0 block sm:inline text-4xl sm:text-5xl text-gray-400 sm:text-gray-900 tracking-widest sm:tracking-normal uppercase sm:normal-case">Whitepaper</span>
             </h1>
 
             <p class="my-6 text-xl leading-8">
@@ -37,7 +37,7 @@ const System = useSystemStore()
                 offering <span class="text-2xl font-medium">sustainable</span> infrastructure to an ever-growing global community, using purely <span class="text-2xl font-medium">economic</span> incentives, built directly into a <span class="text-2xl font-medium">provably fair</span> protocol.
             </p>
 
-            <p class="my-12 text-5xl leading-[60px] font-light italic">
+            <p class="my-8 sm:my-12 text-4xl sm:text-5xl leading-[50px] sm:leading-[60px] font-light italic">
                 What we discovered was How-to <span class="font-normal">financially support <span class="text-rose-500 text-6xl">Creators</span></span> with <span class="underline">NO</span> strings attached, indefinitely!
             </p>
 
@@ -216,10 +216,16 @@ const System = useSystemStore()
                     The mining reward amount is governed by the following calculation:
                 </h4>
 
-                <pre class="mt-3">
+                <pre class="sm:hidden mt-3 text-sm">
+currentSeason =
+    (currentEpoch / seasonLength) + 1
+
+miningReward =
+    genesisMiningReward / currentSeason
+                </pre>
+                <pre class="hidden sm:flex mt-3">
 currentSeason = (currentEpoch / seasonLength) + 1
 miningReward = genesisMiningReward / currentSeason
-
                 </pre>
             </div>
 

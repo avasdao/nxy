@@ -14,7 +14,7 @@ const { locale } = useI18n()
                 </div>
 
                 <div class="pb-6">
-                    <NuxtLink to="https://nxy.app" target="_blank" class="text-sm sm:text-lg leading-6 text-gray-600 hover:text-gray-900">
+                    <NuxtLink to="https://nxy.social/download" target="_blank" class="text-sm sm:text-lg leading-6 text-gray-600 hover:text-gray-900">
                         Download
                     </NuxtLink>
                 </div>

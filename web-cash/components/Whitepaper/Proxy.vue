@@ -39,7 +39,27 @@ const props = defineProps({
             Wise Delegate templates offer <span class="font-bold text-2xl">infinite</span> creative possibilities for Script authors, while still conforming to <span class="font-bold text-2xl">"clean" Nexa-style template</span> standards and maximum interoperability.
         </p>
 
-<pre class="mt-8 px-3 py-2 text-amber-900 bg-amber-50 border-2 border-amber-300 rounded-xl shadow">
+<pre class="lg:hidden mt-8 px-3 py-2 text-amber-900 bg-amber-50 border-2 border-amber-300 rounded-xl shadow">
+&lt;09504F4C59504F573031&gt;
+&lt;OP_DROP&gt;
+
+[ PUSH template placeholder ]
+[ PUSH fair-access code ]
+[ PUSH miner address ]
+[ PUSH submission candidate ]
+[ PUSH # params ]
+[ PUSH # returns ]
+[ PUSH Script template ]
+
+&lt;OP_1NEGATE&gt;
+&lt;OP_PLACE&gt;
+&lt;OP_HASH160&gt;
+&lt;OP_FROMALTSTACK&gt;
+&lt;OP_EQUALVERIFY&gt;
+&lt;OP_EXEC&gt;
+👆 where the *MAGIC* happens ✨
+</pre>
+<pre class="hidden lg:flex mt-8 px-3 py-2 text-amber-900 bg-amber-50 border-2 border-amber-300 rounded-xl shadow">
 &lt;09504F4C59504F573031&gt; (read. POLYPOW01)
 &lt;OP_DROP&gt;
 
@@ -64,18 +84,22 @@ const props = defineProps({
                 Contract / Script Template
             </h2>
 
-<pre class="text-xl tracking-widest text-center">
+<pre class="sm:hidden text-xl tracking-widest text-center">
+<span class="font-bold text-lime-600">09504F4C59504F573031</span>
+754FE9A96C88<NuxtLink to="https://spec.nexa.org/script/op-codes/op_exec/" target="_blank" class="font-bold text-blue-500 hover:underline">ED</NuxtLink>
+</pre>
+<pre class="hidden sm:flex text-xl tracking-widest text-center">
 <span class="font-bold text-lime-600">09504F4C59504F573031</span>754FE9A96C88<NuxtLink to="https://spec.nexa.org/script/op-codes/op_exec/" target="_blank" class="font-bold text-blue-500 hover:underline">ED</NuxtLink>
 </pre>
 
-            <p class="font-bold text-lime-600">
+            <p class="font-medium text-lime-600 leading-6">
                 Unique NAMESPACE is the ONLY configuration required by Script authors
-                <small class="block text-sm italic">
+                <small class="block text-sm italic font-normal">
                     (a namespace is required to ID each individual *delegated* Script template)
                 </small>
             </p>
 
-            <NuxtLink to="https://spec.nexa.org/script/op-codes/op_exec/" target="_blank" class="font-bold text-blue-500 hover:underline">
+            <NuxtLink to="https://spec.nexa.org/script/op-codes/op_exec/" target="_blank" class="font-medium text-blue-500 hover:underline">
                 OP_EXEC (0xED) is a Script command exclusive ONLY to Nexa
             </NuxtLink>
         </section>
@@ -85,7 +109,11 @@ const props = defineProps({
                 Contract / Script Template Hash
             </h2>
 
-<pre class="text-xl tracking-widest text-center">
+<pre class="sm:hidden text-xl tracking-widest text-center">
+90D3B53F09E8430BD4D51
+9243071090D6CB60F96
+</pre>
+<pre class="hidden sm:flex text-xl tracking-widest text-center">
 90D3B53F09E8430BD4D519243071090D6CB60F96
 </pre>
 
