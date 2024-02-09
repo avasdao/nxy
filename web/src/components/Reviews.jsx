@@ -266,7 +266,7 @@ export function Reviews() {
                 </h2>
 
                 <p className="mt-2 text-lg text-gray-600 sm:text-center">
-                    Learn how others discovered the MOST effective ways to
+                    Discover how Creators have been MOST effectively using Nxy to
                     <br />MONETIZE their talents for the GREATEST impact across the entire Oasis.
                 </p>
 

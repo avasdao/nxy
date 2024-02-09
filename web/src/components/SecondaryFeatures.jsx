@@ -6,13 +6,13 @@ const features = [
     {
         name: '100% Permissionless',
         description:
-            `You'll NEVER require anyone's permission or license to Create before fulfilling YOUR dreams.`,
+            `You'll NEVER require anyone's permission to Dream BIG or a license to Build a better future.`,
         icon: DeviceArrowIcon,
     },
     {
-        name: 'FREE & Infinite Scalability',
+        name: 'FREE + Infinite Scalability',
         description:
-            `Finally STOP worrying about hosting costs after deploying to Nxy's global P2P network.`,
+            `You can just STOP worrying about hosting costs after deploying to Nxy's global P2P network.`,
         icon: DeviceCardsIcon,
     },
     {
@@ -24,7 +24,7 @@ const features = [
     {
         name: 'Time-saving Automation',
         description:
-            `Programmable money has NEVER been more convenient for YOUR everyday lifestyle.`,
+            `Programmable money has NEVER worked more conveniently towards YOUR everyday needs.`,
         icon: DeviceClockIcon,
     },
     {
@@ -34,9 +34,9 @@ const features = [
         icon: DeviceChartIcon,
     },
     {
-        name: 'E2E Encrypted & Anonymized',
+        name: 'E2E Encrypted + Anonymized',
         description:
-            `Bleeding-edge technology, that the NSA wish you didn't know about, keeps you Safu.`,
+            `Bleeding-edge security, your government wish you didn't have, keeping YOU Safu.`,
         icon: DeviceLockIcon,
     },
 ]
@@ -201,7 +201,7 @@ export function SecondaryFeatures() {
 
                     <p className="mt-2 text-lg text-gray-600">
                         Let Nxy be the last Space you&apos;ll ever <span className="text-xl font-bold italic">HAVE</span> to move to again.
-                        Access to The Oasis grants you <span className="text-xl font-bold italic">UNLIMITED</span> freedom to discover... <span className="text-xl font-bold italic">EVERYTHING!</span>
+                        Access to the Oasis grants you <span className="text-xl font-bold italic">UNLIMITED</span> freedom to discover... <span className="text-xl font-bold italic">EVERYTHING!</span>
                     </p>
                 </div>
 

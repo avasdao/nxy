@@ -136,7 +136,7 @@ export function Header() {
                             )}
                         </Popover>
 
-                        <Button href="/hotel" variant="outline" className="hidden lg:block text-lg font-light tracking-wider">
+                        <Button href="https://nxy.cash" target="_blank" variant="outline" className="hidden lg:block text-lg font-light tracking-wider">
                             mNXY/USD $0.01
                         </Button>
 
