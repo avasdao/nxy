@@ -96,10 +96,10 @@ export default function Login() {
                         </ul>
 
                         <div className="mt-10 flex justify-center">
-                            <a href="/" className="text-2xl font-semibold leading-6 text-blue-500 flex gap-2">
+                            <Link href="/" className="text-2xl font-semibold leading-6 text-blue-500 flex gap-2">
                                 <span aria-hidden="true">&larr;</span>
                                 Back to home
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </main>
