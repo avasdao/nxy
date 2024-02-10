@@ -69,11 +69,12 @@ onMounted(() => {
 
             <MiningGlobalStats />
 
-            <section class="my-5 flex flex-row gap-6">
+            <section class="my-5 flex flex-row gap-6 items-center">
 
-                <div class="flex-1 bg-green-700 border-2 border-green-900 rounded-xl shadow">
-                    IMG HERE
-                </div>
+                <img
+                    src="~/assets/bitcoin-vault.jpg"
+                    class="w-2/3 h-40 flex-1 bg-green-700 border-2 border-green-900 rounded-xl shadow object-cover"
+                />
 
                 <p class="w-1/3 py-5 text-center text-lg leading-8 text-gray-600">
                     CPU Mining is BACK!
