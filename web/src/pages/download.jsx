@@ -81,10 +81,10 @@ export default function Login() {
                                     </div>
                                     <div className="flex-auto">
                                         <h3 className="text-sm font-semibold leading-6 text-gray-900">
-                                            <a href={link.href}>
+                                            <Link href={link.href}>
                                                 <span className="absolute inset-0" aria-hidden="true" />
                                                 {link.name}
-                                            </a>
+                                            </Link>
                                         </h3>
                                         <p className="mt-2 text-sm leading-6 text-gray-600">{link.description}</p>
                                     </div>
