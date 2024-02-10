@@ -26,10 +26,10 @@ const props = defineProps({
         </h3>
 
         <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            <div class="relative overflow-hidden rounded-lg bg-white px-4 pb-12 pt-5 shadow sm:px-6 sm:pt-6">
+            <div class="relative overflow-hidden rounded-lg bg-sky-900 px-4 pb-12 pt-5 shadow sm:px-6 sm:pt-6">
                 <dt>
-                    <div class="absolute rounded-md bg-indigo-500 p-3">
-                        <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <div class="absolute rounded-md bg-amber-200 p-3">
+                        <svg class="h-6 w-6 text-amber-800" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
                             <path
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
@@ -38,25 +38,30 @@ const props = defineProps({
                         </svg>
                     </div>
 
-                    <p class="ml-16 truncate text-xl font-medium text-gray-500">
+                    <p class="ml-16 truncate text-xl font-medium text-amber-500">
                         Current Hashrate
                     </p>
                 </dt>
 
                 <dd class="ml-16 flex items-baseline pb-6 sm:pb-7">
-                    <p class="text-2xl font-semibold text-gray-900">71,897</p>
-
-                    <p class="ml-2 flex items-baseline text-sm font-semibold text-green-600">
-                        <svg class="h-5 w-5 flex-shrink-0 self-center text-green-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z" clip-rule="evenodd" />
-                        </svg>
-                        <span class="sr-only"> Increased by </span>
-                        122
+                    <p class="text-2xl font-semibold text-amber-400">
+                        126 <small class="text-base">MH/s</small>
                     </p>
 
-                    <div class="absolute inset-x-0 bottom-0 bg-gray-50 px-4 py-4 sm:px-6">
-                        <div class="text-sm">
-                            <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">View all<span class="sr-only"> Total Subscribers stats</span></a>
+                    <p class="ml-2 flex items-baseline text-sm font-semibold text-lime-500">
+                        <svg class="h-5 w-5 flex-shrink-0 self-center text-lime-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z" clip-rule="evenodd" />
+                        </svg>
+
+                        <span class="sr-only"> Increased by </span>
+                        12
+                    </p>
+
+                    <div class="absolute inset-x-0 bottom-0 bg-amber-200 px-4 py-4 sm:px-6">
+                        <div class="text-base">
+                            <a href="javascript://" class="font-medium text-amber-800 hover:text-indigo-500">
+                                view more details<span class="sr-only"> Total Subscribers stats</span>
+                            </a>
                         </div>
                     </div>
                 </dd>
@@ -90,7 +95,7 @@ const props = defineProps({
 
                     <div class="absolute inset-x-0 bottom-0 bg-gray-50 px-4 py-4 sm:px-6">
                         <div class="text-sm">
-                            <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">View all<span class="sr-only"> Avg. Open Rate stats</span></a>
+                            <a href="javascript://" class="font-medium text-indigo-600 hover:text-indigo-500">View all<span class="sr-only"> Avg. Open Rate stats</span></a>
                         </div>
                     </div>
                 </dd>
@@ -124,7 +129,7 @@ const props = defineProps({
 
                     <div class="absolute inset-x-0 bottom-0 bg-gray-50 px-4 py-4 sm:px-6">
                         <div class="text-sm">
-                            <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">View all<span class="sr-only"> Avg. Click Rate stats</span></a>
+                            <a href="javascript://" class="font-medium text-indigo-600 hover:text-indigo-500">View all<span class="sr-only"> Avg. Click Rate stats</span></a>
                         </div>
                     </div>
                 </dd>

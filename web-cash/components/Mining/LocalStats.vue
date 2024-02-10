@@ -74,7 +74,9 @@ const props = defineProps({
                         </svg>
                     </div>
 
-                    <p class="ml-16 truncate text-sm font-medium text-gray-500">Avg. Open Rate</p>
+                    <p class="ml-16 truncate text-xl font-medium text-gray-500">
+                        Average Hashrate
+                    </p>
                 </dt>
 
                 <dd class="ml-16 flex items-baseline pb-6 sm:pb-7">

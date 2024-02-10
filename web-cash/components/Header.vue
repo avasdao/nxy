@@ -54,7 +54,7 @@ onMounted(() => {
 
             <div class="flex lg:hidden items-center gap-6 sm:gap-8">
                 <ClientOnly>
-                    <NuxtLink to="/markets" class="flex flex-row items-end gap-1 text-4xl text-rose-500 font-medium">
+                    <NuxtLink to="https://wiserswap.com/swap/NXY" target="_blank" class="flex flex-row items-end gap-1 text-4xl text-rose-500 font-medium">
                         <div class="flex flex-row items-start">
                             <sup class="mt-2 text-xs text-rose-300">mNXY/USD</sup>
                             {{displayQuote.primary}}
@@ -98,7 +98,7 @@ onMounted(() => {
 
             <div class="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-10">
                 <ClientOnly>
-                    <NuxtLink to="/markets" class="flex flex-row items-end gap-1 text-4xl text-rose-500 font-medium">
+                    <NuxtLink to="https://wiserswap.com/swap/NXY" target="_blank" class="flex flex-row items-end gap-1 text-4xl text-rose-500 font-medium">
                         <div class="flex flex-row items-start">
                             <sup class="mt-2 text-xs text-rose-300">mNXY/USD</sup>
                             {{displayQuote.primary}}
