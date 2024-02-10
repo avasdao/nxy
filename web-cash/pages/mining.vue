@@ -78,8 +78,8 @@ onMounted(() => {
 
                 <p class="w-1/3 py-5 text-center text-lg leading-8 text-gray-600">
                     CPU Mining is BACK!
-                    Join the PREMIER Mining <span class="pr-1 text-2xl text-rose-500 font-extrabold italic">Season 1</span> TODAY!
-                    Easily mine $NXY from your Desktop & Mobile...
+                    Join the <span class="pr-1 text-2xl text-rose-500 font-extrabold italic">Season 1</span> Mining Rewards TODAY!
+                    Easily mine $NXY from your Desktop or Mobile devices.
                 </p>
 
             </section>
@@ -92,14 +92,20 @@ onMounted(() => {
 
                 <section class="lg:col-span-2 flex flex-col gap-3">
 
-                    <button @click="startMiner" class="group px-5 py-5 bg-lime-500 border border-lime-700 rounded-xl shadow hover:bg-lime-400">
-                        <span class="text-5xl text-amber-100 font-medium group-hover:text-amber-700">
+                    <button @click="startMiner" class="group px-5 py-5 bg-green-500 border border-green-700 rounded-xl shadow hover:bg-green-400">
+                        <span class="text-5xl text-amber-100 font-medium group-hover:text-green-900">
                             Start Mining
                         </span>
                     </button>
 
                     <div class="px-3 py-2 bg-gradient-to-r from-rose-50 to-rose-100 border-2 border-rose-300 rounded-xl shadow">
-                        TBD
+                        <small class="text-xs text-rose-800 uppercase font-medium">
+                            Current Mining Algorithm <em>(hash)</em>
+                        </small>
+
+                        <span class="text-rose-600 font-bold text-center tracking-wider truncate">
+                            AD6CE46F7F1EA8519DC02CE8CE0C278C6FF329B2
+                        </span>
                     </div>
 
                 </section>

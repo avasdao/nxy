@@ -152,78 +152,70 @@ onMounted(() => {
             </div>
         </div>
 
-        <!-- Content section -->
-        <div class="mx-auto -mt-12 max-w-7xl px-6 sm:mt-0 lg:px-8 xl:-mt-8">
-            <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                    Mission Statement
-                </h2>
+        <div class="bg-white -mt-20 pb-24">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <div class="mx-auto max-w-2xl lg:mx-0">
+                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                        We approach the workplace as something that adds to our lives and adds value to world.
+                    </h2>
 
-                <p>{{ $t('welcome') }}</p>
+                    <p>{{ $t('welcome') }}</p>
 
-                <div class="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
-                    <div class="lg:w-full lg:max-w-2xl lg:flex-auto">
-                        <p class="text-xl leading-8 text-gray-600">
-                            Ava's DAO is a non-profit organization on a mission to build and manage a comprehensive suite of products & services with the prime directive of assuring financial freedom for every man, woman and child.
+                    <p class="mt-6 text-base leading-7 text-gray-600">
+                        Diam nunc lacus lacus aliquam turpis enim. Eget hac velit est euismod lacus. Est non placerat nam arcu. Cras purus nibh cursus sit eu in id. Integer vel nibh.
+                    </p>
+                </div>
+
+                <div class="mx-auto mt-16 flex max-w-2xl flex-col gap-8 lg:mx-0 lg:mt-20 lg:max-w-none lg:flex-row lg:items-end">
+
+                    <div class="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-gray-50 p-8 sm:w-3/4 sm:max-w-md sm:flex-row-reverse sm:items-end lg:w-72 lg:max-w-none lg:flex-none lg:flex-col lg:items-start">
+                        <p class="flex-none text-3xl font-bold tracking-tight text-gray-900">
+                            250k
                         </p>
 
-                        <div class="mt-10 max-w-xl text-base leading-7 text-gray-700">
-                            <p>
-                                Every $NXY holder is permitted to Vote (on-chain) for public proposals. 'Qualified' $NXY holders receive Daily Payouts (to their respective Nexa or Meta address) from revenues deposited into Ava's Treasury.
+                        <div class="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
+                            <p class="text-lg font-semibold tracking-tight text-gray-900">
+                                Users on the platform
                             </p>
 
-                            <!-- <p class="mt-10">
-                                Et vitae blandit facilisi magna lacus commodo. Vitae sapien duis odio id et. Id blandit molestie auctor fermentum dignissim. Lacus diam tincidunt ac cursus in vel. Mauris varius vulputate et ultrices hac
-                                adipiscing egestas. Iaculis convallis ac tempor et ut. Ac lorem vel integer orci.
-                            </p> -->
+                            <p class="mt-2 text-base leading-7 text-gray-600">
+                                Vel labore deleniti veniam consequuntur sunt nobis.
+                            </p>
                         </div>
                     </div>
 
-                    <div class="lg:flex lg:flex-auto lg:justify-center">
-                        <dl class="w-64 space-y-8 xl:w-80">
-                            <div class="flex flex-col-reverse gap-y-4">
-                                <dt class="text-base leading-7 text-gray-600">
-                                    Total Value Locked (TVL)
-                                    <span class="block">
-                                        in
-                                        <NuxtLink to="https://nexa.sh/contracts" target="_blank" class="text-blue-500 font-extrabold hover:underline">
-                                            non-custodial HODL Vaults
-                                        </NuxtLink>
-                                    </span>
-                                </dt>
+                    <div class="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-gray-900 p-8 sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-sm lg:flex-auto lg:flex-col lg:items-start lg:gap-y-44">
+                        <p class="flex-none text-3xl font-bold tracking-tight text-white">
+                            $8.9 billion
+                        </p>
 
-                                <dd class="text-5xl font-semibold tracking-tight text-gray-900">
-                                    13.37 million
-                                </dd>
-                            </div>
+                        <div class="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
+                            <p class="text-lg font-semibold tracking-tight text-white">
+                                We’re proud that our customers have made over $8 billion in total revenue.
+                            </p>
 
-                            <div class="flex flex-col-reverse gap-y-4">
-                                <dt class="text-base leading-7 text-gray-600">
-                                    Total Payouts to HODLers
-                                    <NuxtLink to="/payouts" class="block text-blue-500 font-extrabold hover:underline">
-                                        delivered on-chain
-                                    </NuxtLink>
-                                </dt>
-
-                                <dd class="text-5xl font-semibold tracking-tight text-gray-900">
-                                    1.23 million
-                                </dd>
-                            </div>
-
-                            <div class="flex flex-col-reverse gap-y-4">
-                                <dt class="text-base leading-7 text-gray-600">
-                                    New wallets per day since
-                                    <NuxtLink to="https://nexa.sh/tx/a61b7879fa31487f767eec5c895be3c68a6402f42ba96ad2d982d88453df7b39" target="_blank" class="block text-blue-500 font-extrabold hover:underline">
-                                        Token Genesis <small>{{ timeSinceGenesisDisplay }}</small>
-                                    </NuxtLink>
-                                </dt>
-
-                                <dd class="text-5xl font-semibold tracking-tight text-gray-900">
-                                    {{walletsCreated}}
-                                </dd>
-                            </div>
-                        </dl>
+                            <p class="mt-2 text-base leading-7 text-gray-400">
+                                Eu duis porta aliquam ornare. Elementum eget magna egestas.
+                            </p>
+                        </div>
                     </div>
+
+                    <div class="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-indigo-600 p-8 sm:w-11/12 sm:max-w-xl sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-none lg:flex-auto lg:flex-col lg:items-start lg:gap-y-28">
+                        <p class="flex-none text-3xl font-bold tracking-tight text-white">
+                            401,093
+                        </p>
+
+                        <div class="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
+                            <p class="text-lg font-semibold tracking-tight text-white">
+                                Transactions this year
+                            </p>
+
+                            <p class="mt-2 text-base leading-7 text-indigo-200">
+                                Eu duis porta aliquam ornare. Elementum eget magna egestas. Eu duis porta aliquam ornare.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -321,84 +313,64 @@ onMounted(() => {
         <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
             <div class="mx-auto max-w-2xl lg:mx-0">
                 <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                    Nexican Bootstrap
+                    Seasonal Mining
                 </h2>
 
                 <p class="mt-6 text-lg leading-8 text-gray-600">
-                    During our early years, it's critical to lay a <em class="text-2xl text-indigo-500 font-medium">SOLID</em> foundation for which we can then build upon for decades to come.
-                    Ava's DAO is committed to building, deploying and supporting <em class="text-2xl text-indigo-500 font-medium">critical infrastructure &amp; services</em> to ensure that <em class="text-2xl text-indigo-500 font-medium">ALL</em> Nexicans will be entitled to <em class="text-2xl text-indigo-500 font-medium">ALWAYS</em> have nice things too.
+                    During our first few months, it's critical to lay a <em class="text-2xl text-indigo-500 font-medium">SOLID</em> foundation for which we can then build upon for decades to come.
+                    Nxy is committed to building, deploying and supporting <em class="text-2xl text-indigo-500 font-medium">critical infrastructure &amp; services</em> to ensure that <em class="text-2xl text-indigo-500 font-medium">ALL</em> Nexicans will be entitled to <em class="text-2xl text-indigo-500 font-medium">ALWAYS</em> have nice things too.
                 </p>
             </div>
 
             <dl class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
                 <div>
                     <dt class="text-2xl font-semibold text-gray-900">
-                        Causes Cash
+                        Season One
                     </dt>
 
                     <dd class="mt-1 text-gray-600">
                         Causes Cash introduces a <span class="text-indigo-500 font-bold">full-service P2P crowdfunding platform</span> to the Nexa community; built & managed by a team with years of experience servicing the Bitcoin Cash (BCH) community.
                     </dd>
-
-                    <NuxtLink to="https://causes.cash/c/475b4cfc-ae95-419d-9681-cf378c083963" target="_blank" class="w-fit flex mt-3 px-5 py-2 text-sky-900 font-bold bg-sky-100 border-2 border-sky-400 rounded-xl shadow hover:bg-sky-200">
-                        Visit Campaign
-                    </NuxtLink>
                 </div>
 
                 <div>
                     <dt class="text-2xl font-semibold text-gray-900">
-                        Ledger Developer SDK
+                        Season Two
                     </dt>
 
                     <dd class="mt-1 text-gray-600">
                         Introducing a plug-n-play, software toolkit for JS Developers to quickly &amp; easily secure their dApps with the #1 market leader in <span class="text-indigo-500 font-bold">Crypto hardware wallet security</span>.
                     </dd>
-
-                    <NuxtLink to="https://causes.cash/c/b8fac25d-e619-4ddf-b474-af084e8250ce" target="_blank" class="w-fit flex mt-3 px-5 py-2 text-sky-900 font-bold bg-sky-100 border-2 border-sky-400 rounded-xl shadow hover:bg-sky-200">
-                        Visit Campaign
-                    </NuxtLink>
                 </div>
 
                 <div>
                     <dt class="text-2xl font-semibold text-gray-900">
-                        Decentralized Coin Mixer
+                        Season Three
                     </dt>
 
                     <dd class="mt-1 text-gray-600">
                         Introducing <span class="text-indigo-500 font-bold">Fungibility for your Nexa transactions</span> by merging the MOST advanced Crypto privacy protocols & specifications <em>(i.e. CoinJoin, CashShuffle and CashFusion)</em> into a total solution.
                     </dd>
-
-                    <NuxtLink to="https://causes.cash/c/707e2a8c-4eea-4c26-9ea2-c548e9e91726" target="_blank" class="w-fit flex mt-3 px-5 py-2 text-sky-900 font-bold bg-sky-100 border-2 border-sky-400 rounded-xl shadow hover:bg-sky-200">
-                        Visit Campaign
-                    </NuxtLink>
                 </div>
 
                 <div>
                     <dt class="text-2xl font-semibold text-gray-900">
-                        MetaNet: EVM-compatible Sidechain
+                        Season Four
                     </dt>
 
                     <dd class="mt-1 text-gray-600">
                         A comprehensive plan to build, test and deploy a <span class="text-indigo-500 font-bold">SmartBCH-style sidechain for Nexa</span>, powered by an Avalanche Subnet.
                     </dd>
-
-                    <NuxtLink to="https://causes.cash/c/f900d1b8-1ae0-4e18-8a2f-212631b62562" target="_blank" class="w-fit flex mt-3 px-5 py-2 text-sky-900 font-bold bg-sky-100 border-2 border-sky-400 rounded-xl shadow hover:bg-sky-200">
-                        Visit Campaign
-                    </NuxtLink>
                 </div>
 
                 <div>
                     <dt class="text-2xl font-semibold text-gray-900">
-                        Seasonal Hackathon Festivals
+                        Season Five
                     </dt>
 
                     <dd class="mt-1 text-gray-600">
                         Spring, Summer, Fall and Winter <span class="text-indigo-500 font-bold">global community events</span> to showcase &amp; financially support the projects and teams actively <span class="text-indigo-500 font-bold">#BUIDLingOnNexa.</span>
                     </dd>
-
-                    <NuxtLink to="/" class="w-fit flex mt-3 px-5 py-2 text-sky-900 font-bold bg-sky-100 border-2 border-sky-400 rounded-xl shadow opacity-50 cursor-not-allowed">
-                        Launching soon...
-                    </NuxtLink>
                 </div>
             </dl>
         </div>
