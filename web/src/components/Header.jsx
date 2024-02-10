@@ -125,7 +125,7 @@ export function Header() {
                                                         </Button>
 
                                                         <Button href="https://nxy.cash/mining" target="_blank" className="py-4 text-[1.8em]">
-                                                            Start Mining
+                                                            Open Mining
                                                         </Button>
                                                     </div>
                                                 </Popover.Panel>
@@ -141,7 +141,7 @@ export function Header() {
                         </Button>
 
                         <Button href="https://nxy.cash/mining" target="_blank" className="hidden lg:block text-lg font-medium tracking-widest">
-                            Start Mining
+                            Open Mining
                         </Button>
                     </div>
                 </Container>
