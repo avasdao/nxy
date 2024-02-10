@@ -1,6 +1,6 @@
 {
   "name": "nxy-web",
-  "version": "22.8.21",
+  "version": "23.2.9",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
@@ -24,6 +24,7 @@
     "use-debounce": "^8.0.3"
   },
   "devDependencies": {
+    "@socialgouv/matomo-next": "^1.8.0",
     "eslint": "8.15.0",
     "eslint-config-next": "12.2.3",
     "prettier": "^2.6.2",
