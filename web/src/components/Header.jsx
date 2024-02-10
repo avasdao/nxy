@@ -124,7 +124,7 @@ export function Header() {
                                                             mNXY/USD $0.01
                                                         </Button>
 
-                                                        <Button href="https://avas.cash/mining" target="_blank" className="py-4 text-[1.8em]">
+                                                        <Button href="https://nxy.cash/mining" target="_blank" className="py-4 text-[1.8em]">
                                                             Start Mining
                                                         </Button>
                                                     </div>
@@ -140,7 +140,7 @@ export function Header() {
                             mNXY/USD $0.01
                         </Button>
 
-                        <Button href="https://avas.cash/mining" target="_blank" className="hidden lg:block text-lg font-medium tracking-widest">
+                        <Button href="https://nxy.cash/mining" target="_blank" className="hidden lg:block text-lg font-medium tracking-widest">
                             Start Mining
                         </Button>
                     </div>
