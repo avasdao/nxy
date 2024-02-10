@@ -62,53 +62,49 @@ onMounted(() => {
     <main class="mx-auto max-w-7xl px-3 sm:px-6 pt-18 sm:pt-16 lg:px-8">
         <div class="mx-auto mt-8 max-w-7xl px-0 sm:mt-0 lg:px-8">
             <div class="mx-auto max-w-4xl text-center">
-                <h1 class="text-2xl font-semibold leading-7 text-indigo-600">
+                <h1 class="text-3xl font-semibold leading-7 text-gray-500 tracking-widest uppercase">
                     Mining Center
                 </h1>
             </div>
 
-            <MiningStats />
+            <MiningGlobalStats />
 
-            <p class="mx-auto mt-6 w-full lg:max-w-2xl text-center text-lg leading-8 text-gray-600">
-                We're asking for your support to get <span class="text-2xl text-indigo-500 font-extrabold">5 Core Platforms</span> off-the-ground.
-                We appreciate you making time to check out and/or share one or more campaigns listed below.
-                For every contribution, supporters will receive <span class="text-2xl text-rose-500 font-extrabold">$NXY</span> sent to their Nexa wallet <span class="text-2xl text-indigo-500 font-extrabold">INSTANTLY!</span>
-            </p>
+            <section class="my-5 flex flex-row gap-6">
 
+                <div class="flex-1 bg-green-700 border-2 border-green-900 rounded-xl shadow">
+                    IMG HERE
+                </div>
 
+                <p class="w-1/3 py-5 text-center text-lg leading-8 text-gray-600">
+                    CPU Mining is BACK!
+                    Join the PREMIER Mining <span class="pr-1 text-2xl text-rose-500 font-extrabold italic">Season 1</span> TODAY!
+                    Easily mine $NXY from your Desktop & Mobile...
+                </p>
 
-            <div class="grid lg:grid-cols-5 gap-5">
+            </section>
 
-                <section class="w-full lg:col-span-3 lg:w-1/2 flex flex-col gap-4">
-                    <h2>
-                        Mining Station
-                    </h2>
+            <div class="mt-20 grid lg:grid-cols-5 gap-5">
 
-                    <button @click="startMiner" class="px-5 py-2 bg-lime-500 rounded-xl shadow hover:bg-lime-400">
-                        <span class="text-3xl text-lime-900 font-medium">
-                            Start Web Miner
+                <section class="lg:col-span-3 flex flex-col gap-4">
+                    <MiningLocalStats />
+                </section>
+
+                <section class="lg:col-span-2 flex flex-col gap-3">
+
+                    <button @click="startMiner" class="group px-5 py-5 bg-lime-500 border border-lime-700 rounded-xl shadow hover:bg-lime-400">
+                        <span class="text-5xl text-amber-100 font-medium group-hover:text-amber-700">
+                            Start Mining
                         </span>
                     </button>
 
-                    <div>
-                        Private/Public
+                    <div class="px-3 py-2 bg-gradient-to-r from-rose-50 to-rose-100 border-2 border-rose-300 rounded-xl shadow">
+                        TBD
                     </div>
 
                 </section>
 
-                <section class="lg:col-span-2">
-
-                    TBD
-
-                </section>
-
             </div>
 
-            <div class="isolate mx-auto mt-10 grid grid-cols-1 gap-8 md:max-w-2xl md:grid-cols-2 lg:max-w-4xl lg:mx-0 lg:max-w-none xl:grid-cols-3">
-
-                TBD
-
-            </div>
         </div>
     </main>
 </template>
