@@ -88,6 +88,7 @@ onMounted(() => {
 
                 <section class="lg:col-span-3 flex flex-col gap-4">
                     <MiningLocalStats />
+                    <MiningPoolStats />
                 </section>
 
                 <section class="lg:col-span-2 flex flex-col gap-3">
@@ -99,8 +100,8 @@ onMounted(() => {
                     </button>
 
                     <div class="px-3 py-2 bg-gradient-to-r from-rose-50 to-rose-100 border-2 border-rose-300 rounded-xl shadow">
-                        <small class="text-xs text-rose-800 uppercase font-medium">
-                            Current Mining Algorithm <em>(hash)</em>
+                        <small class="text-xs text-rose-800 uppercase font-medium tracking-wider">
+                            Current Mining Algorithm (hash)
                         </small>
 
                         <span class="text-rose-600 font-bold text-center tracking-wider truncate">
