@@ -28,6 +28,14 @@ const copyToClipboard = (_text) => {
 }
 
 
+const toggleSolo = () => {
+    alert(`Oops! You MUST have at least 20 $NXY in your wallet to pay the transaction fee and receive the mining reward.\n\nPlease check your balance and try again...`)
+}
+
+const toggleFiat = () => {
+    alert(`Coming soon...`)
+}
+
 const init = async () => {
     let response
 
@@ -86,7 +94,7 @@ onMounted(() => {
 
             <div class="mt-20 grid lg:grid-cols-5 gap-5">
 
-                <section class="lg:col-span-3 flex flex-col gap-4">
+                <section class="lg:col-span-3 flex flex-col gap-12">
                     <MiningLocalStats />
                     <MiningPoolStats />
                 </section>
@@ -99,15 +107,82 @@ onMounted(() => {
                         </span>
                     </button>
 
-                    <div class="px-3 py-2 bg-gradient-to-r from-rose-50 to-rose-100 border-2 border-rose-300 rounded-xl shadow">
-                        <small class="text-xs text-rose-800 uppercase font-medium tracking-wider">
-                            Current Mining Algorithm (hash)
-                        </small>
+                    <div class="my-3 px-3 flex items-center justify-between gap-3">
 
-                        <span class="text-rose-600 font-bold text-center tracking-wider truncate">
-                            AD6CE46F7F1EA8519DC02CE8CE0C278C6FF329B2
+                        <span class="flex flex-grow flex-col">
+                            <span class="text-base font-medium leading-6 text-gray-800 tracking-wider">
+                                Enable SOLO mining?
+                            </span>
+
+                            <span class="text-sm text-gray-500" id="availability-description">
+                                Receive the FULL reward for every accepted solution.
+                                <em class="block text-xs text-rose-500 tracking-wider">(requires small amount of $NXY to pay transaction fee)</em>
+                            </span>
                         </span>
+
+                        <!-- Enabled: "bg-indigo-600", Not Enabled: "bg-gray-200" -->
+                        <button
+                            @click="toggleSolo"
+                            type="button"
+                            class="bg-gray-200 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
+                            role="switch"
+                            aria-checked="false"
+                            aria-labelledby="availability-label"
+                            aria-describedby="availability-description"
+                        >
+                            <!-- Enabled: "translate-x-5", Not Enabled: "translate-x-0" -->
+                            <span aria-hidden="true" class="translate-x-0 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
+                        </button>
                     </div>
+
+                    <div class="my-3 px-3 flex items-center justify-between gap-3">
+
+                        <span class="flex flex-grow flex-col">
+                            <span class="text-base font-medium leading-6 text-gray-800 tracking-wider">
+                                Display in FIAT?
+                            </span>
+
+                            <span class="text-sm text-gray-500" id="availability-description">
+                                Display ALL monetary values in your local currency.
+                            </span>
+                        </span>
+
+                        <!-- Enabled: "bg-indigo-600", Not Enabled: "bg-gray-200" -->
+                        <button
+                            @click="toggleFiat"
+                            type="button"
+                            class="bg-gray-200 relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2"
+                            role="switch"
+                            aria-checked="false"
+                            aria-labelledby="availability-label"
+                            aria-describedby="availability-description"
+                        >
+                            <!-- Enabled: "translate-x-5", Not Enabled: "translate-x-0" -->
+                            <span aria-hidden="true" class="translate-x-0 pointer-events-none inline-block h-5 w-5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out"></span>
+                        </button>
+                    </div>
+
+                    <div class="bg-gray-800 sm:rounded-lg">
+                        <div class="px-4 py-5 sm:p-6">
+                            <h3 class="text-base font-semibold leading-6 text-amber-200 tracking-wider">
+                                Are you looking for more miners?
+                            </h3>
+
+                            <div class="mt-2 max-w-xl text-sm text-amber-300 tracking-wider">
+                                <p>
+                                    Cloud mining offers an opportunity to INSTANTLY scale up your hashrate with just a few clicks.
+                                    Fully-managed CPU miners start at just $5/mo each.
+                                </p>
+                            </div>
+
+                            <div class="mt-5">
+                                <NuxtLink to="https://nexa.rocks/cloud" target="_blank" type="button" class="inline-flex items-center rounded-md bg-white px-3 py-2 text-base font-semibold text-gray-900 shadow-sm hover:bg-lime-200">
+                                    Learn more at Nexa Rocks!
+                                </NuxtLink>
+                            </div>
+                        </div>
+                    </div>
+
 
                 </section>
 

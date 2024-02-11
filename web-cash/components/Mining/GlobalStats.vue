@@ -146,5 +146,30 @@ const props = defineProps({
             </div>
 
         </dl>
+
+        <section class="flex justify-between gap-5">
+
+            <NuxtLink to="https://explorer.nexa.org/tx/8db4ee79ad9d2aac003d6ae727b0ea2c149a68d386a7bb7b23b14b511c3a037f" target="_blank" class="mt-5 w-1/2 px-3 py-3 flex flex-col items-center gap-1 bg-fuchsia-100 border-2 border-fuchsia-300 rounded-xl shadow hover:bg-fuchsia-200">
+                <small class="text-xs text-fuchsia-800 uppercase font-medium tracking-wider">
+                    Last Mining Transaction
+                </small>
+
+                <span class="text-fuchsia-600 font-bold text-center tracking-wider truncate">
+                    8db4ee79ad9d2aac003d ... bb7b23b14b511c3a037f
+                </span>
+            </NuxtLink>
+
+            <div class="mt-5 w-1/2 px-3 py-3 flex flex-col items-center gap-1 bg-gradient-to-r from-rose-50 to-rose-100 border-2 border-rose-300 rounded-xl shadow cursor-help">
+                <small class="text-xs text-rose-800 uppercase font-medium tracking-wider">
+                    Current Mining Algorithm (hash)
+                </small>
+
+                <span class="text-rose-600 font-bold text-center tracking-wider truncate">
+                    AD6CE46F7F1EA8519DC02CE8CE0C278C6FF329B2
+                </span>
+            </div>
+
+        </section>
+
     </main>
 </template>
