@@ -1,6 +1,6 @@
 {
   "name": "nxy-cash",
-  "version": "24.2.1",
+  "version": "24.2.15",
   "license": "MIT",
   "scripts": {
     "build": "nuxt build",
@@ -12,6 +12,7 @@
   "dependencies": {
     "@bitauth/libauth": "1.19.1",
     "@pinia/nuxt": "0.4.7",
+    "crypto-js": "4.2.0",
     "firebase": "10.1.0",
     "moment": "2.29.4",
     "nexajs": "23.11.14",

@@ -27,25 +27,25 @@ const props = defineProps({
 
         <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
 
-            <div class="relative overflow-hidden rounded-lg bg-sky-900 px-4 pb-12 pt-5 shadow sm:px-6 sm:pt-6">
+            <div class="relative overflow-hidden rounded-lg bg-fuchsia-700 px-4 pb-12 pt-5 shadow sm:px-6 sm:pt-6">
                 <dt>
-                    <div class="absolute rounded-md bg-amber-200 p-2">
-                        <svg class="w-10 h-auto text-amber-800" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <div class="absolute rounded-full bg-purple-200 p-2">
+                        <svg class="w-10 h-auto text-purple-800" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12a7.5 7.5 0 0 0 15 0m-15 0a7.5 7.5 0 1 1 15 0m-15 0H3m16.5 0H21m-1.5 0H12m-8.457 3.077 1.41-.513m14.095-5.13 1.41-.513M5.106 17.785l1.15-.964m11.49-9.642 1.149-.964M7.501 19.795l.75-1.3m7.5-12.99.75-1.3m-6.063 16.658.26-1.477m2.605-14.772.26-1.477m0 17.726-.26-1.477M10.698 4.614l-.26-1.477M16.5 19.794l-.75-1.299M7.5 4.205 12 12m6.894 5.785-1.149-.964M6.256 7.178l-1.15-.964m15.352 8.864-1.41-.513M4.954 9.435l-1.41-.514M12.002 12l-3.75 6.495"></path>
                         </svg>
-                        <!-- <svg class="w-10 h-auto text-amber-800" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <!-- <svg class="w-10 h-auto text-purple-800" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"></path>
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z"></path>
                         </svg> -->
                     </div>
 
-                    <p class="ml-16 truncate text-xl font-medium text-amber-500">
+                    <p class="ml-16 truncate text-xl font-medium text-purple-100">
                         Total Hashrate
                     </p>
                 </dt>
 
                 <dd class="ml-16 flex items-baseline pb-6 sm:pb-7">
-                    <p class="text-2xl font-semibold text-amber-400">
+                    <p class="text-2xl font-semibold text-purple-200">
                         112.0 <small class="text-base">MH/s</small>
                     </p>
 
@@ -58,9 +58,9 @@ const props = defineProps({
                         12.3
                     </p>
 
-                    <div class="absolute inset-x-0 bottom-0 bg-amber-200 px-4 py-4 sm:px-6">
+                    <div class="absolute inset-x-0 bottom-0 bg-purple-200 px-4 py-4 sm:px-6">
                         <div class="text-base">
-                            <a href="javascript://" class="font-medium text-amber-800 hover:text-indigo-500">
+                            <a href="javascript://" class="font-medium text-purple-800 hover:text-indigo-500">
                                 open hashrate history<span class="sr-only"> Total Subscribers stats</span>
                             </a>
                         </div>
@@ -68,24 +68,24 @@ const props = defineProps({
                 </dd>
             </div>
 
-            <div class="relative overflow-hidden rounded-lg bg-sky-900 px-4 pb-12 pt-5 shadow sm:px-6 sm:pt-6">
+            <div class="relative overflow-hidden rounded-lg bg-fuchsia-700 px-4 pb-12 pt-5 shadow sm:px-6 sm:pt-6">
                 <dt>
-                    <div class="absolute rounded-md bg-amber-200 p-2">
-                        <svg class="w-10 h-auto text-amber-800" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <div class="absolute rounded-full bg-purple-200 p-2">
+                        <svg class="w-10 h-auto text-purple-800" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"></path>
                         </svg>
-                        <!-- <svg class="w-10 h-auto text-amber-800" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <!-- <svg class="w-10 h-auto text-purple-800" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z"></path>
                         </svg> -->
                     </div>
 
-                    <p class="ml-16 truncate text-xl font-medium text-amber-500">
+                    <p class="ml-16 truncate text-xl font-medium text-purple-100">
                         Mined in Last 24hrs
                     </p>
                 </dt>
 
                 <dd class="ml-16 flex items-baseline pb-6 sm:pb-7">
-                    <p class="text-2xl font-semibold text-amber-400">
+                    <p class="text-2xl font-semibold text-purple-200">
                         35,350 <em class="text-sm font-normal tracking-wider">(in millions)</em>
                     </p>
 
@@ -98,9 +98,9 @@ const props = defineProps({
                         1,050
                     </p>
 
-                    <div class="absolute inset-x-0 bottom-0 bg-amber-200 px-4 py-4 sm:px-6">
+                    <div class="absolute inset-x-0 bottom-0 bg-purple-200 px-4 py-4 sm:px-6">
                         <div class="text-base">
-                            <a href="javascript://" class="font-medium text-amber-800 hover:text-indigo-500">
+                            <a href="javascript://" class="font-medium text-purple-800 hover:text-indigo-500">
                                 open mining history<span class="sr-only"> Total Subscribers stats</span>
                             </a>
                         </div>
@@ -108,21 +108,21 @@ const props = defineProps({
                 </dd>
             </div>
 
-            <div class="relative overflow-hidden rounded-lg bg-sky-900 px-4 pb-12 pt-5 shadow sm:px-6 sm:pt-6">
+            <div class="relative overflow-hidden rounded-lg bg-fuchsia-700 px-4 pb-12 pt-5 shadow sm:px-6 sm:pt-6">
                 <dt>
-                    <div class="absolute rounded-md bg-amber-200 p-2">
-                        <svg class="w-10 h-auto text-amber-800" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <div class="absolute rounded-full bg-purple-200 p-2">
+                        <svg class="w-10 h-auto text-purple-800" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 0 1-1.5 1.5H5.25a1.5 1.5 0 0 1-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 1 0 9.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1 1 14.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z"></path>
                         </svg>
                     </div>
 
-                    <p class="ml-16 truncate text-xl font-medium text-amber-500">
+                    <p class="ml-16 truncate text-xl font-medium text-purple-100">
                         Last Reward Payout
                     </p>
                 </dt>
 
                 <dd class="ml-16 flex items-baseline pb-6 sm:pb-7">
-                    <p class="text-2xl font-semibold text-amber-400">
+                    <p class="text-2xl font-semibold text-purple-200">
                         88 secs ago
                     </p>
 
@@ -135,9 +135,9 @@ const props = defineProps({
                         PRIVATE
                     </p>
 
-                    <div class="absolute inset-x-0 bottom-0 bg-amber-200 px-4 py-4 sm:px-6">
+                    <div class="absolute inset-x-0 bottom-0 bg-purple-200 px-4 py-4 sm:px-6">
                         <div class="text-base">
-                            <a href="javascript://" class="font-medium text-amber-800 hover:text-indigo-500">
+                            <a href="javascript://" class="font-medium text-purple-800 hover:text-indigo-500">
                                 open rewards history<span class="sr-only"> Total Subscribers stats</span>
                             </a>
                         </div>

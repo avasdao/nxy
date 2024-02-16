@@ -3,6 +3,13 @@
 import numeral from 'numeral'
 
 import {
+    reverseHex,
+} from '@nexajs/utils'
+
+import CryptoJS from 'crypto-js'
+// import sha1 from 'crypto-js/sha1'
+
+import {
     getAddressHistory,
     getTransaction,
 } from '@nexajs/rostrum'
@@ -54,6 +61,53 @@ const receivedDisplay = (_campaign) => {
     const received = _campaign.received
 
     return numeral(received / 1e2).format('0,0.00') + ' NEXA'
+}
+
+const calcSubmission = (_miner, _outpointHash, _candidate) => {
+    const myRaw = `${_miner}${_outpointHash}${_candidate}`
+    // console.log('RAW', myRaw)
+
+    let myHex = CryptoJS.enc.Hex.parse(myRaw)
+    // let myHex = CryptoJS.enc.Hex.parse(`${_outpointHash}${_candidate}`)
+    // console.log('MY HEX-1', myHex)
+
+    let hash = CryptoJS.SHA1(myHex)
+    // console.log('HASH-1', hash)
+
+    // let mySha1 = hash.toString(CryptoJS.enc.Hex)
+    // console.log('MY SHA-1', mySha1)
+
+    hash = CryptoJS.SHA256(hash)
+    // console.log('HASH-2', hash)
+
+    // let mySha256 = hash.toString(CryptoJS.enc.Hex)
+    // console.log('MY SHA-256', mySha256)
+
+    hash = CryptoJS.RIPEMD160(hash)
+    // console.log('HASH-3', hash)
+
+    let myRipemd = hash.toString(CryptoJS.enc.Hex)
+    // console.log('MY RIPEMD-160', myRipemd)
+
+    return myRipemd
+}
+
+const startMiner = () => {
+    console.log('STARTING MINER')
+
+    const miner = '0000000000000000000000000000000000000000'
+
+    const candidate = '0000000000000000000000000000000000000000000000000000000000000002'
+
+    let outpointHash
+    let mySubmission
+
+    outpointHash = 'fa0f991ef4fec7039f98264c9f8006f775ad6f186930a4c6596faa566465d171'
+    outpointHash = reverseHex(outpointHash)
+    console.log('OUTPOINT HASH-1', outpointHash)
+
+    mySubmission = calcSubmission(miner, outpointHash, candidate)
+    console.log('SUBMISSION-2', mySubmission)
 }
 
 onMounted(() => {
