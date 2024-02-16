@@ -103,7 +103,7 @@
                     <li class="flex items-center">
                         <NuxtLink
                             class="px-3 py-2 w-full flex flex-col items-center bg-blue-300 border-2 border-blue-500 rounded-lg shadow hover:bg-blue-200"
-                            to="https://nexa.exchange/token/57f46c1766dc0087b207acde1b3372e9f90b18c7e67242657344dcd2af660000"
+                            to="https://nexa.exchange/token/5f2456fa44a88c4a831a4b7d1b1f34176a29a3f28845af639eb9b1c88dd40000"
                             target="_blank"
                         >
                             <h3 class="text-sm sm:text-lg text-blue-700 font-medium uppercase">
@@ -111,13 +111,13 @@
                             </h3>
 
                             <span class="sm:hidden text-lg">
-                                tptlgmqhvmwqp...vcqqqcra40x0x
+                                tp0jg4h6gj5gc...6sqqqsy86tk9q
                             </span>
                             <span class="hidden sm:block lg:hidden text-lg">
-                                tptlgmqhvmwqppajq7kduxen...sn9wdzde540vcqqqcra40x0x
+                                tp0jg4h6gj5gcj5rrf9h6xcl...tmrn6umrjyd6sqqqsy86tk9q
                             </span>
                             <span class="hidden lg:block text-xl">
-                                nexa:tptlgmqhvmwqppajq7kduxenwt5ljzcccln8ysn9wdzde540vcqqqcra40x0x
+                                nexa:tp0jg4h6gj5gcj5rrf9h6xclxstk52dr72yyttmrn6umrjyd6sqqqsy86tk9q
                             </span>
 
                         </NuxtLink>
@@ -130,7 +130,7 @@
                             </h3>
 
                             <h3 class="text-3xl font-medium">
-                                21,000,000,000,000
+                                &lt; 21,000,000,000,000.00
                             </h3>
                         </div>
                     </li>
