@@ -156,7 +156,7 @@ onMounted(() => {
             <div class="mx-auto max-w-7xl px-6 lg:px-8">
                 <div class="mx-auto max-w-2xl lg:mx-0">
                     <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                        We approach the workplace as something that adds to our lives and adds value to world.
+                        We approach Social Finance as something that adds to our lives and adds value to our world.
                     </h2>
 
                     <p>{{ $t('welcome') }}</p>
@@ -170,32 +170,32 @@ onMounted(() => {
 
                     <div class="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-gray-50 p-8 sm:w-3/4 sm:max-w-md sm:flex-row-reverse sm:items-end lg:w-72 lg:max-w-none lg:flex-none lg:flex-col lg:items-start">
                         <p class="flex-none text-3xl font-bold tracking-tight text-gray-900">
-                            250k
+                            1,250
                         </p>
 
                         <div class="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
                             <p class="text-lg font-semibold tracking-tight text-gray-900">
-                                Users on the platform
+                                Wallets on the network
                             </p>
 
                             <p class="mt-2 text-base leading-7 text-gray-600">
-                                Vel labore deleniti veniam consequuntur sunt nobis.
+                                It's 100% FREE to create a new wallet and start earning...
                             </p>
                         </div>
                     </div>
 
                     <div class="flex flex-col-reverse justify-between gap-x-16 gap-y-8 rounded-2xl bg-gray-900 p-8 sm:flex-row-reverse sm:items-end lg:w-full lg:max-w-sm lg:flex-auto lg:flex-col lg:items-start lg:gap-y-44">
                         <p class="flex-none text-3xl font-bold tracking-tight text-white">
-                            $8.9 billion
+                            $1 million
                         </p>
 
                         <div class="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
                             <p class="text-lg font-semibold tracking-tight text-white">
-                                We’re proud that our customers have made over $8 billion in total revenue.
+                                We're proud that our Economies have processed over $1 million in revenues
                             </p>
 
                             <p class="mt-2 text-base leading-7 text-gray-400">
-                                Eu duis porta aliquam ornare. Elementum eget magna egestas.
+                                Nxy Economies provide the foundation on which Spaces and their Creators thrive
                             </p>
                         </div>
                     </div>
@@ -207,11 +207,11 @@ onMounted(() => {
 
                         <div class="sm:w-80 sm:shrink lg:w-auto lg:flex-none">
                             <p class="text-lg font-semibold tracking-tight text-white">
-                                Transactions this year
+                                Transactions since launch
                             </p>
 
                             <p class="mt-2 text-base leading-7 text-indigo-200">
-                                Eu duis porta aliquam ornare. Elementum eget magna egestas. Eu duis porta aliquam ornare.
+                                Join the FASTEST growing L1+ network in the world and experience what everyone has been talking about!
                             </p>
                         </div>
                     </div>

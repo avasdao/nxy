@@ -74,11 +74,10 @@ const { locale } = useI18n()
                     <!-- <option value="es">Spanish</option> -->
                     <option value="tr">Turkish</option>
                 </select>
-                {{locale}}
             </div>
 
             <p class="mt-10 text-center text-sm leading-5 text-gray-500">
-                &copy; 2022-{{new Date().getFullYear()}} Ava's DAO - MIT License
+                &copy; 2024-{{new Date().getFullYear()}} Ava's DAO - MIT License
             </p>
         </div>
     </footer>
