@@ -43,7 +43,7 @@
 
                                 <section class="px-3 sm:px-10 py-3">
                                     <h1 class="text-2xl font-medium">
-                                        How to Backup your Wally Dice seed phrase
+                                        How to Backup your wallet seed phrase
                                     </h1>
 
                                     <p class="mt-3">
@@ -135,7 +135,7 @@
                             <!-- Expand/collapse question button -->
                             <button type="button" class="flex w-full items-start justify-between text-left text-gray-900" aria-controls="faq-0" aria-expanded="false">
                                 <span class="text-base font-semibold leading-7">
-                                    How often are $NEXA payouts?
+                                    How can I mine $NXY?
                                 </span>
                                 <span class="ml-6 flex h-7 items-center">
                                     <!--
@@ -159,7 +159,7 @@
                         </dt>
                         <dd class="mt-2 pr-12" id="faq-0">
                             <p class="text-base leading-7 text-gray-600">
-                                Payouts are sent out to "qualified" addresses once a day at 04:20 UTC.
+                                That's easy! Just go to the <NuxtLink to="/mining" class="text-lg font-medium text-blue-500 hover:underline">Mining</NuxtLink> page and click 'Start Mining'.
                             </p>
                         </dd>
                     </div>
