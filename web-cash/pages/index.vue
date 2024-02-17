@@ -86,11 +86,11 @@ onMounted(() => {
                             </h1>
 
                             <h2 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                                a hybrid utility token delivering <em class="text-3xl sm:text-5xl text-lime-500">Daily</em> $NEXA <em class="text-3xl sm:text-5xl text-lime-500">Payouts</em> to HODLers
+                                a decentralized <em class="text-3xl sm:text-5xl text-lime-500">Social Finance</em> network for <em class="text-3xl sm:text-5xl text-lime-500">Creators</em> to Dream, Build & Profit!
                             </h2>
 
                             <p class="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
-                                Enjoy an opportunity to share in the growth and success of <span class="font-extrabold">Nexa's Premier Decentralized Autonomous Organization (DAO),</span> working tirelessly to deliver critical infrastrucutrue to a nascent Nexican community.
+                                Providing safe & secure Spaces for Creators to <span class="font-extrabold">Dream, Build & Profit</span> from their own exclusive token economies.
 
                                 <ul class="list-disc pl-10 pt-2 leading-8 text-lg text-gray-600">
                                     <li>Vote on governance proposals</li>
@@ -312,8 +312,8 @@ onMounted(() => {
         <!-- Values section -->
         <div class="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
             <div class="mx-auto max-w-2xl lg:mx-0">
-                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                    Seasonal Mining
+                <h2 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+                    Seasonal PoW Mining
                 </h2>
 
                 <p class="mt-6 text-lg leading-8 text-gray-600">
@@ -324,54 +324,136 @@ onMounted(() => {
 
             <dl class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
                 <div>
-                    <dt class="text-2xl font-semibold text-gray-900">
+                    <dt class="text-3xl font-semibold text-gray-900">
                         Season One
                     </dt>
 
                     <dd class="mt-1 text-gray-600">
-                        Causes Cash introduces a <span class="text-indigo-500 font-bold">full-service P2P crowdfunding platform</span> to the Nexa community; built & managed by a team with years of experience servicing the Bitcoin Cash (BCH) community.
+                        We begin this journey by introducing <span class="text-indigo-500 font-bold">CPU &amp; Mobile PoW mining</span> for Nexa's premier Layer 1+ asset.
                     </dd>
+
+                    <section class="">
+                        <h3 class="mt-2 text-xs text-rose-400 font-medium tracking-wider uppercase">
+                            Treasury (Tributes) Allocation
+                        </h3>
+
+                        <ul class="pl-10 list-disc text-sm text-gray-600">
+                            <li>Social media airdrops</li>
+                            <li>DEX liquidity</li>
+                        </ul>
+                    </section>
+
+                    <h3 class="text-2xl font-medium text-rose-600 italic tracking-widest">
+                        Season starts Feb '24
+                    </h3>
                 </div>
 
                 <div>
-                    <dt class="text-2xl font-semibold text-gray-900">
+                    <dt class="text-3xl font-semibold text-gray-900">
                         Season Two
                     </dt>
 
                     <dd class="mt-1 text-gray-600">
                         Introducing a plug-n-play, software toolkit for JS Developers to quickly &amp; easily secure their dApps with the #1 market leader in <span class="text-indigo-500 font-bold">Crypto hardware wallet security</span>.
                     </dd>
+
+                    <section class="">
+                        <h3 class="mt-2 text-xs text-rose-400 font-medium tracking-wider uppercase">
+                            Treasury (Tributes) Allocation
+                        </h3>
+
+                        <ul class="pl-10 list-disc text-sm text-gray-600">
+                            <li>Social media airdrops</li>
+                            <li>Builder bounties</li>
+                        </ul>
+                    </section>
+
+                    <h3 class="text-2xl font-medium text-rose-600 italic tracking-widest">
+                        Season starts May '24
+                    </h3>
                 </div>
 
                 <div>
-                    <dt class="text-2xl font-semibold text-gray-900">
+                    <dt class="text-3xl font-semibold text-gray-900">
                         Season Three
                     </dt>
 
                     <dd class="mt-1 text-gray-600">
                         Introducing <span class="text-indigo-500 font-bold">Fungibility for your Nexa transactions</span> by merging the MOST advanced Crypto privacy protocols & specifications <em>(i.e. CoinJoin, CashShuffle and CashFusion)</em> into a total solution.
                     </dd>
+
+                    <section class="">
+                        <h3 class="mt-2 text-xs text-rose-400 font-medium tracking-wider uppercase">
+                            Treasury (Tributes) Allocation
+                        </h3>
+
+                        <ul class="pl-10 list-disc text-sm text-gray-600">
+                            <li>Social media airdrops</li>
+                            <li>Builder bounties</li>
+                            <li>Builder grants</li>
+                        </ul>
+                    </section>
+
+                    <h3 class="text-2xl font-medium text-rose-600 italic tracking-widest">
+                        Season starts Aug '24
+                    </h3>
                 </div>
 
                 <div>
-                    <dt class="text-2xl font-semibold text-gray-900">
+                    <dt class="text-3xl font-semibold text-gray-900">
                         Season Four
                     </dt>
 
                     <dd class="mt-1 text-gray-600">
                         A comprehensive plan to build, test and deploy a <span class="text-indigo-500 font-bold">SmartBCH-style sidechain for Nexa</span>, powered by an Avalanche Subnet.
                     </dd>
+
+                    <section class="">
+                        <h3 class="mt-2 text-xs text-rose-400 font-medium tracking-wider uppercase">
+                            Treasury (Tributes) Allocation
+                        </h3>
+
+                        <ul class="pl-10 list-disc text-sm text-gray-600">
+                            <li>Social media airdrops</li>
+                            <li>Builder grants</li>
+                            <li>Builder sponsorships</li>
+                            <li>Creator grants</li>
+                        </ul>
+                    </section>
+
+                    <h3 class="text-2xl font-medium text-rose-600 italic tracking-widest">
+                        Season starts Nov '24
+                    </h3>
                 </div>
 
                 <div>
-                    <dt class="text-2xl font-semibold text-gray-900">
+                    <dt class="text-3xl font-semibold text-gray-900">
                         Season Five
                     </dt>
 
                     <dd class="mt-1 text-gray-600">
-                        Spring, Summer, Fall and Winter <span class="text-indigo-500 font-bold">global community events</span> to showcase &amp; financially support the projects and teams actively <span class="text-indigo-500 font-bold">#BUIDLingOnNexa.</span>
+                        Spring, Summer, Fall and Winter <span class="text-indigo-500 font-bold">global community events</span> to showcase &amp; financially support the projects and teams actively <span class="text-indigo-500 font-bold">BuilderingOnNexa.</span>
                     </dd>
+
+                    <section class="">
+                        <h3 class="mt-2 text-xs text-rose-400 font-medium tracking-wider uppercase">
+                            Treasury (Tributes) Allocation
+                        </h3>
+
+                        <ul class="pl-10 list-disc text-sm text-gray-600">
+                            <li>Social media airdrops</li>
+                            <li>Builder grants</li>
+                            <li>Builder sponsorships</li>
+                            <li>Creator grants</li>
+                            <li>Creator sponsorships</li>
+                        </ul>
+                    </section>
+
+                    <h3 class="text-2xl font-medium text-rose-600 italic tracking-widest">
+                        Season starts Feb '25
+                    </h3>
                 </div>
+
             </dl>
         </div>
 

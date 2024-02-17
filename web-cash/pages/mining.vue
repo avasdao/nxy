@@ -2,6 +2,8 @@
 /* Import modules. */
 import numeral from 'numeral'
 
+import { listUnspent } from '@nexajs/address'
+
 import {
     reverseHex,
 } from '@nexajs/utils'
@@ -22,10 +24,16 @@ useHead({
 })
 
 /* Initialize stores. */
+import { useMiningStore } from '@/stores/mining'
 import { useSystemStore } from '@/stores/system'
 import { useWalletStore } from '@/stores/wallet'
+const Mining = useMiningStore()
 const System = useSystemStore()
 const Wallet = useWalletStore()
+
+const NXY_ID_HEX = '5f2456fa44a88c4a831a4b7d1b1f34176a29a3f28845af639eb9b1c88dd40000'
+
+const enclave = ref(null)
 
 const copyToClipboard = (_text) => {
     /* Copy address to clipboard. */
@@ -46,9 +54,9 @@ const toggleFiat = () => {
 const init = async () => {
     let response
 
-    const enclave = await $fetch('https://enclave.nxy.cash/v1/mining')
+    enclave.value = await $fetch('https://enclave.nxy.cash/v1/mining')
         .catch(err => console.error(err))
-    console.log('ENCLAVE', enclave)
+    console.log('ENCLAVE', enclave.value)
 
     console.log('WALLET ADDRESS', Wallet.address)
 
@@ -92,22 +100,42 @@ const calcSubmission = (_miner, _outpointHash, _candidate) => {
     return myRipemd
 }
 
-const startMiner = () => {
+const startMiner = async () => {
     console.log('STARTING MINER')
 
-    const miner = '0000000000000000000000000000000000000000'
+    // nexa:nqtsq5g5wnltcdpm82g5t4rgxx3repxzpc5x6ceav5pqt9ty
+    const miner = '74febc343b3a9145d46831a23c84c20e286d633d'
 
-    const candidate = '0000000000000000000000000000000000000000000000000000000000000002'
+    const candidate = '0000000000000000000000000000000000000000000000000000000000000000'
 
+    let miningAddress
+    let mintingAuth
+    let miningUnspent
     let outpointHash
     let mySubmission
 
-    outpointHash = 'fa0f991ef4fec7039f98264c9f8006f775ad6f186930a4c6596faa566465d171'
+    miningAddress = enclave.value.address
+    console.log('MINING ADDRESS', miningAddress)
+
+    miningUnspent = await listUnspent(miningAddress)
+        .catch(err => console.error(err))
+    console.log('MINING UNSPENT', miningUnspent)
+
+    /* Find latest minting authority. */
+    mintingAuth = miningUnspent.find(_unspent => {
+        return _unspent.tokenidHex === NXY_ID_HEX && _unspent.tokens < BigInt(0)
+    })
+    console.log('MINTING AUTH', mintingAuth)
+
+    outpointHash = mintingAuth.outpoint
     outpointHash = reverseHex(outpointHash)
     console.log('OUTPOINT HASH-1', outpointHash)
 
     mySubmission = calcSubmission(miner, outpointHash, candidate)
     console.log('SUBMISSION-2', mySubmission)
+
+    let result = await Mining.submit(Wallet.wallet, miner, candidate)
+    console.log('RESULT', result)
 }
 
 onMounted(() => {
