@@ -59,10 +59,7 @@ export const useMiningStore = defineStore('mining', {
             //     _entropy = null
             // }
 
-            _submitCandidate.bind(this)(_wallet, _miner, _candidate)
-
-            /* Initialize wallet. */
-            // this.init()
+            return _submitCandidate.bind(this)(_wallet, _miner, _candidate)
         },
 
         async getSender(_tx) {

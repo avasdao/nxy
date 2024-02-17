@@ -178,8 +178,8 @@ export default async function (_wallet, _miner, _candidate) {
         /* Contract Parameters */
         OP.ZERO, // contract function index
         ...encodeDataPush(hexToBin('0b500c7d2dfcbb5dc8c5fb218f33ec5da451a22d')), // bytes20 access HASH160<"Merhaba Satoshi!">
-        ...encodeDataPush(hexToBin('0000000000000000000000000000000000000000')), // bytes20 miner
-        ...encodeDataPush(hexToBin('0000000000000000000000000000000000000000000000000000000000000000')), // bytes32 candidate
+        ...encodeDataPush(_miner), // bytes20 miner
+        ...encodeDataPush(_candidate), // bytes32 candidate
 
         OP.FOUR, // # params
         OP.ZERO, // # returns
@@ -251,7 +251,7 @@ export default async function (_wallet, _miner, _candidate) {
 
     lockTime = headersTip.height
     // console.log('LOCK TIME', lockTime)
-return 'WAIT!!'
+// return 'WAIT!!'
     /* Send UTXO request. */
     response = await sendTokens({
         coins,

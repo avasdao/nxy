@@ -4,7 +4,11 @@ import numeral from 'numeral'
 
 import { listUnspent } from '@nexajs/address'
 
+import { randomBytes } from '@nexajs/crypto'
+
 import {
+    binToHex,
+    hexToBin,
     reverseHex,
 } from '@nexajs/utils'
 
@@ -31,7 +35,9 @@ const Mining = useMiningStore()
 const System = useSystemStore()
 const Wallet = useWalletStore()
 
+const errors = ref(null)
 const mintingAuth = ref(null)
+const txidem = ref(null)
 
 const NXY_ID_HEX = '5f2456fa44a88c4a831a4b7d1b1f34176a29a3f28845af639eb9b1c88dd40000'
 
@@ -59,6 +65,9 @@ const init = async () => {
     let miningUnspent
 
     console.log('WALLET ADDRESS', Wallet.address)
+
+    /* Initialize errors. */
+    errors.value = []
 
     /* Request wallet history. */
     // FIXME: This should already be saved somewhere??
@@ -123,16 +132,23 @@ const startMiner = async () => {
 
     /* Initialize locals. */
     let candidate
+    let errMsg
     let miner
     let mySubmission
     let outpointHash
-    let result
+    let response
+
+    /* Reset errors. */
+    errors.value = []
 
     // TODO Decode script hash from wallet address.
-    miner = '0000000000000000000000000000000000000000'
+    miner = hexToBin('0000000000000000000000000000000000000000')
+    console.log('MINER', binToHex(miner))
 
     /* Generate new candidate. */
-    candidate = '0000000000000000000000000000000000000000000000000000000000000000'
+    // candidate = '0000000000000000000000000000000000000000000000000000000000000000'
+    candidate = randomBytes(32)
+    console.log('CANDIDATE', binToHex(candidate))
 
     // TODO Record candidates to (local) logs (for auditing).
 
@@ -144,8 +160,27 @@ const startMiner = async () => {
     console.log('SUBMISSION', mySubmission)
 
     /* Submit candidate. */
-    result = await Mining.submit(Wallet.wallet, miner, candidate)
-    console.log('SUBMISSION RESULT', result)
+    response = await Mining.submit(Wallet.wallet, miner, candidate)
+    console.log('SUBMISSION RESPONSE', response)
+
+    /* Validate response. */
+    if (response.result) {
+        txidem.value = response.result
+    }
+
+    /* Validate error. */
+    if (response.error) {
+        /* Validate error message. */
+        if (response.error.message.includes('Script failed an OP_VERIFY operation')) {
+            errMsg = 'Candidate failed! Please try again...'
+
+            errors.value.push(errMsg)
+            return console.error(errMsg)
+        }
+
+        /* Display (unknown) error. */
+        alert(response.error.message)
+    }
 }
 
 onMounted(() => {
@@ -200,6 +235,40 @@ onMounted(() => {
                             Start Mining
                         </span>
                     </button>
+
+                    <div v-if="txidem">
+                        {{txidem}}
+                    </div>
+
+                    <div v-if="errors && errors.length">
+                        <div class="rounded-md bg-red-50 p-4">
+                            <div class="flex">
+                                <div class="flex-shrink-0">
+                                    <svg class="h-5 w-5 text-red-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path
+                                            fill-rule="evenodd"
+                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z"
+                                            clip-rule="evenodd"
+                                        />
+                                    </svg>
+                                </div>
+
+                                <div class="ml-3">
+                                    <h3 class="text-sm font-medium text-red-800 tracking-wide">
+                                        There were {{errors.length}} error(s) with your submission
+                                    </h3>
+
+                                    <div class="mt-2 text-sm text-red-700">
+                                        <ul role="list" class="list-disc space-y-1 pl-5">
+                                            <li v-for="error of errors" :key="error">
+                                                {{error}}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                     <div class="my-3 px-3 flex items-center justify-between gap-3">
 
