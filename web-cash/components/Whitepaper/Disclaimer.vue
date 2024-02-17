@@ -21,7 +21,7 @@ const props = defineProps({
 
 <template>
     <main class="mt-16 max-w-2xl">
-        <h2 class="text-2xl font-bold tracking-tight text-gray-900">
+        <h2 class="text-4xl font-bold tracking-tight text-gray-700">
             Disclaimer
         </h2>
 
