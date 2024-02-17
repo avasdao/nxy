@@ -48,7 +48,7 @@ const { locale } = useI18n()
                     </svg>
                 </NuxtLink>
 
-                <NuxtLink to="https://github.com/avasdao/avas.cash" target="_blank" class="text-gray-400 hover:text-gray-500">
+                <NuxtLink to="https://github.com/avasdao/nxy" target="_blank" class="text-gray-400 hover:text-gray-500">
                     <span class="sr-only">GitHub</span>
                     <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path
@@ -77,7 +77,7 @@ const { locale } = useI18n()
             </div>
 
             <p class="mt-10 text-center text-sm leading-5 text-gray-500">
-                &copy; 2024-{{new Date().getFullYear()}} Ava's DAO - MIT License
+                &copy; {{new Date().getFullYear()}} Ava's DAO - MIT License
             </p>
         </div>
     </footer>
