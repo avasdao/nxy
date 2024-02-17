@@ -85,17 +85,18 @@ onMounted(() => {
                                 Nxy Cash
                             </h1>
 
-                            <h2 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                                a decentralized <em class="text-3xl sm:text-5xl text-lime-500">Social Finance</em> network for <em class="text-3xl sm:text-5xl text-lime-500">Creators</em> to Dream, Build & Profit!
-                            </h2>
+                            <p class="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                                powering a decentralized <em class="text-3xl sm:text-5xl text-lime-500">#SoFi</em> network exclusively for <em class="text-3xl sm:text-5xl text-lime-500">Creators</em> to Dream, Build & <em class="text-3xl sm:text-5xl text-lime-500">Profit!</em>
+                            </p>
 
                             <p class="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
-                                Providing safe & secure Spaces for Creators to <span class="font-extrabold">Dream, Build & Profit</span> from their own exclusive token economies.
+                                Nxy Cash is the "official" currency of the Nxy social network.
+                                Spend your Nxy <span class="font-extrabold">throughout the Oasis</span> or create and earn from your own Economies.
 
                                 <ul class="list-disc pl-10 pt-2 leading-8 text-lg text-gray-600">
-                                    <li>Vote on governance proposals</li>
-                                    <li>HODL your $NXY for payouts</li>
-                                    <li>Receive future $TOKEN airdrops</li>
+                                    <li>Forge new Spaces</li>
+                                    <li>Create new Economies</li>
+                                    <li>Build new Societies</li>
                                 </ul>
                             </p>
                         </div>
@@ -103,7 +104,7 @@ onMounted(() => {
                             <div class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
                                 <div class="relative">
                                     <img
-                                        src="https://images.unsplash.com/photo-1605713288610-00c1c630ca1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"
+                                        src="https://images.unsplash.com/photo-1533835673073-b2575dde4265?q=80"
                                         alt=""
                                         class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                                     />
@@ -113,7 +114,7 @@ onMounted(() => {
                             <div class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
                                 <div class="relative">
                                     <img
-                                        src="https://images.unsplash.com/photo-1597155135675-d4cef690184a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=589&q=80"
+                                        src="https://images.unsplash.com/photo-1602492665157-639323eadd31?q=80"
                                         alt=""
                                         class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                                     />
@@ -121,7 +122,7 @@ onMounted(() => {
                                 </div>
                                 <div class="relative">
                                     <img
-                                        src="https://images.unsplash.com/photo-1624789389787-91e252ff8dac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1261&q=80"
+                                        src="https://images.unsplash.com/photo-1636971828014-0f3493cba88a?q=80"
                                         alt=""
                                         class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                                     />
@@ -131,7 +132,7 @@ onMounted(() => {
                             <div class="w-44 flex-none space-y-8 pt-32 sm:pt-0">
                                 <div class="relative">
                                     <img
-                                        src="https://images.unsplash.com/photo-1607863680198-23d4b2565df0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+                                        src="https://images.unsplash.com/photo-1581368121163-0d9c85127cdd?q=80"
                                         alt=""
                                         class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                                     />
@@ -139,7 +140,7 @@ onMounted(() => {
                                 </div>
                                 <div class="relative">
                                     <img
-                                        src="https://images.unsplash.com/photo-1519419691348-3b3433c4c20e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=326&q=80"
+                                        src="https://images.unsplash.com/photo-1628359355624-855775b5c9c4?q=80"
                                         alt=""
                                         class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                                     />
@@ -162,7 +163,7 @@ onMounted(() => {
                     <p>{{ $t('welcome') }}</p>
 
                     <p class="mt-6 text-base leading-7 text-gray-600">
-                        Diam nunc lacus lacus aliquam turpis enim. Eget hac velit est euismod lacus. Est non placerat nam arcu. Cras purus nibh cursus sit eu in id. Integer vel nibh.
+                        Take a look at the many ways in which Nxy offers "real-world" value to countless people all across the world.
                     </p>
                 </div>
 
