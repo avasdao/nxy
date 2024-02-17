@@ -13,7 +13,7 @@ const isShowingNexa = ref(false)
 const makeSwap = async () => {
     const msg = `Are you sure you want to continue with this Swap:
 
-        ↪ You are sending ( 1.00 ) $NXY
+        ↪ You are sending ( 1.00 ) $AVAS
         ↪ You are receiving ( ~1,337.88 ) $NEXA
     `
     if (confirm(msg)) {
@@ -55,7 +55,7 @@ const makeSwap = async () => {
             <div @click="isShowingNexa = false; isShowingAvas = true" class="px-2 flex-1 h-24 sm:h-32 flex justify-center items-center border border-rose-500 rounded-lg shadow bg-gradient-to-b from-rose-400 to-rose-200">
                 <div class="flex flex-col items-center">
                     <h2 class="text-2xl sm:text-3xl text-rose-900 font-medium whitespace-nowrap">
-                        Nxy Cash
+                        Ava's Cash
                     </h2>
 
                     <h3 class="text-sm sm:text-base text-rose-700 font-medium">
@@ -124,7 +124,7 @@ const makeSwap = async () => {
         <section v-if="isShowingAvas || isShowingNexa" class="grid grid-cols-2 gap-y-2">
             <div class="col-span-2 pb-3 flex justify-center">
                 <span class="text-sm text-sky-700 font-medium tracking-widest">
-                    1.00 $NXY = 1,337.88 $NEXA
+                    1.00 $AVAS = 1,337.88 $NEXA
                 </span>
             </div>
 

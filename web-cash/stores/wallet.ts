@@ -1,138 +1,131 @@
 /* Import modules. */
 import { defineStore } from 'pinia'
+import moment from 'moment'
+
+import { mnemonicToEntropy } from '@nexajs/hdnode'
 
 import {
-    encodeAddress,
-    listUnspent,
-} from '@nexajs/address'
-
-import { sha256 } from '@nexajs/crypto'
-
-import {
-    encodePrivateKeyWif,
-    entropyToMnemonic,
-    mnemonicToEntropy,
-} from '@nexajs/hdnode'
-
-import { getCoins } from '@nexajs/purse'
-
-import {
-    getOutpoint,
-    getTip,
-    getTokenInfo,
-    getTransaction,
-    subscribeAddress,
-} from '@nexajs/rostrum'
-
-import { OP } from '@nexajs/script'
-
-import {
-    getTokens,
-    sendToken,
-} from '@nexajs/token'
-
-import {
-    binToHex,
-    hexToBin,
-} from '@nexajs/utils'
-
-import { Wallet } from '@nexajs/wallet'
+    Wallet,
+    WalletStatus,
+} from '@nexajs/wallet'
 
 /* Libauth helpers. */
 import {
-    encodeDataPush,
     instantiateRipemd160,
     instantiateSecp256k1,
 } from '@bitauth/libauth'
 
-import _createWallet from './wallet/create.ts'
-
-let ripemd160
-let secp256k1
-
-;(async () => {
-    /* Instantiate Libauth crypto interfaces. */
-    ripemd160 = await instantiateRipemd160()
-    secp256k1 = await instantiateSecp256k1()
-})()
-
-/* Set ($NXY) token id. */
-const AVAS_TOKENID = '57f46c1766dc0087b207acde1b3372e9f90b18c7e67242657344dcd2af660000'
-
-const TX_GAS_AMOUNT = 1000 // 10.00 NEXA
-
-/* Build (contract) script. */
-// NOTE: This is the "optimized" version of the NexScript v0.1.0
-//       Stakehouse contract (w/out the use of `OP_SWAP`), which saves 1 byte.
-// NOTE: Reversing the visible variables ALSO saves 1 byte.
-//       Version 2 will take advantage of this.
-const STAKEHOUSE_V1_SCRIPT = new Uint8Array([
-    OP.FROMALTSTACK,
-        OP.CHECKSEQUENCEVERIFY,
-        OP.DROP,
-    OP.FROMALTSTACK,
-        OP.CHECKSIGVERIFY,
-])
+import _broadcast from './wallet/broadcast.ts'
+import _setEntropy from './wallet/setEntropy.ts'
 
 /**
  * Wallet Store
  */
 export const useWalletStore = defineStore('wallet', {
     state: () => ({
-        /* Initialize entropy (used for HD wallet). */
-        // NOTE: This is a cryptographically-secure "random" 32-byte (256-bit) value. */
+        _assets: null,
+
+        // _forceUI: null,
+
+        /**
+         * Entropy
+         * (DEPRECATED -- MUST REMAIN SUPPORTED INDEFINITELY)
+         *
+         * Initialize entropy (used for HD wallet).
+         *
+         * NOTE: This is a cryptographically-secure "random"
+         * 32-byte (256-bit) value.
+         */
         _entropy: null,
 
-        /* Wallet object. */
-        _wallet: null,
+        /**
+         * Keychain
+         *
+         * Manages a collection of BIP-32 wallets.
+         *
+         * [
+         *   {
+         *     id        : '5be2e5c3-9d27-4b0f-bb3c-8b2ef6fdaafd',
+         *     type      : 'studio',
+         *     title     : `My Studio Wallet`,
+         *     entropy   : 0x0000000000000000000000000000000000000000000000000000000000000000,
+         *     createdAt : 0123456789,
+         *     updatedAt : 1234567890,
+         *   },
+         *   {
+         *     id        : 'f2457985-4b92-4025-be8d-5f11a5fc4077',
+         *     type      : 'ledger',
+         *     title     : `My Ledger Wallet`,
+         *     createdAt : 0123456789,
+         *     updatedAt : 1234567890,
+         *   },
+         * ]
+         */
+        _keychain: null,
 
+        /**
+         * Wallet
+         *
+         * Currently active wallet object.
+         */
+        _wallet: null,
     }),
 
     getters: {
         /* Return (abbreviated) wallet status. */
         abbr(_state) {
-            return _state.wallet?.abbr
+            if (!_state._wallet) {
+                return null
+            }
+
+            return _state._wallet.abbr
         },
 
         /* Return wallet status. */
         address(_state) {
-            return _state.wallet?.address
+            if (!_state._wallet) {
+                return null
+            }
+
+            return _state._wallet.address
         },
 
-        /* Return NexaJS wallet instance. */
         asset(_state) {
-            if (!this.assets) {
+            if (!this.assets || !this.wallet) {
                 return null
             }
 
-            return this.wallet.assets[this.wallet.assetid]
+            return this.assets[this.wallet.assetid]
         },
 
-        /* Return wallet status. */
         assets(_state) {
-            if (!this.wallet) {
+            if (_state._assets) {
+                return _state._assets
+            }
+
+            if (!_state._wallet) {
                 return null
             }
 
-            return this.wallet.assets
+            return _state._wallet.assets
         },
 
         /* Return wallet status. */
         isLoading(_state) {
-            if (!this.wallet) {
+            if (!_state._wallet) {
                 return true
             }
 
-            return this.wallet.isLoading
+            return _state._wallet.isLoading
         },
 
         /* Return wallet status. */
         isReady(_state) {
-            if (this.wallet?._entropy) {
+            if (_state._wallet && _state._wallet._entropy) {
                 return true
             }
 
-            return this.wallet.isReady
+            return _state._wallet.isReady
         },
 
         /* Return NexaJS wallet instance. */
@@ -143,17 +136,6 @@ export const useWalletStore = defineStore('wallet', {
         WalletStatus() {
             return WalletStatus
         },
-
-
-        // wallet(_state) {
-        //     return _state._wallet
-        // },
-
-        // wif(_state) {
-        //     return _state._wif
-        // },
-
-
     },
 
     actions: {
@@ -176,10 +158,21 @@ export const useWalletStore = defineStore('wallet', {
 
             /* Request a wallet instance (by mnemonic). */
             this._wallet = await Wallet.init(this._entropy, true)
-            console.log('(Initialized) wallet', this._wallet)
+            console.info('(Initialized) wallet', this.wallet)
+
+            // this._assets = { ...this.wallet.assets } // cloned assets
 
             /* Set (default) asset. */
-            this._wallet.setAsset('0')
+            this.wallet.setAsset('0')
+
+            /* Handle balance updates. */
+            this.wallet.on('balances', async (_assets) => {
+                // console.log('Wallet Assets (onChanges):', _assets)
+
+                /* Close asset locally. */
+// FIXME Read ASSETS directly from library (getter).
+                this._assets = { ..._assets }
+            })
         },
 
         createWallet(_entropy) {
@@ -191,7 +184,8 @@ export const useWalletStore = defineStore('wallet', {
                 _entropy = null
             }
 
-            _createWallet.bind(this)(_entropy)
+            /* Set entropy. */
+            _setEntropy.bind(this)(_entropy)
 
             /* Initialize wallet. */
             this.init()
@@ -208,13 +202,9 @@ export const useWalletStore = defineStore('wallet', {
             }
         },
 
-        /**
-         * Select Asset
-         *
-         * Sets the active asset displayed on the UI.
-         */
-        selectAsset(_assetid) {
-            this._assetid = _assetid
+        broadcast(_receivers) {
+            /* Broadcast to receivers. */
+            return _broadcast.bind(this)(_receivers)
         },
 
         setEntropy(_entropy) {
@@ -248,52 +238,10 @@ export const useWalletStore = defineStore('wallet', {
             return this.wallet
         },
 
-        getAddress(_accountIdx) {
-            return this.wallet.getAddress(_accountIdx)
-        },
-
-        async groupTokens() {
-            const tokens = {}
-
-            for (let i = 0; i < this.tokens.length; i++) {
-                const token = this.tokens[i]
-                // console.log('TOKEN (grouped):', token)
-
-                // console.log('DETAILS', this.assets[token.tokenid])
-                if (!tokens[token.tokenid]) {
-                    let tokenidHex
-                    let ticker
-
-                    tokenidHex = this.assets[token.tokenid]?.token_id_hex
-
-                    if (tokenidHex) {
-                        ticker = await $fetch(`https://nexa.exchange/v1/ticker/quote/${tokenidHex}`)
-                            .catch(err => console.error(err))
-                    }
-
-                    tokens[token.tokenid] = {
-                        name: this.assets[token.tokenid]?.name || 'Unknown Asset',
-                        decimals: this.assets[token.tokenid]?.decimal_places || 0,
-                        iconUrl: this.assets[token.tokenid]?.iconUrl || '',
-                        tokens: token.tokens,
-                        tokenidHex,
-                        ticker,
-                    }
-                } else {
-                    tokens[token.tokenid].tokens += token.tokens
-                }
-            }
-
-            return tokens
-        },
-
         destroy() {
             /* Reset wallet. */
             this._entropy = null
             this._wallet = null
-            this._wif = null
-            this._coins = null
-            this._tokens = null
 
             console.info('Wallet destroyed successfully!')
         },

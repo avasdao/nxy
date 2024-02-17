@@ -11,16 +11,17 @@ const System = useSystemStore()
 const Wallet = useWalletStore()
 
 /* Firebase configuration. */
-const firebaseConfig = {
-    apiKey: 'AIzaSyDjig2lVO8V74vj3Wq6iwNgU1axo4B5cxA',
-    authDomain: 'avas--cash.firebaseapp.com',
-    projectId: 'avas--cash',
-    storageBucket: 'avas--cash.appspot.com',
-    messagingSenderId: '999087703954',
-    appId: '1:999087703954:web:e12f16978ad6a97bc5e34b',
-}
+// const firebaseConfig = {
+//     apiKey: 'AIzaSyDjig2lVO8V74vj3Wq6iwNgU1axo4B5cxA',
+//     authDomain: 'avas--cash.firebaseapp.com',
+//     projectId: 'avas--cash',
+//     storageBucket: 'avas--cash.appspot.com',
+//     messagingSenderId: '999087703954',
+//     appId: '1:999087703954:web:e12f16978ad6a97bc5e34b',
+// }
 
 onBeforeMount(() => {
+    // TODO Move this block to @nexajs/app
     try {
         Profile.$state = JSON.parse(localStorage.getItem('profile'), (key, value) => {
             if (typeof value === 'string' && /^\d+n$/.test(value)) {
@@ -42,11 +43,14 @@ onBeforeMount(() => {
             }
             return value
         })
+
+        // add additional states here...
     } catch (err) {
         console.error(err)
     }
 })
 
+// TODO Move this block to @nexajs/app
 watch([Profile.$state, System.$state, Wallet.$state], (_state) => {
     localStorage.setItem('profile',
         JSON.stringify(_state[0], (key, value) =>
@@ -65,9 +69,9 @@ watch([Profile.$state, System.$state, Wallet.$state], (_state) => {
             typeof value === 'bigint' ? value.toString() + 'n' : value
         )
     )
+
+    // watch additional states here...
 })
-
-
 
 const isShowingMenu = ref(false)
 
@@ -75,16 +79,17 @@ const toggleMenu = () => {
     isShowingMenu.value = !isShowingMenu.value
 }
 
-onMounted(() => {
+onMounted(async () => {
     /* Initailize system. */
     System.init()
 
+    /* Initialize profile. */
+    await Profile.init()
+
     /* Initialize wallet. */
-    // await Wallet.init()
     Wallet.init()
 
-
-    const app = initializeApp(firebaseConfig)
+    // const app = initializeApp(firebaseConfig)
 
     /* Initialize localization. */
     // const { locale, setLocale } = useI18n()

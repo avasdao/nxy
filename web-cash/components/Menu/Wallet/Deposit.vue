@@ -42,7 +42,7 @@ const copyToClipboard = () => {
     /* Copy address to clipboard. */
     Clipboard.copy(Wallet.address)
 
-    alert(`${Wallet.address} has been copied to the clipboard.`)
+    alert('Your address has been copied to the clipboard.')
 }
 
 onMounted(() => {
