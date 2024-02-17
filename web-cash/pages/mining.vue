@@ -31,6 +31,8 @@ const Mining = useMiningStore()
 const System = useSystemStore()
 const Wallet = useWalletStore()
 
+const mintingAuth = ref(null)
+
 const NXY_ID_HEX = '5f2456fa44a88c4a831a4b7d1b1f34176a29a3f28845af639eb9b1c88dd40000'
 
 const enclave = ref(null)
@@ -52,23 +54,37 @@ const toggleFiat = () => {
 }
 
 const init = async () => {
-    let response
+    /* Initialize locals. */
+    let miningAddress
+    let miningUnspent
 
+    console.log('WALLET ADDRESS', Wallet.address)
+
+    /* Request wallet history. */
+    // FIXME: This should already be saved somewhere??
+    const history = await getAddressHistory(Wallet.address)
+        .catch(err => console.error(err))
+    console.log('MY HISTORY', history)
+
+    /* Request enclave (mining) details. */
     enclave.value = await $fetch('https://enclave.nxy.cash/v1/mining')
         .catch(err => console.error(err))
     console.log('ENCLAVE', enclave.value)
 
-    console.log('WALLET ADDRESS', Wallet.address)
+    /* Set mining address. */
+    miningAddress = enclave.value.address
+    console.log('MINING ADDRESS', miningAddress)
 
-    const history = await getAddressHistory(Wallet.address)
+    /* Request unspent of mining address. */
+    miningUnspent = await listUnspent(miningAddress)
         .catch(err => console.error(err))
-    console.log('HISTORY', history)
-}
+    console.log('MINING UNSPENT', miningUnspent)
 
-const receivedDisplay = (_campaign) => {
-    const received = _campaign.received
-
-    return numeral(received / 1e2).format('0,0.00') + ' NEXA'
+    /* Find latest minting authority. */
+    mintingAuth.value = miningUnspent.find(_unspent => {
+        return _unspent.tokenidHex === NXY_ID_HEX && _unspent.tokens < BigInt(0)
+    })
+    console.log('MINTING AUTH', mintingAuth.value)
 }
 
 const calcSubmission = (_miner, _outpointHash, _candidate) => {
@@ -94,52 +110,48 @@ const calcSubmission = (_miner, _outpointHash, _candidate) => {
     hash = CryptoJS.RIPEMD160(hash)
     // console.log('HASH-3', hash)
 
-    let myRipemd = hash.toString(CryptoJS.enc.Hex)
-    // console.log('MY RIPEMD-160', myRipemd)
+    /* Convert to (final) submission. */
+    let submission = hash.toString(CryptoJS.enc.Hex)
+    // console.log('MY RIPEMD-160', submission)
 
-    return myRipemd
+    /* Return (final) submission. */
+    return submission
 }
 
 const startMiner = async () => {
-    console.log('STARTING MINER')
+    console.log('STARTING MINER...')
 
-    // nexa:nqtsq5g5wnltcdpm82g5t4rgxx3repxzpc5x6ceav5pqt9ty
-    const miner = '74febc343b3a9145d46831a23c84c20e286d633d'
-
-    const candidate = '0000000000000000000000000000000000000000000000000000000000000000'
-
-    let miningAddress
-    let mintingAuth
-    let miningUnspent
-    let outpointHash
+    /* Initialize locals. */
+    let candidate
+    let miner
     let mySubmission
+    let outpointHash
+    let result
 
-    miningAddress = enclave.value.address
-    console.log('MINING ADDRESS', miningAddress)
+    // TODO Decode script hash from wallet address.
+    miner = '0000000000000000000000000000000000000000'
 
-    miningUnspent = await listUnspent(miningAddress)
-        .catch(err => console.error(err))
-    console.log('MINING UNSPENT', miningUnspent)
+    /* Generate new candidate. */
+    candidate = '0000000000000000000000000000000000000000000000000000000000000000'
 
-    /* Find latest minting authority. */
-    mintingAuth = miningUnspent.find(_unspent => {
-        return _unspent.tokenidHex === NXY_ID_HEX && _unspent.tokens < BigInt(0)
-    })
-    console.log('MINTING AUTH', mintingAuth)
+    // TODO Record candidates to (local) logs (for auditing).
 
-    outpointHash = mintingAuth.outpoint
+    outpointHash = mintingAuth.value.outpoint
     outpointHash = reverseHex(outpointHash)
-    console.log('OUTPOINT HASH-1', outpointHash)
+    console.log('OUTPOINT HASH', outpointHash)
 
     mySubmission = calcSubmission(miner, outpointHash, candidate)
-    console.log('SUBMISSION-2', mySubmission)
+    console.log('SUBMISSION', mySubmission)
 
-    let result = await Mining.submit(Wallet.wallet, miner, candidate)
-    console.log('RESULT', result)
+    /* Submit candidate. */
+    result = await Mining.submit(Wallet.wallet, miner, candidate)
+    console.log('SUBMISSION RESULT', result)
 }
 
 onMounted(() => {
-    init()
+    // init()
+
+    setTimeout(init, 3000) // FIXME: TEMP FOR DEV ONLY
 })
 
 // onBeforeUnmount(() => {
