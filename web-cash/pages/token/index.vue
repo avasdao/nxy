@@ -1,3 +1,33 @@
+<script setup lang="ts">
+useHead({
+    title: `Whitepaper — Nxy Cash`,
+    meta: [
+        { name: 'description', content: `Nxy Cash makes building your next BIG idea effortless.` }
+    ],
+})
+
+/* Initialize stores. */
+import { useSystemStore } from '@/stores/system'
+const System = useSystemStore()
+
+const copyToClipboard = () => {
+    /* Copy address to clipboard. */
+    Clipboard.copy('nexa:tp0jg4h6gj5gcj5rrf9h6xclxstk52dr72yyttmrn6umrjyd6sqqqsy86tk9q')
+
+    alert(`Token ID has been copied to the clipboard.`)
+}
+
+// onMounted(() => {
+//     console.log('Mounted!')
+//     // Now it's safe to perform setup operations.
+// })
+
+// onBeforeUnmount(() => {
+//     console.log('Before Unmount!')
+//     // Now is the time to perform all cleanup operations.
+// })
+</script>
+
 <template>
     <main class="isolate">
         <!-- Hero section -->
@@ -30,10 +60,17 @@
                             </h1>
 
                             <p class="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
-                                Official Governance Token of the Nxy Social Network.
-                                $NXY offer crypto enthusiasts and investors alike an opportunity like never seen before.
-                                Every $NXY holder is permitted to <strong>Vote</strong> <em>(on-chain)</em> for public proposals.
-                                "Qualified" $NXY holders receive <strong>Daily Payouts</strong> <em>(to their respective Nexa or Meta address)</em> from revenues deposited into Ava's Treasury.
+                                Official token of the Nxy social network.
+                                $NXY were <span class="text-2xl font-bold text-lime-500 italic">designed to be spent</span> and provide a gateway the countless opportunities that lay ahead for participants in this nascent community.
+                            </p>
+
+                            <p class="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
+                                $NXY is distributed via proof-of-work mining, using one of <span class="text-2xl font-bold text-lime-500 italic">over 10+ million algorithms</span> embedded into the Polymorph wise contract.
+                            </p>
+
+                            <p class="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
+                                Mining rewards begin at <span class="text-2xl font-bold text-lime-500 italic">50 MILLION in Season One</span> and decrease at the start of each following season.
+                                Check out the <NuxtLink to="/whitepaper" class="text-2xl font-bold text-blue-500 hover:underline">Whitepaper</NuxtLink> for more details on the mining algorithm and the rewards schedule.
                             </p>
                         </div>
 
@@ -41,7 +78,7 @@
                             <div class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
                                 <div class="relative">
                                     <img
-                                        src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+                                        src="https://images.unsplash.com/photo-1556741574-0ddb65d14311?q=80"
                                         alt=""
                                         class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                                     />
@@ -51,7 +88,7 @@
                             <div class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
                                 <div class="relative">
                                     <img
-                                        src="https://images.unsplash.com/photo-1485217988980-11786ced9454?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+                                        src="https://images.unsplash.com/photo-1553531889-56cc480ac5cb?q=80"
                                         alt=""
                                         class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                                     />
@@ -59,7 +96,7 @@
                                 </div>
                                 <div class="relative">
                                     <img
-                                        src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=396&h=528&q=80"
+                                        src="https://images.unsplash.com/photo-1594404430075-9ca1fd127858?q=80"
                                         alt=""
                                         class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                                     />
@@ -69,7 +106,7 @@
                             <div class="w-44 flex-none space-y-8 pt-32 sm:pt-0">
                                 <div class="relative">
                                     <img
-                                        src="https://images.unsplash.com/photo-1670272504528-790c24957dda?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=left&w=400&h=528&q=80"
+                                        src="https://images.unsplash.com/photo-1634674740441-462149c06ae2?q=80"
                                         alt=""
                                         class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                                     />
@@ -77,7 +114,7 @@
                                 </div>
                                 <div class="relative">
                                     <img
-                                        src="https://images.unsplash.com/photo-1670272505284-8faba1c31f7d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&h=528&q=80"
+                                        src="https://images.unsplash.com/photo-1686748548097-d0cdec48a61a?q=80"
                                         alt=""
                                         class="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                                     />
@@ -100,7 +137,7 @@
 
                 <ul class="mt-2 flex flex-col gap-8 leading-6 sm:leading-8">
 
-                    <li class="flex items-center">
+                    <li class="flex flex-col items-center">
                         <NuxtLink
                             class="px-3 py-2 w-full flex flex-col items-center bg-blue-300 border-2 border-blue-500 rounded-lg shadow hover:bg-blue-200"
                             to="https://nexa.exchange/token/5f2456fa44a88c4a831a4b7d1b1f34176a29a3f28845af639eb9b1c88dd40000"
@@ -121,6 +158,14 @@
                             </span>
 
                         </NuxtLink>
+
+                        <button
+                            @click="copyToClipboard"
+                            class="w-full block px-3 py-1 text-2xl text-blue-100 font-medium bg-blue-800 border-2 border-blue-400 rounded-md shadow hover:bg-blue-700"
+                        >
+                            Copy to Clipboard
+                        </button>
+
                     </li>
 
                     <li>

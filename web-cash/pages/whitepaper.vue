@@ -25,7 +25,7 @@ const System = useSystemStore()
     <main class="bg-white px-3 py-32 sm:px-4 lg:px-6">
         <div class="mx-auto max-w-3xl text-base leading-7 text-gray-700">
             <p class="text-base font-light leading-7 text-gray-400 italic tracking-wider">
-                Last updated: 2024.2.4
+                Last updated: 2024.2.17
             </p>
 
             <h1 class="mt-2 text-6xl sm:text-5xl font-bold tracking-tight text-gray-900">
