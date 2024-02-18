@@ -1,5 +1,6 @@
 <script setup lang="ts">
 /* Import modules. */
+import JSConfetti from 'js-confetti'
 import numeral from 'numeral'
 
 import { listUnspent } from '@nexajs/address'
@@ -39,9 +40,14 @@ const errors = ref(null)
 const mintingAuth = ref(null)
 const txidem = ref(null)
 
+const isMining = ref(false)
+
 const NXY_ID_HEX = '5f2456fa44a88c4a831a4b7d1b1f34176a29a3f28845af639eb9b1c88dd40000'
 
 const enclave = ref(null)
+
+/* Initialize confetti. */
+let jsConfetti
 
 const copyToClipboard = (_text) => {
     /* Copy address to clipboard. */
@@ -63,6 +69,9 @@ const init = async () => {
     /* Initialize locals. */
     let miningAddress
     let miningUnspent
+
+    /* Initialize confetti. */
+    jsConfetti = new JSConfetti()
 
     console.log('WALLET ADDRESS', Wallet.address)
 
@@ -141,6 +150,9 @@ const startMiner = async () => {
     /* Reset errors. */
     errors.value = []
 
+    /* Reset result. */
+    txidem.value = null
+
     // TODO Decode script hash from wallet address.
     miner = hexToBin('0000000000000000000000000000000000000000')
     console.log('MINER', binToHex(miner))
@@ -151,6 +163,13 @@ const startMiner = async () => {
     console.log('CANDIDATE', binToHex(candidate))
 
     // TODO Record candidates to (local) logs (for auditing).
+
+    if (!mintingAuth.value?.outpoint) {
+        return alert('Loading mining parameters loading...')
+    }
+
+    /* Set flag. */
+    isMining.value = true
 
     outpointHash = mintingAuth.value.outpoint
     outpointHash = reverseHex(outpointHash)
@@ -163,9 +182,22 @@ const startMiner = async () => {
     response = await Mining.submit(Wallet.wallet, miner, candidate)
     console.log('SUBMISSION RESPONSE', response)
 
+    /* Set flag. */
+    isMining.value = false
+
     /* Validate response. */
     if (response.result) {
         txidem.value = response.result
+
+        // BURST CONFETTI
+        jsConfetti.addConfetti({
+            // emojis: ['🌈', '⚡️', '💥', '✨', '💫', '🌸'],
+            // confettiColors: [
+            //     '#ff0a54', '#ff477e', '#ff7096', '#ff85a1', '#fbb1bd', '#f9bec7',
+            // ],
+            // confettiRadius: 6,
+            confettiNumber: 300,
+        })
     }
 
     /* Validate error. */
@@ -173,6 +205,13 @@ const startMiner = async () => {
         /* Validate error message. */
         if (response.error.message.includes('Script failed an OP_VERIFY operation')) {
             errMsg = 'Candidate failed! Please try again...'
+
+            errors.value.push(errMsg)
+            return console.error(errMsg)
+        }
+
+        if (response.error.message.includes('non-BIP68-final')) {
+            errMsg = 'Please wait until the next Nexa block to submit your next Reward candidate.'
 
             errors.value.push(errMsg)
             return console.error(errMsg)
@@ -206,14 +245,14 @@ onMounted(() => {
 
             <MiningGlobalStats />
 
-            <section class="my-5 flex flex-row gap-6 items-center">
+            <section class="my-5 flex flex-col lg:flex-row gap-6 items-center">
 
                 <img
                     src="~/assets/bitcoin-vault.jpg"
-                    class="w-2/3 h-40 flex-1 bg-green-700 border-2 border-green-900 rounded-xl shadow object-cover"
+                    class="order-2 lg:order-1 w-full lg:w-2/3 h-40 flex-1 bg-green-700 border-2 border-green-900 rounded-xl shadow object-cover"
                 />
 
-                <p class="w-1/3 py-5 text-center text-lg leading-8 text-gray-600">
+                <p class="order-1 lg:order-2 w-full lg:w-1/3 py-5 text-center text-lg leading-8 text-gray-600">
                     CPU Mining is BACK!
                     Join the <span class="pr-1 text-2xl text-rose-500 font-extrabold italic">Season 1</span> Mining Rewards TODAY!
                     Easily mine $NXY from your Desktop or Mobile devices.
@@ -223,21 +262,45 @@ onMounted(() => {
 
             <div class="mt-20 grid lg:grid-cols-5 gap-5">
 
-                <section class="lg:col-span-3 flex flex-col gap-12">
+                <section class="lg:col-span-3 flex flex-col gap-12 order-2 lg:order-1">
                     <MiningLocalStats />
                     <MiningPoolStats />
                 </section>
 
-                <section class="lg:col-span-2 flex flex-col gap-3">
+                <section class="w-full lg:col-span-2 flex flex-col gap-3 order-1 lg:order-2 truncate">
 
-                    <button @click="startMiner" class="group px-5 py-5 bg-green-500 border border-green-700 rounded-xl shadow hover:bg-green-400">
+                    <button
+                        @click="startMiner"
+                        class="group px-5 py-5 bg-green-500 border border-green-700 rounded-xl shadow hover:bg-green-400"
+                        :class="[ isMining ? 'opacity-30' : '' ]"
+                        :disabled="isMining"
+                    >
                         <span class="text-5xl text-amber-100 font-medium group-hover:text-green-900">
                             Start Mining
                         </span>
                     </button>
 
-                    <div v-if="txidem">
-                        {{txidem}}
+                    <div v-if="txidem" class="col-span-2 mb-3 px-3 py-2 flex flex-col gap-3 bg-gray-800 border-t-2 border-amber-300 rounded-lg shadow">
+                        <h3 class="text-gray-100 text-base font-medium">
+                            Congratulations!
+                            <br />You received a mining reward!
+                        </h3>
+
+                        <div class="">
+                            <h4 class="text-xs uppercase text-amber-200 font-medium tracking-wider">
+                                Transaction Idem
+                            </h4>
+
+                            <div class="w-full flex flex-row gap-1 items-center truncate">
+                                <NuxtLink :to="'https://explorer.nexa.org/tx/' + txidem" target="_blank" class="w-full text-lg text-blue-200 font-medium truncate">
+                                    {{txidem}}
+                                </NuxtLink>
+
+                                <svg class="w-10 h-auto text-blue-200" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"></path>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
 
                     <div v-if="errors && errors.length">

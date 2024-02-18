@@ -318,8 +318,8 @@ onMounted(() => {
                 </h2>
 
                 <p class="mt-6 text-lg leading-8 text-gray-600">
-                    During our first few months, it's critical to lay a <em class="text-2xl text-indigo-500 font-medium">SOLID</em> foundation for which we can then build upon for decades to come.
-                    Nxy is committed to building, deploying and supporting <em class="text-2xl text-indigo-500 font-medium">critical infrastructure &amp; services</em> to ensure that <em class="text-2xl text-indigo-500 font-medium">ALL</em> Nexicans will be entitled to <em class="text-2xl text-indigo-500 font-medium">ALWAYS</em> have nice things too.
+                    During our first few months, it's critical to lay a <em class="pr-1 text-2xl text-indigo-500 font-medium">SOLID</em> foundation for which we can then build upon for decades to come.
+                    Nxy is committed to building, deploying and supporting <em class="pr-1 text-2xl text-indigo-500 font-medium">critical infrastructure &amp; services</em> to ensure that <em class="pr-1 text-2xl text-indigo-500 font-medium">ALL</em> Nexicans will be entitled to <em class="pr-1 text-2xl text-indigo-500 font-medium">ALWAYS</em> have nice things too.
                 </p>
             </div>
 
@@ -330,7 +330,7 @@ onMounted(() => {
                     </dt>
 
                     <dd class="mt-1 text-gray-600">
-                        We begin this journey by introducing <span class="text-indigo-500 font-bold">CPU &amp; Mobile PoW mining</span> for Nexa's premier Layer 1+ asset.
+                        We begin our journey by introducing <span class="text-indigo-500 font-bold">CPU &amp; Mobile PoW mining</span> for Nexa's premier Layer 1+ asset.
                     </dd>
 
                     <section class="">
@@ -355,7 +355,8 @@ onMounted(() => {
                     </dt>
 
                     <dd class="mt-1 text-gray-600">
-                        Introducing a plug-n-play, software toolkit for JS Developers to quickly &amp; easily secure their dApps with the #1 market leader in <span class="text-indigo-500 font-bold">Crypto hardware wallet security</span>.
+                        <span class="text-indigo-500 font-bold">Bring on the Builders!</span>
+                        100% of Nxy tributes will be allocated towards building out the Nexa ecosystem.
                     </dd>
 
                     <section class="">
@@ -380,7 +381,7 @@ onMounted(() => {
                     </dt>
 
                     <dd class="mt-1 text-gray-600">
-                        Introducing <span class="text-indigo-500 font-bold">Fungibility for your Nexa transactions</span> by merging the MOST advanced Crypto privacy protocols & specifications <em>(i.e. CoinJoin, CashShuffle and CashFusion)</em> into a total solution.
+                        We will be looking to support as many <span class="text-indigo-500 font-bold">"sustainable" projects &amp; teams</span> as the Treasury can afford.
                     </dd>
 
                     <section class="">
@@ -406,7 +407,7 @@ onMounted(() => {
                     </dt>
 
                     <dd class="mt-1 text-gray-600">
-                        A comprehensive plan to build, test and deploy a <span class="text-indigo-500 font-bold">SmartBCH-style sidechain for Nexa</span>, powered by an Avalanche Subnet.
+                        We aim our sights at the <span class="text-indigo-500 font-bold">mainstream influencers</span> by providing a complete suite of tools and services to meet 100% of their needs.
                     </dd>
 
                     <section class="">
@@ -433,7 +434,7 @@ onMounted(() => {
                     </dt>
 
                     <dd class="mt-1 text-gray-600">
-                        Spring, Summer, Fall and Winter <span class="text-indigo-500 font-bold">global community events</span> to showcase &amp; financially support the projects and teams actively <span class="text-indigo-500 font-bold">BuilderingOnNexa.</span>
+                        We begin preparing for the 1st <span class="text-indigo-500 font-bold">Nexican Builder Festival</span> to showcase &amp; financially support the projects and teams actively <span class="text-indigo-500 font-bold">BuildingOnNexa.</span>
                     </dd>
 
                     <section class="">
