@@ -339,6 +339,7 @@ onMounted(() => {
                         </h3>
 
                         <ul class="pl-10 list-disc text-sm text-gray-600">
+                            <li>Nxy web, mobile &amp; desktop clients</li>
                             <li>Social media airdrops</li>
                             <li>DEX liquidity</li>
                         </ul>
@@ -365,6 +366,7 @@ onMounted(() => {
                         </h3>
 
                         <ul class="pl-10 list-disc text-sm text-gray-600">
+                            <li>Nxy web, mobile &amp; desktop clients</li>
                             <li>Social media airdrops</li>
                             <li>Builder bounties</li>
                         </ul>
@@ -390,6 +392,7 @@ onMounted(() => {
                         </h3>
 
                         <ul class="pl-10 list-disc text-sm text-gray-600">
+                            <li>Nxy web, mobile &amp; desktop clients</li>
                             <li>Social media airdrops</li>
                             <li>Builder bounties</li>
                             <li>Builder grants</li>
@@ -416,6 +419,7 @@ onMounted(() => {
                         </h3>
 
                         <ul class="pl-10 list-disc text-sm text-gray-600">
+                            <li>Nxy web, mobile &amp; desktop clients</li>
                             <li>Social media airdrops</li>
                             <li>Builder grants</li>
                             <li>Builder sponsorships</li>
@@ -434,7 +438,7 @@ onMounted(() => {
                     </dt>
 
                     <dd class="mt-1 text-gray-600">
-                        We begin preparing for the 1st <span class="text-indigo-500 font-bold">Nexican Builder Festival</span> to showcase &amp; financially support the projects and teams actively <span class="text-indigo-500 font-bold">BuildingOnNexa.</span>
+                        Showcase and financially support ALL the projects and teams actively <span class="text-indigo-500 font-bold">BuildingOnNexa.</span>
                     </dd>
 
                     <section class="">
@@ -443,6 +447,7 @@ onMounted(() => {
                         </h3>
 
                         <ul class="pl-10 list-disc text-sm text-gray-600">
+                            <li>Nxy web, mobile &amp; desktop clients</li>
                             <li>Social media airdrops</li>
                             <li>Builder grants</li>
                             <li>Builder sponsorships</li>
