@@ -105,8 +105,8 @@ export default async function (_wallet, _miner, _candidate) {
     /* Build script public key. */
     scriptPubKey = new Uint8Array([
         OP.ZERO, // groupid or empty stack item
-        OP.ONE,
-        ...encodeDataPush(hexToBin(_miner)),
+        OP.ONE, // script template (type)
+        ...encodeDataPush(hexToBin(_miner)), // FIXME why convert???
     ])
     console.info('\nSCRIPT PUBLIC KEY', binToHex(scriptPubKey))
 
@@ -118,6 +118,8 @@ export default async function (_wallet, _miner, _candidate) {
     )
     console.info('\n(MINING) ADDRESS', miningAddress)
 
+    /* Set provider address. */
+    // FIXME Retrieve this value from the enclave.
     providerAddress = 'nexa:nqtsq5g5sp33aj07d808w8xvv7kuarwcrv3z2fvskw2ej7dj'
     console.info('\n(PROVIDER) ADDRESS', providerAddress)
 
@@ -125,11 +127,15 @@ export default async function (_wallet, _miner, _candidate) {
     contractScript = hexToBin(POLYMORPH_HEX)
     console.info('\nCONTRACT SCRIPT', binToHex(contractScript))
 
+    /* Set namespace. */
+    // NOTE: We MUST truncate the OP_RETURN prefix.
     namespace = encodeNullData('POLYPOW01').slice(2)
     console.log('NAMESPACE', binToHex(namespace))
 
-    // NOTE: NexScript v0.1.0 offers a less-than optimized version
-    //       of this (script) contract (w/ the addition of `OP_SWAP`).
+    /* Build locking script. */
+    // NOTE: The NexScript v0.1.0 compiler generates a less-than optimized
+    //       version of this (script) contract (there is an unnecessary
+    //       addition of `OP_SWAP`).
     lockingScript = new Uint8Array([
         ...encodeDataPush(namespace),
         OP.DROP,
@@ -146,9 +152,11 @@ export default async function (_wallet, _miner, _candidate) {
     ])
     console.info('\nDELEGATE TEMPLATE', binToHex(lockingScript))
 
+    /* Calculate script hash. */
     scriptHash = ripemd160(sha256(lockingScript))
     console.log('\nTEMPLATE HASH', binToHex(scriptHash))
 
+    /* Calculate delegate constraint. */
     delegateConstraint = ripemd160(sha256(contractScript))
     console.log('DELEGATE CONSTRAINT', binToHex(delegateConstraint))
 
@@ -187,14 +195,17 @@ export default async function (_wallet, _miner, _candidate) {
     ])
     // console.log('UNLOCKING', binToHex(unlockingScript));
 
+    /* Retrieve (unspent) coins. */
     coins = await getCoins(_wallet.wif)
         .catch(err => console.error(err))
     console.log('\nCOINS', coins)
 
+    /* Retrieve (unspent) tokens. */
     contractTokens = await getTokens(_wallet.wif, scriptPubKey)
         .catch(err => console.error(err))
     console.log('\nCONTRACT TOKENS', contractTokens)
 
+    /* Validate tokens. */
     if (contractTokens.length) {
         // FOR DEV PURPOSES ONLY -- take the LARGEST input
         contractTokens = [contractTokens.sort((a, b) => Number(b.tokens) - Number(a.tokens))[0]]

@@ -14,7 +14,6 @@ import {
 } from '@nexajs/utils'
 
 import CryptoJS from 'crypto-js'
-// import sha1 from 'crypto-js/sha1'
 
 import {
     getAddressHistory,
@@ -22,9 +21,9 @@ import {
 } from '@nexajs/rostrum'
 
 useHead({
-    title: 'Mining',
+    title: 'Nxy Mining',
     meta: [
-        { name: 'description', content: 'Web mining.' }
+        { name: 'description', content: 'Nxy web mining engine.' }
     ],
 })
 
@@ -40,11 +39,12 @@ const errors = ref(null)
 const mintingAuth = ref(null)
 const txidem = ref(null)
 
+/* Initialize mining handlers. */
 const isMining = ref(false)
-
-const NXY_ID_HEX = '5f2456fa44a88c4a831a4b7d1b1f34176a29a3f28845af639eb9b1c88dd40000'
-
 const enclave = ref(null)
+
+/* Initialize constants. */
+const NXY_ID_HEX = '5f2456fa44a88c4a831a4b7d1b1f34176a29a3f28845af639eb9b1c88dd40000'
 
 /* Initialize confetti. */
 let jsConfetti
@@ -65,6 +65,11 @@ const toggleFiat = () => {
     alert(`Coming soon...`)
 }
 
+/**
+ * Initialization
+ *
+ * TBD...
+ */
 const init = async () => {
     /* Initialize locals. */
     let miningAddress
@@ -105,6 +110,11 @@ const init = async () => {
     console.log('MINTING AUTH', mintingAuth.value)
 }
 
+/**
+ * Calculate Submission
+ *
+ * TBD...
+ */
 const calcSubmission = (_miner, _outpointHash, _candidate) => {
     const myRaw = `${_miner}${_outpointHash}${_candidate}`
     // console.log('RAW', myRaw)

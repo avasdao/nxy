@@ -2,7 +2,7 @@
 
 ### https://nxy.cash
 
-### Official Token of Nyx
+### Official Token of Nxy
 
 ## Purpose
 
