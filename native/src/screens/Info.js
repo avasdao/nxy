@@ -34,7 +34,7 @@ import LottieView from 'lottie-react-native'
 import PushNotificationIOS from '@react-native-community/push-notification-ios'
 
 // import testPlay from './Info/_testPlay'
-// import testCafe from './Info/_testCafe'
+// import testSocial from './Info/_testSocial'
 import testCommunity from './Info/_testCommunity'
 // import testPortfolio from './Info/_testPortfolio'
 // import testReminder from './Info/_testReminder'
@@ -42,7 +42,7 @@ import testCommunity from './Info/_testCommunity'
 
 import moment from 'moment'
 
-const testPlay = testCafe = testPortfolio = testReminder = testTreasury = () => {
+const testPlay = testSocial = testPortfolio = testReminder = testTreasury = () => {
     const details = request = {
         id: '1',
         body: `Yeah, so we're starting over..`,
@@ -146,10 +146,10 @@ const Support = () => {
                 <View className="m-2 flex flex-row justify-around">
                     <Pressable
                         className="w-5/12 p-3 border-2 border-pink-400 bg-pink-200 rounded-xl"
-                        onPress={testCafe}
+                        onPress={testSocial}
                     >
                         <Text className="text-xl text-red-500 font-bold text-center">
-                            Café
+                            PnR
                         </Text>
                     </Pressable>
 

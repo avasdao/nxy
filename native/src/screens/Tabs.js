@@ -24,7 +24,7 @@ import SpacesStackScreen from './Spaces'
 import WealthStackScreen from './Wealth'
 
 /* Add (main) screens. */
-import CafeScreen from './Cafe'
+import SocialScreen from './Social'
 
 import InfoButton from '../components/InfoButton'
 import MenuButton from '../components/MenuButton'
@@ -46,7 +46,7 @@ const Tabs = () => {
                         iconName = focused
                         ? 'ios-grid'
                         : 'ios-grid-outline'
-                    } else if (route.name === 'Café') {
+                    } else if (route.name === 'PnR') {
                         iconName = focused
                         ? 'ios-cafe'
                         : 'ios-cafe-outline'
@@ -84,8 +84,8 @@ const Tabs = () => {
             />
 
             <Tab.Screen
-                name="Café"
-                component={CafeScreen}
+                name="PnR"
+                component={SocialScreen}
                 options={{
                     headerRight: InfoButton,
                     tabBarBadge: 3,

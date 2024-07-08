@@ -27,9 +27,9 @@ import { ethers, utils } from 'ethers'
 import store from '../store'
 
 /**
- * Cafe Screen
+ * Social Screen
  */
-const Cafe = observer(({navigation}) => {
+const Social = observer(({navigation}) => {
     const [hasAgreed, setHasAgreed] = React.useState(false)
 
     /* Handle onLoad scripts. */
@@ -77,7 +77,7 @@ const Cafe = observer(({navigation}) => {
                 />
 
                 <Text className="text-pink-500 font-semibold">
-                    24 Hour Cafe
+                    24 Hour Social
                 </Text>
             </View>
 
@@ -85,4 +85,4 @@ const Cafe = observer(({navigation}) => {
     )
 })
 
-export default Cafe
+export default Social

@@ -1,6 +1,6 @@
 {
   "name": "nxy-mobile",
-  "version": "22.9.22",
+  "version": "24.6.28",
   "license": "MIT",
   "scripts": {
     "android": "react-native run-android",

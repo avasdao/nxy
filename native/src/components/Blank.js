@@ -72,7 +72,7 @@ const Blank = observer(() => {
                 />
 
                 <Text className="text-pink-500 font-semibold">
-                    24 Hour Cafe
+                    Power & Respect
                 </Text>
             </View>
         </View>
