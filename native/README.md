@@ -1,4 +1,4 @@
-# Nxy Mobile
+# Nxy Native
 
 ### https://nxy.app
 

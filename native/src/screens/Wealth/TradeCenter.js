@@ -24,7 +24,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 import LottieView from 'lottie-react-native'
 import tailwind from 'tailwind-rn'
 
-import { ethers, utils, Wallet } from 'ethers'
+import { Wallet } from '@nexajs/wallet'
+import { ethers, utils } from 'ethers'
 
 import moment from 'moment'
 
@@ -111,6 +112,7 @@ const Dashboard = observer(({navigation}) => {
     }
 
     const _changeEarningTime = () => {
+testWallet()
         if (earningsTime === 'MONTHLY') {
             setEarningsTime('WEEKLY')
         } else if (earningsTime === 'WEEKLY') {
@@ -118,6 +120,12 @@ const Dashboard = observer(({navigation}) => {
         } else {
             setEarningsTime('MONTHLY')
         }
+    }
+
+    const testWallet = async () => {
+        const wallet = await Wallet.init('armed insect flower embrace hair sense affair robot involve razor clock defy')
+            .catch(err => console.error(err))
+        console.log('WALLET', wallet)
     }
 
     return (
