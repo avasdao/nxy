@@ -1,6 +1,6 @@
 {
   "name": "nxy-cash",
-  "version": "24.2.17",
+  "version": "24.7.9",
   "license": "MIT",
   "scripts": {
     "build": "nuxt build",
@@ -13,12 +13,11 @@
     "@bitauth/libauth": "1.19.1",
     "@pinia/nuxt": "0.4.7",
     "crypto-js": "4.2.0",
-    "firebase": "10.1.0",
     "js-confetti": "0.12.0",
     "moment": "2.29.4",
-    "nexajs": "23.12.29",
+    "nexajs": "24.7.9",
     "numeral": "2.0.6",
-    "nuxt": "3.0.0",
+    "nuxt": "3.7.4",
     "pinia": "2.0.32",
     "qr-scanner": "1.4.2",
     "qrcode": "1.5.3",
@@ -27,6 +26,7 @@
   "devDependencies": {
     "@kevinmarrec/nuxt-pwa": "0.17.0",
     "@nuxtjs/i18n": "8.0.0-rc.2",
-    "@nuxtjs/tailwindcss": "6.4.1"
+    "@nuxtjs/tailwindcss": "6.4.1",
+    "postcss-custom-properties": "13.3.10"
   }
 }

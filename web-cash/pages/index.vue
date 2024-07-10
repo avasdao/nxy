@@ -39,9 +39,7 @@ const walletsCreated = computed(() => {
 })
 
 const init = async () => {
-    richList.value = await $fetch('/api/getRichList')
-        .catch(err => console.error(err))
-    console.log('RICH LIST', richList.value)
+    // TODO
 }
 
 onMounted(() => {
