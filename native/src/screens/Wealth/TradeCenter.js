@@ -24,7 +24,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 import LottieView from 'lottie-react-native'
 import tailwind from 'tailwind-rn'
 
-import { Wallet } from '@nexajs/wallet'
+import { randomBytes } from '@nexajs/crypto'
+// import { Wallet } from '@nexajs/wallet'
 import { ethers, utils } from 'ethers'
 
 import moment from 'moment'
@@ -112,7 +113,9 @@ const Dashboard = observer(({navigation}) => {
     }
 
     const _changeEarningTime = () => {
-testWallet()
+testCrypto()
+testRostrum()
+// testWallet()
         if (earningsTime === 'MONTHLY') {
             setEarningsTime('WEEKLY')
         } else if (earningsTime === 'WEEKLY') {
@@ -122,11 +125,22 @@ testWallet()
         }
     }
 
-    const testWallet = async () => {
-        const wallet = await Wallet.init('armed insect flower embrace hair sense affair robot involve razor clock defy')
-            .catch(err => console.error(err))
-        console.log('WALLET', wallet)
+    const testCrypto = async () => {
+        const myBytes = randomBytes(32)
+        console.log('MY BYTES', myBytes)
     }
+
+    const testRostrum = async () => {
+        const unspent = await listUnspent('nexa:nqtsq5g5084n9vxhzkpssype9fkp73tksn0xt2lylet24rxq')
+            .catch(err => console.error(err))
+        console.log('UNSPENT', unspent)
+    }
+
+    // const testWallet = async () => {
+    //     const wallet = await Wallet.init('armed insect flower embrace hair sense affair robot involve razor clock defy')
+    //         .catch(err => console.error(err))
+    //     console.log('WALLET', wallet)
+    // }
 
     return (
         <ScrollView

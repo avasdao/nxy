@@ -1,22 +1,6 @@
 /* Import modules. */
 import { defineStore } from 'pinia'
 
-/* Import modules. */
-import { encodeAddress } from '@nexajs/address'
-import { getTransaction } from '@nexajs/rostrum'
-import { binToHex } from '@nexajs/utils'
-import { hexToBin } from '@nexajs/utils'
-import { sha256 } from '@nexajs/crypto'
-
-/* Libauth helpers. */
-import { instantiateRipemd160 } from '@bitauth/libauth'
-
-/* Libauth helpers. */
-import { encodeDataPush } from '@bitauth/libauth'
-
-/* Import clipboard manager. */
-import './system/clipboard.ts'
-
 /* Initialize constants. */
 const UPDATE_TICKER_INTERVAL = 30000 // 30 seconds
 
@@ -88,13 +72,12 @@ export const useSystemStore = defineStore('system', {
     }),
 
     getters: {
-        avasUsd() {
-            if (!this._tickers?.AVAS) {
+        nxyUsd() {
+            if (!this._tickers?.NXY) {
                 return null
             }
 
-            // FIXME:FOR DEV PURPSES ONLY
-            return (this._tickers.AVAS.price / 99.0)
+            return (this._tickers.NXY.quote.USD.price)
         },
 
         nex() {
@@ -158,53 +141,17 @@ export const useSystemStore = defineStore('system', {
         },
 
         async updateTicker () {
-            if (!this._tickers.AVAS) {
-                this._tickers.AVAS = {}
+            if (!this._tickers.NXY) {
+                this._tickers.NXY = {}
             }
 
             if (!this._tickers.NEXA) {
                 this._tickers.NEXA = {}
             }
 
-            this._tickers.AVAS = await $fetch('https://nexa.exchange/v1/ticker/quote/57f46c1766dc0087b207acde1b3372e9f90b18c7e67242657344dcd2af660000')
+            this._tickers.NXY = await $fetch('https://telr.exchange/v1/ticker/quote/5f2456fa44a88c4a831a4b7d1b1f34176a29a3f28845af639eb9b1c88dd40000')
 
-            this._tickers.NEXA = await $fetch('https://nexa.exchange/ticker')
-        },
-
-        async getSender(_tx) {
-            const inputs = _tx?.vin
-            // console.log('INPUTS', inputs)
-
-            const hex = inputs[0]?.scriptSig.hex
-            // console.log('HEX', hex)
-
-            const publicKey = hexToBin(hex.slice(4, 70))
-            // console.log('PUBLIC KEY', binToHex(publicKey))
-
-            /* Hash the public key hash according to the P2PKH/P2PKT scheme. */
-            const scriptPushPubKey = encodeDataPush(publicKey)
-            // console.log('SCRIPT PUSH PUBLIC KEY', scriptPushPubKey);
-
-            const ripemd160 = await instantiateRipemd160()
-
-            const publicKeyHash = ripemd160.hash(sha256(scriptPushPubKey))
-            // console.log('PUBLIC KEY HASH (hex)', binToHex(publicKeyHash))
-
-            const pkhScript = hexToBin('17005114' + binToHex(publicKeyHash))
-            // console.info('  Public key hash Script:', binToHex(pkhScript))
-
-            const address = encodeAddress(
-                'nexa', 'TEMPLATE', pkhScript)
-            console.info('ADDRESS', address)
-
-            /* Set sender. */
-            const sender = {
-                address,
-                inputs,
-            }
-
-            /* Return sender. */
-            return sender
+            this._tickers.NEXA = await $fetch('https://telr.exchange/v1/ticker/quote/NEXA')
         },
 
     },

@@ -14,7 +14,7 @@ const System = useSystemStore()
 const emits = defineEmits(['toggleMenu'])
 
 const displayQuote = computed(() => {
-    if (!System.avasUsd) {
+    if (!System.nxyUsd) {
         return {
             primary: '$0.00',
             secondary: '0000',
@@ -22,8 +22,8 @@ const displayQuote = computed(() => {
     }
 
     return {
-        primary: '$' + System.avasUsd.toString().split('.')[0] + '.' + System.avasUsd.toString().split('.')[1].slice(0, 2),
-        secondary: System.avasUsd.toString().split('.')[1].slice(2, 6),
+        primary: '$' + System.nxyUsd.toString().split('.')[0] + '.' + System.nxyUsd.toString().split('.')[1].slice(0, 2),
+        secondary: System.nxyUsd.toString().split('.')[1].slice(2, 6),
     }
 })
 

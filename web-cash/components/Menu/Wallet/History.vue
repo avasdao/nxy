@@ -1,24 +1,73 @@
 <script setup>
 /* Import modules. */
 import moment from 'moment'
-import {
-    getAddressHistory,
-    getTransaction,
-} from '@nexajs/rostrum'
-
-import getSender from './history/getSender.js'
+import numeral from 'numeral'
+import { getSender } from '@nexajs/address'
 
 /* Initialize stores. */
-import { useSystemStore } from '@/stores/system'
 import { useWalletStore } from '@/stores/wallet'
-const System = useSystemStore()
 const Wallet = useWalletStore()
 
+/* Set (REST) API endpoints. */
+const ROSTRUM_ENDPOINT = 'https://nexa.sh/v1/rostrum'
+
+/* Set constants. */
+const ROSTRUM_METHOD = 'POST'
+
+/* Initialize globals. */
+let body
+let response
+
+const headers = new Headers()
+headers.append('Content-Type', 'application/json')
+
+const getAddressHistory = async (_address) => {
+    body = JSON.stringify({
+        request: 'blockchain.address.get_history',
+        params: _address,
+    })
+
+    // NOTE: Native `fetch` requires Node v21+.
+    response = await fetch(ROSTRUM_ENDPOINT, {
+        method: ROSTRUM_METHOD,
+        headers,
+        body,
+    }).catch(err => console.error(err))
+    response = await response.json()
+    // console.log('RESPONSE', response)
+
+    return response
+}
+
+const getTransaction = async (_id) => {
+    body = JSON.stringify({
+        request: 'blockchain.transaction.get',
+        params: [_id, true],
+    })
+
+    // NOTE: Native `fetch` requires Node v21+.
+    response = await fetch(ROSTRUM_ENDPOINT, {
+        method: ROSTRUM_METHOD,
+        headers,
+        body,
+    }).catch(err => console.error(err))
+    response = await response.json()
+    // console.log('RESPONSE', response)
+
+    return response
+}
+
+/* Set constants. */
 const MAX_RESULTS_PER_PAGE = 20
 
-const history = ref(null)
+/* Set responsive. */
 const txs = ref(null)
 
+/**
+ * Initialization
+ *
+ * Setup the wallet history.
+ */
 const init = async () => {
     /* Initialize locals. */
     let history
@@ -57,38 +106,48 @@ const init = async () => {
 }
 
 const displayInputs = (_inputs) => {
+    /* Initialize inputs. */
     const inputs = []
 
-    _inputs.forEach(_input => {
-        inputs.push({
-            outpoint: _input.outpoint,
-            address: getSender(_input),
-            satoshis: _input.value_satoshi,
+    /* Validate inputs. */
+    if (_inputs) {
+        _inputs.forEach(_input => {
+            inputs.push({
+                outpoint: _input.outpoint,
+                address: getSender(_input),
+                satoshis: _input.value_satoshi,
+            })
         })
-    })
+    }
 
+    /* Return inputs. */
     return inputs
 }
 
 const displayOutputs = (_outputs) => {
+    /* Initialize outputs. */
     const outputs = []
 
-    _outputs.forEach(_output => {
-        outputs.push({
-            outpoint: _output.outpoint_hash,
-            address: _output.scriptPubKey.addresses[0],
-            satoshis: _output.value_satoshi,
-            script: {
-                hash: _output.scriptPubKey.scriptHash,
-                args: _output.scriptPubKey.argsHash,
-            },
-            group: _output.scriptPubKey.group,
-            groupAuthority: _output.scriptPubKey.groupAuthority,
-            groupQuantity: _output.scriptPubKey.groupQuantity,
-            hex: _output.scriptPubKey.hex,
+    /* Validate outputs. */
+    if (_outputs) {
+        _outputs.forEach(_output => {
+            outputs.push({
+                outpoint: _output.outpoint_hash,
+                address: _output.scriptPubKey.addresses[0],
+                satoshis: _output.value_satoshi,
+                script: {
+                    hash: _output.scriptPubKey.scriptHash,
+                    args: _output.scriptPubKey.argsHash,
+                },
+                group: _output.scriptPubKey.group,
+                groupAuthority: _output.scriptPubKey.groupAuthority,
+                groupQuantity: _output.scriptPubKey.groupQuantity,
+                hex: _output.scriptPubKey.hex,
+            })
         })
-    })
+    }
 
+    /* Return outputs. */
     return outputs
 }
 
@@ -109,7 +168,6 @@ onMounted(() => {
 //     console.log('Before Unmount!')
 //     // Now is the time to perform all cleanup operations.
 // })
-
 </script>
 
 <template>
@@ -126,7 +184,7 @@ onMounted(() => {
             class="px-2 p-1 bg-amber-50 border border-amber-300 rounded-md shadow hover:bg-amber-100"
         >
             <h3 class="text-xs font-medium truncate">
-                TXID {{tx.txidem}}
+                ID {{tx.txidem}}
             </h3>
 
             <h3>
@@ -162,9 +220,9 @@ onMounted(() => {
                         <span class="font-medium">{{input.address}}</span>
                     </NuxtLink>
 
-                    <h3 class="text-xs text-amber-800 truncate">
+                    <h3 v-if="input.satoshis" class="text-xs text-amber-800 truncate">
                         Satoshis:
-                        <span class="font-medium">{{input.satoshis}}</span>
+                        <span class="font-medium">{{numeral(Number(input.satoshis)).format('0,0')}}</span>
                     </h3>
                     <!-- {{input}} -->
                 </div>

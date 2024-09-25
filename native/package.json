@@ -1,6 +1,6 @@
 {
   "name": "nxy-native",
-  "version": "24.7.9",
+  "version": "24.7.21",
   "license": "MIT",
   "scripts": {
     "android": "react-native run-android",
@@ -38,7 +38,7 @@
     "mobx-react": "7.5.3",
     "moment": "2.29.1",
     "nativewind": "2.0.0-next.58",
-    "nexajs": "24.7.9",
+    "nexajs": "24.7.20",
     "numeral": "2.0.6",
     "process": "0.11.10",
     "react": "18.1.0",

@@ -1,22 +1,27 @@
 <script setup lang="ts">
-/* Define properties. */
-// https://vuejs.org/guide/components/props.html#props-declaration
-const props = defineProps({
-    data: {
-        type: [Object],
-    },
-})
-
 /* Initialize stores. */
 import { useWalletStore } from '@/stores/wallet'
 const Wallet = useWalletStore()
 
 const mnemonic = ref(null)
 
+const createWallet = () => {
+    // NOTE: This confirmation is NOT REQUIRED for single-application
+    //       wallet integration(s), and can be SAFELY removed.
+    if (confirm('Before you continue, please close ALL other Nxy Cash browser windows. Failure to do so may result in LOSS OF ASSETS!\n\nWould you like to continue creating a new wallet?')) {
+        /* Create a new wallet. */
+        Wallet.createWallet()
+    }
+}
+
 const importWallet = () => {
-    /* Set/save mnemonic. */
-    // NOTE: Will save `entropy` to the local storage.
-    Wallet.setMnemonic(mnemonic.value)
+    // NOTE: This confirmation is NOT REQUIRED for single-application
+    //       wallet integration(s), and can be SAFELY removed.
+    if (confirm('Before you continue, please close ALL other Nxy Cash browser windows. Failure to do so may result in LOSS OF ASSETS!\n\nWould you like to continue importing an existing wallet?')) {
+        /* Set/save mnemonic. */
+        // NOTE: Will save `entropy` to the local storage.
+        Wallet.setMnemonic(mnemonic.value)
+    }
 }
 
 // onMounted(() => {
@@ -31,20 +36,20 @@ const importWallet = () => {
 </script>
 
 <template>
-    <main class="flex flex-col gap-5">
+    <section class="flex flex-col gap-5">
         <p class="px-3 py-2 bg-yellow-100 text-base font-medium border-2 border-yellow-200 rounded-lg shadow-md">
-            Welcome to your WiserSwap wallet.
-            Click the button below to create a new wallet and begin your journey.
+            Welcome to your Nxy Cash wallet.
+            Click the button below to create a new wallet and begin trading.
         </p>
 
-        <div @click="Wallet.createWallet" class="cursor-pointer px-3 py-2 text-2xl text-blue-100 font-medium bg-blue-500 border-2 border-blue-700 rounded-lg shadow hover:bg-blue-400">
+        <div @click="createWallet" class="cursor-pointer px-3 py-2 text-2xl text-blue-100 font-medium bg-blue-500 border-2 border-blue-700 rounded-lg shadow hover:bg-blue-400">
             Create New Wallet
         </div>
 
         <hr />
 
         <p class="px-3 py-2 bg-yellow-100 text-base font-medium border-2 border-yellow-200 rounded-lg shadow-md">
-            Import your existing wallet into WiserSwap
+            Import your existing wallet into Nxy Cash.
         </p>
 
         <textarea
@@ -56,5 +61,5 @@ const importWallet = () => {
         <div @click="importWallet" class="cursor-pointer px-3 py-2 text-2xl text-blue-100 font-medium bg-blue-500 border-2 border-blue-700 rounded-lg shadow hover:bg-blue-400">
             Import Existing Wallet
         </div>
-    </main>
+    </section>
 </template>

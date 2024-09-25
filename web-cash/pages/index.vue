@@ -87,7 +87,7 @@ onMounted(() => {
                                 powering a decentralized <em class="text-3xl sm:text-5xl text-lime-500">#SoFi</em> network exclusively for <em class="text-3xl sm:text-5xl text-lime-500">Creators</em> to Dream, Build & <em class="text-3xl sm:text-5xl text-lime-500">Profit!</em>
                             </p>
 
-                            <p class="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
+                            <div class="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
                                 Nxy Cash is the "official" currency of the Nxy social network.
                                 Spend your Nxy <span class="font-extrabold">throughout the Oasis</span> or create and earn from your own Economies.
 
@@ -96,8 +96,9 @@ onMounted(() => {
                                     <li>Create new Economies</li>
                                     <li>Build new Societies</li>
                                 </ul>
-                            </p>
+                            </div>
                         </div>
+
                         <div class="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-20 lg:pl-0">
                             <div class="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
                                 <div class="relative">
@@ -109,6 +110,7 @@ onMounted(() => {
                                     <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
                                 </div>
                             </div>
+
                             <div class="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
                                 <div class="relative">
                                     <img
@@ -118,6 +120,7 @@ onMounted(() => {
                                     />
                                     <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
                                 </div>
+
                                 <div class="relative">
                                     <img
                                         src="https://images.unsplash.com/photo-1636971828014-0f3493cba88a?q=80"
@@ -127,6 +130,7 @@ onMounted(() => {
                                     <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
                                 </div>
                             </div>
+
                             <div class="w-44 flex-none space-y-8 pt-32 sm:pt-0">
                                 <div class="relative">
                                     <img
@@ -136,6 +140,7 @@ onMounted(() => {
                                     />
                                     <div class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10"></div>
                                 </div>
+
                                 <div class="relative">
                                     <img
                                         src="https://images.unsplash.com/photo-1628359355624-855775b5c9c4?q=80"
