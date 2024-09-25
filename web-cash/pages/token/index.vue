@@ -140,7 +140,7 @@ const copyToClipboard = () => {
                     <li class="flex flex-col items-center">
                         <NuxtLink
                             class="px-3 py-2 w-full flex flex-col items-center bg-blue-300 border-2 border-blue-500 rounded-lg shadow hover:bg-blue-200"
-                            to="https://nexa.exchange/token/5f2456fa44a88c4a831a4b7d1b1f34176a29a3f28845af639eb9b1c88dd40000"
+                            to="https://telr.exchange/token/5f2456fa44a88c4a831a4b7d1b1f34176a29a3f28845af639eb9b1c88dd40000"
                             target="_blank"
                         >
                             <h3 class="text-sm sm:text-lg text-blue-700 font-medium uppercase">

@@ -1,12 +1,11 @@
 /* Import modules. */
 import moment from 'moment'
 
+import { signMessageHashSchnorr } from '@nexajs/crypto'
 import {
     binToHex,
     hexToBin,
 } from '@nexajs/utils'
-
-import { instantiateSecp256k1 } from '@bitauth/libauth'
 
 /* Initialize stores. */
 import { useProfileStore } from '@/stores/profile'
@@ -46,7 +45,7 @@ export default async function () {
     console.log('\n\nMESSAGE HASH', binToHex(messageHash))
 
     // Generate a signature over the "sighash" using the passed private key.
-    signature = secp256k1.signMessageHashSchnorr(this.wallet.privateKey, messageHash)
+    signature = signMessageHashSchnorr(this.wallet.privateKey, messageHash)
     console.log('SIGNATURE BIN', signature)
     console.log('SIGNATURE HEX', binToHex(signature))
 

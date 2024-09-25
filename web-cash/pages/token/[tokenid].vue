@@ -6,7 +6,7 @@ const route = useRoute()
 const tokenid = route?.params.tokenid
 
 /* Set (token display) target. */
-const target = `https://nexa.exchange/token/${tokenid}`
+const target = `https://telr.exchange/token/${tokenid}`
 
 /* Validate client. */
 if (process.client) {
