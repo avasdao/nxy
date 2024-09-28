@@ -69,6 +69,10 @@ currency.value = 'USD'
 <template>
     <main class="flex flex-col gap-4">
 
+        <MenuSettingsChooseYourXp />
+
+        <div class="mx-5 my-5 border-t border-gray-300" />
+
         <section class="pr-1 sm:px-3 flex items-center justify-between gap-4">
             <span class="flex flex-grow flex-col">
                 <span class="text-sm font-medium leading-6 text-gray-900" id="availability-label">
