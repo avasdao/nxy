@@ -71,7 +71,7 @@ onMounted(async () => {
     System.init()
 
     /* Initialize profile. */
-    await Profile.init()
+    // await Profile.init()
 
     /* Initialize wallet. */
     Wallet.init()
