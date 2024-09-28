@@ -1,8 +1,14 @@
 /* Import modules. */
 import { defineStore } from 'pinia'
 
+import { encodeAddress } from '@nexajs/address'
+import { hash160 } from '@nexajs/crypto'
 import { mnemonicToEntropy } from '@nexajs/hdnode'
 import { sendCoins } from '@nexajs/purse'
+import {
+    encodeDataPush,
+    OP,
+} from '@nexajs/script'
 import {
     Wallet,
     WalletStatus,
@@ -15,6 +21,7 @@ import _setEntropy from './wallet/setEntropy.ts'
 // FIXME Move these constants to System.
 const FEE_AMOUNT = 1000
 const MAX_INPUTS_ALLOWED = 250
+const GROUP_TYPE_TEMPLATE = 'TEMPLATE'
 
 /**
  * Wallet Store
@@ -63,6 +70,21 @@ export const useWalletStore = defineStore('wallet', {
          * ]
          */
         _keychain: null,
+
+        /**
+         * Networks
+         *
+         * Manages all Layer1 Networks, Layer1+ (Plus) Supernets,
+         * and Layer1 (EVM) MetaNets "managed by" the Nexa Core blockchain.
+         */
+        _networks: [
+            'METANEXA', // Nexa (MetaNet)
+            'METANXY',  // Nxy  (MetaNet)
+            'METATELR', // TΞLR (MetaNet)
+            'NEXA',     // Nexa (Core/Base Network)
+            'NXY',      // Nxy  (Supernet)
+            'TELR',     // TΞLR (Supernet)
+        ],
 
         /**
          * Wallet
@@ -133,7 +155,10 @@ export const useWalletStore = defineStore('wallet', {
             return _state._wallet.isReady
         },
 
-        /* Return NEXA.js wallet instance. */
+        networks(_state) {
+            return _state._networks
+        },
+
         wallet(_state) {
             return _state._wallet
         },
@@ -202,6 +227,58 @@ export const useWalletStore = defineStore('wallet', {
 
             /* Initialize wallet. */
             this.init()
+        },
+
+        getNetwork(_networkid) {
+            if (
+                this.wallet &&
+                this.wallet.publicKey &&
+                this.networks.includes(_networkid.toUpperCase())
+            ) {
+                /* Initialize locals. */
+                let publicKeyHash
+                let scriptData
+                let scriptPubkey
+
+                /* Initialize network handler (object). */
+                const network = {}
+
+                /* Set network ID. */
+                network.id = _networkid.toUpperCase()
+
+                /* Set address prefix. */
+                network.prefix = _networkid.toLowerCase()
+
+                /* Set (Script PUSH) public key. */
+                scriptData = encodeDataPush(this.wallet.publicKey)
+
+                /* Set public key hash. */
+                publicKeyHash = hash160(scriptData)
+
+                /* Set script pubkey. */
+                scriptPubkey = new Uint8Array([
+                    OP.ZERO,
+                    OP.ONE,
+                    ...encodeDataPush(publicKeyHash),
+                ])
+
+                /* Set address. */
+                network.address = encodeAddress(
+                    network.prefix,
+                    GROUP_TYPE_TEMPLATE,
+                    scriptPubkey
+                )
+
+                /* Return network. */
+                return network
+            } else {
+                /* Return empty network (object). */
+                return {
+                    id: null,
+                    hrf: null,
+                    address: null,
+                }
+            }
         },
 
         async transfer(_receiver, _satoshis) {

@@ -52,6 +52,11 @@ export const useProfileStore = defineStore('profile', {
          *       Both upper and lower-case characters are accepted.
          */
         _nickname: null,
+
+        /**
+         * Preferred User Experience
+         */
+        _ux: null,
     }),
 
     getters: {
@@ -65,6 +70,10 @@ export const useProfileStore = defineStore('profile', {
 
         sessionid(_state) {
             return _state._session?.id || null
+        },
+
+        ux(_state) {
+            return _state._ux || 'NXY'
         },
     },
 
@@ -112,6 +121,17 @@ export const useProfileStore = defineStore('profile', {
         saveSession(_session) {
             /* Set session. */
             this._setSession(_session)
+        },
+
+        /**
+         * Save (Preferred) User Experience
+         *
+         * @param {Object} _ux User experience.
+         */
+        saveUserExperience (_ux) {
+            /* Set user experience. */
+            this._ux = _ux
+            console.log('SET UX', this._ux)
         },
 
         /**
