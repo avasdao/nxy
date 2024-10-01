@@ -1,4 +1,4 @@
-package org.nxy;
+package social.nxy;
 
 import com.bugsnag.android.Bugsnag;
 import android.app.Application;
@@ -10,7 +10,7 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.config.ReactFeatureFlags;
 import com.facebook.soloader.SoLoader;
-import org.nxy.newarchitecture.MainApplicationReactNativeHost;
+import social.nxy.newarchitecture.MainApplicationReactNativeHost;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
@@ -75,7 +75,7 @@ public class MainApplication extends Application implements ReactApplication {
          We use reflection here to pick up the class that initializes Flipper,
         since Flipper library is not available in release mode
         */
-        Class<?> aClass = Class.forName("org.nxy.ReactNativeFlipper");
+        Class<?> aClass = Class.forName("social.nxy.ReactNativeFlipper");
         aClass
             .getMethod("initializeFlipper", Context.class, ReactInstanceManager.class)
             .invoke(null, context, reactInstanceManager);

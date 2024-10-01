@@ -1,4 +1,4 @@
-package org.nxy.newarchitecture.modules;
+package social.nxy.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;

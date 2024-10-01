@@ -1,4 +1,4 @@
-package org.nxy;
+package social.nxy;
 
 import android.os.Bundle;
 
