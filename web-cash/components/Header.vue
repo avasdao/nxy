@@ -21,9 +21,12 @@ const displayQuote = computed(() => {
         }
     }
 
+    let megaVal = (System.nxyUsd * 1e6)
+    // console.log('MEGA VALUE', 1e6, megaVal)
+
     return {
-        primary: '$' + System.nxyUsd.toString().split('.')[0] + '.' + System.nxyUsd.toString().split('.')[1].slice(0, 2),
-        secondary: System.nxyUsd.toString().split('.')[1].slice(2, 6),
+        primary: '$' + megaVal.toString().split('.')[0] + '.' + megaVal.toString().split('.')[1].slice(0, 2),
+        secondary: megaVal.toString().split('.')[1].slice(2, 6),
     }
 })
 
