@@ -1,35 +1,24 @@
 /* Import modules. */
-import {
-    decodeAddress,
-    encodeAddress,
-} from '@nexajs/address'
-
+import { encodeAddress } from '@nexajs/address'
 import {
     ripemd160,
     sha256,
 } from '@nexajs/crypto'
-
-/* Import library modules. */
+import { getTip } from '@nexajs/provider'
 import { getCoins } from '@nexajs/purse'
-
-import { getTip } from '@nexajs/rostrum'
-
-import {
-    getTokens,
-    sendTokens,
-} from '@nexajs/token'
-
-import {
-    binToHex,
-    hexToBin,
-} from '@nexajs/utils'
-
-/* Import (individual) modules. */
 import {
     encodeDataPush,
     encodeNullData,
     OP,
 } from '@nexajs/script'
+import {
+    getTokens,
+    sendTokens,
+} from '@nexajs/token'
+import {
+    binToHex,
+    hexToBin,
+} from '@nexajs/utils'
 
 // nexa:tp0jg4h6gj5gcj5rrf9h6xclxstk52dr72yyttmrn6umrjyd6sqqqsy86tk9q
 const NXY_ID_HEX = '5f2456fa44a88c4a831a4b7d1b1f34176a29a3f28845af639eb9b1c88dd40000' // NXY

@@ -1,24 +1,16 @@
 <script setup lang="ts">
 /* Import modules. */
+import CryptoJS from 'crypto-js'
 import JSConfetti from 'js-confetti'
-import numeral from 'numeral'
 
 import { listUnspent } from '@nexajs/address'
-
 import { randomBytes } from '@nexajs/crypto'
-
+import { getAddressHistory } from '@nexajs/provider'
 import {
     binToHex,
     hexToBin,
     reverseHex,
 } from '@nexajs/utils'
-
-import CryptoJS from 'crypto-js'
-
-import {
-    getAddressHistory,
-    getTransaction,
-} from '@nexajs/rostrum'
 
 useHead({
     title: 'Nxy Mining',
@@ -29,10 +21,8 @@ useHead({
 
 /* Initialize stores. */
 import { useMiningStore } from '@/stores/mining'
-import { useSystemStore } from '@/stores/system'
 import { useWalletStore } from '@/stores/wallet'
 const Mining = useMiningStore()
-const System = useSystemStore()
 const Wallet = useWalletStore()
 
 const errors = ref(null)
@@ -48,14 +38,6 @@ const NXY_ID_HEX = '5f2456fa44a88c4a831a4b7d1b1f34176a29a3f28845af639eb9b1c88dd4
 
 /* Initialize confetti. */
 let jsConfetti
-
-const copyToClipboard = (_text) => {
-    /* Copy address to clipboard. */
-    Clipboard.copy(_text)
-
-    alert(`${_text} has been copied to the clipboard.`)
-}
-
 
 const toggleSolo = () => {
     alert(`Oops! You MUST have at least 20 $NXY in your wallet to pay the transaction fee and receive the mining reward.\n\nPlease check your balance and try again...`)
