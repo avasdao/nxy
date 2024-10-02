@@ -1,6 +1,6 @@
 {
   "name": "nxy-cash",
-  "version": "24.9.28",
+  "version": "24.10.2",
   "license": "MIT",
   "scripts": {
     "build": "nuxt build",
@@ -14,7 +14,7 @@
     "crypto-js": "4.2.0",
     "js-confetti": "0.12.0",
     "moment": "2.29.4",
-    "nexajs": "24.9.25",
+    "nexajs": "24.10.4",
     "numeral": "2.0.6",
     "nuxt": "3.12.4",
     "pinia": "2.0.32",

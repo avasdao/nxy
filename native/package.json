@@ -1,6 +1,6 @@
 {
   "name": "nxy-native",
-  "version": "24.7.21",
+  "version": "24.10.1",
   "license": "MIT",
   "scripts": {
     "android": "react-native run-android",
@@ -29,7 +29,7 @@
     "@react-navigation/native-stack": "6.9.0",
     "@xmtp/xmtp-js": "6.1.0",
     "crypto-browserify": "3.12.0",
-    "ethers": "5.5.3",
+    "ethers": "6.13.3",
     "events": "3.3.0",
     "lottie-ios": "3.4.3",
     "lottie-react-native": "5.1.4",
@@ -38,7 +38,7 @@
     "mobx-react": "7.5.3",
     "moment": "2.29.1",
     "nativewind": "2.0.0-next.58",
-    "nexajs": "24.7.20",
+    "nexajs": "24.9.25",
     "numeral": "2.0.6",
     "process": "0.11.10",
     "react": "18.1.0",
