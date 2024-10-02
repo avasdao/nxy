@@ -83,7 +83,7 @@ const init = async () => {
     /* Request unspent of mining address. */
     miningUnspent = await listUnspent(miningAddress)
         .catch(err => console.error(err))
-    console.log('MINING UNSPENT', miningUnspent)
+    // console.log('MINING UNSPENT', miningUnspent)
 
     /* Find latest minting authority. */
     mintingAuth.value = miningUnspent.find(_unspent => {
@@ -235,7 +235,7 @@ onMounted(() => {
                 </h1>
             </div>
 
-            <MiningGlobalStats />
+            <MiningGlobalStats :mintingAuth="mintingAuth" />
 
             <section class="my-5 flex flex-col lg:flex-row gap-6 items-center">
 
@@ -394,8 +394,8 @@ onMounted(() => {
                             </div>
 
                             <div class="mt-5">
-                                <NuxtLink to="https://nexa.rocks/cloud" target="_blank" type="button" class="inline-flex items-center rounded-md bg-white px-3 py-2 text-base font-semibold text-gray-900 shadow-sm hover:bg-lime-200">
-                                    Learn more at Nexa Rocks!
+                                <NuxtLink to="https://minado.io/cloud" target="_blank" type="button" class="inline-flex items-center rounded-md bg-white px-3 py-2 text-base font-semibold text-gray-900 shadow-sm hover:bg-lime-200">
+                                    Learn more at Minado!
                                 </NuxtLink>
                             </div>
                         </div>

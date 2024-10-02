@@ -1,30 +1,46 @@
 <script setup lang="ts">
+/* Import modules. */
+import moment from 'moment'
+import { getTransaction } from '@nexajs/provider'
+
 /* Define properties. */
 // https://vuejs.org/guide/components/props.html#props-declaration
 const props = defineProps({
-    data: {
-        type: [Object],
-    },
+    mintingAuth: Object,
 })
 
-// onMounted(() => {
-//     console.log('Mounted!')
-//     // Now it's safe to perform setup operations.
-// })
+const lastTx = ref(null)
+
+const lastPayoutTime = computed(() => {
+    if (!lastTx.value) {
+        return 'n/a'
+    }
+
+    return moment.unix(lastTx.value.time).fromNow()
+})
+
+
+const init = async () => {
+    console.log('mintingAuth', props.mintingAuth)
+
+    /* Request transaction details. */
+    lastTx.value = await getTransaction(props.mintingAuth.txid)
+        .catch(err => console.error(err))
+    console.log('TX RESULT', lastTx.value)
+}
+
+onMounted(() => {
+    init()
+})
 
 // onBeforeUnmount(() => {
 //     console.log('Before Unmount!')
 //     // Now is the time to perform all cleanup operations.
 // })
-
 </script>
 
 <template>
     <main>
-        <!-- <h3 class="text-base font-semibold leading-6 text-gray-900">
-            Global Network Stats
-        </h3> -->
-
         <dl class="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
 
             <div class="relative overflow-hidden rounded-lg bg-fuchsia-700 px-4 pb-12 pt-5 shadow sm:px-6 sm:pt-6">
@@ -123,7 +139,7 @@ const props = defineProps({
 
                 <dd class="ml-16 flex items-baseline pb-6 sm:pb-7">
                     <p class="text-2xl font-semibold text-purple-200">
-                        88 secs ago
+                        {{lastPayoutTime}}
                     </p>
 
                     <p class="ml-2 flex items-baseline text-sm tracking-wider font-medium text-red-400">
@@ -132,7 +148,6 @@ const props = defineProps({
                         </svg>
 
                         <span class="sr-only"> Public availability </span>
-                        PRIVATE
                     </p>
 
                     <div class="absolute inset-x-0 bottom-0 bg-purple-200 px-4 py-4 sm:px-6">
@@ -149,13 +164,13 @@ const props = defineProps({
 
         <section class="flex flex-col lg:flex-row justify-between gap-5">
 
-            <NuxtLink to="https://explorer.nexa.org/tx/8db4ee79ad9d2aac003d6ae727b0ea2c149a68d386a7bb7b23b14b511c3a037f" target="_blank" class="mt-5 w-full lg:w-1/2 px-3 py-3 flex flex-col items-center gap-1 bg-fuchsia-100 border-2 border-fuchsia-300 rounded-xl shadow hover:bg-fuchsia-200">
+            <NuxtLink v-if="props.mintingAuth?.txid" :to="'https://explorer.nexa.org/tx/' + props.mintingAuth.txid" target="_blank" class="mt-5 w-full lg:w-1/2 px-3 py-3 flex flex-col items-center gap-1 bg-fuchsia-100 border-2 border-fuchsia-300 rounded-xl shadow hover:bg-fuchsia-200">
                 <small class="text-xs text-fuchsia-800 uppercase font-medium tracking-wider">
                     Last Mining Transaction
                 </small>
 
                 <span class="w-full text-fuchsia-600 font-bold text-center tracking-wider truncate">
-                    8db4ee79ad9d2aac003d ... bb7b23b14b511c3a037f
+                    {{props.mintingAuth.txid}}
                 </span>
             </NuxtLink>
 
