@@ -23,10 +23,15 @@ const lastPayoutTime = computed(() => {
 const init = async () => {
     console.log('mintingAuth', props.mintingAuth)
 
-    /* Request transaction details. */
-    lastTx.value = await getTransaction(props.mintingAuth.txid)
-        .catch(err => console.error(err))
-    console.log('TX RESULT', lastTx.value)
+    /* Initialize last transaction (display). */
+    lastTx.value = 'loading...'
+
+    if (props.mintingAuth) {
+        /* Request transaction details. */
+        lastTx.value = await getTransaction(props.mintingAuth.txid)
+            .catch(err => console.error(err))
+        console.log('TX RESULT', lastTx.value)
+    }
 }
 
 onMounted(() => {

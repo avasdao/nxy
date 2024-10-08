@@ -30,8 +30,9 @@ const mintingAuth = ref(null)
 const txidem = ref(null)
 
 /* Initialize mining handlers. */
-const isMining = ref(false)
 const enclave = ref(null)
+const isMining = ref(false)
+const useConfetti = ref(true)
 
 /* Initialize constants. */
 const NXY_ID_HEX = '5f2456fa44a88c4a831a4b7d1b1f34176a29a3f28845af639eb9b1c88dd40000'
@@ -57,10 +58,14 @@ const init = async () => {
     let miningAddress
     let miningUnspent
 
+// console.log('WALLET ADDRESS', Wallet.address)
+    /* Validate (wallet) address. */
+    if (!Wallet.address) {
+        return setTimeout(init, 100)
+    }
+
     /* Initialize confetti. */
     jsConfetti = new JSConfetti()
-
-    console.log('WALLET ADDRESS', Wallet.address)
 
     /* Initialize errors. */
     errors.value = []
@@ -76,9 +81,30 @@ const init = async () => {
         .catch(err => console.error(err))
     console.log('ENCLAVE', enclave.value)
 
-    /* Set mining address. */
-    miningAddress = enclave.value.address
-    console.log('MINING ADDRESS', miningAddress)
+    /* Validate enclave. */
+    if (!enclave.value) {
+        return alert('ERROR! Nxy Mining Enclave is currently unavailable. Please try again later..')
+    }
+
+    /* Validate minting authority. */
+    if (enclave.value?.authority) {
+        /* Set minting authority. */
+        mintingAuth.value = enclave.value.authority
+
+        return // exit function
+    }
+
+    /* Validate minting authority. */
+    if (enclave.value?.address) {
+        /* Set mining address. */
+        miningAddress = enclave.value.address
+        console.log('MINING ADDRESS', miningAddress)
+    }
+
+    /* Validate mining address. */
+    if (!miningAddress) {
+        throw new Error('Oops! There is NO mining address available.')
+    }
 
     /* Request unspent of mining address. */
     miningUnspent = await listUnspent(miningAddress)
@@ -137,6 +163,7 @@ const startMiner = async () => {
     let miner
     let mySubmission
     let outpointHash
+    let provider
     let response
 
     /* Reset errors. */
@@ -157,7 +184,7 @@ const startMiner = async () => {
     // TODO Record candidates to (local) logs (for auditing).
 
     if (!mintingAuth.value?.outpoint) {
-        return alert('Loading mining parameters loading...')
+        return alert('Loading mining parameters are STILL loading...')
     }
 
     /* Set flag. */
@@ -170,8 +197,16 @@ const startMiner = async () => {
     mySubmission = calcSubmission(miner, outpointHash, candidate)
     console.log('SUBMISSION', mySubmission)
 
+    /* Set (mining) provider. */
+    provider = enclave.value?.provider
+
+    /* Validate provider. */
+    if (!provider) {
+        throw new Error('Oops! You MUST set a mining provider.')
+    }
+
     /* Submit candidate. */
-    response = await Mining.submit(Wallet.wallet, miner, candidate)
+    response = await Mining.submit(Wallet.wallet, miner, candidate, provider)
     console.log('SUBMISSION RESPONSE', response)
 
     /* Set flag. */
@@ -181,15 +216,18 @@ const startMiner = async () => {
     if (response.result) {
         txidem.value = response.result
 
-        // BURST CONFETTI
-        jsConfetti.addConfetti({
-            // emojis: ['🌈', '⚡️', '💥', '✨', '💫', '🌸'],
-            // confettiColors: [
-            //     '#ff0a54', '#ff477e', '#ff7096', '#ff85a1', '#fbb1bd', '#f9bec7',
-            // ],
-            // confettiRadius: 6,
-            confettiNumber: 300,
-        })
+        /* Validate confetti flag. */
+        if (useConfetti.value) {
+            // BURST CONFETTI
+            jsConfetti.addConfetti({
+                // emojis: ['🌈', '⚡️', '💥', '✨', '💫', '🌸'],
+                // confettiColors: [
+                //     '#ff0a54', '#ff477e', '#ff7096', '#ff85a1', '#fbb1bd', '#f9bec7',
+                // ],
+                // confettiRadius: 6,
+                confettiNumber: 300,
+            })
+        }
     }
 
     /* Validate error. */
@@ -215,9 +253,9 @@ const startMiner = async () => {
 }
 
 onMounted(() => {
-    // init()
+    init()
 
-    setTimeout(init, 3000) // FIXME: TEMP FOR DEV ONLY
+    // setTimeout(init, 3000) // FIXME: TEMP FOR DEV ONLY
 })
 
 // onBeforeUnmount(() => {
