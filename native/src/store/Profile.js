@@ -43,10 +43,10 @@ class Profile {
     @action.bound
     async createWallet(_seed) {
         /* Set node URL. */
-        const NODE_URL = 'wss://speedy-nodes-nyc.moralis.io/39f5474b84a2f39277aea60a/avalanche/mainnet/ws'
+        // const NODE_URL = 'wss://speedy-nodes-nyc.moralis.io/39f5474b84a2f39277aea60a/avalanche/mainnet/ws'
 
         /* Set provider. */
-        const provider = new ethers.providers.WebSocketProvider(NODE_URL)
+        // const provider = new ethers.providers.WebSocketProvider(NODE_URL)
 
         /* Set mnemonic. */
         // const mnemonic = require('../../.secrets').mnemonic
@@ -68,36 +68,37 @@ class Profile {
         console.log('PRIVATE KEY', privateKey)
 
         /* Initialize wallet. */
-        const _wallet = new Wallet(privateKey, provider)
+        // const _wallet = new Wallet(privateKey, provider)
         // console.log('WALLET', _wallet)
 
         /* Save wallet. */
-        this.saveWallet(_wallet)
+        // this.saveWallet(_wallet)
 
         // Querying the network
-        const _balance = await this.wallet.getBalance()
-            .catch(err => console.error(err))
+        // const _balance = await this.wallet.getBalance()
+        //     .catch(err => console.error(err))
         // console.log('\nBALANCE (bn)', typeof balanceBN, balanceBN)
 
         /* Save balance. */
-        this.saveBalance(_balance)
+        // this.saveBalance(_balance)
 
         /* Set balance. */
         // this.balance = ethers.BigNumber.from(balanceBN)
         // console.log('\nBALANCE', typeof this.balance, this.balance)
 
         /* Set transaction count. */
-        const _txCount = await this.wallet.getTransactionCount()
-            .catch(err => console.error(err))
+        // const _txCount = await this.wallet.getTransactionCount()
+        //     .catch(err => console.error(err))
         // console.log('\nTX COUNT', typeof this.txCount, this.txCount)
 
         /* Save transaction count. */
-        this.saveTxCount(_txCount)
+        // this.saveTxCount(_txCount)
 
         return {
-            wallet: _wallet,
-            balance: _balance,
-            txCount: _txCount,
+            WIP: 'still upgrading + migrating...',
+            wallet: null,
+            balance: 1337,
+            txCount: 888,
         }
     }
 
