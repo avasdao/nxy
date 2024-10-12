@@ -1,7 +1,10 @@
 /* Import modules. */
 import { encodeAddress } from '@nexajs/address'
 import { hash160 } from '@nexajs/crypto'
-import { getTip } from '@nexajs/provider'
+import {
+    broadcast,
+    getTip,
+} from '@nexajs/provider'
 import { getCoins } from '@nexajs/purse'
 import {
     encodeDataPush,
@@ -9,6 +12,7 @@ import {
     OP,
 } from '@nexajs/script'
 import {
+    buildTokens,
     getTokens,
     sendTokens,
 } from '@nexajs/token'
@@ -41,6 +45,7 @@ export default async function (_wallet, _miner, _candidate, _provider) {
     let namespace
     let prefix
     let receivers
+    let response
     let scriptHash
     let scriptPubkey
     let txResult
@@ -75,9 +80,8 @@ export default async function (_wallet, _miner, _candidate, _provider) {
 
     /* Set namespace. */
     // NOTE: We MUST truncate the OP_RETURN prefix.
-    namespace = encodeNullData('POLYPOW01').slice(2)
-let namespace2 = utf8ToBin('POLYPOW01')
-    console.log('NAMESPACE (***TEST***)', binToHex(namespace) === binToHex(namespace2), binToHex(namespace), binToHex(namespace2))
+    namespace = utf8ToBin('POLYPOW01')
+    console.log('NAMESPACE', binToHex(namespace))
 
     /* Build locking script. */
     // NOTE: The NexScript v0.1.0 compiler generates a less-than optimized
@@ -212,13 +216,17 @@ let namespace2 = utf8ToBin('POLYPOW01')
     // console.log('LOCK TIME', lockTime)
 // return 'WAIT!!'
     /* Send UTXO request. */
-    txResult = await sendTokens({
+    response = await buildTokens({
         coins,
         tokens: contractTokens,
         receivers,
         lockTime,
         sequence: 0x01,
-    })
+    }).catch(err => console.error(err))
+    console.log('RAW HEX', response.hex)
+
+    txResult = await broadcast(response.hex)
+        .catch(err => console.error(err))
     console.log('TX RESULT', txResult)
 
     /* Validate transaction error. */

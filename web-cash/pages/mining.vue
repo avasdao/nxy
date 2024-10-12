@@ -1,6 +1,7 @@
 <script setup lang="ts">
 /* Import modules. */
 import CryptoJS from 'crypto-js'
+import { createClient } from 'graphql-ws'
 import JSConfetti from 'js-confetti'
 
 import { listUnspent } from '@nexajs/address'
@@ -9,8 +10,9 @@ import { getAddressHistory } from '@nexajs/provider'
 import {
     binToHex,
     hexToBin,
-    reverseHex,
+    sleep,
 } from '@nexajs/utils'
+
 
 useHead({
     title: 'Nxy Mining',
@@ -36,6 +38,8 @@ const useConfetti = ref(true)
 
 /* Initialize constants. */
 const NXY_ID_HEX = '5f2456fa44a88c4a831a4b7d1b1f34176a29a3f28845af639eb9b1c88dd40000'
+
+const RECONNECTION_DELAY = 3000
 
 /* Initialize confetti. */
 let jsConfetti
@@ -124,14 +128,29 @@ const init = async () => {
  * TBD...
  */
 const calcSubmission = (_miner, _outpointHash, _candidate) => {
-    const myRaw = `${_miner}${_outpointHash}${_candidate}`
-    // console.log('RAW', myRaw)
+    /* Initialize locals. */
+    let entropy
+    let hash
+    let raw
+    let submission
 
-    let myHex = CryptoJS.enc.Hex.parse(myRaw)
-    // let myHex = CryptoJS.enc.Hex.parse(`${_outpointHash}${_candidate}`)
+    /* Set entropy. */
+    entropy = hexToBin(_outpointHash)
+    entropy = entropy.reverse() // NOTE Convert to little endian.
+
+    /* Build (binary) submission. */
+    submission = new Uint8Array([
+        ..._miner,
+        ...entropy,
+        ..._candidate,
+    ])
+    // const myRaw = `${_miner}${_outpointHash}${_candidate}`
+    console.log('SUBMISSION (pre-image)', binToHex(submission))
+
+    raw = CryptoJS.enc.Hex.parse(binToHex(submission))
     // console.log('MY HEX-1', myHex)
 
-    let hash = CryptoJS.SHA1(myHex)
+    hash = CryptoJS.SHA1(raw)
     // console.log('HASH-1', hash)
 
     // let mySha1 = hash.toString(CryptoJS.enc.Hex)
@@ -147,7 +166,7 @@ const calcSubmission = (_miner, _outpointHash, _candidate) => {
     // console.log('HASH-3', hash)
 
     /* Convert to (final) submission. */
-    let submission = hash.toString(CryptoJS.enc.Hex)
+    submission = hash.toString(CryptoJS.enc.Hex)
     // console.log('MY RIPEMD-160', submission)
 
     /* Return (final) submission. */
@@ -191,11 +210,13 @@ const startMiner = async () => {
     isMining.value = true
 
     outpointHash = mintingAuth.value.outpoint
-    outpointHash = reverseHex(outpointHash)
     console.log('OUTPOINT HASH', outpointHash)
 
     mySubmission = calcSubmission(miner, outpointHash, candidate)
     console.log('SUBMISSION', mySubmission)
+
+// TODO Validate submission BEFORE attempting to "manually" submit
+// NOTE DO NOT verify for shares to mining pools.
 
     /* Set (mining) provider. */
     provider = enclave.value?.provider
@@ -204,7 +225,7 @@ const startMiner = async () => {
     if (!provider) {
         throw new Error('Oops! You MUST set a mining provider.')
     }
-
+// return
     /* Submit candidate. */
     response = await Mining.submit(Wallet.wallet, miner, candidate, provider)
     console.log('SUBMISSION RESPONSE', response)
@@ -233,14 +254,14 @@ const startMiner = async () => {
     /* Validate error. */
     if (response.error) {
         /* Validate error message. */
-        if (response.error.message.includes('Script failed an OP_VERIFY operation')) {
+        if (response.error.message?.includes('Script failed an OP_VERIFY operation')) {
             errMsg = 'Candidate failed! Please try again...'
 
             errors.value.push(errMsg)
             return console.error(errMsg)
         }
 
-        if (response.error.message.includes('non-BIP68-final')) {
+        if (response.error.message?.includes('non-BIP68-final')) {
             errMsg = 'Please wait until the next Nexa block to submit your next Reward candidate.'
 
             errors.value.push(errMsg)
@@ -248,14 +269,130 @@ const startMiner = async () => {
         }
 
         /* Display (unknown) error. */
-        alert(response.error.message)
+        alert(response.error?.message || response.error)
     }
+}
+
+/* Initialize globals. */
+let activeSocket
+let isReconnecting
+let query
+let response
+let subscription
+let wsClient
+
+// get ready
+const GRAPHQL_ENDPOINT = 'wss://nexa.sh/graphql'
+
+const BLOCK_QUERY = `
+{
+  block(height: 1337) {
+    hash
+    bits
+    time
+    txcount
+  }
+}
+`
+
+const BLOCK_SUBSCRIPTION = `
+subscription Block {
+  block {
+    height
+    hash
+    txcount
+  }
+}
+`
+
+const startMonitor = async () => {
+console.log('START MONITOR')
+    /* Create WebSocket client. */
+    wsClient = createClient({
+        url: 'wss://nexa.sh/graphql',
+        lazy: false,
+        // shouldRetry: () => true,
+        // retryAttempts: Infinity,
+        // retryAttempts: 3,
+        keepAlive: 10000,
+        on: {
+            connected: async (_socket) => {
+                isReconnecting = false
+                activeSocket = _socket // to be used at pings & pongs
+                console.log('ACTIVE SOCKET', activeSocket)
+                // get the access token expiry time and set a timer to close the socket
+                // once the token expires... Since 'retryAttempts: Infinity' it will
+                // try to reconnect again by getting a fresh token.
+                // const token_expiry_time = getTokenExpiryDate();
+                // const current_time = Math?.round(+new Date() / 1000);
+                // const difference_time = (token_expiry_time - current_time) * 1000;
+                // setTimeout(() => {
+                //     if (socket?.readyState === WebSocket?.OPEN) {
+                //         socket?.close(CloseCode?.Forbidden, "Forbidden");
+                //     }
+                // }, difference_time);
+                // }
+console.log('WS CLIENT', wsClient)
+                query = wsClient.iterate({
+                    query: BLOCK_QUERY,
+                })
+
+                response = await query
+                    .next()
+                    .catch(err => console.error(err))
+                console.log('GRAPHQL QUERY RESPONSE', response?.value?.data?.block || response?.value?.data || response?.value || response)
+
+                subscription = wsClient.iterate({
+                    query: BLOCK_SUBSCRIPTION,
+                })
+
+                for await (const event of subscription) {
+                    console.log('SUBSCRIPTION EVENT', event?.data?.block || event?.data || event)
+
+                    if (!subscription) {
+                        console.error('NO SUBSCRIPTION!!')
+                    }
+                }
+
+            },
+            ping: (received) => {
+                console.log('PING', received)
+                // if (!received)
+                //     // sent
+                //     timedOut = setTimeout(() => {
+                //         if (activeSocket?.readyState === WebSocket?.OPEN)
+                //             activeSocket?.close(4408, 'Request Timeout');
+                //     }, 5000); // wait 5 seconds for the pong and then close the connection
+            },
+            pong: (received) => {
+                console.log('PONG', received)
+                // if (received) clearTimeout(timedOut); // pong is received, clear connection close timeout
+            },
+            closed: async (received) => {
+                console.error('Oops! Client connection was closed.')
+
+                if (!isReconnecting) {
+                    wsClient = null
+                    console.info('Re-connecting...')
+
+                    isReconnecting = true
+
+                    // Timeout and retry mechanism
+                    await sleep(RECONNECTION_DELAY)
+                    startMonitor()
+                }
+            }
+        },
+    })
 }
 
 onMounted(() => {
     init()
 
     // setTimeout(init, 3000) // FIXME: TEMP FOR DEV ONLY
+
+    isReconnecting = false
+    startMonitor()
 })
 
 // onBeforeUnmount(() => {

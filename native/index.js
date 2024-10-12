@@ -8,8 +8,8 @@
 //     plugins: [new BugsnagPluginReactNavigation()]
 // })
 //
-// import { ampli } from './src/ampli'
-// ampli.load({ environment: 'production' })
+import { ampli } from './src/ampli'
+ampli.load({ environment: 'production' })
 
 import {
     AppRegistry,
@@ -29,7 +29,12 @@ import App from './src/App'
 
 import {name as appName} from './src/app.json'
 
-if (!new class { x }().hasOwnProperty('x')) throw new Error('Transpiler is not configured correctly');
+if (
+    !new (class {
+        x
+    })().hasOwnProperty('x')
+)
+    throw new Error('Transpiler is not configured correctly')
 
 /* Disable log warnings. */
 LogBox.ignoreLogs([

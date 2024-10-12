@@ -23,7 +23,7 @@ import {
 
 import {NavigationContainer} from '@react-navigation/native'
 
-import Bugsnag from '@bugsnag/react-native'
+// import Bugsnag from '@bugsnag/react-native'
 import { ampli } from './ampli'
 
 import DeviceInfo from 'react-native-device-info'
@@ -37,10 +37,7 @@ import MainStack from './screens/Main'
  */
 const App = () => {
     /* Initialize PROFILE context. */
-    const {
-        userid,
-        saveUserid,
-    } = React.useContext(store.Profile)
+    const {userid, saveUserid} = React.useContext(store.Profile)
 
     /**
      * Start Session
@@ -141,16 +138,24 @@ const App = () => {
     })
 
     /* Initialize Bugsnag. */
-    const { createNavigationContainer } = Bugsnag.getPlugin('reactNavigation')
-    const BugsnagNavigationContainer = createNavigationContainer(
-        NavigationContainer)
+    // const {createNavigationContainer} = Bugsnag.getPlugin('reactNavigation')
+    // const BugsnagNavigationContainer =
+    //     createNavigationContainer(NavigationContainer)
 
     /* Request dark mode. */
     const isDarkMode = useColorScheme() === 'dark'
 
     /* Set background style. */
     const backgroundStyle = {
-        backgroundColor: isDarkMode ? 'rgba(30, 30, 30, 0.8)' : 'rgba(180, 180, 180, 0.8)',
+        _backgroundColor: isDarkMode
+            ? 'rgba(30, 30, 30, 0.8)'
+            : 'rgba(180, 180, 180, 0.8)',
+        get backgroundColor() {
+            return this._backgroundColor
+        },
+        set backgroundColor(value) {
+            this._backgroundColor = value
+        },
     }
 
     /**
@@ -166,19 +171,23 @@ const App = () => {
         const height = Dimensions.get('window').height
 
         console.info(
-            `Screen Layout has been updated [ w:${parseInt(width)} | h:${parseInt(height)} ]`)
+            `Screen Layout has been updated [ w:${parseInt(
+                width,
+            )} | h:${parseInt(height)} ]`,
+        )
     }
 
     return (
-        <BugsnagNavigationContainer>
+        // <BugsnagNavigationContainer>
+        <NavigationContainer>
             <SafeAreaView
                 onLayout={_updateLayout}
                 style={backgroundStyle}
-                className="h-full"
-            >
+                className="h-full">
                 <MainStack />
             </SafeAreaView>
-        </BugsnagNavigationContainer>
+        </NavigationContainer>
+        // </BugsnagNavigationContainer>
     )
 }
 

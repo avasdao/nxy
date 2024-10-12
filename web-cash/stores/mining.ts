@@ -17,8 +17,8 @@ export const useMiningStore = defineStore('mining', {
     },
 
     actions: {
-        submit(_wallet, _miner, _candidate) {
-            return _submitCandidate.bind(this)(_wallet, _miner, _candidate)
+        submit(_wallet, _miner, _candidate, _provider) {
+            return _submitCandidate.bind(this)(_wallet, _miner, _candidate, _provider)
         },
 
     },
