@@ -8,23 +8,13 @@
 
 import React from 'react'
 
-import type {Node} from 'react'
-
-import {
-    Dimensions,
-    SafeAreaView,
-    ScrollView,
-    StatusBar,
-    StyleSheet,
-    Text,
-    useColorScheme,
-    View,
-} from 'react-native'
+import {Dimensions, SafeAreaView, useColorScheme} from 'react-native'
 
 import {NavigationContainer} from '@react-navigation/native'
 
-// import Bugsnag from '@bugsnag/react-native'
-import { ampli } from './ampli'
+import Bugsnag from '@bugsnag/react-native'
+
+import {ampli} from './ampli'
 
 import DeviceInfo from 'react-native-device-info'
 
@@ -127,7 +117,6 @@ const App = () => {
             } catch (err) {
                 console.error('SESSION ERROR', err)
             }
-
         }
 
         /* Fetch device info. */
@@ -138,9 +127,9 @@ const App = () => {
     })
 
     /* Initialize Bugsnag. */
-    // const {createNavigationContainer} = Bugsnag.getPlugin('reactNavigation')
-    // const BugsnagNavigationContainer =
-    //     createNavigationContainer(NavigationContainer)
+    const {createNavigationContainer} = Bugsnag.getPlugin('reactNavigation')
+    const BugsnagNavigationContainer =
+        createNavigationContainer(NavigationContainer)
 
     /* Request dark mode. */
     const isDarkMode = useColorScheme() === 'dark'
@@ -178,16 +167,16 @@ const App = () => {
     }
 
     return (
-        // <BugsnagNavigationContainer>
-        <NavigationContainer>
+        <BugsnagNavigationContainer>
+        {/* <NavigationContainer> */}
             <SafeAreaView
                 onLayout={_updateLayout}
                 style={backgroundStyle}
                 className="h-full">
                 <MainStack />
             </SafeAreaView>
-        </NavigationContainer>
-        // </BugsnagNavigationContainer>
+        {/* </NavigationContainer> */}
+        </BugsnagNavigationContainer>
     )
 }
 
