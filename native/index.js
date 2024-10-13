@@ -2,11 +2,11 @@
  * @format
  */
 
-import Bugsnag from '@bugsnag/react-native'
-import BugsnagPluginReactNavigation from '@bugsnag/plugin-react-navigation'
-Bugsnag.start({
-    plugins: [new BugsnagPluginReactNavigation()],
-})
+// import Bugsnag from '@bugsnag/react-native'
+// import BugsnagPluginReactNavigation from '@bugsnag/plugin-react-navigation'
+// Bugsnag.start({
+//     plugins: [new BugsnagPluginReactNavigation()],
+// })
 
 import {ampli} from './src/ampli'
 ampli.load({environment: 'production'})

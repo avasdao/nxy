@@ -12,7 +12,7 @@ import {Dimensions, SafeAreaView, useColorScheme} from 'react-native'
 
 import {NavigationContainer} from '@react-navigation/native'
 
-import Bugsnag from '@bugsnag/react-native'
+// import Bugsnag from '@bugsnag/react-native'
 
 import {ampli} from './ampli'
 
@@ -116,7 +116,7 @@ const App = () => {
                 })
 
 // FOR DEV PURPOSES ONLY
-console.log('BUGSNAG', Bugsnag)
+// console.log('BUGSNAG', Bugsnag)
 // Bugsnag.notify(new Error('Test error'))
             } catch (err) {
                 console.error('SESSION ERROR', err)
@@ -131,9 +131,9 @@ console.log('BUGSNAG', Bugsnag)
     })
 
     /* Initialize Bugsnag. */
-    const {createNavigationContainer} = Bugsnag.getPlugin('reactNavigation')
-    const BugsnagNavigationContainer =
-        createNavigationContainer(NavigationContainer)
+    // const {createNavigationContainer} = Bugsnag.getPlugin('reactNavigation')
+    // const BugsnagNavigationContainer =
+    //     createNavigationContainer(NavigationContainer)
 
     /* Request dark mode. */
     const isDarkMode = useColorScheme() === 'dark'
@@ -171,16 +171,16 @@ console.log('BUGSNAG', Bugsnag)
     }
 
     return (
-        <BugsnagNavigationContainer>
-        {/* <NavigationContainer> */}
+        // <BugsnagNavigationContainer>
+        <NavigationContainer>
             <SafeAreaView
                 onLayout={_updateLayout}
                 style={backgroundStyle}
                 className="h-full">
                 <MainStack />
             </SafeAreaView>
-        {/* </NavigationContainer> */}
-        </BugsnagNavigationContainer>
+        </NavigationContainer>
+        // </BugsnagNavigationContainer>
     )
 }
 
