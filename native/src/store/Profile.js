@@ -62,6 +62,7 @@ class Profile {
         if (_seed) {
             privateKey = utils.id(_seed)
         } else {
+            // nexa:nqtsq5g5rv6u2k2uftdzx59fm70umm7j7fqll0fmmay32x33
             privateKey = require('../../.secrets').privateKey
         }
         console.log('SEED', _seed)

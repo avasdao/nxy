@@ -114,6 +114,10 @@ const App = () => {
                     uid,
                     deviceId,
                 })
+
+// FOR DEV PURPOSES ONLY
+console.log('BUGSNAG', Bugsnag)
+// Bugsnag.notify(new Error('Test error'))
             } catch (err) {
                 console.error('SESSION ERROR', err)
             }
