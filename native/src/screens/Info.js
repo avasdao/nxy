@@ -149,7 +149,7 @@ const Support = () => {
                         onPress={testSocial}
                     >
                         <Text className="text-xl text-red-500 font-bold text-center">
-                            PnR
+                            Social
                         </Text>
                     </Pressable>
 

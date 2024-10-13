@@ -46,7 +46,7 @@ const Tabs = () => {
                         iconName = focused
                         ? 'ios-grid'
                         : 'ios-grid-outline'
-                    } else if (route.name === 'PnR') {
+                    } else if (route.name === 'Social') {
                         iconName = focused
                         ? 'ios-cafe'
                         : 'ios-cafe-outline'
@@ -84,7 +84,7 @@ const Tabs = () => {
             />
 
             <Tab.Screen
-                name="PnR"
+                name="Social"
                 component={SocialScreen}
                 options={{
                     headerRight: InfoButton,

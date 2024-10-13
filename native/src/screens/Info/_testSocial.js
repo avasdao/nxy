@@ -7,7 +7,7 @@ const test = () => {
 
     const message = {
         body: `Satoshi just sent you a message`,
-        subText: `PnR`,
+        subText: `Social`,
     }
 
     localNotif(channel, title, message)
