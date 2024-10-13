@@ -2,17 +2,13 @@ package social.nxy;
 
 import com.bugsnag.android.Bugsnag;
 import android.app.Application;
-import android.content.Context;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
-import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint;
 import com.facebook.react.defaults.DefaultReactNativeHost;
 import com.facebook.soloader.SoLoader;
-import social.nxy.newarchitecture.MainApplicationReactNativeHost;
-import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 public class MainApplication extends Application implements ReactApplication {
@@ -58,8 +54,6 @@ public class MainApplication extends Application implements ReactApplication {
   public void onCreate() {
     super.onCreate();
     Bugsnag.start(this);
-    // If you opted-in for the New Architecture, we enable the TurboModule system
-    ReactFeatureFlags.useTurboModules = BuildConfig.IS_NEW_ARCHITECTURE_ENABLED;
     SoLoader.init(this, /* native exopackage */ false);
     if (BuildConfig.IS_NEW_ARCHITECTURE_ENABLED) {
       // If you opted-in for the New Architecture, we load the native entry point for this app.

@@ -12,7 +12,7 @@ import {Dimensions, SafeAreaView, useColorScheme} from 'react-native'
 
 import {NavigationContainer} from '@react-navigation/native'
 
-// import Bugsnag from '@bugsnag/react-native'
+import Bugsnag from '@bugsnag/react-native'
 
 import {ampli} from './ampli'
 
@@ -127,9 +127,9 @@ const App = () => {
     })
 
     /* Initialize Bugsnag. */
-    // const {createNavigationContainer} = Bugsnag.getPlugin('reactNavigation')
-    // const BugsnagNavigationContainer =
-    //     createNavigationContainer(NavigationContainer)
+    const {createNavigationContainer} = Bugsnag.getPlugin('reactNavigation')
+    const BugsnagNavigationContainer =
+        createNavigationContainer(NavigationContainer)
 
     /* Request dark mode. */
     const isDarkMode = useColorScheme() === 'dark'
@@ -167,16 +167,16 @@ const App = () => {
     }
 
     return (
-        // <BugsnagNavigationContainer>
-        <NavigationContainer>
+        <BugsnagNavigationContainer>
+        {/* <NavigationContainer> */}
             <SafeAreaView
                 onLayout={_updateLayout}
                 style={backgroundStyle}
                 className="h-full">
                 <MainStack />
             </SafeAreaView>
-        </NavigationContainer>
-        // </BugsnagNavigationContainer>
+        {/* </NavigationContainer> */}
+        </BugsnagNavigationContainer>
     )
 }
 
