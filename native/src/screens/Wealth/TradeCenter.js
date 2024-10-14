@@ -1,3 +1,9 @@
+/* FIXME HANDLE MISSING GLOBALS IN @NEXAJS/CRYPTO!!! */
+if (!process?.version || typeof process?.version === 'undefined') {
+    process.version = ''
+    console.info('process.version has been INJECTED!', process)
+}
+
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -25,8 +31,9 @@ import LottieView from 'lottie-react-native'
 import tailwind from 'tailwind-rn'
 
 import { randomBytes } from '@nexajs/crypto'
-// import { Wallet } from '@nexajs/wallet'
-import { ethers, utils } from 'ethers'
+import { listUnspent } from '@nexajs/address'
+import { Wallet } from '@nexajs/wallet'
+// import { ethers, utils } from 'ethers'
 
 import moment from 'moment'
 
@@ -94,6 +101,9 @@ const Dashboard = observer(({navigation}) => {
     /* Retreive window width. */
     const width = Dimensions.get('window').width
 
+// FOR DEV PURPOSES ONLY
+let wallet
+
     /* Handle onLoad scripts. */
     React.useEffect(() => {
         /**
@@ -112,10 +122,7 @@ const Dashboard = observer(({navigation}) => {
         console.log('QUERY (props):', _query)
     }
 
-    const _changeEarningTime = () => {
-testCrypto()
-testRostrum()
-// testWallet()
+    const _changeEarningTime = async () => {
         if (earningsTime === 'MONTHLY') {
             setEarningsTime('WEEKLY')
         } else if (earningsTime === 'WEEKLY') {
@@ -123,6 +130,11 @@ testRostrum()
         } else {
             setEarningsTime('MONTHLY')
         }
+
+await testCrypto()
+await testWallet()
+await testRostrum()
+await testSend()
     }
 
     const testCrypto = async () => {
@@ -131,16 +143,23 @@ testRostrum()
     }
 
     const testRostrum = async () => {
-        const unspent = await listUnspent('nexa:nqtsq5g5084n9vxhzkpssype9fkp73tksn0xt2lylet24rxq')
+        console.log('MY WALLET', wallet.address)
+        const unspent = await listUnspent(wallet.address)
             .catch(err => console.error(err))
         console.log('UNSPENT', unspent)
     }
 
-    // const testWallet = async () => {
-    //     const wallet = await Wallet.init('armed insect flower embrace hair sense affair robot involve razor clock defy')
-    //         .catch(err => console.error(err))
-    //     console.log('WALLET', wallet)
-    // }
+    const testWallet = async () => {
+        wallet = await Wallet.init('armed insect flower embrace hair sense affair robot involve razor clock defy')
+            .catch(err => console.error(err))
+        console.log('WALLET', wallet.address)
+    }
+
+    const testSend = async () => {
+        const response = await wallet.send('nexa:nqtsq5g5mysklvg5qtejx9lpp50a2z7wjg9y70g7cjcj39cy', BigInt(2000))
+            .catch(err => console.error(err))
+        console.log('TX RESPONSE', response)
+    }
 
     return (
         <ScrollView
