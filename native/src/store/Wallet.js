@@ -4,9 +4,12 @@ import React from 'react'
 import { action, computed, makeObservable, observable } from 'mobx'
 import { persist } from 'mobx-persist'
 
-// import 'react-native-get-random-values'
-// import '@ethersproject/shims'
-// import { ethers, utils, Wallet as EvmWallet } from 'ethers'
+import 'react-native-get-random-values'
+import '@ethersproject/shims'
+import { ethers, utils, Wallet as EvmWallet } from 'ethers'
+
+import { listUnspent } from '@nexajs/address'
+import { Wallet as UtxoWallet } from '@nexajs/wallet'
 
 // import moment from 'moment'
 
@@ -24,7 +27,7 @@ class Wallet {
         // TODO: Add error-handling in the event of failure.
         //       All on-chain functions depend on access to this wallet.
         console.info('Initializing Wallet store..')
-        this.createWallet()
+        this.initWallet()
     }
 
     /* Initialize (observable) variables. */
@@ -34,11 +37,11 @@ class Wallet {
     @observable userid = null
 
     /* Initialize (persistent) variables. */
-    @persist @observable mnemonic = null
+    @persist @observable mnemonic = 'armed insect flower embrace hair sense affair robot involve razor clock defy'
 
     /* Create wallet. */
     @action.bound
-    async createWallet(_seed) {
+    async initWallet(_seed) {
         /* Set node URL. */
         // const NODE_URL = 'wss://speedy-nodes-nyc.moralis.io/39f5474b84a2f39277aea60a/avalanche/mainnet/ws'
 
@@ -116,6 +119,32 @@ class Wallet {
     @action.bound
     saveWallet(_wallet) {
         this.wallet = _wallet
+    }
+
+    /* Run test. */
+    @action.bound
+    async runTest() {
+        /* Initialize locals. */
+        let unspent
+
+        console.log('Running Wallet test...')
+
+        /* Initialize wallet. */
+        this.wallet = await UtxoWallet
+            .init(this.mnemonic)
+            .catch(err => console.error(err))
+        // console.log('WALLET', this.wallet)
+        console.log('WALLET ADDRESS', this.wallet.address)
+
+        /* Request unspent coins. */
+        unspent = await listUnspent(this.wallet.address)
+            .catch(err => console.error(err))
+        console.log('UNSPENT', unspent)
+
+        // const response = await wallet.send('nexa:nqtsq5g5mysklvg5qtejx9lpp50a2z7wjg9y70g7cjcj39cy', BigInt(2000))
+        //     .catch(err => console.error(err))
+        // console.log('TX RESPONSE', response)
+
     }
 
     /* Balance display. */

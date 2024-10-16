@@ -30,11 +30,6 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 import LottieView from 'lottie-react-native'
 import tailwind from 'tailwind-rn'
 
-import { randomBytes } from '@nexajs/crypto'
-import { listUnspent } from '@nexajs/address'
-import { Wallet } from '@nexajs/wallet'
-// import { ethers, utils } from 'ethers'
-
 import moment from 'moment'
 
 import {
@@ -101,6 +96,21 @@ const Dashboard = observer(({navigation}) => {
     /* Retreive window width. */
     const width = Dimensions.get('window').width
 
+    /* Initialize CRYPTO context. */
+    const {
+        runTest: runCryptoTest,
+    } = React.useContext(store.Crypto)
+
+    /* Initialize WALLET context. */
+    const {
+        // balance,
+        // balanceDisplay,
+        // wallet,
+        // createWallet,
+        runTest: runWalletTest,
+    } = React.useContext(store.Wallet)
+
+
 // FOR DEV PURPOSES ONLY
 let wallet
 
@@ -131,34 +141,9 @@ let wallet
             setEarningsTime('MONTHLY')
         }
 
-await testCrypto()
-await testWallet()
-await testRostrum()
-await testSend()
-    }
-
-    const testCrypto = async () => {
-        const myBytes = randomBytes(32)
-        console.log('MY BYTES', myBytes)
-    }
-
-    const testRostrum = async () => {
-        console.log('MY WALLET', wallet.address)
-        const unspent = await listUnspent(wallet.address)
-            .catch(err => console.error(err))
-        console.log('UNSPENT', unspent)
-    }
-
-    const testWallet = async () => {
-        wallet = await Wallet.init('armed insect flower embrace hair sense affair robot involve razor clock defy')
-            .catch(err => console.error(err))
-        console.log('WALLET', wallet.address)
-    }
-
-    const testSend = async () => {
-        const response = await wallet.send('nexa:nqtsq5g5mysklvg5qtejx9lpp50a2z7wjg9y70g7cjcj39cy', BigInt(2000))
-            .catch(err => console.error(err))
-        console.log('TX RESPONSE', response)
+// FOR DEV PURPOSES ONLY
+runCryptoTest()
+runWalletTest()
     }
 
     return (
