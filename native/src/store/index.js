@@ -1,11 +1,12 @@
-import { observable, action, computed } from 'mobx'
 import { create } from 'mobx-persist'
 
 import AsyncStorage from '@react-native-async-storage/async-storage'
 
-import Profile from './Profile'
+import Economy from './Economy.js'
+import Profile from './Profile.js'
+import Space from './Space.js'
 import System from './System.js'
-import Token from './Token.js'
+import Wallet from './Wallet.js'
 
 const hydrate = create({
     storage: AsyncStorage,
@@ -18,17 +19,20 @@ const hydrate = create({
  * Base store to manage the overall application's data and activities.
  */
 class Store {
+    Economy = Economy.Context
     Profile = Profile.Context
+    Space = Space.Context
     System = System.Context
-    Token = Token.Context
+    Wallet = Wallet.Context
 
     constructor() {
         Promise.all([
+            hydrate('Economy', Economy.Store),
             hydrate('Profile', Profile.Store),
+            hydrate('Space', Space.Store),
             hydrate('System', System.Store),
-            hydrate('Token', Token.Store),
+            hydrate('Wallet', Wallet.Store),
         ])
-        // .then(() => this.System.initData()),
         .then(() => {
             console.info('Data store has loaded successfully!')
         })
