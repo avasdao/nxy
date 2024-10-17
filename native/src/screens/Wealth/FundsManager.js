@@ -21,8 +21,6 @@ import { observer } from 'mobx-react'
 
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
-import tailwind from 'tailwind-rn'
-
 import { ethers, utils, Wallet } from 'ethers'
 
 import LottieView from 'lottie-react-native'
@@ -54,11 +52,11 @@ const FundsManager = observer(({navigation}) => {
     return (
         <ScrollView
             contentInsetAdjustmentBehavior="automatic"
-            style={tailwind('')}
+            className=""
         >
             <ScreenTitle title="Funds Manager" />
 
-            <View style={tailwind('m-3')}>
+            <View className="m-3">
 
                 <FundListItem
                     basePair={'AVAX'}

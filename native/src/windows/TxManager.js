@@ -24,8 +24,6 @@ import { useNavigationContainerRef } from '@react-navigation/native'
 
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
-import tailwind from 'tailwind-rn'
-
 import LottieView from 'lottie-react-native'
 
 import 'react-native-get-random-values'
@@ -126,41 +124,41 @@ const TxManager = observer(({navigation}) => {
     return (
         <ScrollView
             contentInsetAdjustmentBehavior="automatic"
-            style={tailwind('')}
+            className=""
         >
-            <View style={tailwind('bg-gray-800 items-end py-1')}>
+            <View className="bg-gray-800 items-end py-1">
                 <Pressable onPress={() => navigation.goBack()}>
                     <Ionicons
-                        style={tailwind('mr-2 text-gray-300')}
+                        className="mr-2 text-gray-300"
                         name={'close-outline'}
                         size={40}
                     />
                 </Pressable>
             </View>
 
-            <View style={tailwind('m-5 items-center')}>
-                <Text style={tailwind('text-gray-400 text-3xl font-semibold')}>
+            <View className="m-5 items-center">
+                <Text className="text-gray-400 text-3xl font-semibold">
                     Transaction Manager
                 </Text>
             </View>
 
-            <View style={tailwind('hidden py-5 bg-gray-50 items-center')}>
+            <View className="hidden py-5 bg-gray-50 items-center">
                 <LottieView
-                    style={tailwind('h-48')}
+                    className="h-48"
                     source={require('../assets/lottie/customer-support.json')} autoPlay loop
                 />
 
-                <Text style={tailwind('text-pink-500 font-semibold')}>
+                <Text className="text-pink-500 font-semibold">
                     24 Customer Support Center
                 </Text>
             </View>
 
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Text style={tailwind('text-2xl font-medium text-purple-500')}>
+                <Text className="text-2xl font-medium text-purple-500">
                     Balance Display: {balanceDisplay}
                 </Text>
 
-                <Text style={tailwind('text-2xl font-medium text-purple-500')}>
+                <Text className="text-2xl font-medium text-purple-500">
                     AVAX Price: {price('AVAX')}
                 </Text>
 

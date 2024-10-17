@@ -53,19 +53,19 @@ const Blank = observer(({navigation}) => {
             contentInsetAdjustmentBehavior="automatic"
             className=""
         >
-            <View style={tailwind('bg-gray-800 items-end py-1')}>
+            <View className="bg-gray-800 items-end py-1">
                 <Pressable onPress={() => navigation.goBack()}>
                     <Ionicons
-                        style={tailwind('mr-2 text-gray-300')}
+                        className="mr-2 text-gray-300"
                         name={'close-outline'}
                         size={40}
                     />
                 </Pressable>
             </View>
 
-            <View style={tailwind('py-6 items-center')}>
-                <View style={tailwind('bg-pink-200 px-3 py-2 rounded-full')}>
-                    <Text style={tailwind('text-pink-800 text-xl font-semibold')}>
+            <View className="py-6 items-center">
+                <View className="bg-pink-200 px-3 py-2 rounded-full">
+                    <Text className="text-pink-800 text-xl font-semibold">
                         THIS IS AN EARLY PREVIEW...
                     </Text>
                 </View>
@@ -73,19 +73,19 @@ const Blank = observer(({navigation}) => {
 
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                 <Text style={{ fontSize: 30 }}>
-                    Do <Text style={tailwind('font-bold')}>YOU</Text> need help?
+                    Do <Text className="font-bold">YOU</Text> need help?
                 </Text>
 
                 <Pressable onPress={() => navigation.goBack()} title="No thanks" />
             </View>
 
-            <View style={tailwind('py-5 bg-gray-50 items-center')}>
+            <View className="py-5 bg-gray-50 items-center">
                 <LottieView
-                    style={tailwind('h-48')}
+                    className="h-48"
                     source={require('../assets/lottie/couple-talk.json')} autoPlay loop
                 />
 
-                <Text style={tailwind('text-pink-500 font-semibold')}>
+                <Text className="text-pink-500 font-semibold">
                     Power & Respect
                 </Text>
             </View>

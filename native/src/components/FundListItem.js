@@ -24,8 +24,6 @@ import { observer } from 'mobx-react'
 
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
-import tailwind from 'tailwind-rn'
-
 import LottieView from 'lottie-react-native'
 
 import store from '../store'
@@ -134,70 +132,70 @@ const FundListItem = observer((_params) => {
     return (
         <Pressable
             onPress={_saveFund}
-            style={tailwind('mt-3 px-3 py-2 flex flex-row justify-between bg-yellow-100 border-2 border-yellow-300 rounded-xl')}
+            className="mt-3 px-3 py-2 flex flex-row justify-between bg-sky-700 border-2 border-sky-300 rounded-xl"
         >
-            <View style={tailwind('flex flex-row items-center')}>
-                <View style={tailwind('flex mr-2')}>
-                    <View style={tailwind('bg-gray-50 border-2 border-gray-50 rounded-full overflow-hidden')}>
+            <View className="flex flex-row items-center">
+                <View className="flex mr-2">
+                    <View className="bg-gray-50 border-2 border-gray-50 rounded-full overflow-hidden">
                         <Image
-                            style={tailwind('w-6 h-6')}
+                            className="w-6 h-6"
                             source={Tokens[basePair]}
                         />
                     </View>
 
-                    <View style={tailwind('bg-gray-50 border-2 border-gray-50 rounded-full overflow-hidden relative -mt-1')}>
+                    <View className="bg-gray-50 border-2 border-gray-50 rounded-full overflow-hidden relative -mt-1">
                         <Image
-                            style={tailwind('w-6 h-6')}
+                            className="w-6 h-6"
                             source={Tokens[tradePair]}
                         />
                     </View>
                 </View>
 
                 <View>
-                    <Text style={tailwind('text-xs font-bold')}>
+                    <Text className="text-xs font-bold">
                         {platform}
                     </Text>
 
-                    <Text style={tailwind('text-xs font-bold')}>
+                    <Text className="text-xs font-bold">
                         {getTokenLabel(basePair)}/{getTokenLabel(tradePair)}
                     </Text>
                 </View>
             </View>
 
             <View>
-                <Text style={tailwind('text-lg font-bold')}>
+                <Text className="text-lg font-bold">
                     {yieldMain}%
                 </Text>
 
-                <Text style={tailwind('text-base font-bold line-through')}>
+                <Text className="text-base font-bold line-through">
                     {yieldOther}%
                 </Text>
             </View>
 
             <View>
-                <Text style={farming ? tailwind('text-xs font-semibold') : tailwind('hidden')}>
+                <Text className={farming ? 'text-xs font-semibold' : 'hidden'}>
                     # of Subs
                 </Text>
 
-                <Text v-if="fee" style={fee ? tailwind('text-xs font-semibold') : tailwind('hidden')}>
+                <Text v-if="fee" className={fee ? 'text-xs font-semibold' : 'hidden'}>
                     # of Events
                 </Text>
 
-                <Text v-if="borrow" style={borrow ? tailwind('text-xs font-semibold') : tailwind('hidden')}>
+                <Text v-if="borrow" className={borrow ? 'text-xs font-semibold' : 'hidden'}>
                 Last Event
                 </Text>
             </View>
 
             <View>
-                <Text v-if="farming" style={farming ? tailwind('text-xs font-bold text-right') : tailwind('hidden')}>
+                <Text v-if="farming" className={farming ? 'text-xs font-bold text-right' : 'hidden'}>
                     {farming}
                 </Text>
 
-                <Text v-if="fee" style={fee ? tailwind('text-xs font-bold text-right') : tailwind('hidden')}>
+                <Text v-if="fee" className={fee ? 'text-xs font-bold text-right' : 'hidden'}>
                     {fee}
                 </Text>
 
-                <Text v-if="borrow" style={borrow ? tailwind('text-xs font-bold text-right') : tailwind('hidden')}>
+                <Text v-if="borrow" className={borrow ? 'text-xs font-bold text-right' : 'hidden'}>
                     {borrow}
                 </Text>
             </View>

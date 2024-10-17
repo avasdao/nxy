@@ -39,7 +39,7 @@ const Search = (_props) => {
 
     return (
         <View
-            className="flex flex-row items-center bg-gray-800 border-2 border-gray-800 rounded-lg"
+            className="flex flex-row items-center bg-slate-800 border-2 border-gray-800 rounded-lg"
             style={_props.style}
         >
             <View className="ml-2">
@@ -54,7 +54,7 @@ const Search = (_props) => {
             <TextInput
                 className="h-14 ml-3 pb-3 text-xl text-gray-300 font-medium"
                 onChangeText={_handleInput}
-                onFocus={() => alert('Search is NOT enabled in this DEMO')}
+                onFocus={() => alert('Search is NOT enabled in this PREVIEW')}
                 value={queryText}
                 placeholder={_props.placeholder}
                 placeholderTextColor="#AAA"
