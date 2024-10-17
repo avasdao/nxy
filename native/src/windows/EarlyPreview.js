@@ -105,7 +105,7 @@ const EarlyPreview = observer(({navigation}) => {
                     </Text>
 
                     <Text className="text-red-700 text-2xl font-medium text-center">
-                        AvaGoGo.io
+                        Nxy.social
                     </Text>
                 </Pressable>
             </View>

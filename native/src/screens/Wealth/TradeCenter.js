@@ -153,9 +153,9 @@ runWalletTest()
             <ScreenTitle title="DeFi Trade Center" />
 
             <SearchBar
-                className="mx-2 mt-2 mb-1"
+                className="my-1"
                 onQuery={_handleQuery}
-                placeholder="what ru looking for?"
+                placeholder="what are you looking for?"
             />
 
             <View className="p-3">
