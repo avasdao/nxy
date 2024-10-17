@@ -1,0 +1,80 @@
+AutoName: Nxy
+Categories:
+  - Internet
+  - Money
+  - Development
+  - SocialFi
+License: MIT
+WebSite: https://nxy.social
+AuthorName: Ava's DAO
+AuthorEmail: support@avasdao.org
+AuthorWebSite: https://avasdao.org
+SourceCode: https://github.com/avasdao/nxy
+IssueTracker: https://github.com/avasdao/nxy/issues
+Changelog: https://github.com/avasdao/nxy#changelog
+RepoType: git
+Repo: https://github.com/avasdao/nxy.git
+
+Summary: |-
+  Nxy is a SocialFi platform for Creators to Dream It. Build It. and Profit!
+Description: |-
+  Nxy is an emerging <strong>Social Finance (SocialFi)</strong> decentralized
+  application (dApp) delivering a modern-day platform for everyday users.
+
+  Nxy is merging well-known services from Traditional Finance (TradFi),
+  with the latest in Social Media.
+
+  This perfect fusion of technolgies is commonly referred to as:
+  Social Finance (SocialFi)
+  ---
+
+  <h2>Why Nxy?</h2>
+
+  Nxy is proudly introducing emerging NEW ways & means of monitization for:
+    - Creators
+    - Influencers
+    - TBD...
+
+  From their precious time and hard work.
+
+  Nxy Spaces provide the foundation for everything.
+
+  Nxy Economies allow individuals and/or groups to organically grow their own
+  wealth.
+  ---
+
+  <strong>!! IMPORTANT NOTE !!</strong>
+  This application makes use of Tracking (an Anti-pattern) in order to provide
+  the user with an optimal experience; by ensuring minimal bugs and an optimium
+  performance.
+
+Builds:
+  - versionName: '2024.10.16'
+    versionCode: 20241016
+    commit: 'v2024.10.16-fdroid'
+    subdir: native/android/app/
+    sudo:
+      - sysctl fs.inotify.max_user_watches=524288 || true
+      - curl -Lo node.tar.gz https://nodejs.org/download/release/v22.10.0/node-v22.10.0-linux-x64.tar.gz
+      - echo "674fef1891cc9927b5dc2b0ee2399b77f6621e6b3157f563a9e9491ad3db107b node.tar.gz"
+        | sha256sum -c -
+      - tar xzf node.tar.gz --strip-components=1 -C /usr/local/
+      - npm -g install yarn
+    init:
+      - cd ../..
+      - yarn config set --home enableTelemetry 0
+      - yarn cache clean
+      - npm_config_build_from_source=true yarn --force
+    gradle:
+      - yes
+    scanignore:
+      - android/build.gradle
+    scandelete:
+      - node_modules
+    # binary: <url-goes-here>
+
+AntiFeatures: Tracking
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: '2024.10.16'
+CurrentVersionCode: 20241016
