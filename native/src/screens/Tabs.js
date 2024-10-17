@@ -58,7 +58,7 @@ const Tabs = () => {
 
                     /* Return (tab) icon. */
                     return <Image
-                        source={require('../assets/logo.png')}
+                        source={require('../assets/icon.png')}
                         style={{ width: 24, height: 24 }}
                     />
                 },

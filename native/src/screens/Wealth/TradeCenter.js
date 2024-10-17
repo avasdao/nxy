@@ -44,7 +44,7 @@ import store from '../../store'
 
 import Divider from '../../components/Divider'
 import ScreenTitle from '../../components/ScreenTitle'
-import Search from '../../components/Search'
+import SearchBar from '../../components/SearchBar'
 
 const chartConfig = {
     // backgroundColor: "#e26a00",
@@ -153,7 +153,7 @@ runWalletTest()
         >
             <ScreenTitle title="DeFi Trade Center" />
 
-            <Search
+            <SearchBar
                 style={tailwind('mx-2 mt-2 mb-1')}
                 onQuery={_handleQuery}
                 placeholder="What are you looking for?"

@@ -27,7 +27,7 @@ import { ethers, utils } from 'ethers'
 import store from '../store'
 
 import Divider from '../components/Divider'
-import Search from '../components/Search'
+import AddressBar from '../components/AddressBar'
 
 /**
  * Playground Screen
@@ -58,10 +58,10 @@ const Playground = observer(({navigation}) => {
             contentInsetAdjustmentBehavior="automatic"
             className=""
         >
-            <Search
+            <AddressBar
                 className="mx-2 mt-2 mb-1"
                 onQuery={_handleQuery}
-                placeholder="What are you looking for?"
+                placeholder="what's ur destination?"
             />
 
             <Divider />
@@ -86,7 +86,7 @@ const Playground = observer(({navigation}) => {
 
             <View className="py-5 bg-gray-50 items-center">
                 <LottieView
-                    className="h-48"
+                    className="h-48 w-full"
                     source={require('../assets/lottie/online-shopping.json')} autoPlay loop
                 />
             </View>
@@ -107,7 +107,7 @@ const Playground = observer(({navigation}) => {
 
             <View className="py-5 bg-gray-50 items-center">
                 <LottieView
-                    className="h-48"
+                    className="h-48 w-full"
                     source={require('../assets/lottie/under-construction.json')} autoPlay loop
                 />
             </View>
@@ -132,7 +132,7 @@ const Playground = observer(({navigation}) => {
 
             <View className="py-5 bg-gray-50 items-center">
                 <LottieView
-                    className="h-32"
+                    className="h-32 w-full"
                     source={require('../assets/lottie/broadcast.json')} autoPlay loop
                 />
             </View>

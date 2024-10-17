@@ -97,9 +97,9 @@ const localNotif = (_id = 'default-channel', _title, _message) => {
         smallIcon,
         // bigText: 'My big text that will be shown when notification is expanded', // (optional) default: 'message' prop
         subText,
-        // bigPictureUrl: 'https://nxy.social/logo.png', // (optional) default: undefined
+        // bigPictureUrl: 'https://nxy.social/icon.png', // (optional) default: undefined
         // bigLargeIcon: 'ic_launcher', // (optional) default: undefined
-        // bigLargeIconUrl: 'https://nxy.social/logo.png', // (optional) default: undefined
+        // bigLargeIconUrl: 'https://nxy.social/icon.png', // (optional) default: undefined
         color,
         // vibrate: true, // (optional) default: true
         // vibration: 300, // vibration length in milliseconds, ignored if vibrate=false, default: 1000
