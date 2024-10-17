@@ -30,8 +30,9 @@ import {
 
 import store from '../store'
 
-import WalletScreen from './Wealth/FundsManager'
-import PortfolioScreen from './Wealth/TradeCenter'
+import ConciergeScreen from './Wealth/Concierge'
+import MarketsScreen from './Wealth/Markets'
+import WalletScreen from './Wealth/Wallet'
 
 /* Initialize tab (navigation). */
 const Tab = createMaterialTopTabNavigator()
@@ -58,10 +59,10 @@ const Wealth = observer(({navigation}) => {
     return (
         <Tab.Navigator>
             <Tab.Screen
-                name="Portfolio"
-                component={PortfolioScreen}
+                name="Markets"
+                component={MarketsScreen}
                 options={{
-                    title: 'Portfolio'
+                    title: 'Markets'
                 }}
             />
             <Tab.Screen
@@ -72,10 +73,10 @@ const Wealth = observer(({navigation}) => {
                 }}
             />
             <Tab.Screen
-                name="Assets"
-                component={WalletScreen}
+                name="Concierge"
+                component={ConciergeScreen}
                 options={{
-                    title: 'Assets'
+                    title: 'Concierge'
                 }}
             />
         </Tab.Navigator>

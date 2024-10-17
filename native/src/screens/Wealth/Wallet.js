@@ -54,7 +54,7 @@ const FundsManager = observer(({navigation}) => {
             contentInsetAdjustmentBehavior="automatic"
             className=""
         >
-            <ScreenTitle title="Funds Manager" />
+            {/* <ScreenTitle title="Wallet" /> */}
 
             <View className="m-3">
 

@@ -43,7 +43,7 @@ import store from '../../store'
 
 import Divider from '../../components/Divider'
 import ScreenTitle from '../../components/ScreenTitle'
-import SearchBar from '../../components/SearchBar'
+import SupportBar from '../../components/SupportBar'
 
 const chartConfig = {
     // backgroundColor: "#e26a00",
@@ -150,12 +150,12 @@ runWalletTest()
             contentInsetAdjustmentBehavior="automatic"
             className=""
         >
-            <ScreenTitle title="DeFi Trade Center" />
+            {/* <ScreenTitle title="Concierge" /> */}
 
-            <SearchBar
+            <SupportBar
                 className="my-1"
                 onQuery={_handleQuery}
-                placeholder="what are you looking for?"
+                placeholder="how can i help you?"
             />
 
             <View className="p-3">
@@ -285,7 +285,7 @@ runWalletTest()
                         </Text>
 
                         <Text className="text-gray-400 text-xs">
-                            Telr Analytics
+                            TΞLR Analytics
                         </Text>
                     </View>
                 </View>

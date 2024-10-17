@@ -59,9 +59,9 @@ const Playground = observer(({navigation}) => {
             className=""
         >
             <AddressBar
-                className="mx-2 mt-2 mb-1"
+                className=""
                 onQuery={_handleQuery}
-                placeholder="what's ur destination?"
+                placeholder="where do you want to go?"
             />
 
             <Divider />
