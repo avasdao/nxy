@@ -1,10 +1,37 @@
-# Nxy
+<p align="center">
+  <img width="200" src="assets/icon.png"8 />
+  <h1 align="center">Nxy - Dream It. Build It. Profit!</h2>
+</p>
 
-### ↳ https://nxy.app
+<p align="center">
+  <h5 align="center">
+    Nxy is an emerging <strong>Social Finance (SocialFi)</strong> decentralized
+    application (dApp) delivering a modern-day web platform for everyday users.
+  </h5>
+</p>
 
-Introducing safe & secure [__Spaces__](http://nxy.wiki/creators/spaces.html) for Creators to __Build__, __Grow__ and __Profit__ from their own _exclusive_ token economies.
+<p align="center">
+  <h2 align="center">
+    <a href="https://nxy.social">https://nxy.social</a>
+  </h2>
+</p>
 
-> The Atlanta Journal-Constitution 1/Feb/2024 -- Shooting into crowd kills 20 in north Gaza, combat in the south displaces thousands
+[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png"
+     alt="Get it on F-Droid"
+     height="80">](https://f-droid.org/packages/social.nxy)
+[<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
+     alt="Get it on Google Play"
+     height="80">]()
+[<img src="https://www.etesync.com/static/img/app-store-badge.c31e7b1c6a83.png"
+     alt="Download on the App Store"
+     height="80">]()
+
+![GitHub tag](https://img.shields.io/github/tag/avasdao/nxy.svg)
+[![Chat with us](https://img.shields.io/badge/chat-IRC%20|%20Matrix%20|%20Web-blue.svg)]()
+
+### $NXY Genesis Mining Transaction
+#### https://explorer.nexa.org/tx/dfd2be60b87df9056ef374b3218298ef8588923b2d5f3bcd27604baa69043633
+#### "The Atlanta Journal-Constitution (AP) 15/Feb/2024 Japan slips into a recession and loses its spot as the world's third-largest economy" NXY.cash Season 01 #SoFi
 
 # Table of contents
 

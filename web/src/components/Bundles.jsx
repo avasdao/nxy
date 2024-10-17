@@ -45,6 +45,26 @@ const plans = [
         logomarkClassName: 'fill-gray-500',
     },
     {
+        name: 'My 1st Oasis',
+        featured: true,
+        price: { Monthly: 'Costs may vary', Annually: '' },
+        description:
+            `Lead your community of followers to a BIG and BRIGHT future of prosperity.`,
+        button: {
+            label: 'Learn more',
+            href: 'https://nxy.wiki/society',
+        },
+        features: [
+            'Group of one or more Spaces',
+            'Formalized DAO governance',
+            'Deployed a $TOKEN voting portal',
+            'Real-time asset notifications',
+            'Advanced transaction anonymization',
+            'and much more...',
+        ],
+        logomarkClassName: 'fill-cyan-500',
+    },
+    {
         name: 'My 1st Society',
         featured: true,
         price: { Monthly: 'Costs may vary', Annually: '' },
@@ -218,7 +238,7 @@ export function Bundles() {
                     </p>
                 </div>
 
-                <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-10 sm:mt-20 lg:max-w-none lg:grid-cols-3">
+                <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 items-start gap-x-8 gap-y-10 sm:mt-20 lg:max-w-none lg:grid-cols-2">
                     {plans.map((plan) => (
                         <Plan key={plan.name} {...plan} activePeriod={activePeriod} />
                     ))}
