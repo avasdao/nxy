@@ -17,7 +17,6 @@ import {
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import Ionicons from 'react-native-vector-icons/Ionicons'
-// import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 
 /* Add (navigation) stacks. */
 import SpacesStackScreen from './Spaces'
