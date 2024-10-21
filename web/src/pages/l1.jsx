@@ -17,7 +17,7 @@ export default function Login() {
     return (
         <>
             <Head>
-                <title>L1 MetaNet</title>
+                <title>Nxy L1 MetaNet</title>
             </Head>
 
             <div className="mx-auto w-full max-w-7xl px-6 pb-16 pt-10 sm:pb-24 lg:px-8">
@@ -32,7 +32,7 @@ export default function Login() {
                 <section className="mx-auto w-auto flex flex-col gap-6">
                     <div className="mx-auto mt-20 max-w-2xl text-center sm:mt-24">
                         <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
-                            <span className="text-rose-500 text-7xl italic font-normal">Nxy L1</span>
+                            <span className="text-rose-500 text-7xl italic font-normal">Nxy L1 MetaNet</span>
 
                         </h1>
 
