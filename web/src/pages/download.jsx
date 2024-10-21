@@ -11,7 +11,7 @@ import { BookmarkSquareIcon, BookOpenIcon, QueueListIcon, RssIcon } from '@heroi
 
 import logo from '@/images/logo.png'
 
-export default function Login() {
+export default function Download() {
     const links = [
         {
             name: 'For iPhones and iPads',

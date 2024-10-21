@@ -5,7 +5,7 @@ import { AuthLayout } from '@/components/AuthLayout'
 import { Button } from '@/components/Button'
 import { SelectField, TextField } from '@/components/Fields'
 
-export default function Register() {
+export default function Hotel() {
     return (
         <>
             <Head>
