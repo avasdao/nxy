@@ -29,25 +29,25 @@ export default function Login() {
                     height="64px"
                 />
 
-                <section class="mx-auto w-auto flex flex-col gap-6">
+                <section className="mx-auto w-auto flex flex-col gap-6">
                     <div className="mx-auto mt-20 max-w-2xl text-center sm:mt-24">
                         <h1 className="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
                             <span className="text-rose-500 text-7xl italic font-normal">Nxy L1</span>
 
                         </h1>
 
-                        <h3 class="text-3xl font-bold">
+                        <h3 className="text-3xl font-bold">
                             on Avalanche 9000
                         </h3>
                     </div>
 
-                    <p class="max-w-2xl">
+                    <p className="max-w-2xl">
                         Building best-in-class Crypto Experience (CX) for your iOS & Android devices 📱
                         Come join in supporting our Avalanche/Retro9000 L1 ❤️
                         ✨ NXY.social/L1 ✨
                     </p>
 
-                    <h3 class="text-3xl font-bold italic tracking-widest">
+                    <h3 className="text-3xl font-bold italic tracking-widest">
                         Coming soon...
                     </h3>
 
