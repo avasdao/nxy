@@ -8,7 +8,7 @@ export async function getServerSideProps(context) {
     const url = context.query.catch;
     const { res } = context;
     if (url !== url.toLowerCase()) {
-        res.writeHead(307, {location: `/${url.toLowerCase()}`}) // 307 is temporary while 308 is permanent, choose your preference here..
+        res.writeHead(308, {location: `/${url.toLowerCase()}`}) // 307 is temporary while 308 is permanent, choose your preference here..
         res.end();
     }
     else {

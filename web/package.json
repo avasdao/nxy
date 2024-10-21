@@ -1,6 +1,6 @@
 {
   "name": "nxy-web",
-  "version": "23.2.9",
+  "version": "24.10.21",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
@@ -10,25 +10,25 @@
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
-    "@headlessui/react": "^1.6.5",
-    "@tailwindcss/forms": "^0.5.2",
-    "autoprefixer": "^10.4.7",
-    "clsx": "^1.1.1",
-    "focus-visible": "^5.2.0",
-    "framer-motion": "^6.5.1",
+    "@headlessui/react": "1.6.5",
+    "@tailwindcss/forms": "0.5.2",
+    "autoprefixer": "10.4.7",
+    "clsx": "1.1.1",
+    "focus-visible": "5.2.0",
+    "framer-motion": "6.5.1",
     "next": "12.2.3",
-    "postcss-focus-visible": "^6.0.4",
+    "postcss-focus-visible": "6.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "tailwindcss": "^3.1.4",
-    "use-debounce": "^8.0.3"
+    "tailwindcss": "3.1.4",
+    "use-debounce": "8.0.3"
   },
   "devDependencies": {
-    "@heroicons/react": "^2.1.1",
-    "@socialgouv/matomo-next": "^1.8.0",
+    "@heroicons/react": "2.1.1",
+    "@socialgouv/matomo-next": "1.8.0",
     "eslint": "8.15.0",
     "eslint-config-next": "12.2.3",
-    "prettier": "^2.6.2",
-    "prettier-plugin-tailwindcss": "^0.1.11"
+    "prettier": "2.6.2",
+    "prettier-plugin-tailwindcss": "0.1.11"
   }
 }
