@@ -87,7 +87,7 @@ const Playground = observer(({navigation}) => {
             <View className="py-5 bg-gray-50 items-center">
                 <LottieView
                     className="h-48 w-full"
-                    source={require('../assets/lottie/online-shopping.json')} autoPlay loop
+                    source={require('../assets/lottie/under-construction.json')} autoPlay loop
                 />
             </View>
 
@@ -103,13 +103,6 @@ const Playground = observer(({navigation}) => {
                         Nexa Fun
                     </Text>
                 </View>
-            </View>
-
-            <View className="py-5 bg-gray-50 items-center">
-                <LottieView
-                    className="h-48 w-full"
-                    source={require('../assets/lottie/under-construction.json')} autoPlay loop
-                />
             </View>
 
             <View className="flex bg-indigo-200">

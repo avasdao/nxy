@@ -1,6 +1,6 @@
 {
   "name": "nxy-cash",
-  "version": "24.10.8",
+  "version": "24.10.21",
   "license": "MIT",
   "scripts": {
     "build": "nuxt build",
@@ -12,6 +12,7 @@
   "dependencies": {
     "@pinia/nuxt": "0.5.4",
     "crypto-js": "4.2.0",
+    "ethers": "6.13.4",
     "graphql-ws": "5.16.0",
     "js-confetti": "0.12.0",
     "moment": "2.29.4",

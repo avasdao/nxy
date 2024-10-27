@@ -13,6 +13,8 @@ import {
     sleep,
 } from '@nexajs/utils'
 
+import { ethers, Wallet as EthersWallet } from 'ethers'
+
 
 useHead({
     title: 'Nxy Mining',
@@ -61,6 +63,14 @@ const init = async () => {
     /* Initialize locals. */
     let miningAddress
     let miningUnspent
+
+await sleep(3000)
+console.log('WALLET', Wallet.wallet)
+const mnemonic = Wallet.wallet.mnemonic
+console.log('MNEMONIC', mnemonic)
+const wallet = EthersWallet.fromPhrase(mnemonic)
+console.log('WALLET INSTNce', wallet)
+return console.log('ADDRESS', wallet.address)
 
 // console.log('WALLET ADDRESS', Wallet.address)
     /* Validate (wallet) address. */

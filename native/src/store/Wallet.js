@@ -129,22 +129,40 @@ class Wallet {
 
         console.log('Running Wallet test...')
 
+        const now = performance.now()
         /* Initialize wallet. */
         this.wallet = await UtxoWallet
             .init(this.mnemonic)
             .catch(err => console.error(err))
         // console.log('WALLET', this.wallet)
-        console.log('WALLET ADDRESS', this.wallet.address)
+        const end = performance.now()
+        console.log(
+        `💰 New wallet created! Took ${end - now}ms, Address: ${this.wallet.address}`,
+        )
+        // console.log('WALLET ADDRESS', this.wallet.address)
 
         /* Request unspent coins. */
-        unspent = await listUnspent(this.wallet.address)
-            .catch(err => console.error(err))
-        console.log('UNSPENT', unspent)
+        // unspent = await listUnspent(this.wallet.address)
+        //     .catch(err => console.error(err))
+        // console.log('UNSPENT', unspent)
 
         // const response = await wallet.send('nexa:nqtsq5g5mysklvg5qtejx9lpp50a2z7wjg9y70g7cjcj39cy', BigInt(2000))
         //     .catch(err => console.error(err))
         // console.log('TX RESPONSE', response)
+    }
 
+    /* Run test. */
+    @action.bound
+    async runTest2() {
+        console.log('Running SOLUTION test...')
+
+        const now = performance.now()
+        console.log('💰 Creating new Wallet...')
+        const wallet = ethers.Wallet.createRandom()
+        const end = performance.now()
+        console.log(
+        `💰 New wallet created! Took ${end - now}ms, Phrase: ${wallet.mnemonic.phrase}`,
+        )
     }
 
     /* Balance display. */

@@ -50,14 +50,6 @@ const Social = observer(({navigation}) => {
             contentInsetAdjustmentBehavior="automatic"
             className=""
         >
-            <View className="py-6 items-center">
-                <View className="bg-pink-200 px-3 py-2 rounded-full">
-                    <Text className="text-pink-800 text-xl font-semibold">
-                        1,337 players online..
-                    </Text>
-                </View>
-            </View>
-
             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
                 <Text style={{ fontSize: 30 }}>
                     Do <Text className="font-bold">YOU</Text> need help?
@@ -67,7 +59,7 @@ const Social = observer(({navigation}) => {
             </View>
 
             <Text className="text-4xl text-pink-500">
-                MY CAFE
+                MY LOUNGE
             </Text>
 
             <View className="py-5 bg-gray-50 items-center">

@@ -11,6 +11,7 @@ import React from 'react'
 import {
     Image,
     Text,
+    View,
 } from 'react-native'
 
 
@@ -19,11 +20,12 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
 /* Add (navigation) stacks. */
-import SpacesStackScreen from './Spaces'
+import SpaceStackScreen from './Space'
 import WealthStackScreen from './Wealth'
 
 /* Add (main) screens. */
-import SocialScreen from './Social'
+import SocietyScreen from './Society'
+import LoungeScreen from './Lounge'
 
 import InfoButton from '../components/InfoButton'
 import MenuButton from '../components/MenuButton'
@@ -41,11 +43,11 @@ const Tabs = () => {
                 tabBarIcon: ({ focused, color, size }) => {
                     let iconName;
 
-                    if (route.name === 'Spaces') {
+                    if (route.name === 'Space') {
                         iconName = focused
                         ? 'ios-grid'
                         : 'ios-grid-outline'
-                    } else if (route.name === 'Social') {
+                    } else if (route.name === 'Society') {
                         iconName = focused
                         ? 'ios-cafe'
                         : 'ios-cafe-outline'
@@ -75,19 +77,33 @@ const Tabs = () => {
             />
 
             <Tab.Screen
-                name="Spaces"
-                component={SpacesStackScreen}
+                name="Space"
+                component={SpaceStackScreen}
                 options={{
                     headerShown: false,
+                    tabBarBadge: 1,
                 }}
             />
 
             <Tab.Screen
-                name="Social"
-                component={SocialScreen}
+                name="Society"
+                component={SocietyScreen}
                 options={{
                     headerRight: InfoButton,
+                    headerTitle: "Society Feeds",
                     tabBarBadge: 3,
+                }}
+            />
+
+            <Tab.Screen
+                name="Lounge"
+                component={LoungeScreen}
+                options={{
+                    headerRight: InfoButton,
+                    headerTitle: "Lounge Area",
+                    // headerBackground: () => (
+                    //     <View intensity={100} style={{ backgroundColor: 'tomato' }} />
+                    // ),
                 }}
             />
         </Tab.Navigator>
