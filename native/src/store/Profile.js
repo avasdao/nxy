@@ -4,9 +4,7 @@ import React from 'react'
 import { action, computed, makeObservable, observable } from 'mobx'
 import { persist } from 'mobx-persist'
 
-import 'react-native-get-random-values'
-import '@ethersproject/shims'
-import { ethers, utils, Wallet } from 'ethers'
+import { ethers, utils, Wallet } from '../libs/ethers-setup.js'
 
 import moment from 'moment'
 

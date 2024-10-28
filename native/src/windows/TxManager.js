@@ -26,8 +26,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 
 import LottieView from 'lottie-react-native'
 
-import 'react-native-get-random-values'
-import { ethers, utils, Wallet } from 'ethers'
+import { ethers, utils, Wallet } from '../libs/ethers-setup.js'
 
 import moment from 'moment'
 

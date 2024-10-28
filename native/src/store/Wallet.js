@@ -4,9 +4,7 @@ import React from 'react'
 import { action, computed, makeObservable, observable } from 'mobx'
 import { persist } from 'mobx-persist'
 
-import 'react-native-get-random-values'
-import '@ethersproject/shims'
-import { ethers, utils, Wallet as EvmWallet } from 'ethers'
+import { ethers, utils, Wallet as EvmWallet } from '../libs/ethers-setup.js'
 
 import { listUnspent } from '@nexajs/address'
 import { Wallet as UtxoWallet } from '@nexajs/wallet'
