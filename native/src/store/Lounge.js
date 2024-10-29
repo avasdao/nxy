@@ -4,19 +4,21 @@ import React from 'react'
 import { action, computed, makeObservable, observable } from 'mobx'
 import { persist } from 'mobx-persist'
 
-import { ethers, utils, Wallet as EvmWallet } from '../libs/ethers-setup.js'
+import { ethers, utils, Lounge as EvmLounge } from '../libs/ethers-setup.js'
+
+import Bugsnag from '@bugsnag/react-native'
 
 import { listUnspent } from '@nexajs/address'
-import { Wallet as UtxoWallet } from '@nexajs/wallet'
+// import { Lounge as UtxoLounge } from '@nexajs/wallet'
 
 // import moment from 'moment'
 
 /**
- * Wallet Store
+ * Lounge Store
  *
  * Manages the user's profile information..
  */
-class Wallet {
+class Lounge {
     /* Constructor. */
     constructor() {
         makeObservable(this)
@@ -24,8 +26,8 @@ class Wallet {
         /* Create the wallet upon initialization. */
         // TODO: Add error-handling in the event of failure.
         //       All on-chain functions depend on access to this wallet.
-        console.info('Initializing Wallet store..')
-        this.initWallet()
+        console.info('Initializing Lounge store..')
+        this.initLounge()
     }
 
     /* Initialize (observable) variables. */
@@ -39,7 +41,7 @@ class Wallet {
 
     /* Create wallet. */
     @action.bound
-    async initWallet(_seed) {
+    async initLounge(_seed) {
         /* Set node URL. */
         // const NODE_URL = 'wss://speedy-nodes-nyc.moralis.io/39f5474b84a2f39277aea60a/avalanche/mainnet/ws'
 
@@ -50,7 +52,7 @@ class Wallet {
         // const mnemonic = require('../../.secrets').mnemonic
 
         /* Initialize wallet. */
-        // const mnemonicWallet = EvmWallet.fromMnemonic(mnemonic)
+        // const mnemonicLounge = EvmLounge.fromMnemonic(mnemonic)
         // console.log('\nWALLET (mnemonic):')
 
         let privateKey = null
@@ -67,11 +69,11 @@ class Wallet {
         console.log('PRIVATE KEY', privateKey)
 
         /* Initialize wallet. */
-        // const _wallet = new EvmWallet(privateKey, provider)
+        // const _wallet = new EvmLounge(privateKey, provider)
         // console.log('WALLET', _wallet)
 
         /* Save wallet. */
-        // this.saveWallet(_wallet)
+        // this.saveLounge(_wallet)
 
         // Querying the network
         // const _balance = await this.wallet.getBalance()
@@ -115,52 +117,19 @@ class Wallet {
 
     /* Save wallet. */
     @action.bound
-    saveWallet(_wallet) {
+    saveLounge(_wallet) {
         this.wallet = _wallet
     }
 
     /* Run test. */
     @action.bound
-    async runUtxoTest() {
+    async runTest() {
         /* Initialize locals. */
         let unspent
 
-        console.log('Running Wallet test...')
+        console.log('Running Lounge test...')
 
-        const now = performance.now()
-        /* Initialize wallet. */
-        this.wallet = await UtxoWallet
-            .init(this.mnemonic)
-            .catch(err => console.error(err))
-        // console.log('WALLET', this.wallet)
-        const end = performance.now()
-        console.log(
-        `💰 New wallet created! Took ${end - now}ms, Address: ${this.wallet.address}`,
-        )
-        // console.log('WALLET ADDRESS', this.wallet.address)
-
-        /* Request unspent coins. */
-        // unspent = await listUnspent(this.wallet.address)
-        //     .catch(err => console.error(err))
-        // console.log('UNSPENT', unspent)
-
-        // const response = await wallet.send('nexa:nqtsq5g5mysklvg5qtejx9lpp50a2z7wjg9y70g7cjcj39cy', BigInt(2000))
-        //     .catch(err => console.error(err))
-        // console.log('TX RESPONSE', response)
-    }
-
-    /* Run test. */
-    @action.bound
-    async runEvmTest() {
-        console.log('Running SOLUTION test...')
-
-        const now = performance.now()
-        console.log('💰 Creating new Wallet...')
-        const wallet = ethers.Wallet.createRandom()
-        const end = performance.now()
-        console.log(
-        `💰 New wallet created! Took ${end - now}ms, Phrase: ${wallet.mnemonic.phrase}`,
-        )
+        Bugsnag.notify(new Error('Test Lounge error'))
     }
 
     /* Balance display. */
@@ -185,7 +154,7 @@ class Wallet {
 }
 
 /* Initialize store. */
-const Store = new Wallet()
+const Store = new Lounge()
 
 /* Initialize (store) context. */
 const Context = React.createContext(Store)

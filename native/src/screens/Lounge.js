@@ -27,10 +27,15 @@ import { ethers, utils } from 'ethers'
 import store from '../store'
 
 /**
- * Social Screen
+ * Lounge Screen
  */
-const Social = observer(({navigation}) => {
+const Lounge = observer(({navigation}) => {
     const [hasAgreed, setHasAgreed] = React.useState(false)
+
+    /* Initialize WALLET context. */
+    const {
+        runTest: runLoungeTest,
+    } = React.useContext(store.Lounge)
 
     /* Handle onLoad scripts. */
     React.useEffect(() => {
@@ -69,12 +74,21 @@ const Social = observer(({navigation}) => {
                 />
 
                 <Text className="text-pink-500 font-semibold">
-                    24 Hour Social
+                    24 Hour Lounge
                 </Text>
             </View>
+
+            <Pressable
+                className="py-1 px-3 border-2 border-yellow-500 bg-yellow-300 rounded"
+                onPress={runLoungeTest}
+            >
+                <Text className="text-yellow-800 text-sm font-bold uppercase">
+                    Run Lounge Test!
+                </Text>
+            </Pressable>
 
         </ScrollView>
     )
 })
 
-export default Social
+export default Lounge

@@ -4,6 +4,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 
 import Crypto from './Crypto.js'
 import Economy from './Economy.js'
+import Lounge from './Lounge.js'
 import Profile from './Profile.js'
 import Space from './Space.js'
 import System from './System.js'
@@ -23,6 +24,7 @@ const hydrate = create({
 class Store {
     Crypto = Crypto.Context
     Economy = Economy.Context
+    Lounge = Lounge.Context
     Profile = Profile.Context
     Space = Space.Context
     System = System.Context
@@ -33,6 +35,7 @@ class Store {
         Promise.all([
             hydrate('Crypto', Crypto.Store),
             hydrate('Economy', Economy.Store),
+            hydrate('Lounge', Lounge.Store),
             hydrate('Profile', Profile.Store),
             hydrate('Space', Space.Store),
             hydrate('System', System.Store),

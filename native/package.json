@@ -1,6 +1,6 @@
 {
   "name": "nxy-native",
-  "version": "24.10.28",
+  "version": "24.10.29",
   "license": "MIT",
   "scripts": {
     "android": "react-native run-android",
@@ -12,8 +12,8 @@
   "dependencies": {
     "@amplitude/react-native": "2.17.3",
     "@azure/core-asynciterator-polyfill": "1.0.2",
-    "@bugsnag/plugin-react-navigation": "8.0.0",
-    "@bugsnag/react-native": "8.0.0",
+    "@bugsnag/plugin-react-navigation": "8.1.1",
+    "@bugsnag/react-native": "8.1.2",
     "@ethersproject/shims": "5.7.0",
     "@peculiar/webcrypto": "1.5.0",
     "@react-native-async-storage/async-storage": "2.0.0",

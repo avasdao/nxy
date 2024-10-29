@@ -106,7 +106,7 @@ const Dashboard = observer(({navigation}) => {
         // balanceDisplay,
         // wallet,
         // createWallet,
-        runTest2: runWalletTest,
+        runEvmTest: runWalletTest,
     } = React.useContext(store.Wallet)
 
 

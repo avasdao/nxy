@@ -181,6 +181,8 @@ project.ext.vectoricons = [
 ]
 apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
 
+// apply(plugin = "com.bugsnag.android.gradle")
+apply plugin: "com.bugsnag.android.gradle"
 // bugsnag {
 //   uploadReactNativeMappings = true
 // }

@@ -1,6 +1,7 @@
 package social.nxy
 
 import android.app.Application
+import com.bugsnag.android.Bugsnag
 import com.facebook.react.PackageList
 import com.facebook.react.ReactApplication
 import com.facebook.react.ReactHost
@@ -41,5 +42,7 @@ class MainApplication : Application(), ReactApplication {
       load()
     }
     ReactNativeFlipper.initializeFlipper(this, reactNativeHost.reactInstanceManager)
+
+    Bugsnag.start(this)
   }
 }
