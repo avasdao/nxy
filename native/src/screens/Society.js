@@ -6,25 +6,24 @@
  * @flow strict-local
  */
 
+/* Import modules. */
 import React from 'react'
 
 import {
-    Pressable,
     ScrollView,
-    StatusBar,
     Text,
-    useColorScheme,
     View,
 } from 'react-native'
 
 import { observer } from 'mobx-react'
 
-import Ionicons from 'react-native-vector-icons/Ionicons'
 import LottieView from 'lottie-react-native'
 
-import { ethers, utils } from 'ethers'
-
+/* Import (local) modules. */
 import store from '../store'
+import Divider from '../components/Divider'
+import AddressBar from '../components/AddressBar'
+import SocietyWatching from '../components/Society/Watching'
 
 /**
  * Social Screen
@@ -45,35 +44,85 @@ const Social = observer(({navigation}) => {
         fetchInfo()
     }, [])
 
+    /* Handle search query. */
+    const _handleQuery = (_query) => {
+        console.log('QUERY (props):', _query)
+    }
+
     return (
         <ScrollView
             contentInsetAdjustmentBehavior="automatic"
             className=""
         >
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Text style={{ fontSize: 30 }}>
-                    Do <Text className="font-bold">YOU</Text> need help?
-                </Text>
+            <AddressBar
+                className=""
+                onQuery={_handleQuery}
+                placeholder="who's worthy of your time?"
+            />
 
-                <Pressable onPress={() => navigation.goBack()} title="No thanks" />
-            </View>
-
-            <Text className="text-4xl text-pink-500">
-                THE NXY OASIS
-            </Text>
+            <SocietyWatching />
 
             <View className="py-5 bg-gray-50 items-center">
                 <LottieView
                     className="h-48 w-full"
-                    source={require('../assets/lottie/online-shopping.json')} autoPlay loop
+                    source={require('../assets/lottie/under-construction.json')} autoPlay loop
                 />
             </View>
 
-            <View className="py-6 items-center">
-                <View className="bg-pink-200 px-3 py-2 rounded-full">
-                    <Text className="text-pink-800 text-xl font-semibold">
-                        1,337 players online..
+            <View className="flex bg-indigo-200">
+                <View className="ml-2">
+                    <Text className="text-indigo-800 text-sm font-bold uppercase">
+                        My Spaces
                     </Text>
+                </View>
+
+                <View className="flex justify-center h-16 w-32 bg-yellow-300 px-3 py-2 rounded-lg">
+                    <Text className="text-yellow-800 text-2xl font-bold">
+                        Nexa Fun
+                    </Text>
+                </View>
+            </View>
+
+            <View className="flex bg-indigo-200">
+                <View className="ml-2">
+                    <Text className="text-indigo-800 text-sm font-bold uppercase">
+                        More Spaces
+                    </Text>
+                </View>
+
+                <View className="flex flex-row space-x-4 px-4 py-2 items-center bg-indigo-200">
+                    <View className="h-16 w-16 bg-pink-200 px-3 py-2 rounded-lg">
+
+                    </View>
+
+                    <View className="h-16 w-16 bg-pink-200 px-3 py-2 rounded-lg">
+
+                    </View>
+                </View>
+            </View>
+
+            <View className="py-5 bg-gray-50 items-center">
+                <LottieView
+                    className="h-32 w-full"
+                    source={require('../assets/lottie/broadcast.json')} autoPlay loop
+                />
+            </View>
+
+            <View className="flex bg-indigo-200">
+                <View className="ml-2">
+                    <Text className="text-indigo-800 text-sm font-bold uppercase">
+                        More Spaces
+                    </Text>
+                </View>
+
+                <View className="flex flex-row space-x-4 px-4 py-2 items-center bg-indigo-200">
+                    <View className="h-16 w-16 bg-pink-200 px-3 py-2 rounded-lg">
+
+                    </View>
+
+                    <View className="h-16 w-16 bg-pink-200 px-3 py-2 rounded-lg">
+
+                    </View>
                 </View>
             </View>
 

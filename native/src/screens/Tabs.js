@@ -89,8 +89,9 @@ const Tabs = () => {
                 name="Society"
                 component={SocietyScreen}
                 options={{
-                    headerRight: InfoButton,
-                    headerTitle: "Society Feeds",
+                    headerShown: false,
+                    // headerRight: InfoButton,
+                    // headerTitle: "Society Feeds",
                     tabBarBadge: 3,
                 }}
             />
@@ -99,8 +100,9 @@ const Tabs = () => {
                 name="Lounge"
                 component={LoungeScreen}
                 options={{
-                    headerRight: InfoButton,
-                    headerTitle: "Lounge Area",
+                    headerShown: false,
+                    // headerRight: InfoButton,
+                    // headerTitle: "Lounge Area",
                     // headerBackground: () => (
                     //     <View intensity={100} style={{ backgroundColor: 'tomato' }} />
                     // ),

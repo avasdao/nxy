@@ -8,27 +8,9 @@
 
 import React from 'react'
 
-import {
-    Pressable,
-    ScrollView,
-    StatusBar,
-    Text,
-    useColorScheme,
-    View,
-} from 'react-native'
-
 import { observer } from 'mobx-react'
 
-import Ionicons from 'react-native-vector-icons/Ionicons'
-import LottieView from 'lottie-react-native'
-
-import { ethers, utils } from 'ethers'
-
-import {
-    createMaterialTopTabNavigator
-} from '@react-navigation/material-top-tabs'
-
-import store from '../store'
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 
 import ConciergeScreen from './Wealth/Concierge'
 import MarketsScreen from './Wealth/Markets'

@@ -158,139 +158,6 @@ runWalletTest()
                 placeholder="how can i help you?"
             />
 
-            <View className="p-3">
-                <View className="px-5 flex flex-row justify-between items-center">
-                    <Text className="text-gray-800 text-xl font-bold">
-                        ApeCoin (APE)
-                    </Text>
-
-                    <Text className="text-gray-800 text-2xl font-bold">
-                        {price}
-                    </Text>
-                </View>
-
-                <View className="px-5 flex flex-row justify-between items-center">
-                    <Text className="text-gray-800 text-base font-bold">
-                        Market Cap
-                    </Text>
-
-                    <Text className="text-gray-800 text-lg font-bold">
-                        {marketCap}
-                    </Text>
-                </View>
-
-                <View className="px-5 flex flex-row justify-between items-center">
-                    <Text className="text-gray-800 text-base font-bold">
-                        Circulating Supply
-                    </Text>
-
-                    <View className="flex flex-row items-end">
-                        <Text className="text-gray-800 text-lg font-bold">
-                            {circulating}
-                        </Text>
-
-                        <Text className="ml-1 mb-1 text-gray-500 text-xs font-bold">
-                            {circulatingPct}
-                        </Text>
-                    </View>
-                </View>
-            </View>
-
-            <Divider />
-
-            <View className="my-1">
-                <View className="px-3 flex flex-row justify-between items-center">
-                    <View className="flex flex-row items-end">
-                        <Text className="text-xl font-bold text-gray-500">
-                            My APY Power
-                        </Text>
-
-                        <Text className="ml-2 mb-0.5 font-bold text-gray-500">
-                            vs. Community
-                        </Text>
-                    </View>
-
-                    <Pressable
-                        className="py-1 px-3 border-2 border-yellow-500 bg-yellow-300 rounded"
-                        onPress={_changeEarningTime}
-                    >
-                        <Text className="text-yellow-800 text-sm font-bold uppercase">
-                            {earningsTime}
-                        </Text>
-                    </Pressable>
-                </View>
-
-                <View className="mt-3 py-2 bg-gray-300 border-t border-b border-indigo-500">
-                    <VictoryChart
-                        width={width}
-                        height={width / 1.75}
-                        theme={VictoryTheme.material}
-                        padding={{ top: 10, bottom: 35, left: 55, right: 20 }}
-                        domainPadding={10}
-                    >
-                        <VictoryAxis
-                            // tickValues specifies both the number of ticks and where
-                            // they are placed on the axis
-                            // tickValues={[1, 2, 3, 4]}
-                            tickFormat={[
-                                moment().subtract(5, 'months').format('MMM'),
-                                moment().subtract(4, 'months').format('MMM'),
-                                moment().subtract(3, 'months').format('MMM'),
-                                moment().subtract(2, 'months').format('MMM'),
-                                moment().subtract(1, 'months').format('MMM'),
-                                moment().format('MMM'),
-                            ]}
-                        />
-
-                        <VictoryAxis
-                              dependentAxis
-                              // tickFormat specifies how ticks should be displayed
-                              tickFormat={(x) => `${x}%`}
-                        />
-
-                        <VictoryLine
-                            data={communityData}
-                            x='timestamp'
-                            y='earnings'
-                            // labels={({ datum }) => datum.y}
-                            labels={['1', '2', '3', '4']}
-                            interpolation='natural'
-                            style={{
-                                data: {
-                                    stroke: '#D03B29',
-                                    strokeWidth: 5,
-                                }
-                            }}
-                        />
-
-                        <VictoryBar
-                            data={userData}
-                            x='timestamp'
-                            y='earnings'
-                            style={{
-                                data: {
-                                    fill: '#3C8DA8',
-                                }
-                            }}
-                        />
-
-                    </VictoryChart>
-
-                    <View className="flex flex-row px-3 justify-between">
-                        <Text className="text-gray-600 text-xs italic">
-                            Updated
-                            <Text className="text-gray-600 font-bold italic">
-                                &nbsp;5 minutes ago
-                            </Text>
-                        </Text>
-
-                        <Text className="text-gray-400 text-xs">
-                            TΞLR Analytics
-                        </Text>
-                    </View>
-                </View>
-            </View>
-
             <Pressable
                 className="mt-5 mb-5 mx-3 px-3 py-2 border-2 border-pink-800 bg-pink-600 rounded-md"
                 onPress={() => alert('More centers are coming soon..')}
@@ -315,6 +182,7 @@ runWalletTest()
                     </Text>
                 </View>
             </Pressable>
+
         </ScrollView>
     )
 })

@@ -42,6 +42,7 @@ import {
 import store from '../../store'
 
 import Divider from '../../components/Divider'
+import MarketsTrending from '../../components/Markets/Trending'
 import ScreenTitle from '../../components/ScreenTitle'
 import SearchBar from '../../components/SearchBar'
 
@@ -291,30 +292,7 @@ runWalletTest()
                 </View>
             </View>
 
-            <Pressable
-                className="mt-5 mb-5 mx-3 px-3 py-2 border-2 border-pink-800 bg-pink-600 rounded-md"
-                onPress={() => alert('More centers are coming soon..')}
-            >
-                <Text className="text-xl text-pink-100 font-bold">
-                    Choose Your App Center
-                </Text>
-
-                <View className="ml-3">
-                    <Text className="mt-1 text-base text-pink-200 font-bold">
-                        &#8618; DeFi Trade Center
-                    </Text>
-
-                    <Text className="mt-1 text-base text-pink-200 font-bold">
-                        &#8618; GameFi Play Center
-                        <Text className="pl-1 text-sm text-pink-300">(coming soon)</Text>
-                    </Text>
-
-                    <Text className="mt-1 text-base text-pink-200 font-bold">
-                        &#8618; SocialFi Chat Center
-                        <Text className="pl-1 text-sm text-pink-300">(coming soon)</Text>
-                    </Text>
-                </View>
-            </Pressable>
+            <MarketsTrending />
         </ScrollView>
     )
 })

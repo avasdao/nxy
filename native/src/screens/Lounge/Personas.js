@@ -29,7 +29,6 @@ import store from '../../store'
 
 import FundListItem from '../../components/FundListItem'
 import ScreenTitle from '../../components/ScreenTitle'
-import WalletSummary from '../../components/Wallet/Summary'
 
 /**
  * Funds Manager Screen
@@ -55,7 +54,7 @@ const FundsManager = observer(({navigation}) => {
             contentInsetAdjustmentBehavior="automatic"
             className=""
         >
-            <WalletSummary />
+            {/* <ScreenTitle title="Wallet" /> */}
 
             <View className="m-3">
 

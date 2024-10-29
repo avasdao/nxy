@@ -19,23 +19,22 @@ import {
 
 import { observer } from 'mobx-react'
 
-import Ionicons from 'react-native-vector-icons/Ionicons'
 import LottieView from 'lottie-react-native'
 
-import { ethers, utils } from 'ethers'
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 
-import store from '../store'
+import ExperimentalScreen from './Lounge/Experimental'
+import PersonasScreen from './Lounge/Personas'
+import SettingsScreen from './Lounge/Settings'
+
+/* Initialize tab (navigation). */
+const Tab = createMaterialTopTabNavigator()
 
 /**
  * Lounge Screen
  */
 const Lounge = observer(({navigation}) => {
     const [hasAgreed, setHasAgreed] = React.useState(false)
-
-    /* Initialize WALLET context. */
-    const {
-        runTest: runLoungeTest,
-    } = React.useContext(store.Lounge)
 
     /* Handle onLoad scripts. */
     React.useEffect(() => {
@@ -51,43 +50,29 @@ const Lounge = observer(({navigation}) => {
     }, [])
 
     return (
-        <ScrollView
-            contentInsetAdjustmentBehavior="automatic"
-            className=""
-        >
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Text style={{ fontSize: 30 }}>
-                    Do <Text className="font-bold">YOU</Text> need help?
-                </Text>
-
-                <Pressable onPress={() => navigation.goBack()} title="No thanks" />
-            </View>
-
-            <Text className="text-4xl text-pink-500">
-                MY LOUNGE
-            </Text>
-
-            <View className="py-5 bg-gray-50 items-center">
-                <LottieView
-                    className="h-48 w-full"
-                    source={require('../assets/lottie/couple-talk.json')} autoPlay loop
-                />
-
-                <Text className="text-pink-500 font-semibold">
-                    24 Hour Lounge
-                </Text>
-            </View>
-
-            <Pressable
-                className="py-1 px-3 border-2 border-yellow-500 bg-yellow-300 rounded"
-                onPress={runLoungeTest}
-            >
-                <Text className="text-yellow-800 text-sm font-bold uppercase">
-                    Run Lounge Test!
-                </Text>
-            </Pressable>
-
-        </ScrollView>
+        <Tab.Navigator>
+            <Tab.Screen
+                name="Personas"
+                component={PersonasScreen}
+                options={{
+                    title: 'Personas'
+                }}
+            />
+            <Tab.Screen
+                name="Settings"
+                component={SettingsScreen}
+                options={{
+                    title: 'Settings'
+                }}
+            />
+            <Tab.Screen
+                name="Experimental"
+                component={ExperimentalScreen}
+                options={{
+                    title: 'For XP Only'
+                }}
+            />
+        </Tab.Navigator>
     )
 })
 
