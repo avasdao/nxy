@@ -129,7 +129,7 @@ class Lounge {
 
         console.log('Running Lounge test...')
 
-        Bugsnag.notify(new Error('Test Lounge error'))
+        Bugsnag.notify(new Error('Test Bugsnag (Lounge) error'))
     }
 
     /* Balance display. */

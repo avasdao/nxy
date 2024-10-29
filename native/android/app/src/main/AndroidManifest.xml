@@ -34,7 +34,7 @@
 
         <meta-data
             android:name="com.bugsnag.android.API_KEY"
-            android:value="70839c6e89e9b4906446ae6519d4e348" />
+            android:value="cf88d573a1c0e958390b61eb4eb27951" />
 
     </application>
 </manifest>
