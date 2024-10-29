@@ -31,7 +31,7 @@ const Area51 = observer(({navigation}) => {
 
     /* Initialize WALLET context. */
     const {
-        runTest: runArea51Test,
+        runBugsnagTest: runBugsnagTest,
     } = React.useContext(store.Area51)
 
     /* Handle onLoad scripts. */
@@ -80,10 +80,10 @@ const Area51 = observer(({navigation}) => {
 
                 <Pressable
                     className="py-2 px-5 border border-yellow-500 bg-yellow-300 rounded"
-                    onPress={runArea51Test}
+                    onPress={runBugsnagTest}
                 >
                     <Text className="text-yellow-800 text-lg font-bold uppercase">
-                        Run Area 51 Test
+                        Run Bugsnag Test
                     </Text>
                 </Pressable>
 

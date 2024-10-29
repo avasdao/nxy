@@ -25,11 +25,10 @@ class Area51 {
     /* Initialize (persistent) variables. */
     @persist @observable var2 = null
 
-    /* Run test. */
+    /* Run BUGSNAG test. */
     @action.bound
-    runTest() {
-        console.log('Running Area 51 test...')
-
+    runBugsnagTest() {
+        console.log('[Area 51] Testing BUGSNAG error report.')
         Bugsnag.notify(new Error('[Area 51] Testing BUGSNAG error report.'))
     }
 }

@@ -122,7 +122,7 @@ const Playground = observer(({navigation}) => {
 
                 <View className="w-full flex flex-row">
                     <View className="w-1/2 pr-2 h-auto">
-                        <View className="h-28 bg-rose-700 px-3 py-2 rounded-lg">
+                        <View className="h-28 bg-rose-700 px-3 py-2 rounded-lg border border-rose-400">
                             <Text className="w-3/5 text-base text-lime-100 font-bold tracking-wider">
                                 Nxy Oasis
                             </Text>
@@ -130,7 +130,7 @@ const Playground = observer(({navigation}) => {
                     </View>
 
                     <View className="w-1/2 pl-2 h-auto">
-                        <View className="h-28 bg-sky-700 px-3 py-2 rounded-lg">
+                        <View className="h-28 bg-sky-700 px-3 py-2 rounded-lg border border-sky-400">
                             <Text className="w-3/5 text-base text-lime-100 font-bold tracking-wider">
                                 Minado
                             </Text>
@@ -140,7 +140,7 @@ const Playground = observer(({navigation}) => {
 
                 <View className="w-full flex flex-row">
                     <View className="w-1/2 pr-2 h-auto">
-                        <View className="h-28 bg-fuchsia-700 px-3 py-2 rounded-lg">
+                        <View className="h-28 bg-fuchsia-700 px-3 py-2 rounded-lg border border-fuchsia-400">
                             <Text className="w-3/5 text-base text-lime-100 font-bold tracking-wider">
                                 Nifty Art
                             </Text>
@@ -148,7 +148,7 @@ const Playground = observer(({navigation}) => {
                     </View>
 
                     <View className="w-1/2 pl-2 h-auto">
-                        <View className="h-28 bg-green-600 px-3 py-2 rounded-lg">
+                        <View className="h-28 bg-green-600 px-3 py-2 rounded-lg border border-green-400">
                             <Text className="w-3/5 text-base text-lime-100 font-bold tracking-wider">
                                 Causes Cash
                             </Text>
@@ -156,7 +156,6 @@ const Playground = observer(({navigation}) => {
                     </View>
                 </View>
             </View>
-
 
             <View className="pt-3 bg-rose-50">
                 {/* Bottom (scroll) spacer */}
