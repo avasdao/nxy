@@ -23,7 +23,8 @@ import LottieView from 'lottie-react-native'
 
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 
-import ExperimentalScreen from './Lounge/Experimental'
+import Area51Screen from './Lounge/Area51'
+import HelpScreen from './Lounge/Help'
 import PersonasScreen from './Lounge/Personas'
 import SettingsScreen from './Lounge/Settings'
 
@@ -66,10 +67,17 @@ const Lounge = observer(({navigation}) => {
                 }}
             />
             <Tab.Screen
-                name="Experimental"
-                component={ExperimentalScreen}
+                name="Help"
+                component={HelpScreen}
                 options={{
-                    title: 'For XP Only'
+                    title: 'Help?'
+                }}
+            />
+            <Tab.Screen
+                name="Area51"
+                component={Area51Screen}
+                options={{
+                    title: 'Area 51'
                 }}
             />
         </Tab.Navigator>

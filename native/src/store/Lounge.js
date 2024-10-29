@@ -6,8 +6,6 @@ import { persist } from 'mobx-persist'
 
 import { ethers, utils, Lounge as EvmLounge } from '../libs/ethers-setup.js'
 
-import Bugsnag from '@bugsnag/react-native'
-
 import { listUnspent } from '@nexajs/address'
 // import { Lounge as UtxoLounge } from '@nexajs/wallet'
 
@@ -128,8 +126,6 @@ class Lounge {
         let unspent
 
         console.log('Running Lounge test...')
-
-        Bugsnag.notify(new Error('Test Bugsnag (Lounge) error'))
     }
 
     /* Balance display. */

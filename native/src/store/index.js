@@ -3,9 +3,9 @@ import { create } from 'mobx-persist'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 
 /* Import (local) modules. */
+import Area51 from './Area51.js'
 import Crypto from './Crypto.js'
 import Economy from './Economy.js'
-import Experimental from './Experimental.js'
 import Lounge from './Lounge.js'
 import Profile from './Profile.js'
 import Society from './Society.js'
@@ -26,9 +26,9 @@ const hydrate = create({
  * Base store to manage the overall application's data and activities.
  */
 class Store {
+    Area51 = Area51.Context
     Crypto = Crypto.Context
     Economy = Economy.Context
-    Experimental = Experimental.Context
     Lounge = Lounge.Context
     Profile = Profile.Context
     Society = Society.Context
@@ -40,9 +40,9 @@ class Store {
 
     constructor() {
         Promise.all([
+            hydrate('Area51', Area51.Store),
             hydrate('Crypto', Crypto.Store),
             hydrate('Economy', Economy.Store),
-            hydrate('Experimental', Experimental.Store),
             hydrate('Lounge', Lounge.Store),
             hydrate('Profile', Profile.Store),
             hydrate('Society', Society.Store),
