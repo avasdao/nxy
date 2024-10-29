@@ -68,7 +68,7 @@ const Area51 = observer(({navigation}) => {
             <View className="py-5 bg-gray-50 items-center">
                 <LottieView
                     className="h-48 w-full"
-                    source={require('../../assets/lottie/couple-talk.json')} autoPlay loop
+                    source={require('../../assets/lottie/under-construction.json')} autoPlay loop
                 />
 
                 <Text className="text-2xl text-red-600 font-semibold">

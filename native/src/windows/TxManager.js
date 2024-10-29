@@ -43,8 +43,8 @@ const TxManager = observer(({navigation}) => {
         balance,
         balanceDisplay,
         wallet,
-        createWallet,
-    } = React.useContext(store.Profile)
+        initWallet,
+    } = React.useContext(store.Wallet)
 
     /* Initialize SYSTEM context. */
     const {
@@ -63,7 +63,7 @@ const TxManager = observer(({navigation}) => {
             /* Validate wallet. */
             if (!wallet) {
                 /* Create new wallet. */
-                const returnedWallet = await createWallet()
+                const returnedWallet = await initWallet()
                 // console.log('\nTX MANAGER (new wallet)', returnedWallet)
             }
         }
