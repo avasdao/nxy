@@ -26,8 +26,7 @@ import LottieView from 'lottie-react-native'
 
 import { ethers, utils } from 'ethers'
 
-import store from '../stores'
-
+import stores from '../stores'
 import Divider from '../components/Divider'
 import AddressBar from '../components/AddressBar'
 import Discover from '../components/Spaces/Discover'
@@ -75,20 +74,6 @@ const Playground = observer(({ navigation }) => {
             <Trending />
 
             <Discover />
-
-            <View className="flex bg-indigo-200">
-                <View className="ml-2">
-                    <Text className="text-indigo-800 text-sm font-bold uppercase">
-                        My Spaces
-                    </Text>
-                </View>
-
-                <Button
-                    onPress={ () => navigation.navigate('TxManager') }
-                    title="Open TxManager"
-                />
-
-            </View>
 
             <ProtectedGallery />
 

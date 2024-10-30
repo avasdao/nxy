@@ -26,7 +26,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 
 import LottieView from 'lottie-react-native'
 
-import store from '../stores'
+import stores from '../stores'
 
 import Tokens from '../assets/images/tokens'
 
@@ -65,12 +65,12 @@ const FundListItem = observer((_params) => {
     // const {
     //     currentFund,
     //     saveCurrentFund,
-    // } = React.useContext(store.Fund)
+    // } = React.useContext(stores.Fund)
 
     /* Initialize SYSTEM context. */
     // const {
     //     openPreview,
-    // } = React.useContext(store.System)
+    // } = React.useContext(stores.System)
 
     /* Set base pair. */
     const basePair = _params.basePair

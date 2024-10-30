@@ -6,8 +6,8 @@
  * @flow strict-local
  */
 
+/* Import modules. */
 import React from 'react'
-
 import {
     Button,
     Pressable,
@@ -17,20 +17,14 @@ import {
     useColorScheme,
     View,
 } from 'react-native'
-
 import { observer } from 'mobx-react'
-
-import { useNavigationContainerRef } from '@react-navigation/native'
-
 import Ionicons from 'react-native-vector-icons/Ionicons'
-
 import LottieView from 'lottie-react-native'
-
-import { ethers, utils, Wallet } from '../libs/ethers-setup.js'
-
 import moment from 'moment'
 
-import store from '../stores'
+/* Import (local) modules. */
+import stores from '../stores'
+import { ethers, utils, Wallet } from '../libs/ethers-setup.js'
 
 /**
  * Transaction Manager Screen

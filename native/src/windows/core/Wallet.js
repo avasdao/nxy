@@ -135,6 +135,15 @@ const Wallet = observer(({ navigation }) => {
                         source={ require('../../assets/lottie/couple-talk.json') } autoPlay loop
                     />
                 </View>
+
+                <Pressable
+                    onPress={ () => navigation.navigate('TxManager') }
+                    className="px-5 py-4 bg-red-400"
+                >
+                    <Text className="text-red-100 text-3xl font-medium">
+                        Open TxManager
+                    </Text>
+                </Pressable>
             </View>
 
         </ScrollView>

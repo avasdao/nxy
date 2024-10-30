@@ -27,7 +27,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 
 import LottieView from 'lottie-react-native'
 
-import store from '../stores'
+import stores from '../stores'
 
 /**
  * Page Title
@@ -41,7 +41,7 @@ const PageTitle = observer((_props) => {
     // const {
     //     firstName,
     //     displayName
-    // } = React.useContext(store.Profile)
+    // } = React.useContext(stores.Profile)
 
     /* Initialize navigation. */
     const navigation = useNavigation()

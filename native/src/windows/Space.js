@@ -23,9 +23,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 import LottieView from 'lottie-react-native'
 
 import { ethers, utils, Wallet } from '../libs/ethers-setup.js'
-
-import store from '../stores'
-
+import stores from '../stores'
 import Divider from '../components/Divider'
 import ScreenTitle from '../components/ScreenTitle'
 
