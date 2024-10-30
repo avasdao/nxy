@@ -32,11 +32,6 @@ import ScreenTitle from '../../components/ScreenTitle'
 const Identity = observer(({ navigation }) => {
     const [ hasBlank, setHasBlank ] = React.useState(false)
 
-    /* Initialize LOUNGE context. */
-    const {
-        changeMnemonic,
-    } = React.useContext(stores.Lounge)
-
     /* Handle onLoad scripts. */
     React.useEffect(() => {
         /**
@@ -75,15 +70,6 @@ const Identity = observer(({ navigation }) => {
             >
                 <Text className="text-yellow-800 text-sm font-bold uppercase">
                     View My Keychain
-                </Text>
-            </Pressable>
-
-            <Pressable
-                className="py-1 px-3 border-2 border-yellow-500 bg-yellow-300 rounded"
-                onPress={ changeMnemonic }
-            >
-                <Text className="text-yellow-800 text-sm font-bold uppercase">
-                    Change Mnemonic
                 </Text>
             </Pressable>
 
