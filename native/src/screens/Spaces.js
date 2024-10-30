@@ -156,7 +156,6 @@ const Playground = observer(({ navigation }) => {
             </View>
 
             <View className="pt-3 bg-rose-50" />
-
         </ScrollView>
     )
 })

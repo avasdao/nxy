@@ -130,7 +130,6 @@ const EarlyPreview = observer(({ navigation }) => {
             </View>
 
             <View className="pt-5" />
-
         </ScrollView>
     )
 })
