@@ -30,9 +30,9 @@ import Divider from '../../components/Divider'
 import ScreenTitle from '../../components/ScreenTitle'
 
 /**
- * Play Screen
+ * Vue Screen
  */
-const Play = observer(({ navigation }) => {
+const Vue = observer(({ navigation }) => {
     const [hasAgreed, setHasAgreed] = React.useState(false)
 
     /* Handle onLoad scripts. */
@@ -66,7 +66,7 @@ const Play = observer(({ navigation }) => {
             <View className="py-6 items-center">
                 <View className="bg-pink-200 px-3 py-2 rounded-full">
                     <Text className="text-pink-800 text-xl font-semibold">
-                        WATCH YOUR MEDIA
+                        VIEWING CENTER
                     </Text>
                 </View>
             </View>
@@ -82,7 +82,7 @@ const Play = observer(({ navigation }) => {
             <View className="py-5 bg-gray-50 items-center">
                 <LottieView
                     className="h-48"
-                    source={ require('../../assets/lottie/couple-talk.json') } autoPlay loop
+                    source={ require('../../assets/lottie/couple-talk.json') } autoViewing loop
                 />
 
                 <Text className="text-pink-500 font-semibold">
@@ -94,4 +94,4 @@ const Play = observer(({ navigation }) => {
     )
 })
 
-export default Play
+export default Vue

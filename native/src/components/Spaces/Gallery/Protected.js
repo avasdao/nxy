@@ -97,12 +97,12 @@ const Blank = observer(() => {
 
                 <View className="w-full flex flex-row">
                     <Pressable
-                        onPress={ () => navigation.navigate('WatchWin') }
+                        onPress={ () => navigation.navigate('VueWin') }
                         className="w-1/2 pr-1 h-auto"
                     >
                         <View className="h-20 bg-slate-800 px-3 py-2 rounded-lg border border-slate-500">
                             <Text className="w-3/5 text-base text-lime-100 font-bold tracking-wider">
-                                Watch
+                                Vue
                             </Text>
                         </View>
                     </Pressable>

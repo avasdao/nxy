@@ -23,7 +23,7 @@ import KeychainWin from '../windows/core/Keychain'
 import MineWin from '../windows/core/Mine'
 import PersonaWin from '../windows/core/Persona'
 import ProtectedWin from '../windows/core/Protected'
-import WatchWin from '../windows/core/Watch'
+import VueWin from '../windows/core/Vue'
 import WalletWin from '../windows/core/Wallet'
 
 /* Add (society) windows. */
@@ -54,7 +54,7 @@ const Main = () => {
                 <HomeStack.Screen name="MineWin" component={ MineWin } />
                 <HomeStack.Screen name="PersonaWin" component={ PersonaWin } />
                 <HomeStack.Screen name="ProtectedWin" component={ ProtectedWin } />
-                <HomeStack.Screen name="WatchWin" component={ WatchWin } />
+                <HomeStack.Screen name="VueWin" component={ VueWin } />
                 <HomeStack.Screen name="WalletWin" component={ WalletWin } />
 
                 {/* Society */}

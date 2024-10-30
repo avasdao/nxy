@@ -80,9 +80,15 @@ const Wallet = observer(({ navigation }) => {
                             0xblahblahblah
                         </Text>
 
-                        <Text className="text-amber-700 text-xs uppercase tracking-wider">
-                            Nxy Oasis (Layer 1)
-                        </Text>
+                        <View className="flex flex-row justify-between">
+                            <Text className="text-amber-700 text-xs uppercase tracking-wider">
+                                0.0 | $0.00
+                            </Text>
+
+                            <Text className="text-amber-700 text-xs uppercase tracking-wider">
+                                Nxy Oasis • L1
+                            </Text>
+                        </View>
                     </View>
 
                     <View className="px-2 pb-1 bg-amber-100 border border-amber-300 rounded">
@@ -90,9 +96,15 @@ const Wallet = observer(({ navigation }) => {
                             nxy:jahjahjahjah
                         </Text>
 
-                        <Text className="text-amber-700 text-xs uppercase tracking-wider">
-                            Nxy Supernet (Layer 1+)
-                        </Text>
+                        <View className="flex flex-row justify-between">
+                            <Text className="text-amber-700 text-xs uppercase tracking-wider">
+                                0.0 | $0.00
+                            </Text>
+
+                            <Text className="text-amber-700 text-xs uppercase tracking-wider">
+                                Nxy Supernet • L1+
+                            </Text>
+                        </View>
                     </View>
 
                     <View className="px-2 pb-1 bg-amber-100 border border-amber-300 rounded">
@@ -100,9 +112,15 @@ const Wallet = observer(({ navigation }) => {
                             0xrahrahrahrah
                         </Text>
 
-                        <Text className="text-amber-700 text-xs uppercase tracking-wider">
-                            Kingdom Of Nxy (Layer 2)
-                        </Text>
+                        <View className="flex flex-row justify-between">
+                            <Text className="text-amber-700 text-xs uppercase tracking-wider">
+                                0.0 | $0.00
+                            </Text>
+
+                            <Text className="text-amber-700 text-xs uppercase tracking-wider">
+                                Kingdom Of Nxy • L2
+                            </Text>
+                        </View>
                     </View>
                 </View>
 
