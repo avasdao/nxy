@@ -63,31 +63,55 @@ const Wallet = observer(({ navigation }) => {
                 </Pressable>
             </View>
 
-            <View className="py-6 items-center">
-                <View className="bg-pink-200 px-3 py-2 rounded-full">
-                    <Text className="text-pink-800 text-xl font-semibold">
-                        WALLET
+            <View className="w-full">
+                <View className="py-6 items-center">
+                    <Text className="text-pink-800 text-4xl font-light italic">
+                        My Wallet
                     </Text>
                 </View>
-            </View>
 
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Text style={{ fontSize: 30 }}>
-                    Do <Text className="font-bold">YOU</Text> need help?
-                </Text>
+                <View className="px-3 pt-1 pb-3 flex flex-col gap-y-2 bg-amber-50 border-y border-amber-200">
+                    <Text className="text-center text-amber-900 text-xs font-medium tracking-widest uppercase">
+                        Primary Accounts / Addresses
+                    </Text>
 
-                <Pressable onPress={ () => navigation.goBack() } title="No thanks" />
-            </View>
+                    <View className="px-2 pb-1 bg-amber-100 border border-amber-300 rounded">
+                        <Text className="text-amber-800 text-lg font-bold tracking-tighter">
+                            0xblahblahblah
+                        </Text>
 
-            <View className="py-5 bg-gray-50 items-center">
-                <LottieView
-                    className="h-48"
-                    source={ require('../../assets/lottie/couple-talk.json') } autoPlay loop
-                />
+                        <Text className="text-amber-700 text-xs uppercase tracking-wider">
+                            Nxy Oasis (Layer 1)
+                        </Text>
+                    </View>
 
-                <Text className="text-pink-500 font-semibold">
-                    Power & Respect
-                </Text>
+                    <View className="px-2 pb-1 bg-amber-100 border border-amber-300 rounded">
+                        <Text className="text-amber-800 text-lg font-bold tracking-tighter">
+                            nxy:jahjahjahjah
+                        </Text>
+
+                        <Text className="text-amber-700 text-xs uppercase tracking-wider">
+                            Nxy Supernet (Layer 1+)
+                        </Text>
+                    </View>
+
+                    <View className="px-2 pb-1 bg-amber-100 border border-amber-300 rounded">
+                        <Text className="text-amber-800 text-lg font-bold tracking-tighter">
+                            0xrahrahrahrah
+                        </Text>
+
+                        <Text className="text-amber-700 text-xs uppercase tracking-wider">
+                            Kingdom Of Nxy (Layer 2)
+                        </Text>
+                    </View>
+                </View>
+
+                <View className="py-5 bg-gray-50 items-center">
+                    <LottieView
+                        className="w-full h-48"
+                        source={ require('../../assets/lottie/couple-talk.json') } autoPlay loop
+                    />
+                </View>
             </View>
 
         </ScrollView>
