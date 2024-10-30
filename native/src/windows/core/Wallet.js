@@ -35,6 +35,11 @@ import ScreenTitle from '../../components/ScreenTitle'
 const Wallet = observer(({ navigation }) => {
     const [ hasBlank, setHasBlank ] = React.useState(false)
 
+    /* Initialize SYSTEM context. */
+    const {
+        runTest: runSystemTest,
+    } = React.useContext(store.System)
+
     /* Handle onLoad scripts. */
     React.useEffect(() => {
         /**

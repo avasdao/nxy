@@ -34,6 +34,10 @@ const Area51 = observer(({ navigation }) => {
         runBugsnagTest: runBugsnagTest,
     } = React.useContext(store.Area51)
 
+    const {
+        runTest: runSystemTest,
+    } = React.useContext(store.System)
+
     /* Handle onLoad scripts. */
     React.useEffect(() => {
         /**
@@ -50,45 +54,68 @@ const Area51 = observer(({ navigation }) => {
     return (
         <ScrollView
             contentInsetAdjustmentBehavior="automatic"
-            className=""
+            className="bg-slate-100"
         >
-            <Pressable
-                className="flex items-center justify-center"
-                onPress={() => navigation.goBack()} title="No thanks"
-            >
-                <Text className="py-5 text-slate-700 text-4xl font-bold">
-                    Go <Text className="font-bold">BACK!</Text>
+            <View className="py-5 flex items-center justify-center">
+                <Text className="px-5 text-4xl text-sky-700 font-bold uppercase tracking-widest">
+                    Welcome To
                 </Text>
-            </Pressable>
 
-            <Text className="px-5 text-5xl text-sky-700 font-bold">
-                Area 51
-            </Text>
-
-            <View className="py-5 bg-gray-50 items-center">
-                <LottieView
-                    className="h-48 w-full"
-                    source={require('../../assets/lottie/under-construction.json')} autoPlay loop
-                />
-
-                <Text className="text-2xl text-red-600 font-semibold">
-                    Experiments are LIVE!
+                <Text className="px-5 text-7xl text-sky-700 font-light italic">
+                    Area 51
                 </Text>
             </View>
 
-            <View className="px-3">
+            <View className="py-5 bg-gray-50 items-center">
+                <LottieView
+                    className="h-32 w-full"
+                    source={ require('../../assets/lottie/under-construction.json') } autoPlay loop
+                />
+            </View>
+
+            <View className="my-5 flex flex-col items-center gap-3">
+                <Pressable
+                    className="w-full py-3 px-5 border border-red-500 bg-red-300 rounded"
+                    onPress={ navigation.goBack }
+                >
+                    <Text className="text-center text-red-800 text-3xl font-bold uppercase">
+                        EXIT, GO BACK!
+                    </Text>
+                </Pressable>
+            </View>
+
+            <View className="mt-2 mb-5 mx-5 border border-red-500" />
+
+            <View className="my-10 flex flex-col items-center gap-5">
+                <Text className="text-3xl text-red-600 font-bold tracking-tighter">
+                    ⚠️ LIVE! Experiments ⚠️
+                </Text>
+            </View>
+
+            <View className="px-10 flex flex-col items-center gap-5">
 
                 <Pressable
-                    className="py-2 px-5 border border-yellow-500 bg-yellow-300 rounded"
-                    onPress={runBugsnagTest}
+                    className="w-full py-3 px-5 border border-yellow-500 bg-yellow-300 rounded opacity-30"
+                    onPress={ runBugsnagTest }
+                    disabled
                 >
-                    <Text className="text-yellow-800 text-lg font-bold uppercase">
-                        Run Bugsnag Test
+                    <Text className="text-center text-yellow-800 text-xl font-bold uppercase">
+                        Bugsnag Test Suite
+                    </Text>
+                </Pressable>
+
+                <Pressable
+                    className="w-full py-3 px-5 border border-yellow-500 bg-yellow-300 rounded"
+                    onPress={ runSystemTest }
+                >
+                    <Text className="text-center text-yellow-800 text-xl font-bold uppercase">
+                        System Test Suite
                     </Text>
                 </Pressable>
 
             </View>
 
+            <View className="pt-3" />
         </ScrollView>
     )
 })

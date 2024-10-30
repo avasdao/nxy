@@ -87,6 +87,16 @@ class System {
         }
     }
 
+    /* Run test. */
+    @action.bound
+    async runTest() {
+        console.log('Running SYSTEM test...')
+
+        const now = performance.now()
+        // DO SOMETHING
+        const end = performance.now()
+        console.log(`SYSTEM test completed successfully! Took ${ (end - now) }ms`)
+    }
 }
 
 const Store = new System()
