@@ -14,7 +14,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 
 import ConciergeScreen from './Wealth/Concierge'
 import MarketsScreen from './Wealth/Markets'
-import WalletScreen from './Wealth/Wallet'
+import PortfolioScreen from './Wealth/Portfolio'
 
 /* Initialize tab (navigation). */
 const Tab = createMaterialTopTabNavigator()
@@ -48,10 +48,10 @@ const Wealth = observer(({ navigation }) => {
                 }}
             />
             <Tab.Screen
-                name="Wallet"
-                component={WalletScreen}
+                name="Portfolio"
+                component={PortfolioScreen}
                 options={{
-                    title: 'Wallet'
+                    title: 'Portfolio'
                 }}
             />
             <Tab.Screen

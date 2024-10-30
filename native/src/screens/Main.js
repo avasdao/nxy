@@ -7,18 +7,6 @@
  */
 
 import React from 'react'
-
-import {
-    Image,
-    Pressable,
-    ScrollView,
-    StatusBar,
-    Text,
-    useColorScheme,
-    View,
-} from 'react-native'
-
-// import { useNavigation } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 /* Add (top-level) screens. */
@@ -38,30 +26,30 @@ import PixelfedWin from '../windows/society/Pixelfed'
 const HomeStack = createNativeStackNavigator()
 
 /**
- * Home Stack Screen
+ * Main Stack Screen
  */
-const Home = () => {
+const Main = () => {
     return (
         <HomeStack.Navigator
             screenOptions={{ headerShown: false }}
         >
-            <HomeStack.Screen name="Start" component={TabsScreen} />
-            <HomeStack.Screen name="Info" component={InfoScreen} />
+            <HomeStack.Screen name="Start" component={ TabsScreen } />
+            <HomeStack.Screen name="Info" component={ InfoScreen } />
 
             <HomeStack.Group screenOptions={{ presentation: 'modal' }}>
                 {/* General UI/UX */}
-                <HomeStack.Screen name="EarlyPreview" component={EarlyPreviewWin} />
-                <HomeStack.Screen name="SpaceWin" component={SpaceWin} />
+                <HomeStack.Screen name="EarlyPreview" component={ EarlyPreviewWin } />
+                <HomeStack.Screen name="SpaceWin" component={ SpaceWin } />
 
                 {/* Society */}
-                <HomeStack.Screen name="FarcasterWin" component={FarcasterWin} />
-                <HomeStack.Screen name="PixelfedWin" component={PixelfedWin} />
+                <HomeStack.Screen name="FarcasterWin" component={ FarcasterWin } />
+                <HomeStack.Screen name="PixelfedWin" component={ PixelfedWin } />
 
                 {/* Wallet */}
-                <HomeStack.Screen name="TxManager" component={TxManagerWin} />
+                <HomeStack.Screen name="TxManager" component={ TxManagerWin } />
             </HomeStack.Group>
         </HomeStack.Navigator>
     )
 }
 
-export default Home
+export default Main

@@ -32,9 +32,9 @@ import ScreenTitle from '../../components/ScreenTitle'
 import WalletSummary from '../../components/Wallet/Summary'
 
 /**
- * Funds Manager Screen
+ * Portfolio Screen
  */
-const FundsManager = observer(({ navigation }) => {
+const Portfolio = observer(({ navigation }) => {
     const [hasAgreed, setHasAgreed] = React.useState(false)
 
     /* Handle onLoad scripts. */
@@ -119,4 +119,4 @@ const FundsManager = observer(({ navigation }) => {
     )
 })
 
-export default FundsManager
+export default Portfolio
