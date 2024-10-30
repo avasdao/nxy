@@ -84,12 +84,12 @@ const Blank = observer(() => {
                     </Pressable>
 
                     <Pressable
-                        onPress={ () => navigation.navigate('MiningWin') }
+                        onPress={ () => navigation.navigate('MineWin') }
                         className="w-1/2 pl-1 h-auto"
                     >
                         <View className="h-20 bg-slate-500 px-3 py-2 rounded-lg border border-slate-200">
                             <Text className="w-3/5 text-base text-lime-100 font-bold tracking-wider">
-                                Mining
+                                Mine
                             </Text>
                         </View>
                     </Pressable>
@@ -97,12 +97,12 @@ const Blank = observer(() => {
 
                 <View className="w-full flex flex-row">
                     <Pressable
-                        onPress={ () => navigation.navigate('PlayWin') }
+                        onPress={ () => navigation.navigate('WatchWin') }
                         className="w-1/2 pr-1 h-auto"
                     >
                         <View className="h-20 bg-slate-800 px-3 py-2 rounded-lg border border-slate-500">
                             <Text className="w-3/5 text-base text-lime-100 font-bold tracking-wider">
-                                Play
+                                Watch
                             </Text>
                         </View>
                     </Pressable>
@@ -113,7 +113,7 @@ const Blank = observer(() => {
                     >
                         <View className="h-20 bg-slate-400 px-3 py-2 rounded-lg border border-slate-100">
                             <Text className="w-3/5 text-base text-lime-100 font-bold tracking-wider">
-                                Dating
+                                Meet
                             </Text>
                         </View>
                     </Pressable>
@@ -137,7 +137,55 @@ const Blank = observer(() => {
                     >
                         <View className="h-20 bg-slate-700 px-3 py-2 rounded-lg border border-slate-400">
                             <Text className="w-3/5 text-base text-lime-100 font-bold tracking-wider">
+                                Listen
+                            </Text>
+                        </View>
+                    </Pressable>
+                </View>
+
+                <View className="w-full flex flex-row">
+                    <Pressable
+                        onPress={ () => navigation.navigate('EarlyPreview') }
+                        className="w-1/2 pr-1 h-auto"
+                    >
+                        <View className="h-20 bg-slate-800 px-3 py-2 rounded-lg border border-slate-500">
+                            <Text className="w-3/5 text-base text-lime-100 font-bold tracking-wider">
+                                Play
+                            </Text>
+                        </View>
+                    </Pressable>
+
+                    <Pressable
+                        onPress={ () => navigation.navigate('EarlyPreview') }
+                        className="w-1/2 pl-1 h-auto"
+                    >
+                        <View className="h-20 bg-slate-500 px-3 py-2 rounded-lg border border-slate-200">
+                            <Text className="w-3/5 text-base text-lime-100 font-bold tracking-wider">
                                 Learn
+                            </Text>
+                        </View>
+                    </Pressable>
+                </View>
+
+                <View className="w-full flex flex-row">
+                    <Pressable
+                        onPress={ () => navigation.navigate('EarlyPreview') }
+                        className="w-1/2 pr-1 h-auto"
+                    >
+                        <View className="h-20 bg-slate-900 px-3 py-2 rounded-lg border border-slate-600">
+                            <Text className="w-3/5 text-base text-lime-100 font-bold tracking-wider">
+                                TBD
+                            </Text>
+                        </View>
+                    </Pressable>
+
+                    <Pressable
+                        onPress={ () => navigation.navigate('EarlyPreview') }
+                        className="w-1/2 pl-1 h-auto"
+                    >
+                        <View className="h-20 bg-slate-900 px-3 py-2 rounded-lg border border-slate-600">
+                            <Text className="w-3/5 text-base text-lime-100 font-bold tracking-wider">
+                                TBD
                             </Text>
                         </View>
                     </Pressable>

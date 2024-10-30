@@ -66,7 +66,7 @@ const Play = observer(({ navigation }) => {
             <View className="py-6 items-center">
                 <View className="bg-pink-200 px-3 py-2 rounded-full">
                     <Text className="text-pink-800 text-xl font-semibold">
-                        MEDIA CENTER
+                        WATCH YOUR MEDIA
                     </Text>
                 </View>
             </View>
