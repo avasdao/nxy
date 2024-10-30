@@ -4,10 +4,10 @@ import React from 'react'
 import { action, computed, makeObservable, observable } from 'mobx'
 import { persist } from 'mobx-persist'
 
-import { ethers, utils, Lounge as EvmLounge } from '../libs/ethers-setup.js'
+import { ethers, utils, Wallet as EvmWallet } from '../libs/ethers-setup.js'
 
 import { listUnspent } from '@nexajs/address'
-// import { Lounge as UtxoLounge } from '@nexajs/wallet'
+// import { Wallet as UtxoWallet } from '@nexajs/wallet'
 
 // import moment from 'moment'
 

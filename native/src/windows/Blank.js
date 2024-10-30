@@ -22,17 +22,17 @@ import { observer } from 'mobx-react'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import LottieView from 'lottie-react-native'
 
-import { ethers, utils, Wallet } from 'ethers'
+import { ethers, utils, Wallet } from '../../libs/ethers-setup.js'
 
-import store from '../store'
+import store from '../../store'
 
-import Divider from '../components/Divider'
-import ScreenTitle from '../components/ScreenTitle'
+import Divider from '../../components/Divider'
+import ScreenTitle from '../../components/ScreenTitle'
 
 /**
  * Blank Screen
  */
-const Blank = observer(({navigation}) => {
+const Blank = observer(({ navigation }) => {
     const [hasAgreed, setHasAgreed] = React.useState(false)
 
     /* Handle onLoad scripts. */
@@ -54,11 +54,11 @@ const Blank = observer(({navigation}) => {
             className=""
         >
             <View className="bg-gray-800 items-end py-1">
-                <Pressable onPress={() => navigation.goBack()}>
+                <Pressable onPress={ () => navigation.goBack() }>
                     <Ionicons
                         className="mr-2 text-gray-300"
-                        name={'close-outline'}
-                        size={40}
+                        name={ 'close-outline' }
+                        size={ 40 }
                     />
                 </Pressable>
             </View>
@@ -76,13 +76,13 @@ const Blank = observer(({navigation}) => {
                     Do <Text className="font-bold">YOU</Text> need help?
                 </Text>
 
-                <Pressable onPress={() => navigation.goBack()} title="No thanks" />
+                <Pressable onPress={ () => navigation.goBack() } title="No thanks" />
             </View>
 
             <View className="py-5 bg-gray-50 items-center">
                 <LottieView
                     className="h-48"
-                    source={require('../assets/lottie/couple-talk.json')} autoPlay loop
+                    source={ require('../../assets/lottie/couple-talk.json') } autoPlay loop
                 />
 
                 <Text className="text-pink-500 font-semibold">

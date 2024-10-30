@@ -22,16 +22,22 @@ import { observer } from 'mobx-react'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import LottieView from 'lottie-react-native'
 
-import { ethers, utils, Wallet } from 'ethers'
+import { ethers, utils, Wallet } from '../libs/ethers-setup.js'
 
 import store from '../store'
 
-/**
- * Blank Screen
- */
-const Blank = observer(({ navigation }) => {
-    const [hasAgreed, setHasAgreed] = React.useState(false)
+import Divider from '../components/Divider'
+import ScreenTitle from '../components/ScreenTitle'
 
+/**
+ * Space Screen
+ */
+const Space = observer(({ route, navigation }) => {
+console.log('ROUTE (params)', route.params)
+    const [spaceid, setSpaceId] = React.useState(route.params?.spaceid || 0)
+    const [subspaceid, setSubSpaceId] = React.useState(route.params?.subspaceid || 0)
+console.log('SPACEID', spaceid)
+console.log('SUBSPACEID', subspaceid)
     /* Handle onLoad scripts. */
     React.useEffect(() => {
         /**
@@ -50,34 +56,32 @@ const Blank = observer(({ navigation }) => {
             contentInsetAdjustmentBehavior="automatic"
             className=""
         >
+            <View className="bg-gray-800 items-end py-1">
+                <Pressable onPress={ () => navigation.goBack() }>
+                    <Ionicons
+                        className="mr-2 text-gray-300"
+                        name={ 'close-outline' }
+                        size={ 40 }
+                    />
+                </Pressable>
+            </View>
+
             <View className="py-6 items-center">
                 <View className="bg-pink-200 px-3 py-2 rounded-full">
                     <Text className="text-pink-800 text-xl font-semibold">
-                        1,337 players online..
+                        SPACE { spaceid }
                     </Text>
                 </View>
             </View>
 
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Text style={{ fontSize: 30 }}>
-                    Do <Text className="font-bold">YOU</Text> need help?
-                </Text>
-
-                <Pressable onPress={() => navigation.goBack()} title="No thanks" />
-            </View>
-
-            <Text className="text-4xl text-pink-500">
-                NEW TAILWIND PLUGIN
-            </Text>
-
             <View className="py-5 bg-gray-50 items-center">
                 <LottieView
                     className="h-48"
-                    source={require('../assets/lottie/couple-talk.json')} autoPlay loop
+                    source={ require('../assets/lottie/couple-talk.json') } autoPlay loop
                 />
 
                 <Text className="text-pink-500 font-semibold">
-                    Power & Respect
+                    SUBSPACE ID { subspaceid }
                 </Text>
             </View>
 
@@ -85,4 +89,4 @@ const Blank = observer(({ navigation }) => {
     )
 })
 
-export default Blank
+export default Space

@@ -85,7 +85,7 @@ const communityData = [
 /**
  * Dashboard Screen
  */
-const Dashboard = observer(({navigation}) => {
+const Dashboard = observer(({ navigation }) => {
     const [earningsTime, setEarningsTime] = React.useState('MONTHLY')
 
     const [price, setPrice] = React.useState('$0.013370')

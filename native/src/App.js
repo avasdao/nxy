@@ -6,20 +6,16 @@
  * @flow strict-local
  */
 
+/* Import modules. */
 import React from 'react'
-
-import {Dimensions, SafeAreaView, useColorScheme} from 'react-native'
-
-import {NavigationContainer} from '@react-navigation/native'
-
+import { Dimensions, SafeAreaView, useColorScheme } from 'react-native'
+import { NavigationContainer } from '@react-navigation/native'
 import Bugsnag from '@bugsnag/react-native'
-
-import {ampli} from './ampli'
-
 import DeviceInfo from 'react-native-device-info'
 
+/* Import (local) modules. */
+import { ampli } from './ampli'
 import store from './store'
-
 import MainStack from './screens/Main'
 
 /**
@@ -27,7 +23,7 @@ import MainStack from './screens/Main'
  */
 const App = () => {
     /* Initialize PROFILE context. */
-    const {userid, saveUserid} = React.useContext(store.Profile)
+    const { userid, saveUserid } = React.useContext(store.Profile)
 
     /**
      * Start Session
@@ -127,7 +123,7 @@ const App = () => {
     })
 
     /* Initialize Bugsnag. */
-    const {createNavigationContainer} = Bugsnag.getPlugin('reactNavigation')
+    const { createNavigationContainer } = Bugsnag.getPlugin('reactNavigation')
     const BugsnagNavigationContainer =
         createNavigationContainer(NavigationContainer)
 
@@ -168,14 +164,12 @@ const App = () => {
 
     return (
         <BugsnagNavigationContainer>
-        {/* <NavigationContainer> */}
             <SafeAreaView
-                onLayout={_updateLayout}
-                style={backgroundStyle}
+                onLayout={ _updateLayout }
+                style={ backgroundStyle }
                 className="h-full">
                 <MainStack />
             </SafeAreaView>
-        {/* </NavigationContainer> */}
         </BugsnagNavigationContainer>
     )
 }

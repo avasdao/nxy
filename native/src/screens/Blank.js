@@ -29,7 +29,7 @@ import store from '../../store'
 /**
  * Blank Screen
  */
-const Blank = observer(({navigation}) => {
+const Blank = observer(({ navigation }) => {
     const [hasAgreed, setHasAgreed] = React.useState(false)
 
     /* Handle onLoad scripts. */

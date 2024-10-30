@@ -29,9 +29,9 @@ import LottieView from 'lottie-react-native'
 import store from '../../store'
 
 /**
- * Blank
+ * Society Watching
  */
-const Blank = observer(() => {
+const SocietyWatching = observer(() => {
     // const [hasAgreed, setHasAgreed] = React.useState(false)
 
     // const {
@@ -65,11 +65,14 @@ const Blank = observer(() => {
 
             <View className="h-16 flex flex-row space-x-4 px-4 py-2 items-center bg-indigo-200">
 
-                <View className="h-full w-fit flex justify-center items-center bg-sky-800 px-3 py-2 rounded-lg">
+                <Pressable
+                    onPress={() => navigation.navigate('FarcasterWin')}
+                    className="h-full w-fit flex justify-center items-center bg-sky-800 px-3 py-2 rounded-lg"
+                >
                     <Text className="text-slate-200 text-sm font-medium uppercase">
                         Farcaster
                     </Text>
-                </View>
+                </Pressable>
 
                 <View className="h-full w-fit flex justify-center items-center bg-sky-800 px-3 py-2 rounded-lg">
                     <Text className="text-slate-200 text-sm font-medium uppercase">
@@ -124,4 +127,4 @@ const Blank = observer(() => {
     )
 })
 
-export default Blank
+export default SocietyWatching

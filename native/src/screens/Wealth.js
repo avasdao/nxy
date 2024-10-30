@@ -22,7 +22,7 @@ const Tab = createMaterialTopTabNavigator()
 /**
  * Wealth Screen
  */
-const Wealth = observer(({navigation}) => {
+const Wealth = observer(({ navigation }) => {
     const [hasAgreed, setHasAgreed] = React.useState(false)
 
     /* Handle onLoad scripts. */

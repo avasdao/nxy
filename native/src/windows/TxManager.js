@@ -35,7 +35,7 @@ import store from '../store'
 /**
  * Transaction Manager Screen
  */
-const TxManager = observer(({navigation}) => {
+const TxManager = observer(({ navigation }) => {
     // const [balance, setBalance] = React.useState(0)
 
     /* Initialize PROFILE context. */

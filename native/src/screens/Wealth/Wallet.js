@@ -34,7 +34,7 @@ import WalletSummary from '../../components/Wallet/Summary'
 /**
  * Funds Manager Screen
  */
-const FundsManager = observer(({navigation}) => {
+const FundsManager = observer(({ navigation }) => {
     const [hasAgreed, setHasAgreed] = React.useState(false)
 
     /* Handle onLoad scripts. */

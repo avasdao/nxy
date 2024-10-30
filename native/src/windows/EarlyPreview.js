@@ -38,7 +38,7 @@ const openWebHome = async () => {
 /**
  * Early Preview
  */
-const EarlyPreview = observer(({navigation}) => {
+const EarlyPreview = observer(({ navigation }) => {
     const [hasAgreed, setHasAgreed] = React.useState(false)
 
     /* Handle onLoad scripts. */

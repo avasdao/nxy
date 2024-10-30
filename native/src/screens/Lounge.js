@@ -34,7 +34,7 @@ const Tab = createMaterialTopTabNavigator()
 /**
  * Lounge Screen
  */
-const Lounge = observer(({navigation}) => {
+const Lounge = observer(({ navigation }) => {
     const [hasAgreed, setHasAgreed] = React.useState(false)
 
     /* Handle onLoad scripts. */

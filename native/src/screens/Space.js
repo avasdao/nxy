@@ -35,7 +35,7 @@ import SpaceFavorites from '../components/Space/Favorites'
 /**
  * Playground Screen
  */
-const Playground = observer(({navigation}) => {
+const Playground = observer(({ navigation }) => {
     const [hasAgreed, setHasAgreed] = React.useState(false)
 
     /* Handle onLoad scripts. */
@@ -195,7 +195,7 @@ const Playground = observer(({navigation}) => {
             <View className="py-5 bg-gray-50 items-center">
                 <LottieView
                     className="h-32 w-full"
-                    source={require('../assets/lottie/broadcast.json')} autoPlay loop
+                    source={ require('../assets/lottie/broadcast.json') } autoPlay loop
                 />
             </View>
 
@@ -207,13 +207,22 @@ const Playground = observer(({navigation}) => {
                 </View>
 
                 <View className="w-full flex flex-row">
-                    <View className="w-1/2 pr-2 h-auto">
+                    <Pressable
+                        onPress={
+                            () => navigation.navigate(
+                                'SpaceWin', {
+                                    spaceid: 'apecs', // a.k.a Nametag
+                                    subspaceid: 'shomari'
+                                })
+                        }
+                        className="w-1/2 pr-2 h-auto"
+                    >
                         <View className="h-28 bg-rose-700 px-3 py-2 rounded-lg border border-rose-400">
                             <Text className="w-3/5 text-base text-lime-100 font-bold tracking-wider">
                                 Nxy Oasis
                             </Text>
                         </View>
-                    </View>
+                    </Pressable>
 
                     <View className="w-1/2 pl-2 h-auto">
                         <View className="h-28 bg-sky-700 px-3 py-2 rounded-lg border border-sky-400">

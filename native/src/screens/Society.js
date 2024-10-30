@@ -11,6 +11,7 @@ import React from 'react'
 
 import {
     Image,
+    Pressable,
     ScrollView,
     Text,
     View,
@@ -29,7 +30,7 @@ import SocietyWatching from '../components/Society/Watching'
 /**
  * Social Screen
  */
-const Social = observer(({navigation}) => {
+const Social = observer(({ navigation }) => {
     const [hasAgreed, setHasAgreed] = React.useState(false)
 
     /* Handle onLoad scripts. */
@@ -179,14 +180,17 @@ const Social = observer(({navigation}) => {
                 </View>
 
                 <View className="w-full flex flex-row">
-                    <View className="w-1/2 pr-2 h-auto">
+                    <Pressable
+                        onPress={() => navigation.navigate('PixelfedWin')}
+                        className="w-1/2 pr-2 h-auto"
+                    >
                         <View className="rounded-lg border border-amber-600 overflow-hidden">
                             <Image
                                 className="w-full h-48"
                                 src="https://images.unsplash.com/photo-1617138278033-ac7e498321da?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             />
                         </View>
-                    </View>
+                    </Pressable>
 
                     <View className="w-1/2 pl-2 h-auto">
                         <View className="rounded-lg border border-fuchsia-500 overflow-hidden">
