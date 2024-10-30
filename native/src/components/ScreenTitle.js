@@ -33,7 +33,7 @@ import store from '../store'
  * Page Title
  */
 const PageTitle = observer((_props) => {
-    // const [hasAgreed, setHasAgreed] = React.useState(false)
+    // const [ hasBlank, setHasBlank ] = React.useState(false)
 
     /* Set title. */
     const title = _props.title

@@ -27,7 +27,7 @@ import store from '../../store'
  * Help Screen
  */
 const Help = observer(({ navigation }) => {
-    const [hasAgreed, setHasAgreed] = React.useState(false)
+    const [ hasBlank, setHasBlank ] = React.useState(false)
 
     /* Initialize WALLET context. */
     const {

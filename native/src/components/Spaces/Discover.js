@@ -32,7 +32,7 @@ import store from '../../store'
  * Discover
  */
 const Discover = observer(() => {
-    // const [hasAgreed, setHasAgreed] = React.useState(false)
+    // const [ hasBlank, setHasBlank ] = React.useState(false)
 
     // const {
     //     firstName,

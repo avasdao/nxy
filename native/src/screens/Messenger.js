@@ -30,7 +30,7 @@ import store from '../store'
  * Blank Screen
  */
 const Blank = observer(({ navigation }) => {
-    const [hasAgreed, setHasAgreed] = React.useState(false)
+    const [ hasBlank, setHasBlank ] = React.useState(false)
 
     /* Handle onLoad scripts. */
     React.useEffect(() => {

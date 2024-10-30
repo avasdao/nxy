@@ -33,7 +33,7 @@ import ScreenTitle from '../../components/ScreenTitle'
  * Wallet Screen
  */
 const Wallet = observer(({ navigation }) => {
-    const [hasAgreed, setHasAgreed] = React.useState(false)
+    const [ hasBlank, setHasBlank ] = React.useState(false)
 
     /* Handle onLoad scripts. */
     React.useEffect(() => {

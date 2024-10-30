@@ -27,7 +27,7 @@ import store from '../../store'
  * Area 51 Screen
  */
 const Area51 = observer(({ navigation }) => {
-    const [hasAgreed, setHasAgreed] = React.useState(false)
+    const [ hasBlank, setHasBlank ] = React.useState(false)
 
     /* Initialize WALLET context. */
     const {

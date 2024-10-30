@@ -32,7 +32,7 @@ import store from '../../store'
  * Trending
  */
 const Trending = observer(() => {
-    // const [hasAgreed, setHasAgreed] = React.useState(false)
+    // const [ hasBlank, setHasBlank ] = React.useState(false)
 
     // const {
     //     firstName,

@@ -35,7 +35,7 @@ import WalletSummary from '../../components/Wallet/Summary'
  * Portfolio Screen
  */
 const Portfolio = observer(({ navigation }) => {
-    const [hasAgreed, setHasAgreed] = React.useState(false)
+    const [ hasBlank, setHasBlank ] = React.useState(false)
 
     /* Handle onLoad scripts. */
     React.useEffect(() => {

@@ -35,7 +35,7 @@ const Tab = createMaterialTopTabNavigator()
  * Lounge Screen
  */
 const Lounge = observer(({ navigation }) => {
-    const [hasAgreed, setHasAgreed] = React.useState(false)
+    const [ hasBlank, setHasBlank ] = React.useState(false)
 
     /* Handle onLoad scripts. */
     React.useEffect(() => {

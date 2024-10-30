@@ -32,7 +32,7 @@ import store from '../../store'
  * Society Watching
  */
 const SocietyWatching = observer(() => {
-    // const [hasAgreed, setHasAgreed] = React.useState(false)
+    // const [ hasBlank, setHasBlank ] = React.useState(false)
 
     // const {
     //     firstName,

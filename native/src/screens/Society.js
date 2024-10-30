@@ -32,7 +32,7 @@ import SocietyWatching from '../components/Society/Watching'
  * Social Screen
  */
 const Social = observer(({ navigation }) => {
-    const [hasAgreed, setHasAgreed] = React.useState(false)
+    const [ hasBlank, setHasBlank ] = React.useState(false)
 
     /* Handle onLoad scripts. */
     React.useEffect(() => {

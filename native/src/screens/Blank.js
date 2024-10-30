@@ -30,7 +30,12 @@ import store from '../../store'
  * Blank Screen
  */
 const Blank = observer(({ navigation }) => {
-    const [hasAgreed, setHasAgreed] = React.useState(false)
+    const [ hasBlank, setHasBlank ] = React.useState(false)
+
+    /* Initialize SYSTEM context. */
+    const {
+        runTest: runSystemTest,
+    } = React.useContext(store.System)
 
     /* Handle onLoad scripts. */
     React.useEffect(() => {
