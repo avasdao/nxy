@@ -25,7 +25,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 
 import Area51Screen from './Lounge/Area51'
 import HelpScreen from './Lounge/Help'
-import PersonasScreen from './Lounge/Personas'
+import IdentityScreen from './Lounge/Identity'
 import SettingsScreen from './Lounge/Settings'
 
 /* Initialize tab (navigation). */
@@ -53,10 +53,10 @@ const Lounge = observer(({ navigation }) => {
     return (
         <Tab.Navigator>
             <Tab.Screen
-                name="Personas"
-                component={PersonasScreen}
+                name="Identity"
+                component={IdentityScreen}
                 options={{
-                    title: 'Personas'
+                    title: 'Identity'
                 }}
             />
             <Tab.Screen

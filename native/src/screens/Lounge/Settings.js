@@ -31,9 +31,9 @@ import FundListItem from '../../components/FundListItem'
 import ScreenTitle from '../../components/ScreenTitle'
 
 /**
- * Funds Manager Screen
+ * Settings Screen
  */
-const FundsManager = observer(({ navigation }) => {
+const Settings = observer(({ navigation }) => {
     const [hasAgreed, setHasAgreed] = React.useState(false)
 
     /* Handle onLoad scripts. */
@@ -118,4 +118,4 @@ const FundsManager = observer(({ navigation }) => {
     )
 })
 
-export default FundsManager
+export default Settings

@@ -67,15 +67,6 @@ const Help = observer(({ navigation }) => {
                 </Text>
             </View>
 
-            <Pressable
-                className="py-1 px-3 border-2 border-yellow-500 bg-yellow-300 rounded"
-                onPress={runLoungeTest}
-            >
-                <Text className="text-yellow-800 text-sm font-bold uppercase">
-                    Run Lounge Test!
-                </Text>
-            </Pressable>
-
         </ScrollView>
     )
 })

@@ -18,6 +18,11 @@ import EarlyPreviewWin from '../windows/EarlyPreview'
 import SpaceWin from '../windows/Space'
 import TxManagerWin from '../windows/TxManager'
 
+/* Add (core) windows. */
+import KeychainWin from '../windows/core/Keychain'
+import PersonaWin from '../windows/core/Persona'
+import WalletWin from '../windows/core/Wallet'
+
 /* Add (society) windows. */
 import FarcasterWin from '../windows/society/Farcaster'
 import PixelfedWin from '../windows/society/Pixelfed'
@@ -40,6 +45,11 @@ const Main = () => {
                 {/* General UI/UX */}
                 <HomeStack.Screen name="EarlyPreview" component={ EarlyPreviewWin } />
                 <HomeStack.Screen name="SpaceWin" component={ SpaceWin } />
+
+                {/* Core Spaces */}
+                <HomeStack.Screen name="KeychainWin" component={ KeychainWin } />
+                <HomeStack.Screen name="PersonaWin" component={ PersonaWin } />
+                <HomeStack.Screen name="WalletWin" component={ WalletWin } />
 
                 {/* Society */}
                 <HomeStack.Screen name="FarcasterWin" component={ FarcasterWin } />
