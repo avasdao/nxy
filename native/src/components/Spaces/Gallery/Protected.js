@@ -83,23 +83,29 @@ const Blank = observer(() => {
                         </View>
                     </Pressable>
 
-                    <View className="w-1/2 pl-1 h-auto">
+                    <Pressable
+                        onPress={ () => navigation.navigate('MiningWin') }
+                        className="w-1/2 pl-1 h-auto"
+                    >
                         <View className="h-20 bg-slate-500 px-3 py-2 rounded-lg border border-slate-200">
                             <Text className="w-3/5 text-base text-lime-100 font-bold tracking-wider">
                                 Mining
                             </Text>
                         </View>
-                    </View>
+                    </Pressable>
                 </View>
 
                 <View className="w-full flex flex-row">
-                    <View className="w-1/2 pr-1 h-auto">
+                    <Pressable
+                        onPress={ () => navigation.navigate('PlayWin') }
+                        className="w-1/2 pr-1 h-auto"
+                    >
                         <View className="h-20 bg-slate-800 px-3 py-2 rounded-lg border border-slate-500">
                             <Text className="w-3/5 text-base text-lime-100 font-bold tracking-wider">
                                 Play
                             </Text>
                         </View>
-                    </View>
+                    </Pressable>
 
                     <Pressable
                         onPress={ () => navigation.navigate('EarlyPreview') }
@@ -112,9 +118,42 @@ const Blank = observer(() => {
                         </View>
                     </Pressable>
                 </View>
+
+                <View className="w-full flex flex-row">
+                    <Pressable
+                        onPress={ () => navigation.navigate('EarlyPreview') }
+                        className="w-1/2 pr-1 h-auto"
+                    >
+                        <View className="h-20 bg-slate-500 px-3 py-2 rounded-lg border border-slate-200">
+                            <Text className="w-3/5 text-base text-lime-100 font-bold tracking-wider">
+                                Shop
+                            </Text>
+                        </View>
+                    </Pressable>
+
+                    <Pressable
+                        onPress={ () => navigation.navigate('EarlyPreview') }
+                        className="w-1/2 pl-1 h-auto"
+                    >
+                        <View className="h-20 bg-slate-700 px-3 py-2 rounded-lg border border-slate-400">
+                            <Text className="w-3/5 text-base text-lime-100 font-bold tracking-wider">
+                                Learn
+                            </Text>
+                        </View>
+                    </Pressable>
+                </View>
             </View>
 
-            <View className="pt-3 bg-rose-50" />
+            <Pressable
+                onPress={ () => navigation.navigate('EarlyPreview') }
+                className="w-full mt-3 mb-1 h-12"
+            >
+                <View className="mx-auto bg-blue-500 px-5 py-3 rounded-lg border border-blue-300">
+                    <Text className="text-xs text-lime-100 font-bold tracking-wider uppercase">
+                        View All Protected
+                    </Text>
+                </View>
+            </Pressable>
         </View>
     )
 })
