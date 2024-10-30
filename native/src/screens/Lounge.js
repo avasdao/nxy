@@ -28,6 +28,9 @@ import HelpScreen from './Lounge/Help'
 import IdentityScreen from './Lounge/Identity'
 import SettingsScreen from './Lounge/Settings'
 
+/* Import (local) modules. */
+import stores from '../stores'
+
 /* Initialize tab (navigation). */
 const Tab = createMaterialTopTabNavigator()
 
@@ -37,13 +40,19 @@ const Tab = createMaterialTopTabNavigator()
 const Lounge = observer(({ navigation }) => {
     const [ hasBlank, setHasBlank ] = React.useState(false)
 
+    /* Initialize LOUNGE context. */
+    const {
+        init: initLoungeStore,
+    } = React.useContext(stores.Lounge)
+
     /* Handle onLoad scripts. */
     React.useEffect(() => {
         /**
          * Fetch Info
          */
         const fetchInfo = async () => {
-            //
+            /* Initialize lounge store. */
+            initLoungeStore()
         }
 
         /* Fetch info. */

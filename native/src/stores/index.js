@@ -12,8 +12,10 @@ import Society from './Society.js'
 import Space from './Space.js'
 import System from './System.js'
 import Utils from './Utils.js'
-import Wallet from './Wallet.js'
 import Wealth from './Wealth.js'
+
+/* Import (core) modules. */
+import Wallet from './core/Wallet.js'
 
 const hydrate = create({
     storage: AsyncStorage,

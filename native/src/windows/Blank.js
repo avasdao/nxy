@@ -22,10 +22,9 @@ import { observer } from 'mobx-react'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import LottieView from 'lottie-react-native'
 
-import { ethers, utils, Wallet } from '../../libs/ethers-setup.js'
-
+/* Import (local) modules. */
 import stores from '../../stores'
-
+import { ethers, utils, Wallet } from '../../libs/ethers-setup.js'
 import Divider from '../../components/Divider'
 import ScreenTitle from '../../components/ScreenTitle'
 

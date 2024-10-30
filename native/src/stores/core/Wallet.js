@@ -4,7 +4,7 @@ import React from 'react'
 import { action, computed, makeObservable, observable } from 'mobx'
 import { persist } from 'mobx-persist'
 
-import { ethers, utils, Wallet as EvmWallet } from '../libs/ethers-setup.js'
+import { ethers, utils, Wallet as EvmWallet } from '../../libs/ethers-setup.js'
 
 import { listUnspent } from '@nexajs/address'
 import { Wallet as UtxoWallet } from '@nexajs/wallet'
@@ -49,19 +49,19 @@ class Wallet {
         /* Set mnemonic. */
         // const mnemonic = require('../../.secrets').mnemonic
 
-        /* Initialize wallet. */
-        // const mnemonicWallet = EvmWallet.fromMnemonic(mnemonic)
-        // console.log('\nWALLET (mnemonic):')
 
         let privateKey = null
 
         /* Set private key. */
         // FIXME: We need to provide an optimal UX for retrieving this private key.
         if (_seed) {
+            /* Initialize wallet. */
+            const mnemonicWallet = EvmWallet.fromMnemonic(mnemonic)
+            console.log('\nWALLET (mnemonic):', mnemonicWallet)
+
             privateKey = utils.id(_seed)
         } else {
             // nexa:nqtsq5g5rv6u2k2uftdzx59fm70umm7j7fqll0fmmay32x33
-            privateKey = require('../../.secrets').privateKey
         }
         console.log('SEED', _seed)
         console.log('PRIVATE KEY', privateKey)
