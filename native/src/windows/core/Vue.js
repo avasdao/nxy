@@ -24,7 +24,7 @@ import LottieView from 'lottie-react-native'
 
 import { ethers, utils, Wallet } from '../../libs/ethers-setup.js'
 
-import store from '../../store'
+import store from '../../stores'
 
 import Divider from '../../components/Divider'
 import ScreenTitle from '../../components/ScreenTitle'

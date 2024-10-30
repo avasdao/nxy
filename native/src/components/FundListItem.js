@@ -26,7 +26,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 
 import LottieView from 'lottie-react-native'
 
-import store from '../store'
+import store from '../stores'
 
 import Tokens from '../assets/images/tokens'
 

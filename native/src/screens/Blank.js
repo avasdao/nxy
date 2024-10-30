@@ -24,7 +24,7 @@ import LottieView from 'lottie-react-native'
 
 import { ethers, utils, Wallet } from 'ethers'
 
-import store from '../../store'
+import store from '../../stores'
 
 /**
  * Blank Screen

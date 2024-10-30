@@ -25,7 +25,7 @@ import { ethers, utils, Wallet } from 'ethers'
 
 import LottieView from 'lottie-react-native'
 
-import store from '../../store'
+import store from '../../stores'
 
 import FundListItem from '../../components/FundListItem'
 import ScreenTitle from '../../components/ScreenTitle'

@@ -22,7 +22,7 @@ import { observer } from 'mobx-react'
 import LottieView from 'lottie-react-native'
 
 /* Import (local) modules. */
-import store from '../store'
+import store from '../stores'
 import Divider from '../components/Divider'
 import AddressBar from '../components/AddressBar'
 import PixelfedNew from '../components/Society/Pixelfed/New'

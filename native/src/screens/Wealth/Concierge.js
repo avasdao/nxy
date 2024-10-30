@@ -39,7 +39,7 @@ import {
     VictoryTheme
 } from 'victory-native'
 
-import store from '../../store'
+import store from '../../stores'
 
 import Divider from '../../components/Divider'
 import ScreenTitle from '../../components/ScreenTitle'

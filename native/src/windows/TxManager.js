@@ -30,7 +30,7 @@ import { ethers, utils, Wallet } from '../libs/ethers-setup.js'
 
 import moment from 'moment'
 
-import store from '../store'
+import store from '../stores'
 
 /**
  * Transaction Manager Screen

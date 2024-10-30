@@ -21,7 +21,7 @@ import { observer } from 'mobx-react'
 
 import LottieView from 'lottie-react-native'
 
-import store from '../../store'
+import store from '../../stores'
 
 /**
  * Area 51 Screen

@@ -15,7 +15,7 @@ import DeviceInfo from 'react-native-device-info'
 
 /* Import (local) modules. */
 import { ampli } from './ampli'
-import store from './store'
+import store from './stores'
 import MainStack from './screens/Main'
 
 /**
