@@ -6,6 +6,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 import Area51 from './Area51.js'
 import Crypto from './Crypto.js'
 import Economy from './Economy.js'
+import Keychain from './Keychain.js'
 import Lounge from './Lounge.js'
 import Profile from './Profile.js'
 import Society from './Society.js'
@@ -31,6 +32,7 @@ class Store {
     Area51 = Area51.Context
     Crypto = Crypto.Context
     Economy = Economy.Context
+    Keychain = Keychain.Context
     Lounge = Lounge.Context
     Profile = Profile.Context
     Society = Society.Context
@@ -45,6 +47,7 @@ class Store {
             hydrate('Area51', Area51.Store),
             hydrate('Crypto', Crypto.Store),
             hydrate('Economy', Economy.Store),
+            hydrate('Keychain', Keychain.Store),
             hydrate('Lounge', Lounge.Store),
             hydrate('Profile', Profile.Store),
             hydrate('Society', Society.Store),

@@ -1,6 +1,6 @@
 {
   "name": "nxy-native",
-  "version": "24.10.29",
+  "version": "24.10.30",
   "license": "MIT",
   "scripts": {
     "android": "react-native run-android",
@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@amplitude/react-native": "2.17.3",
-    "@azure/core-asynciterator-polyfill": "1.0.2",
     "@bugsnag/plugin-react-navigation": "8.1.1",
     "@bugsnag/react-native": "8.1.2",
     "@ethersproject/shims": "5.7.0",
@@ -23,7 +22,6 @@
     "@react-navigation/native": "6.1.18",
     "@react-navigation/native-stack": "6.11.0",
     "@shopify/react-native-skia": "1.4.2",
-    "crypto-browserify": "3.12.0",
     "ethers": "6.13.4",
     "events": "3.3.0",
     "lottie-ios": "4.5.0",
@@ -60,11 +58,9 @@
     "react-native-tab-view": "3.5.2",
     "react-native-vector-icons": "10.2.0",
     "scrypt-js": "3.0.1",
-    "stream-browserify": "3.0.0",
     "text-encoding": "0.7.0",
     "uuid": "10.0.0",
-    "victory-native": "37.2.0",
-    "web-streams-polyfill": "4.0.0"
+    "victory-native": "37.2.0"
   },
   "devDependencies": {
     "@babel/core": "7.20.2",
