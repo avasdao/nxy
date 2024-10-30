@@ -21,7 +21,7 @@ import { observer } from 'mobx-react'
 
 import LottieView from 'lottie-react-native'
 
-import store from '../../stores'
+import stores from '../../stores'
 
 /**
  * Help Screen
@@ -32,7 +32,7 @@ const Help = observer(({ navigation }) => {
     /* Initialize WALLET context. */
     const {
         runTest: runLoungeTest,
-    } = React.useContext(store.Lounge)
+    } = React.useContext(stores.Lounge)
 
     /* Handle onLoad scripts. */
     React.useEffect(() => {

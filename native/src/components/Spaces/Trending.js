@@ -26,7 +26,7 @@ import { observer } from 'mobx-react'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import LottieView from 'lottie-react-native'
 
-import store from '../../stores'
+import stores from '../../stores'
 
 /**
  * Trending
@@ -37,7 +37,7 @@ const Trending = observer(() => {
     // const {
     //     firstName,
     //     displayName
-    // } = React.useContext(store.Profile)
+    // } = React.useContext(stores.Profile)
 
     /* Initialize navigation. */
     const navigation = useNavigation()

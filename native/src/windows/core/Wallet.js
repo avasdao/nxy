@@ -24,7 +24,7 @@ import LottieView from 'lottie-react-native'
 
 import { ethers, utils, Wallet as EvmWallet } from '../../libs/ethers-setup.js'
 
-import store from '../../stores'
+import stores from '../../stores'
 
 import Divider from '../../components/Divider'
 import ScreenTitle from '../../components/ScreenTitle'
@@ -38,7 +38,7 @@ const Wallet = observer(({ navigation }) => {
     /* Initialize SYSTEM context. */
     const {
         runTest: runSystemTest,
-    } = React.useContext(store.System)
+    } = React.useContext(stores.System)
 
     /* Handle onLoad scripts. */
     React.useEffect(() => {

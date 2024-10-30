@@ -15,7 +15,7 @@ import DeviceInfo from 'react-native-device-info'
 
 /* Import (local) modules. */
 import { ampli } from './ampli'
-import store from './stores'
+import stores from './stores'
 import MainStack from './screens/Main'
 
 /**
@@ -23,7 +23,7 @@ import MainStack from './screens/Main'
  */
 const App = () => {
     /* Initialize PROFILE context. */
-    const { userid, saveUserid } = React.useContext(store.Profile)
+    const { userid, saveUserid } = React.useContext(stores.Profile)
 
     /**
      * Start Session

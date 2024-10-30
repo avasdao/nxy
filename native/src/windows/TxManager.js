@@ -30,21 +30,21 @@ import { ethers, utils, Wallet } from '../libs/ethers-setup.js'
  * Transaction Manager Screen
  */
 const TxManager = observer(({ navigation }) => {
-    // const [balance, setBalance] = React.useState(0)
+    // const [ balance, setBalance ] = React.useState(0)
 
-    /* Initialize PROFILE context. */
+    /* Initialize WALLET context. */
     const {
         balance,
         balanceDisplay,
         wallet,
         initWallet,
-    } = React.useContext(store.Wallet)
+    } = React.useContext(stores.Wallet)
 
     /* Initialize SYSTEM context. */
     const {
         price,
         quote,
-    } = React.useContext(store.System)
+    } = React.useContext(stores.System)
 
     /* Handle onLoad scripts. */
     React.useEffect(() => {
@@ -58,14 +58,14 @@ const TxManager = observer(({ navigation }) => {
             if (!wallet) {
                 /* Create new wallet. */
                 const returnedWallet = await initWallet()
-                // console.log('\nTX MANAGER (new wallet)', returnedWallet)
+                console.log('\nTX MANAGER (new wallet)', returnedWallet)
             }
         }
 
         /* Fetch info. */
         fetchInfo()
 
-    }, [balance, wallet])
+    }, [ balance, wallet ])
 
     /**
      * Start Transaction

@@ -26,7 +26,7 @@ import { observer } from 'mobx-react'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import LottieView from 'lottie-react-native'
 
-import store from '../../stores'
+import stores from '../../stores'
 
 /**
  * Blank
@@ -45,7 +45,7 @@ const Blank = observer(() => {
     /* Initialize CRYPTO context. */
     const {
         runTest: runCryptoTest,
-    } = React.useContext(store.Crypto)
+    } = React.useContext(stores.Crypto)
 
     /* Initialize WALLET context. */
     const {
@@ -54,7 +54,7 @@ const Blank = observer(() => {
         // wallet,
         // createWallet,
         runTest: runWalletTest,
-    } = React.useContext(store.Wallet)
+    } = React.useContext(stores.Wallet)
 
 
 // FOR DEV PURPOSES ONLY

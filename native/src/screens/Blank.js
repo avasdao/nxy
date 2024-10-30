@@ -24,7 +24,7 @@ import LottieView from 'lottie-react-native'
 
 import { ethers, utils, Wallet } from 'ethers'
 
-import store from '../../stores'
+import stores from '../../stores'
 
 /**
  * Blank Screen
@@ -35,7 +35,7 @@ const Blank = observer(({ navigation }) => {
     /* Initialize SYSTEM context. */
     const {
         runTest: runSystemTest,
-    } = React.useContext(store.System)
+    } = React.useContext(stores.System)
 
     /* Handle onLoad scripts. */
     React.useEffect(() => {

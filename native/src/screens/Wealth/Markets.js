@@ -39,7 +39,7 @@ import {
     VictoryTheme
 } from 'victory-native'
 
-import store from '../../stores'
+import stores from '../../stores'
 
 import Divider from '../../components/Divider'
 import MarketsTrending from '../../components/Markets/Trending'
@@ -99,7 +99,7 @@ const Dashboard = observer(({ navigation }) => {
     /* Initialize CRYPTO context. */
     const {
         runTest: runCryptoTest,
-    } = React.useContext(store.Crypto)
+    } = React.useContext(stores.Crypto)
 
     /* Initialize WALLET context. */
     const {
@@ -108,7 +108,7 @@ const Dashboard = observer(({ navigation }) => {
         // wallet,
         // createWallet,
         runEvmTest: runWalletTest,
-    } = React.useContext(store.Wallet)
+    } = React.useContext(stores.Wallet)
 
 
 // FOR DEV PURPOSES ONLY

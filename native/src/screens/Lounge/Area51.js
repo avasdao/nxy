@@ -21,7 +21,7 @@ import { observer } from 'mobx-react'
 
 import LottieView from 'lottie-react-native'
 
-import store from '../../stores'
+import stores from '../../stores'
 
 /**
  * Area 51 Screen
@@ -32,11 +32,11 @@ const Area51 = observer(({ navigation }) => {
     /* Initialize WALLET context. */
     const {
         runBugsnagTest: runBugsnagTest,
-    } = React.useContext(store.Area51)
+    } = React.useContext(stores.Area51)
 
     const {
         runTest: runSystemTest,
-    } = React.useContext(store.System)
+    } = React.useContext(stores.System)
 
     /* Handle onLoad scripts. */
     React.useEffect(() => {
