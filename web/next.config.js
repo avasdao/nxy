@@ -7,7 +7,6 @@ const nextConfig = {
     images: {
       allowFutureImage: true,
     },
-    edge: true,
   },
 }
 
