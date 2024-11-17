@@ -38,6 +38,9 @@ const enclave = ref(null)
 const isMining = ref(false)
 const useConfetti = ref(true)
 
+const evmAddress = ref(null)
+const evmWallet = ref(null)
+
 /* Initialize constants. */
 const NXY_ID_HEX = '5f2456fa44a88c4a831a4b7d1b1f34176a29a3f28845af639eb9b1c88dd40000'
 
@@ -64,13 +67,21 @@ const init = async () => {
     let miningAddress
     let miningUnspent
 
-await sleep(3000)
-console.log('WALLET', Wallet.wallet)
-const mnemonic = Wallet.wallet.mnemonic
-console.log('MNEMONIC', mnemonic)
-const wallet = EthersWallet.fromPhrase(mnemonic)
-console.log('WALLET INSTNce', wallet)
-return console.log('ADDRESS', wallet.address)
+    /* Wait a bit for the wallet to initialize. */
+    await sleep(3000)
+    console.log('WALLET', Wallet.wallet)
+
+    /* Set mnemonic. */
+    const mnemonic = Wallet.wallet.mnemonic
+    // console.log('MNEMONIC', mnemonic)
+
+    /* Initialize EVM wallet. */
+    evmWallet.value = EthersWallet.fromPhrase(mnemonic)
+    console.log('EVM WALLET', evmWallet.value)
+
+    evmAddress.value = evmWallet.value.address
+    console.log('EVM ADDRESS', evmAddress.value)
+return
 
 // console.log('WALLET ADDRESS', Wallet.address)
     /* Validate (wallet) address. */
@@ -401,8 +412,8 @@ onMounted(() => {
 
     // setTimeout(init, 3000) // FIXME: TEMP FOR DEV ONLY
 
-    isReconnecting = false
-    startMonitor()
+    // isReconnecting = false
+    // startMonitor()
 })
 
 // onBeforeUnmount(() => {
