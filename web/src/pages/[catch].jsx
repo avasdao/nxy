@@ -1,4 +1,7 @@
-import Custom404 from "./404"
+import Custom404 from './404'
+
+// https://nextjs.org/docs/app/building-your-application/rendering/edge-and-nodejs-runtimes
+export const config = { runtime: 'edge' }
 
 export default function CatchAllRoutes({url}) {
     return <Custom404 />
