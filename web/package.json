@@ -1,6 +1,6 @@
 {
   "name": "nxy-web",
-  "version": "24.10.21",
+  "version": "25.1.13",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
@@ -30,5 +30,9 @@
     "eslint-config-next": "12.2.3",
     "prettier": "2.6.2",
     "prettier-plugin-tailwindcss": "0.1.11"
+  },
+  "packageManager": "yarn@1.22.22",
+  "engines": {
+    "node": ">=21.0.0"
   }
 }
